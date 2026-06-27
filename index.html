@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>SimmiLearning - Interactive English Tense Practice</title>
+  
+  <!-- Material Symbols and Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  
+  <!-- Custom Style System -->
+  <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="header-bar">
+    <div class="header-container">
+      <a href="#" id="logo-container" class="logo">
+        <span class="material-symbols-outlined filled">language</span>
+        SimmiLearning
+      </a>
+      
+      <!-- Desktop Navigation links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="#" id="nav-dashboard" class="nav-link active">Dashboard</a>
+        <a href="#" id="nav-lessons" class="nav-link">Lessons</a>
+        <a href="#" id="nav-practice" class="nav-link">Practice</a>
+        <a href="#" id="nav-guide" class="nav-link">Grammar Guide</a>
+      </nav>
+      
+      <!-- Action buttons -->
+      <div class="header-actions">
+        <!-- Language Toggle Button -->
+        <button id="lang-toggle-btn" class="icon-btn" aria-label="Switch language" style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: var(--rounded-full); border: 1px solid rgba(132, 148, 149, 0.2); height: 40px; margin-right: 4px; color: var(--on-surface-variant);">
+          <span class="material-symbols-outlined" style="font-size: 20px;">translate</span>
+          <span id="lang-label" style="font-family: var(--font-display); font-size: 13px; font-weight: 700;">EN</span>
+        </button>
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle dark mode">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+        <!-- Notifications -->
+        <button class="icon-btn" aria-label="Notifications">
+          <span class="material-symbols-outlined">notifications</span>
+        </button>
+        <!-- Profile Account -->
+        <button class="icon-btn" aria-label="Account profile">
+          <span class="material-symbols-outlined">account_circle</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Canvas Content wrapper -->
+  <main class="main-canvas">
+    <!-- Ambient Background Effects -->
+    <div class="ambient-glow">
+      <div class="glow-bubble-1"></div>
+      <div class="glow-bubble-2"></div>
+    </div>
+
+    <!-- VIEW 1: Dashboard / Tense Selection -->
+    <section id="screen-selection" class="view-section">
+      <div class="hero-block">
+        <h1 id="selection-hero-title" class="text-display">Master the Flow of Time</h1>
+        <p id="selection-hero-subtitle" class="text-body-lg">Select an English tense to focus your practice session today. Consistency is key to fluency.</p>
+      </div>
+      <div id="tense-cards-grid" class="grid-container">
+        <!-- Tense cards dynamically populated by app.js -->
+      </div>
+    </section>
+
+    <!-- VIEW 2: Quiz / Practice Exercises -->
+    <section id="screen-practice" class="view-section">
+      <div class="practice-container">
+        <!-- Header & Progress Indicators -->
+        <div class="practice-header">
+          <div class="practice-header-top">
+            <div>
+              <span id="practice-tense-indicator" class="tense-indicator">Present Perfect</span>
+              <h1 id="practice-session-title" class="text-headline-lg" style="margin-top: 4px;">Practice Session</h1>
+            </div>
+            <span id="practice-counter" class="question-counter">Question 1 of 5</span>
+          </div>
+          <!-- Progress bar -->
+          <div class="progress-track">
+            <div id="practice-progress-bar" class="progress-bar"></div>
+          </div>
+        </div>
+
+        <!-- Interactive Question Card -->
+        <div class="glass-card question-glow-card" style="padding: var(--spacing-lg);">
+          <h2 id="practice-question-text" class="text-headline-md" style="margin-bottom: var(--spacing-xs);">
+            Which sentence correctly uses the present perfect tense?
+          </h2>
+          <p id="practice-prompt" class="text-body-md" style="color: var(--on-surface-variant);">Select the most appropriate option below.</p>
+          
+          <div id="practice-options-container" class="options-list">
+            <!-- Option buttons rendered dynamically by app.js -->
+          </div>
+        </div>
+
+        <!-- Hint Section Drawer -->
+        <div id="hint-section" class="hint-section">
+          <div class="hint-content">
+            <span class="material-symbols-outlined">lightbulb</span>
+            <p id="hint-text-content"></p>
+          </div>
+        </div>
+
+        <!-- Action Controls -->
+        <div class="practice-actions">
+          <button id="hint-btn" class="btn-secondary">
+            <span class="material-symbols-outlined">lightbulb</span>
+            Hint
+          </button>
+          
+          <button id="action-btn" class="btn-primary" style="width: auto; min-width: 180px;">
+            Check Answer
+            <span class="material-symbols-outlined">check</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 3: Scorecard / Results -->
+    <section id="screen-results" class="view-section">
+      <div class="practice-container" style="max-width: 800px;">
+        <!-- Hero Completed Banner -->
+        <div class="results-hero">
+          <h1 id="results-title" class="text-display">Session Complete!</h1>
+          <p id="results-subtitle" class="text-body-lg">Excellent work! You're making solid progress on your English tenses.</p>
+          
+          <!-- Animated Score SVG Circle Chart -->
+          <div class="results-chart-container">
+            <svg class="circular-chart" viewBox="0 0 36 36" width="160" height="160">
+              <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+              <path id="results-circle-progress" class="circle" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+              <text id="results-score-text" class="percentage" x="18" y="20.35">8/10</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Strengths / Areas of Improvement lists -->
+        <div class="results-grid">
+          <!-- Strengths -->
+          <div class="breakdown-card strengths">
+            <div class="breakdown-header">
+              <span class="material-symbols-outlined filled">check_circle</span>
+              <h2 id="strengths-title">Strengths</h2>
+            </div>
+            <ul id="strengths-list" class="breakdown-list">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+          
+          <!-- Improvements -->
+          <div class="breakdown-card improvements">
+            <div class="breakdown-header">
+              <span class="material-symbols-outlined filled">trending_up</span>
+              <h2 id="improvements-title">Areas to Improve</h2>
+            </div>
+            <ul id="improvements-list" class="breakdown-list">
+              <!-- Dynamically populated -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- Navigation CTAs -->
+        <div class="results-actions">
+          <button id="btn-practice-more" class="btn-primary">
+            <span class="material-symbols-outlined">replay</span>
+            Practice More
+          </button>
+          <button id="btn-back-dashboard" class="btn-secondary">
+            <span class="material-symbols-outlined">dashboard</span>
+            Back to Dashboard
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Information Bar -->
+  <footer class="footer-bar">
+    <div class="footer-container">
+      <div class="footer-brand">SimmiLearning</div>
+      <div class="footer-links">
+        <a href="#" id="footer-help" class="footer-link">Help Center</a>
+        <a href="#" id="footer-privacy" class="footer-link">Privacy Policy</a>
+        <a href="#" id="footer-terms" class="footer-link">Terms of Service</a>
+      </div>
+      <div class="footer-copy">
+        <span id="footer-copyright">&copy; 2026 SimmiLearning Grammar. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Feedback -->
+  <div id="toast-feedback" class="toast-container" role="status" aria-live="polite">
+    <span class="toast-icon material-symbols-outlined">info</span>
+    <span class="toast-text">Feedback details go here.</span>
+  </div>
+
+  <!-- Custom Scripts -->
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

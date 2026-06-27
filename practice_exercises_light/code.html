@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SimmiLearning - Practice Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#006b71",
+                        "secondary-fixed": "#72f5ff",
+                        "tertiary": "#00696f",
+                        "primary-fixed-dim": "#00dce7",
+                        "on-secondary-fixed-variant": "#004f53",
+                        "error": "#ba1a1a",
+                        "outline": "#6f797a",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f7f9fb",
+                        "surface-dim": "#d8dadc",
+                        "on-tertiary-fixed-variant": "#004f54",
+                        "surface-container-highest": "#e1e3e5",
+                        "background": "#f7f9fb",
+                        "surface-variant": "#dce4e5",
+                        "secondary-fixed-dim": "#50d9e2",
+                        "surface-container": "#eceeef",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#404949",
+                        "on-surface": "#181c1c",
+                        "primary": "#006b71",
+                        "inverse-primary": "#16f3ff",
+                        "on-background": "#181c1c",
+                        "on-primary-fixed": "#002022",
+                        "secondary": "#00696f",
+                        "on-secondary-fixed": "#002022",
+                        "tertiary-container": "#91f2f9",
+                        "primary-container": "#8bebf2",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#bfe8eb",
+                        "secondary-container": "#72f5ff",
+                        "on-error-container": "#410002",
+                        "inverse-surface": "#2d3131",
+                        "tertiary-fixed": "#91f2f9",
+                        "primary-fixed": "#70f6ff",
+                        "on-secondary-container": "#002022",
+                        "inverse-on-surface": "#eff1f2",
+                        "on-tertiary-fixed": "#002022",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#004f53",
+                        "surface": "#f7f9fb",
+                        "tertiary-fixed-dim": "#75d5dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#002022",
+                        "on-primary-container": "#002022",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container-high": "#e7e8ea",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "caption": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface text-primary docked full-width top-0 border-b border-outline-variant/50 shadow-sm transition-all duration-200 ease-in-out z-50">
+<div class="flex justify-between items-center px-gutter py-4 w-full max-w-[1120px] mx-auto">
+<div class="flex items-center gap-6">
+<a class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">language</span>
+                    SimmiLearning
+                </a>
+<div class="hidden md:flex items-center gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-surface-container-high/50 font-label-md text-label-md" href="#">Dashboard</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-surface-container-high/50 font-label-md text-label-md" href="#">Lessons</a>
+<a class="text-primary font-semibold border-b-2 border-primary pb-1 px-3 py-2 font-label-md text-label-md" href="#">Practice</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors px-3 py-2 rounded-md hover:bg-surface-container-high/50 font-label-md text-label-md" href="#">Grammar Guide</a>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-high/50 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-high/50 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+<!-- Mobile Menu Button -->
+<button class="md:hidden p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-[1120px] mx-auto px-margin-mobile md:px-gutter py-lg md:py-margin-desktop flex flex-col items-center justify-center">
+<!-- Practice Container -->
+<div class="w-full max-w-2xl flex flex-col gap-8">
+<!-- Header & Progress -->
+<div class="flex flex-col gap-4 w-full">
+<div class="flex justify-between items-end">
+<div class="flex flex-col gap-1">
+<span class="font-label-md text-label-md text-secondary tracking-widest uppercase">Present Perfect</span>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">Practice Session</h1>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant bg-surface-container-high px-3 py-1 rounded-full border border-outline-variant/30">
+                        Question 4 of 10
+                    </div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[40%] transition-all duration-500 ease-out"></div>
+</div>
+</div>
+<!-- Question Card -->
+<div class="bg-surface rounded-xl border border-outline-variant/30 shadow-md p-6 md:p-8 flex flex-col gap-8 relative overflow-hidden group hover:border-outline-variant/60 transition-colors duration-300">
+<!-- Subtle background glow -->
+<div class="absolute -top-24 -right-24 w-48 h-48 bg-primary-container/20 rounded-full blur-3xl pointer-events-none transition-all duration-500"></div>
+<div class="flex flex-col gap-2 z-10">
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">
+                        Which sentence correctly uses the present perfect tense?
+                    </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Select the most appropriate option below.</p>
+</div>
+<!-- Options -->
+<div class="flex flex-col gap-4 z-10">
+<!-- Option A (Unselected) -->
+<button class="w-full text-left p-4 rounded-lg border-2 border-outline-variant/50 bg-surface hover:bg-surface-container-high hover:border-primary/40 transition-all duration-200 flex items-center justify-between group/btn focus:outline-none focus:ring-2 focus:ring-primary">
+<span class="font-body-lg text-body-lg text-on-surface">I have went to the store yesterday.</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant/50 flex items-center justify-center group-hover/btn:border-primary transition-colors"></div>
+</button>
+<!-- Option B (Selected) -->
+<button class="w-full text-left p-4 rounded-lg border-2 border-primary bg-primary-container/20 shadow-sm transition-all duration-200 flex items-center justify-between group/btn focus:outline-none">
+<span class="font-body-lg text-body-lg text-primary font-medium">She has eaten dinner already.</span>
+<div class="w-6 h-6 rounded-full border-2 border-primary bg-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px] text-on-primary font-bold">check</span>
+</div>
+</button>
+<!-- Option C (Unselected) -->
+<button class="w-full text-left p-4 rounded-lg border-2 border-outline-variant/50 bg-surface hover:bg-surface-container-high hover:border-primary/40 transition-all duration-200 flex items-center justify-between group/btn focus:outline-none focus:ring-2 focus:ring-primary">
+<span class="font-body-lg text-body-lg text-on-surface">They was walking to the park.</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant/50 flex items-center justify-center group-hover/btn:border-primary transition-colors"></div>
+</button>
+<!-- Option D (Unselected) -->
+<button class="w-full text-left p-4 rounded-lg border-2 border-outline-variant/50 bg-surface hover:bg-surface-container-high hover:border-primary/40 transition-all duration-200 flex items-center justify-between group/btn focus:outline-none focus:ring-2 focus:ring-primary">
+<span class="font-body-lg text-body-lg text-on-surface">We will have be finished soon.</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant/50 flex items-center justify-center group-hover/btn:border-primary transition-colors"></div>
+</button>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="flex justify-between items-center w-full pt-4">
+<button class="px-6 py-3 rounded-lg border-2 border-outline text-secondary font-label-md text-label-md hover:bg-surface-container-high transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+                    Hint
+                </button>
+<button class="px-8 py-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold hover:shadow-md transition-all duration-300 flex items-center gap-2 group">
+                    Check Answer
+                    <span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low text-secondary font-caption text-caption full-width border-t border-outline-variant mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter py-lg w-full max-w-[1120px] mx-auto gap-6 md:gap-0">
+<div class="font-headline-sm text-headline-sm text-on-surface-variant">
+                © 2024 SimmiLearning Grammar. All rights reserved.
+            </div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Help Center</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>
