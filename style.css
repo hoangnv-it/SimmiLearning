@@ -1182,3 +1182,23 @@ button {
     text-align: right;
   }
 }
+
+/* Mobile (Small) Overrides for Practice Session */
+@media (max-width: 599px) {
+  #practice-session-title {
+    font-size: 20px !important;
+  }
+  #practice-question-text {
+    font-size: 18px !important;
+    line-height: 1.4;
+  }
+  .option-btn {
+    padding: 8px 16px;
+    min-height: 40px;
+  }
+  .toast-container {
+    bottom: 100px;
+    width: calc(100% - 32px);
+    justify-content: center;
+  }
+}
