@@ -2895,5 +2895,443 @@ const QUESTIONS_DATABASE = {
         "hint": "'just' indicates recent completed event. Singular takes 'has received'."
       }
     ]
+  },
+  "grade-5-exam": {
+    "name": "Grade 5 Final Exam",
+    "badge": "Comprehensive 45'",
+    "icon": "school",
+    "description": "Comprehensive English Examination for Grade 5 (Tiếng Anh 5 Global Success): Pronunciation, Vocabulary, Grammar & Reading.",
+    "example": "Where will you go this summer? — I will visit Ha Long Bay.",
+    "questions": [
+      {
+        "question": "[Pronunciation -s/-es] Choose the word whose underlined ending sound is pronounced differently: A. books (/s/)  B. lamps (/s/)  C. friends (/z/)  D. hats (/s/)",
+        "options": [
+          "books",
+          "lamps",
+          "friends",
+          "hats"
+        ],
+        "answerIndex": 2,
+        "hint": "'friends' ends in voiced sound /d/ + s -> /z/. The others end in voiceless sounds /k/, /p/, /t/ + s -> /s/."
+      },
+      {
+        "question": "[Pronunciation -ed] Choose the word whose ending sound is pronounced differently: A. visited  B. wanted  C. needed  D. played",
+        "options": [
+          "visited (/ɪd/)",
+          "wanted (/ɪd/)",
+          "needed (/ɪd/)",
+          "played (/d/)"
+        ],
+        "answerIndex": 3,
+        "hint": "Verbs ending in /t/ or /d/ take /ɪd/ in past tense. 'played' ends in vowel + ed -> /d/."
+      },
+      {
+        "question": "[Vocabulary - Health] Linh has a bad toothache. She should go to see the ________.",
+        "options": [
+          "dentist",
+          "teacher",
+          "farmer",
+          "architect"
+        ],
+        "answerIndex": 0,
+        "hint": "When you have a toothache, you should visit a dentist."
+      },
+      {
+        "question": "[Collocation] On Sundays, my family often goes on a ________ in the park near our house.",
+        "options": [
+          "homework",
+          "picnic",
+          "swimming",
+          "breakfast"
+        ],
+        "answerIndex": 1,
+        "hint": "Common collocation in Tiếng Anh 5: 'go on a picnic'."
+      },
+      {
+        "question": "[Word Form] Ha Long Bay is a very ________ and famous place in Viet Nam.",
+        "options": [
+          "beauty (noun)",
+          "beautiful (adjective)",
+          "beautifully (adverb)",
+          "beautify (verb)"
+        ],
+        "answerIndex": 1,
+        "hint": "Before the noun phrase 'place', we need an adjective: 'beautiful'."
+      },
+      {
+        "question": "[Adverb of Frequency] My mother ________ goes to work on Sundays because her office is closed on weekends.",
+        "options": [
+          "always",
+          "never",
+          "usually",
+          "often"
+        ],
+        "answerIndex": 1,
+        "hint": "Because her office is closed on Sundays, she 'never' goes to work then."
+      },
+      {
+        "question": "[Preposition of Time] Vietnamese Children's Day is celebrated ________ June 1st every year.",
+        "options": [
+          "in",
+          "at",
+          "on",
+          "between"
+        ],
+        "answerIndex": 2,
+        "hint": "We use the preposition 'on' before specific dates and days (on June 1st)."
+      },
+      {
+        "question": "[Preposition of Place] Look! The library is right ________ the computer room and the school canteen.",
+        "options": [
+          "between",
+          "next to",
+          "under",
+          "in front"
+        ],
+        "answerIndex": 0,
+        "hint": "We use 'between X and Y' when something is in the middle of two places."
+      },
+      {
+        "question": "[Tenses] Listen! Mai and Lan ________ English songs in the classroom right now.",
+        "options": [
+          "sing",
+          "sings",
+          "are singing",
+          "will sing"
+        ],
+        "answerIndex": 2,
+        "hint": "Look for signal words 'Listen!' and 'right now' -> Present Continuous ('are singing')."
+      },
+      {
+        "question": "[Possessive Pronouns] That blue bicycle belongs to Nam. It is ________.",
+        "options": [
+          "him",
+          "his",
+          "he",
+          "himself"
+        ],
+        "answerIndex": 1,
+        "hint": "'his' is the possessive pronoun meaning 'belonging to him'."
+      },
+      {
+        "question": "[Pronunciation -es/-s] Choose the word whose ending sound is pronounced /ɪz/: A. watches  B. looks  C. plays  D. reads",
+        "options": [
+          "watches",
+          "looks",
+          "plays",
+          "reads"
+        ],
+        "answerIndex": 0,
+        "hint": "Words ending in -ch, -sh, -s, -x take /ɪz/ sound when adding -es ('watches')."
+      },
+      {
+        "question": "[Pronunciation -ed] Choose the word whose ending sound is pronounced /t/: A. looked  B. listened  C. played  D. arrived",
+        "options": [
+          "looked",
+          "listened",
+          "played",
+          "arrived"
+        ],
+        "answerIndex": 0,
+        "hint": "Verbs ending in voiceless sounds /k/, /p/, /f/, /s/, /ʃ/, /tʃ/ take /t/ ('looked')."
+      },
+      {
+        "question": "[Vocabulary - Health Advice] What's the matter with Quan? — He has a sore throat. He shouldn't ________ cold water.",
+        "options": [
+          "drink",
+          "eat",
+          "have",
+          "make"
+        ],
+        "answerIndex": 0,
+        "hint": "With a sore throat, you shouldn't 'drink' cold water."
+      },
+      {
+        "question": "[Vocabulary - Occupations] My aunt works in a hospital and takes care of sick people. She is a ________.",
+        "options": [
+          "nurse",
+          "farmer",
+          "pilot",
+          "driver"
+        ],
+        "answerIndex": 0,
+        "hint": "A person who takes care of sick people in a hospital is a nurse or doctor."
+      },
+      {
+        "question": "[Vocabulary - Summer Holiday] Where will you go this summer? — I will visit ________.",
+        "options": [
+          "Phu Quoc Island",
+          "Science Subject",
+          "English Club",
+          "Toothache"
+        ],
+        "answerIndex": 0,
+        "hint": "'Phu Quoc Island' is a place you can visit on holiday."
+      },
+      {
+        "question": "[Vocabulary - Transport] We will travel to Nha Trang by ________ because it is fast and comfortable.",
+        "options": [
+          "plane",
+          "bicycle",
+          "foot",
+          "swim"
+        ],
+        "answerIndex": 0,
+        "hint": "Traveling long distances fast and comfortably is usually by 'plane'."
+      },
+      {
+        "question": "[Collocation] Minh and his classmates often ________ badminton after school.",
+        "options": [
+          "play",
+          "do",
+          "make",
+          "go"
+        ],
+        "answerIndex": 0,
+        "hint": "We use 'play' before ball games and sports like badminton, football, basketball."
+      },
+      {
+        "question": "[Collocation] On Saturday afternoon, Lan often ________ her mom cook dinner in the kitchen.",
+        "options": [
+          "helps",
+          "makes",
+          "does",
+          "plays"
+        ],
+        "answerIndex": 0,
+        "hint": "'help somebody do something' -> Lan often 'helps' her mom cook."
+      },
+      {
+        "question": "[Word Form] Ha Noi is a big city with many ________ buildings and lakes.",
+        "options": [
+          "beautiful",
+          "beauty",
+          "beautifully",
+          "beautify"
+        ],
+        "answerIndex": 0,
+        "hint": "An adjective is needed before the noun 'buildings': 'beautiful'."
+      },
+      {
+        "question": "[Word Form] Phong sings English songs very ________. Everyone loves listening to him.",
+        "options": [
+          "well",
+          "good",
+          "nice",
+          "beauty"
+        ],
+        "answerIndex": 0,
+        "hint": "An adverb is needed to modify the action verb 'sings': 'well'."
+      },
+      {
+        "question": "[Adverbs of Frequency] We ________ go to school on Sundays. Our school is closed every weekend.",
+        "options": [
+          "never",
+          "always",
+          "usually",
+          "often"
+        ],
+        "answerIndex": 0,
+        "hint": "Because the school is closed on Sundays, we 'never' go to school then."
+      },
+      {
+        "question": "[Adverbs of Frequency] How ________ do you visit your grandparents? — Twice a month.",
+        "options": [
+          "often",
+          "many",
+          "much",
+          "long"
+        ],
+        "answerIndex": 0,
+        "hint": "'How often' asks about frequency (Twice a month)."
+      },
+      {
+        "question": "[Prepositions of Time] We have our school English festival ________ December.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "under"
+        ],
+        "answerIndex": 0,
+        "hint": "We use the preposition 'in' before months (in December)."
+      },
+      {
+        "question": "[Prepositions of Time] My family usually has dinner together ________ 7 o'clock in the evening.",
+        "options": [
+          "at",
+          "on",
+          "in",
+          "between"
+        ],
+        "answerIndex": 0,
+        "hint": "We use the preposition 'at' before specific times of day (at 7 o'clock)."
+      },
+      {
+        "question": "[Prepositions of Place] There is a small park right ________ front of my house.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "to"
+        ],
+        "answerIndex": 0,
+        "hint": "Fixed preposition phrase: 'in front of'."
+      },
+      {
+        "question": "[Prepositions of Place] The science laboratory is next ________ the computer room on the second floor.",
+        "options": [
+          "to",
+          "in",
+          "at",
+          "on"
+        ],
+        "answerIndex": 0,
+        "hint": "Fixed preposition phrase: 'next to'."
+      },
+      {
+        "question": "[Simple Present Tense] My father always ________ coffee after breakfast every morning.",
+        "options": [
+          "drinks",
+          "drink",
+          "drinking",
+          "will drink"
+        ],
+        "answerIndex": 0,
+        "hint": "Daily habit with third-person singular ('My father') takes verb + -s ('drinks')."
+      },
+      {
+        "question": "[Simple Present Tense] What ________ your sister usually do in her free time? — She reads comic books.",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "will"
+        ],
+        "answerIndex": 0,
+        "hint": "Third-person singular auxiliary question form: 'What does + subject + do...?'"
+      },
+      {
+        "question": "[Present Continuous Tense] Look! The children ________ football in the school playground right now.",
+        "options": [
+          "are playing",
+          "play",
+          "played",
+          "will play"
+        ],
+        "answerIndex": 0,
+        "hint": "Signal words 'Look!' and 'right now' indicate Present Continuous ('are playing')."
+      },
+      {
+        "question": "[Present Continuous Tense] Please be quiet! The baby ________ in the bedroom.",
+        "options": [
+          "is sleeping",
+          "sleeps",
+          "slept",
+          "sleep"
+        ],
+        "answerIndex": 0,
+        "hint": "'Please be quiet!' signals an action happening right now -> 'is sleeping'."
+      },
+      {
+        "question": "[Future Simple Tense] Next weekend, my class ________ camping in Ba Vi National Park.",
+        "options": [
+          "will go",
+          "went",
+          "going",
+          "goes"
+        ],
+        "answerIndex": 0,
+        "hint": "'Next weekend' indicates a future action -> 'will go'."
+      },
+      {
+        "question": "[Future Simple Tense] What ________ you do at Ha Long Bay tomorrow? — I will take a boat trip around the islands.",
+        "options": [
+          "will",
+          "did",
+          "do",
+          "are"
+        ],
+        "answerIndex": 0,
+        "hint": "Future question form with 'tomorrow': 'What will you do...?'"
+      },
+      {
+        "question": "[Possessive Pronouns] This red backpack is mine, and that blue backpack is ________.",
+        "options": [
+          "yours",
+          "your",
+          "you",
+          "yourself"
+        ],
+        "answerIndex": 0,
+        "hint": "'yours' is the possessive pronoun standing alone at the end of the sentence."
+      },
+      {
+        "question": "[Possessive Pronouns] We bought these storybooks yesterday. They are ________.",
+        "options": [
+          "ours",
+          "our",
+          "us",
+          "we"
+        ],
+        "answerIndex": 0,
+        "hint": "'ours' is the possessive pronoun meaning 'belonging to us'."
+      },
+      {
+        "question": "[Situational Response] \"What's the matter with you, Nam?\" — \"________\"",
+        "options": [
+          "I have a bad headache.",
+          "I will go to Da Nang.",
+          "I like playing chess.",
+          "It is next to the library."
+        ],
+        "answerIndex": 0,
+        "hint": "'What's the matter with you?' asks about a health problem."
+      },
+      {
+        "question": "[Situational Response] \"Where did you go on holiday last summer?\" — \"________\"",
+        "options": [
+          "I went to Hoi An Ancient Town.",
+          "I am going to school.",
+          "I have a sore throat.",
+          "I usually read books."
+        ],
+        "answerIndex": 0,
+        "hint": "Past question 'Where did you go...?' requires a past response ('I went to...')."
+      },
+      {
+        "question": "[Situational Response] \"What will you do at Ha Long Bay?\" — \"________\"",
+        "options": [
+          "I will explore the caves and swim in the sea.",
+          "I went there by coach.",
+          "She is a doctor.",
+          "It is on June 1st."
+        ],
+        "answerIndex": 0,
+        "hint": "'What will you do...?' asks for future activities ('I will explore...')."
+      },
+      {
+        "question": "[Reading Comprehension] Read: \"Phong usually gets up at 6 a.m. He has breakfast at 6:30 and rides his bike to school at 6:45.\" What time does Phong have breakfast?",
+        "options": [
+          "At 6:30 a.m.",
+          "At 6:00 a.m.",
+          "At 6:45 a.m.",
+          "At 7:00 a.m."
+        ],
+        "answerIndex": 0,
+        "hint": "The passage says: 'He has breakfast at 6:30'."
+      },
+      {
+        "question": "[Reading Comprehension] Read: \"Last summer, Mai's family visited Phu Quoc Island. They stayed in a seaside hotel for four days.\" How long did Mai's family stay in Phu Quoc?",
+        "options": [
+          "For four days",
+          "For two days",
+          "For one week",
+          "For three days"
+        ],
+        "answerIndex": 0,
+        "hint": "The passage states: 'for four days'."
+      }
+    ]
   }
 };

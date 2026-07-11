@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>SimmiLearning - Lessons Overview (Tiếng Anh 8 Global Success)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#00696f",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#72f5ff",
+                        "on-primary-container": "#002022",
+                        "secondary": "#4a6365",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#cce8ea",
+                        "on-secondary-container": "#051f21",
+                        "tertiary": "#505f79",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#d7e3ff",
+                        "on-tertiary-container": "#0a1b32",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#410002",
+                        "background": "#f7f9fb",
+                        "on-background": "#171c1d",
+                        "surface": "#f7f9fb",
+                        "on-surface": "#171c1d",
+                        "surface-variant": "#dbe4e5",
+                        "on-surface-variant": "#3f4849",
+                        "outline": "#6f797a",
+                        "outline-variant": "#bec8c9",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container": "#eceeef",
+                        "surface-container-high": "#e6e8e9",
+                        "surface-container-highest": "#e0e2e4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "md": "24px",
+                        "margin-mobile": "16px",
+                        "xl": "64px",
+                        "lg": "40px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "margin-desktop": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "caption": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 105, 111, 0.12);
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .glass-card:hover {
+            box-shadow: 0 8px 32px rgba(0, 105, 111, 0.12);
+            border-color: rgba(0, 105, 111, 0.3);
+        }
+        .search-input:focus {
+            box-shadow: 0 0 0 3px rgba(114, 245, 255, 0.5);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f2f4f6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #bec8c9;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6f797a;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-background/90 backdrop-blur-md sticky top-0 border-b border-outline-variant/40 shadow-sm transition-all duration-200 ease-in-out z-50">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-[1280px] mx-auto">
+            <a href="#" class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2.5 no-underline">
+                <span aria-hidden="true" class="material-symbols-outlined text-secondary icon-fill text-[28px]" data-icon="language">language</span>
+                <span>SimmiLearning</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav aria-label="Main Navigation" class="hidden md:flex gap-2 items-center">
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-[15px] font-semibold hover:bg-surface-container-high/50 px-4 py-2 rounded-lg" href="#">Dashboard</a>
+                <a aria-current="page" class="text-primary font-bold bg-primary-container/30 border-b-2 border-primary font-label-md text-[15px] px-4 py-2 rounded-t-lg" href="#">Lessons</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-[15px] font-semibold hover:bg-surface-container-high/50 px-4 py-2 rounded-lg" href="#">Practice</a>
+                <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-[15px] font-semibold hover:bg-surface-container-high/50 px-4 py-2 rounded-lg" href="#">Grammar Guide</a>
+            </nav>
+            
+            <!-- Action Controls -->
+            <div class="flex items-center gap-3">
+                <button aria-label="Switch language" class="flex items-center gap-1 px-3 py-1.5 rounded-full border border-outline-variant/40 text-on-surface-variant hover:text-primary hover:border-primary transition-all text-xs font-bold">
+                    <span class="material-symbols-outlined text-[18px]">translate</span>
+                    <span>EN</span>
+                </button>
+                <button aria-label="Notifications" class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-high/60 p-2 rounded-full flex items-center justify-center relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full"></span>
+                </button>
+                <button aria-label="Account profile" class="text-on-surface-variant hover:text-primary transition-colors hover:bg-surface-container-high/60 p-1.5 rounded-full flex items-center justify-center border border-outline-variant/30">
+                    <span class="material-symbols-outlined text-[26px]">account_circle</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Canvas -->
+    <main class="flex-grow flex flex-col px-margin-mobile md:px-margin-desktop py-lg w-full max-w-[1280px] mx-auto relative">
+        
+        <!-- Ambient Background Glows -->
+        <div class="absolute inset-0 z-[-1] overflow-hidden pointer-events-none">
+            <div class="absolute top-0 left-[10%] w-[45%] h-[35%] bg-primary-container/25 rounded-full blur-[110px]"></div>
+            <div class="absolute top-[40%] right-[5%] w-[35%] h-[35%] bg-secondary-container/30 rounded-full blur-[100px]"></div>
+        </div>
+
+        <!-- Page Header & Curriculum Title -->
+        <div class="mb-8">
+            <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-secondary mb-1">
+                <span class="material-symbols-outlined text-[18px]">school</span>
+                <span>Curriculum Overview</span>
+            </div>
+            <h1 class="font-headline-xl text-3xl md:text-4xl font-bold text-on-surface tracking-tight">Tiếng Anh 8 Global Success</h1>
+            <p class="text-on-surface-variant mt-1.5 text-base md:text-lg max-w-3xl">Master all 12 units structured across two semesters. Deep dive into vocabulary topics and core grammar points designed for comprehensive fluency.</p>
+        </div>
+
+        <!-- Progress Tracking Dashboard Header -->
+        <section aria-label="Progress Tracking Dashboard" class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
+            <!-- Overall Completion Indicator Card -->
+            <div class="lg:col-span-7 glass-card rounded-2xl p-6 md:p-7 flex flex-col justify-between relative overflow-hidden bg-gradient-to-br from-white/90 to-surface-container-lowest/90 border-l-4 border-l-primary">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs mb-2">Overall Progress</span>
+                        <h2 class="text-xl md:text-2xl font-bold text-on-surface">Curriculum Completion</h2>
+                        <p class="text-on-surface-variant text-sm mt-1">You're making great progress! Keep it up to finish the school year strong.</p>
+                    </div>
+                    <div class="w-14 h-14 rounded-full bg-primary-container/40 flex items-center justify-center text-primary font-bold text-lg border border-primary/20 shrink-0">
+                        25%
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="flex justify-between items-center text-sm font-semibold mb-2">
+                        <span class="text-on-surface-variant">Units Mastered</span>
+                        <span class="text-primary font-bold">3 of 12 Units Complete</span>
+                    </div>
+                    <div class="w-full bg-surface-variant/70 h-3 rounded-full overflow-hidden p-0.5">
+                        <div class="bg-gradient-to-r from-primary to-secondary h-full rounded-full transition-all duration-500 w-[25%]"></div>
+                    </div>
+                    <div class="flex gap-6 mt-4 pt-4 border-t border-outline-variant/20 text-xs text-on-surface-variant">
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span>
+                            <span>3 Completed</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-primary-container inline-block border border-primary/40"></span>
+                            <span>1 In Progress</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-outline-variant inline-block"></span>
+                            <span>8 Not Started</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue Learning Shortcut Card -->
+            <div class="lg:col-span-5 rounded-2xl p-6 md:p-7 flex flex-col justify-between bg-gradient-to-br from-primary to-[#004f53] text-on-primary shadow-lg relative overflow-hidden group">
+                <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-primary-container/15 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-500"></div>
+                <div class="absolute top-0 right-0 p-6 opacity-10">
+                    <span class="material-symbols-outlined text-[100px]">menu_book</span>
+                </div>
+                
+                <div class="relative z-10">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-extrabold text-[11px] uppercase tracking-wider animate-pulse">Next Up</span>
+                        <span class="text-primary-container text-xs font-medium">Semester 1 • Unit 4</span>
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold tracking-tight mb-1">Ethnic groups of Vietnam</h3>
+                    <p class="text-on-primary/80 text-sm line-clamp-2 mb-4">Explore the traditional cultures, customs, and lifestyles of 54 ethnic minority groups in Vietnam.</p>
+                    
+                    <div class="bg-black/15 backdrop-blur-sm rounded-xl p-3 border border-white/10 mb-6">
+                        <div class="text-[11px] uppercase font-bold text-primary-container mb-0.5 flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[14px]">lightbulb</span>
+                            <span>Core Grammar Focus</span>
+                        </div>
+                        <p class="text-xs font-medium text-white">Yes/No & Wh-questions; Countable and uncountable nouns</p>
+                    </div>
+                </div>
+
+                <a href="#unit-4" class="relative z-10 bg-primary-container hover:bg-white text-on-primary-container font-bold py-3 px-5 rounded-xl flex items-center justify-center gap-2 shadow-md hover:shadow-xl transition-all transform active:scale-98 group/btn no-underline">
+                    <span class="material-symbols-outlined icon-fill text-primary group-hover/btn:scale-110 transition-transform">play_circle</span>
+                    <span>Continue Learning</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Search Bar and Filter Controls -->
+        <section aria-label="Curriculum Search and Filters" class="mb-8">
+            <div class="bg-surface-container-lowest rounded-2xl p-4 md:p-5 shadow-sm border border-outline-variant/30 flex flex-col md:flex-row gap-4 items-center justify-between">
+                
+                <!-- Integrated Search Bar -->
+                <div class="relative w-full md:w-96 flex-1">
+                    <span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none text-[22px]">search</span>
+                    <input type="text" id="curriculum-search-input" placeholder="Search by unit name, topic, or grammar point (e.g., 'verbs of liking', 'conditional')..." class="w-full pl-11 pr-10 py-2.5 bg-surface-container-low border border-outline-variant/40 rounded-xl text-sm text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:border-primary focus:bg-white search-input transition-all"/>
+                    <button id="clear-search-btn" class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface hidden">
+                        <span class="material-symbols-outlined text-[18px]">close</span>
+                    </button>
+                </div>
+
+                <!-- Semester Tabs -->
+                <div class="flex items-center gap-1.5 bg-surface-container-low p-1 rounded-xl border border-outline-variant/30 w-full md:w-auto overflow-x-auto">
+                    <button class="filter-tab-btn active px-4 py-1.5 rounded-lg text-xs font-bold text-on-primary bg-primary shadow-sm transition-all whitespace-nowrap" data-filter="all">
+                        All Units (12)
+                    </button>
+                    <button class="filter-tab-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 transition-all whitespace-nowrap" data-filter="sem1">
+                        Semester 1 (Units 1-6)
+                    </button>
+                    <button class="filter-tab-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 transition-all whitespace-nowrap" data-filter="sem2">
+                        Semester 2 (Units 7-12)
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- No Search Results Empty State (Hidden by default) -->
+        <div id="no-results-state" class="hidden text-center py-16 bg-surface-container-lowest rounded-2xl border border-outline-variant/30 mb-8">
+            <span class="material-symbols-outlined text-[48px] text-outline mb-3">search_off</span>
+            <h3 class="text-lg font-bold text-on-surface">No matching units found</h3>
+            <p class="text-sm text-on-surface-variant max-w-md mx-auto mt-1">We couldn't find any curriculum units or grammar points matching your search query. Try searching for "environment", "conditional", or "Unit 1".</p>
+            <button id="reset-search-btn" class="mt-4 px-4 py-2 bg-primary/10 text-primary hover:bg-primary/20 rounded-lg text-xs font-bold transition-colors inline-flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">refresh</span>
+                <span>Reset Search</span>
+            </button>
+        </div>
+
+        <!-- SEMESTER 1 SECTION -->
+        <section id="semester-1-section" class="semester-group mb-12">
+            <div class="flex items-center justify-between mb-5 border-b border-outline-variant/30 pb-3">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold">
+                        1
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-on-surface flex items-center gap-2">
+                            <span>Semester 1 (Học kì 1)</span>
+                        </h2>
+                        <p class="text-xs text-on-surface-variant">Units 1 to 6 • Fundamental everyday communication and Vietnamese culture</p>
+                    </div>
+                </div>
+                <span class="text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full">3 of 6 Completed</span>
+            </div>
+
+            <!-- Grid of Unit Cards (Semester 1) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Unit 1 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group" data-unit="1" data-semester="sem1" data-title="Leisure time" data-topics="free-time activities hobbies family friends study balance" data-grammar="verbs of liking v-ing to v">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-primary/15 text-primary font-bold text-xs border border-primary/20">Unit 1</span>
+                            <span class="flex items-center gap-1 text-xs font-bold text-[#006b71] bg-secondary-container px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px] icon-fill">check_circle</span>
+                                <span>Completed</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Leisure time</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Explore different free-time activities, hobbies, spending quality time with family and friends, and balancing leisure with academic life.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Verbs of liking + V-ing / to V</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-full rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">100%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#004f53] group-hover:translate-x-1 transition-all no-underline">
+                                <span>Review Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unit 2 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group" data-unit="2" data-semester="sem1" data-title="Life in the countryside" data-topics="rural life farming activities comparing city country lifestyles nature" data-grammar="comparative adverbs of manner">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-primary/15 text-primary font-bold text-xs border border-primary/20">Unit 2</span>
+                            <span class="flex items-center gap-1 text-xs font-bold text-[#006b71] bg-secondary-container px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px] icon-fill">check_circle</span>
+                                <span>Completed</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Life in the countryside</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Learn about rural life, farming activities, traditional folk games, and comparing city and countryside lifestyles.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Comparative forms of adverbs of manner</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-full rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">100%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#004f53] group-hover:translate-x-1 transition-all no-underline">
+                                <span>Review Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unit 3 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group" data-unit="3" data-semester="sem1" data-title="Teenagers" data-topics="teen pressure school life clubs social media youth navigation" data-grammar="simple sentences compound sentences coordinating conjunctions">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-primary/15 text-primary font-bold text-xs border border-primary/20">Unit 3</span>
+                            <span class="flex items-center gap-1 text-xs font-bold text-[#006b71] bg-secondary-container px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px] icon-fill">check_circle</span>
+                                <span>Completed</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Teenagers</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Discuss teen issues, school pressures, after-school clubs, social media habits, and navigating youth challenges.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Simple sentences and compound sentences</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-full rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">100%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-[#004f53] group-hover:translate-x-1 transition-all no-underline">
+                                <span>Review Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unit 4 -->
+                <article id="unit-4" class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group border-2 border-primary shadow-md" data-unit="4" data-semester="sem1" data-title="Ethnic groups of Vietnam" data-topics="life culture traditions customs ethnic minorities vietnam diversity" data-grammar="yes no questions wh questions countable uncountable nouns">
+                    <div class="absolute top-0 right-0 bg-primary text-on-primary text-[10px] font-extrabold uppercase px-3 py-1 rounded-bl-xl tracking-wider">
+                        Current Target
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-primary/15 text-primary font-bold text-xs border border-primary/20">Unit 4</span>
+                            <span class="flex items-center gap-1 text-xs font-bold text-[#004f53] bg-primary-container/60 px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px]">pending</span>
+                                <span>In Progress</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Ethnic groups of Vietnam</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Discover the traditional cultures, customs, costumes, and festivals of 54 ethnic minority groups across Vietnam.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-primary-container/20 rounded-xl p-3.5 border border-primary/30 mb-5">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Yes/No & Wh-questions; Countable and uncountable nouns</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-[40%] rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-primary">40%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1.5 text-xs font-bold bg-primary text-on-primary hover:bg-[#004f53] px-3.5 py-2 rounded-lg transition-all shadow-sm no-underline">
+                                <span>Continue Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">play_arrow</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unit 5 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group opacity-90 hover:opacity-100" data-unit="5" data-semester="sem1" data-title="Our customs and traditions" data-topics="family customs traditional festivals table manners etiquette lifestyle" data-grammar="zero conditional articles a an the zero article">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-bold text-xs border border-outline-variant/30">Unit 5</span>
+                            <span class="flex items-center gap-1 text-xs font-semibold text-on-surface-variant bg-surface-variant/70 px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px]">lock_open</span>
+                                <span>Not Started</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Our customs and traditions</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Learn about Vietnamese family customs, traditional festivals, table manners, and respecting heritage in modern society.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Zero conditional; Articles: a, an, the, zero article</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-0 rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">0%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-on-surface-variant hover:text-primary group-hover:translate-x-1 transition-all no-underline">
+                                <span>Start Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unit 6 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group opacity-90 hover:opacity-100" data-unit="6" data-semester="sem1" data-title="Lifestyles" data-topics="traditional modern lifestyles healthy living habits global culture" data-grammar="future simple will first conditional if clauses">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-bold text-xs border border-outline-variant/30">Unit 6</span>
+                            <span class="flex items-center gap-1 text-xs font-semibold text-on-surface-variant bg-surface-variant/70 px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px]">lock_open</span>
+                                <span>Not Started</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Lifestyles</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Compare traditional and modern lifestyles, explore healthy daily routines, and examine how habits differ around the globe.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Future simple with 'will'; First conditional</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-0 rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">0%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-on-surface-variant hover:text-primary group-hover:translate-x-1 transition-all no-underline">
+                                <span>Start Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SEMESTER 2 SECTION -->
+        <section id="semester-2-section" class="semester-group mb-12">
+            <div class="flex items-center justify-between mb-5 border-b border-outline-variant/30 pb-3">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary font-bold">
+                        2
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-bold text-on-surface flex items-center gap-2">
+                            <span>Semester 2 (Học kì 2)</span>
+                        </h2>
+                        <p class="text-xs text-on-surface-variant">Units 7 to 12 • Global challenges, science, and future horizons</p>
+                    </div>
+                </div>
+                <span class="text-xs font-semibold text-on-surface-variant bg-surface-variant px-3 py-1 rounded-full">0 of 6 Completed</span>
+            </div>
+
+            <!-- Grid of Unit Cards (Semester 2) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Unit 7 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group opacity-90 hover:opacity-100" data-unit="7" data-semester="sem2" data-title="Environmental protection" data-topics="environmental problems endangered species eco friendly habits conservation recycling" data-grammar="complex sentences adverbial clauses time cause concession">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-bold text-xs border border-outline-variant/30">Unit 7</span>
+                            <span class="flex items-center gap-1 text-xs font-semibold text-on-surface-variant bg-surface-variant/70 px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px]">lock_open</span>
+                                <span>Not Started</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Environmental protection</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Investigate environmental challenges, endangered species protection, conservation efforts, and practicing eco-friendly daily habits.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Complex sentences with adverbial clauses of time, cause, and concession</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-0 rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">0%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-on-surface-variant hover:text-primary group-hover:translate-x-1 transition-all no-underline">
+                                <span>Start Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unit 8 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group opacity-90 hover:opacity-100" data-unit="8" data-semester="sem2" data-title="Shopping" data-topics="types of shops shopping habits online shopping smart consumerism sales" data-grammar="adverbs of frequency present simple for future meaning schedules">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-bold text-xs border border-outline-variant/30">Unit 8</span>
+                            <span class="flex items-center gap-1 text-xs font-semibold text-on-surface-variant bg-surface-variant/70 px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px]">lock_open</span>
+                                <span>Not Started</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Shopping</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Explore types of traditional and modern shops, online shopping trends, smart consumer habits, and navigating sales and promotions.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Adverbs of frequency; Present simple for future meaning (schedules)</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-0 rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">0%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-on-surface-variant hover:text-primary group-hover:translate-x-1 transition-all no-underline">
+                                <span>Start Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unit 9 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group opacity-90 hover:opacity-100" data-unit="9" data-semester="sem2" data-title="Natural disasters" data-topics="earthquakes floods storms volcanic eruptions natural disasters safety rescue" data-grammar="past continuous tense past simple vs past continuous">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-bold text-xs border border-outline-variant/30">Unit 9</span>
+                            <span class="flex items-center gap-1 text-xs font-semibold text-on-surface-variant bg-surface-variant/70 px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px]">lock_open</span>
+                                <span>Not Started</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Natural disasters</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Understand natural phenomena like earthquakes, floods, and storms, and learn essential emergency preparedness and rescue safety.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Past continuous tense; Past simple vs. Past continuous</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-0 rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">0%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-on-surface-variant hover:text-primary group-hover:translate-x-1 transition-all no-underline">
+                                <span>Start Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unit 10 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group opacity-90 hover:opacity-100" data-unit="10" data-semester="sem2" data-title="Communication in the future" data-topics="modern future communication social networks telepathy holography tech" data-grammar="prepositions of place and time possessive pronouns">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-bold text-xs border border-outline-variant/30">Unit 10</span>
+                            <span class="flex items-center gap-1 text-xs font-semibold text-on-surface-variant bg-surface-variant/70 px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px]">lock_open</span>
+                                <span>Not Started</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Communication in the future</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Explore futuristic communication methods, holography, telepathy, virtual reality, and the evolution of digital social networks.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Prepositions of place and time; Possessive pronouns</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-0 rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">0%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-on-surface-variant hover:text-primary group-hover:translate-x-1 transition-all no-underline">
+                                <span>Start Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unit 11 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group opacity-90 hover:opacity-100" data-unit="11" data-semester="sem2" data-title="Science and technology" data-topics="technological advances ai smart homes future inventions benefits drawbacks tech" data-grammar="reported speech statements pronouns in reported speech">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-bold text-xs border border-outline-variant/30">Unit 11</span>
+                            <span class="flex items-center gap-1 text-xs font-semibold text-on-surface-variant bg-surface-variant/70 px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px]">lock_open</span>
+                                <span>Not Started</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Science and technology</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Examine breakthrough technological advances, artificial intelligence, smart homes, and weigh the benefits and drawbacks of automation.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">Reported speech (statements); Pronouns in reported speech</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-0 rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">0%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-on-surface-variant hover:text-primary group-hover:translate-x-1 transition-all no-underline">
+                                <span>Start Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Unit 12 -->
+                <article class="unit-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 relative overflow-hidden group opacity-90 hover:opacity-100" data-unit="12" data-semester="sem2" data-title="Life on other planets" data-topics="space exploration ufos aliens living on mars exoplanets astronomy" data-grammar="may might for future possibility second conditional if clauses">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant font-bold text-xs border border-outline-variant/30">Unit 12</span>
+                            <span class="flex items-center gap-1 text-xs font-semibold text-on-surface-variant bg-surface-variant/70 px-2.5 py-0.5 rounded-full">
+                                <span class="material-symbols-outlined text-[14px]">lock_open</span>
+                                <span>Not Started</span>
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">Life on other planets</h3>
+                        <p class="text-sm text-on-surface-variant line-clamp-3 mb-5">
+                            Journey into space exploration, investigate exoplanets and UFO phenomena, and speculate on conditions for extraterrestrial life on Mars.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <!-- Grammar Focus Box -->
+                        <div class="bg-surface-container-low rounded-xl p-3.5 border border-outline-variant/30 mb-5 group-hover:bg-primary-container/15 transition-colors">
+                            <div class="flex items-center gap-1.5 text-xs font-bold text-primary mb-1">
+                                <span class="material-symbols-outlined text-[16px]">menu_book</span>
+                                <span>Grammar Focus</span>
+                            </div>
+                            <p class="text-xs font-semibold text-on-surface-variant">May / Might for future possibility; Second conditional</p>
+                        </div>
+                        
+                        <!-- Card Footer -->
+                        <div class="flex justify-between items-center pt-4 border-t border-outline-variant/20">
+                            <div class="flex items-center gap-1.5">
+                                <div class="w-16 bg-surface-variant h-1.5 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full w-0 rounded-full"></div>
+                                </div>
+                                <span class="text-xs font-bold text-on-surface-variant">0%</span>
+                            </div>
+                            <a href="#" class="inline-flex items-center gap-1 text-xs font-bold text-on-surface-variant hover:text-primary group-hover:translate-x-1 transition-all no-underline">
+                                <span>Start Unit</span>
+                                <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Information Bar -->
+    <footer class="bg-surface-container-low border-t border-outline-variant/30 mt-16 py-8">
+        <div class="px-margin-mobile md:px-margin-desktop w-full max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-on-surface-variant">
+            <div class="flex items-center gap-2 font-bold text-on-surface">
+                <span class="material-symbols-outlined text-primary text-[20px]">language</span>
+                <span>SimmiLearning • Tiếng Anh 8 Global Success</span>
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-primary transition-colors no-underline">Help Center</a>
+                <a href="#" class="hover:text-primary transition-colors no-underline">Privacy Policy</a>
+                <a href="#" class="hover:text-primary transition-colors no-underline">Terms of Service</a>
+            </div>
+            <div>
+                &copy; 2026 SimmiLearning Grammar. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Filtering & Search Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('curriculum-search-input');
+            const clearBtn = document.getElementById('clear-search-btn');
+            const resetBtn = document.getElementById('reset-search-btn');
+            const noResultsState = document.getElementById('no-results-state');
+            const tabButtons = document.querySelectorAll('.filter-tab-btn');
+            const unitCards = document.querySelectorAll('.unit-card');
+            const sem1Section = document.getElementById('semester-1-section');
+            const sem2Section = document.getElementById('semester-2-section');
+
+            let currentTab = 'all';
+            let searchQuery = '';
+
+            function filterUnits() {
+                let visibleCount = 0;
+                let sem1Visible = 0;
+                let sem2Visible = 0;
+
+                unitCards.forEach(card => {
+                    const unitNum = card.getAttribute('data-unit') || '';
+                    const semester = card.getAttribute('data-semester') || '';
+                    const title = (card.getAttribute('data-title') || '').toLowerCase();
+                    const topics = (card.getAttribute('data-topics') || '').toLowerCase();
+                    const grammar = (card.getAttribute('data-grammar') || '').toLowerCase();
+
+                    // Check Tab Match
+                    const matchesTab = (currentTab === 'all') || 
+                                     (currentTab === 'sem1' && semester === 'sem1') || 
+                                     (currentTab === 'sem2' && semester === 'sem2');
+
+                    // Check Search Query Match
+                    const query = searchQuery.toLowerCase().trim();
+                    const matchesSearch = !query || 
+                                        title.includes(query) || 
+                                        topics.includes(query) || 
+                                        grammar.includes(query) || 
+                                        unitNum === query ||
+                                        `unit ${unitNum}`.includes(query);
+
+                    if (matchesTab && matchesSearch) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                        if (semester === 'sem1') sem1Visible++;
+                        if (semester === 'sem2') sem2Visible++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                // Toggle section headers visibility based on results
+                if (sem1Section) sem1Section.style.display = (sem1Visible > 0 || (currentTab === 'sem1' && visibleCount === 0)) ? 'block' : 'none';
+                if (sem2Section) sem2Section.style.display = (sem2Visible > 0 || (currentTab === 'sem2' && visibleCount === 0)) ? 'block' : 'none';
+
+                // Toggle No Results state
+                if (visibleCount === 0) {
+                    noResultsState.classList.remove('hidden');
+                    if (sem1Section) sem1Section.style.display = 'none';
+                    if (sem2Section) sem2Section.style.display = 'none';
+                } else {
+                    noResultsState.classList.add('hidden');
+                }
+
+                // Show/hide clear button
+                if (searchQuery.trim().length > 0) {
+                    clearBtn.classList.remove('hidden');
+                } else {
+                    clearBtn.classList.add('hidden');
+                }
+            }
+
+            // Search input listener
+            if (searchInput) {
+                searchInput.addEventListener('input', (e) => {
+                    searchQuery = e.target.value;
+                    filterUnits();
+                });
+            }
+
+            // Clear search button
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    searchInput.value = '';
+                    searchQuery = '';
+                    filterUnits();
+                    searchInput.focus();
+                });
+            }
+
+            // Reset search button
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                    searchInput.value = '';
+                    searchQuery = '';
+                    currentTab = 'all';
+                    tabButtons.forEach(btn => {
+                        if (btn.getAttribute('data-filter') === 'all') {
+                            btn.className = 'filter-tab-btn active px-4 py-1.5 rounded-lg text-xs font-bold text-on-primary bg-primary shadow-sm transition-all whitespace-nowrap';
+                        } else {
+                            btn.className = 'filter-tab-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 transition-all whitespace-nowrap';
+                        }
+                    });
+                    filterUnits();
+                });
+            }
+
+            // Tab click listeners
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    currentTab = btn.getAttribute('data-filter') || 'all';
+                    
+                    // Update tab styles
+                    tabButtons.forEach(t => {
+                        t.className = 'filter-tab-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 transition-all whitespace-nowrap';
+                    });
+                    btn.className = 'filter-tab-btn active px-4 py-1.5 rounded-lg text-xs font-bold text-on-primary bg-primary shadow-sm transition-all whitespace-nowrap';
+                    
+                    filterUnits();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

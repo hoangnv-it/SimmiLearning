@@ -77,6 +77,11 @@ const TRANSLATIONS = {
         name: "Present Perfect",
         badge: "Advanced",
         description: "Actions linked in time: from past to present."
+      },
+      "grade-5-exam": {
+        name: "Grade 5 Final Exam",
+        badge: "Comprehensive 45'",
+        description: "Comprehensive English Exam for Grade 5 (Global Success): Pronunciation, Vocabulary, Grammar & Reading."
       }
     },
     
@@ -142,6 +147,11 @@ const TRANSLATIONS = {
         name: "Thì Hiện tại Hoàn thành",
         badge: "Nâng cao",
         description: "Hành động liên kết thời gian: từ quá khứ đến hiện tại."
+      },
+      "grade-5-exam": {
+        name: "Đề Thi Khảo Sát Lớp 5",
+        badge: "Đề Thi 45 Phút",
+        description: "Đề thi tổng hợp Tiếng Anh lớp 5 (Global Success): Phát âm, Từ vựng, Ngữ pháp & Đọc hiểu."
       }
     },
     
@@ -340,6 +350,22 @@ function setupGlobalEventListeners() {
     });
   }
 
+  const navLessons = document.getElementById('nav-lessons');
+  if (navLessons) {
+    navLessons.addEventListener('click', (e) => {
+      e.preventDefault();
+      showScreen('lessons');
+    });
+  }
+
+  const continueUnitBtn = document.getElementById('btn-continue-unit-4');
+  if (continueUnitBtn) {
+    continueUnitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      showUnitDetails(CURRICULUM_UNITS[3]);
+    });
+  }
+
   // Hint Button
   const hintBtn = document.getElementById('hint-btn');
   if (hintBtn) {
@@ -379,7 +405,7 @@ function showScreen(screenId) {
   state.currentScreen = screenId;
 
   // Deactivate all screens
-  const screens = ['selection', 'practice', 'results'];
+  const screens = ['selection', 'lessons', 'unit-details', 'practice', 'results'];
   screens.forEach(id => {
     const el = document.getElementById(`screen-${id}`);
     if (el) {
@@ -399,14 +425,18 @@ function showScreen(screenId) {
 
   // Update Nav Links styling
   const navDashboard = document.getElementById('nav-dashboard');
+  const navLessons = document.getElementById('nav-lessons');
   const navPractice = document.getElementById('nav-practice');
   
-  if (navDashboard && navPractice) {
+  if (navDashboard && navLessons && navPractice) {
+    navDashboard.classList.remove('active');
+    navLessons.classList.remove('active');
+    navPractice.classList.remove('active');
     if (screenId === 'selection') {
       navDashboard.classList.add('active');
-      navPractice.classList.remove('active');
-    } else {
-      navDashboard.classList.remove('active');
+    } else if (screenId === 'lessons') {
+      navLessons.classList.add('active');
+    } else if (screenId === 'practice') {
       navPractice.classList.add('active');
     }
   }
@@ -414,6 +444,8 @@ function showScreen(screenId) {
   // Screen specific hooks
   if (screenId === 'selection') {
     renderTenseSelection();
+  } else if (screenId === 'lessons') {
+    renderLessonsOverview();
   }
 }
 
@@ -455,10 +487,18 @@ function renderTenseSelection() {
       <div class="example-quote-card">
         <p>"${data.example}"</p>
       </div>
-      <button class="btn-primary" onclick="startPractice('${tenseId}')">
-        ${t('startPractice')}
-        <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
-      </button>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+        <button class="btn-primary" onclick="startPractice('${tenseId}')" style="flex: 1;">
+          ${t('startPractice')}
+          <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+        </button>
+        ${tenseId === 'grade-5-exam' ? `
+          <a href="grade5_exam.html" target="_blank" class="btn-secondary" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; border-radius: var(--rounded-md); text-decoration: none; font-weight: 600; border: 1px solid var(--primary); color: var(--primary);">
+            <span class="material-symbols-outlined" style="font-size: 18px;">description</span>
+            Full Exam Paper
+          </a>
+        ` : ''}
+      </div>
     `;
 
     container.appendChild(card);
@@ -494,8 +534,9 @@ window.startPractice = function(tenseId) {
   if (!tenseData) return;
 
   // Initialize practice state
+  const questionCount = tenseId === 'grade-5-exam' ? 30 : 10;
   state.selectedTenseId = tenseId;
-  state.questions = preparePracticeQuestions(tenseData.questions, 10);
+  state.questions = preparePracticeQuestions(tenseData.questions, questionCount);
   state.currentQuestionIndex = 0;
   state.selectedOptionIndex = null;
   state.isAnswerChecked = false;
@@ -645,6 +686,8 @@ function checkAnswer() {
   state.isAnswerChecked = true;
   const currentQ = state.questions[state.currentQuestionIndex];
   const isCorrect = state.selectedOptionIndex === currentQ.answerIndex;
+  currentQ.userAnswerIndex = state.selectedOptionIndex;
+  currentQ.isCorrect = isCorrect;
 
   if (isCorrect) {
     state.score++;
@@ -792,7 +835,162 @@ function renderResultsScreen() {
       `;
     }
   }
+
+  // Render clean, scroll-minimizing examination review section
+  renderExaminationReview();
 }
+
+let currentReviewFilter = 'all';
+let selectedReviewIndex = 0;
+
+function renderExaminationReview() {
+  const section = document.getElementById('results-review-section');
+  if (!section || !state.questions || state.questions.length === 0) return;
+
+  section.style.display = 'block';
+
+  let correctCount = 0;
+  let incorrectCount = 0;
+  state.questions.forEach(q => {
+    if (q.isCorrect) correctCount++;
+    else incorrectCount++;
+  });
+
+  const elAll = document.getElementById('count-all');
+  const elInc = document.getElementById('count-incorrect');
+  const elCor = document.getElementById('count-correct');
+  if (elAll) elAll.textContent = state.questions.length;
+  if (elInc) elInc.textContent = incorrectCount;
+  if (elCor) elCor.textContent = correctCount;
+
+  currentReviewFilter = 'all';
+  updateReviewFilterButtons();
+  renderReviewPills();
+
+  selectedReviewIndex = 0;
+  if (incorrectCount > 0) {
+    const firstInc = state.questions.findIndex(q => q.isCorrect === false);
+    if (firstInc !== -1) selectedReviewIndex = firstInc;
+  }
+  showReviewQuestionDetail(selectedReviewIndex);
+}
+
+window.filterReview = function(filterType) {
+  currentReviewFilter = filterType;
+  updateReviewFilterButtons();
+  renderReviewPills();
+
+  let firstMatch = state.questions.findIndex(q => matchReviewFilter(q));
+  if (firstMatch !== -1) {
+    showReviewQuestionDetail(firstMatch);
+  }
+};
+
+function matchReviewFilter(q) {
+  if (currentReviewFilter === 'incorrect') return q.isCorrect === false;
+  if (currentReviewFilter === 'correct') return q.isCorrect === true;
+  return true;
+}
+
+function updateReviewFilterButtons() {
+  ['all', 'incorrect', 'correct'].forEach(type => {
+    const btn = document.getElementById(`filter-btn-${type}`);
+    if (btn) {
+      if (type === currentReviewFilter) btn.classList.add('active');
+      else btn.classList.remove('active');
+    }
+  });
+}
+
+function renderReviewPills() {
+  const grid = document.getElementById('review-pills-grid');
+  if (!grid) return;
+  grid.innerHTML = '';
+
+  state.questions.forEach((q, idx) => {
+    if (!matchReviewFilter(q)) return;
+
+    const pill = document.createElement('div');
+    pill.className = `review-pill ${q.isCorrect ? 'correct' : 'incorrect'} ${idx === selectedReviewIndex ? 'active' : ''}`;
+    pill.innerHTML = `
+      <span>#${idx + 1}</span>
+      <span class="material-symbols-outlined" style="font-size: 14px; font-weight: bold;">
+        ${q.isCorrect ? 'check' : 'close'}
+      </span>
+    `;
+    pill.onclick = () => showReviewQuestionDetail(idx);
+    grid.appendChild(pill);
+  });
+}
+
+function showReviewQuestionDetail(index) {
+  const card = document.getElementById('review-detail-card');
+  if (!card || !state.questions[index]) return;
+
+  selectedReviewIndex = index;
+  renderReviewPills();
+
+  const q = state.questions[index];
+  const userOpt = q.userAnswerIndex !== undefined && q.userAnswerIndex !== null ? q.options[q.userAnswerIndex] : 'No answer selected';
+  const correctOpt = q.options[q.answerIndex];
+  const isCorrect = q.isCorrect;
+
+  card.innerHTML = `
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-weight: 800; font-size: 16px; color: var(--on-surface);">Question #${index + 1}</span>
+        <span class="review-answer-badge ${isCorrect ? 'correct-badge' : 'incorrect-badge'}">
+          <span class="material-symbols-outlined" style="font-size: 16px;">${isCorrect ? 'check_circle' : 'cancel'}</span>
+          ${isCorrect ? 'Correct' : 'Incorrect'}
+        </span>
+      </div>
+      <div style="display: flex; gap: 6px;">
+        <button class="btn-secondary" onclick="navigateReviewQuestion(-1)" style="padding: 4px 10px; min-height: 32px; font-size: 12px;">
+          <span class="material-symbols-outlined" style="font-size: 16px;">arrow_back</span> Prev
+        </button>
+        <button class="btn-secondary" onclick="navigateReviewQuestion(1)" style="padding: 4px 10px; min-height: 32px; font-size: 12px;">
+          Next <span class="material-symbols-outlined" style="font-size: 16px;">arrow_forward</span>
+        </button>
+      </div>
+    </div>
+
+    <p style="font-size: 16px; font-weight: 600; color: var(--on-surface); margin-bottom: 14px; line-height: 1.5;">
+      ${q.question}
+    </p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-bottom: 12px;">
+      <div style="background: ${isCorrect ? 'rgba(46, 125, 50, 0.08)' : 'rgba(211, 47, 47, 0.08)'}; border: 1px solid ${isCorrect ? 'rgba(46, 125, 50, 0.3)' : 'rgba(211, 47, 47, 0.3)'}; padding: 10px 14px; border-radius: var(--rounded-sm);">
+        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--on-surface-variant); margin-bottom: 4px;">Your Answer</div>
+        <div style="font-weight: 600; color: ${isCorrect ? '#2e7d32' : '#d32f2f'};">${userOpt}</div>
+      </div>
+      ${!isCorrect ? `
+        <div style="background: rgba(46, 125, 50, 0.08); border: 1px solid rgba(46, 125, 50, 0.3); padding: 10px 14px; border-radius: var(--rounded-sm);">
+          <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--on-surface-variant); margin-bottom: 4px;">Correct Answer</div>
+          <div style="font-weight: 600; color: #2e7d32;">${correctOpt}</div>
+        </div>
+      ` : ''}
+    </div>
+
+    ${q.hint ? `
+      <div style="display: flex; gap: 8px; align-items: flex-start; background: var(--surface); border: 1px solid var(--outline-variant); padding: 10px 14px; border-radius: var(--rounded-sm); font-size: 13px; color: var(--on-surface-variant);">
+        <span class="material-symbols-outlined" style="font-size: 18px; color: var(--primary); flex-shrink: 0;">lightbulb</span>
+        <div><strong>Explanation:</strong> ${q.hint}</div>
+      </div>
+    ` : ''}
+  `;
+}
+
+window.navigateReviewQuestion = function(delta) {
+  const total = state.questions.length;
+  let nextIdx = (selectedReviewIndex + delta + total) % total;
+  for (let i = 0; i < total; i++) {
+    if (matchReviewFilter(state.questions[nextIdx])) {
+      showReviewQuestionDetail(nextIdx);
+      return;
+    }
+    nextIdx = (nextIdx + delta + total) % total;
+  }
+};
 
 // Toast alerts helper
 function showToast(message, isSuccess) {
@@ -872,4 +1070,260 @@ function loadHistory() {
       state.history = {};
     }
   }
+}
+
+// Tiếng Anh 8 Global Success Curriculum Data
+const CURRICULUM_UNITS = [
+  { unit: 1, semester: 'sem1', title: "Leisure time", topics: "free-time activities hobbies family friends study balance", grammar: "Verbs of liking + V-ing / to V", status: "Completed", progress: 100, targetTense: "simple-present", desc: "Explore different free-time activities, hobbies, spending quality time with family and friends, and balancing leisure with academic life." },
+  { unit: 2, semester: 'sem1', title: "Life in the countryside", topics: "rural life farming activities comparing city country lifestyles nature", grammar: "Comparative forms of adverbs of manner", status: "Completed", progress: 100, targetTense: "present-continuous", desc: "Learn about rural life, farming activities, traditional folk games, and comparing city and countryside lifestyles." },
+  { unit: 3, semester: 'sem1', title: "Teenagers", topics: "teen pressure school life clubs social media youth navigation", grammar: "Simple sentences and compound sentences", status: "Completed", progress: 100, targetTense: "simple-past", desc: "Discuss teen issues, school pressures, after-school clubs, social media habits, and navigating youth challenges." },
+  { unit: 4, semester: 'sem1', title: "Ethnic groups of Vietnam", topics: "life culture traditions customs ethnic minorities vietnam diversity", grammar: "Yes/No & Wh-questions; Countable and uncountable nouns", status: "In Progress", progress: 40, targetTense: "simple-past", isCurrent: true, desc: "Discover the traditional cultures, customs, costumes, and festivals of 54 ethnic minority groups across Vietnam." },
+  { unit: 5, semester: 'sem1', title: "Our customs and traditions", topics: "family customs traditional festivals table manners etiquette lifestyle", grammar: "Zero conditional; Articles: a, an, the, zero article", status: "Not Started", progress: 0, targetTense: "present-perfect", desc: "Learn about Vietnamese family customs, traditional festivals, table manners, and respecting heritage in modern society." },
+  { unit: 6, semester: 'sem1', title: "Lifestyles", topics: "traditional modern lifestyles healthy living habits global culture", grammar: "Future simple with 'will'; First conditional", status: "Not Started", progress: 0, targetTense: "simple-present", desc: "Compare traditional and modern lifestyles, explore healthy daily routines, and examine how habits differ around the globe." },
+  { unit: 7, semester: 'sem2', title: "Environmental protection", topics: "environmental problems endangered species eco friendly habits conservation recycling", grammar: "Complex sentences with adverbial clauses of time, cause, and concession", status: "Not Started", progress: 0, targetTense: "present-continuous", desc: "Investigate environmental challenges, endangered species protection, conservation efforts, and practicing eco-friendly daily habits." },
+  { unit: 8, semester: 'sem2', title: "Shopping", topics: "types of shops shopping habits online shopping smart consumerism sales", grammar: "Adverbs of frequency; Present simple for future meaning (schedules)", status: "Not Started", progress: 0, targetTense: "simple-present", desc: "Explore types of traditional and modern shops, online shopping trends, smart consumer habits, and navigating sales and promotions." },
+  { unit: 9, semester: 'sem2', title: "Natural disasters", topics: "earthquakes floods storms volcanic eruptions natural disasters safety rescue", grammar: "Past continuous tense; Past simple vs. Past continuous", status: "Not Started", progress: 0, targetTense: "simple-past", desc: "Understand natural phenomena like earthquakes, floods, and storms, and learn essential emergency preparedness and rescue safety." },
+  { unit: 10, semester: 'sem2', title: "Communication in the future", topics: "modern future communication social networks telepathy holography tech", grammar: "Prepositions of place and time; Possessive pronouns", status: "Not Started", progress: 0, targetTense: "present-perfect", desc: "Explore futuristic communication methods, holography, telepathy, virtual reality, and the evolution of digital social networks." },
+  { unit: 11, semester: 'sem2', title: "Science and technology", topics: "technological advances ai smart homes future inventions benefits drawbacks tech", grammar: "Reported speech (statements); Pronouns in reported speech", status: "Not Started", progress: 0, targetTense: "simple-present", desc: "Examine breakthrough technological advances, artificial intelligence, smart homes, and weigh the benefits and drawbacks of automation." },
+  { unit: 12, semester: 'sem2', title: "Life on other planets", topics: "space exploration ufos aliens living on mars exoplanets astronomy", grammar: "May / Might for future possibility; Second conditional", status: "Not Started", progress: 0, targetTense: "simple-past", desc: "Journey into space exploration, investigate exoplanets and UFO phenomena, and speculate on conditions for extraterrestrial life on Mars." }
+];
+
+let currentLessonTab = 'all';
+let currentLessonSearch = '';
+
+function renderLessonsOverview() {
+  const sem1Container = document.getElementById('app-lessons-grid-sem1');
+  const sem2Container = document.getElementById('app-lessons-grid-sem2');
+  if (!sem1Container || !sem2Container) return;
+
+  sem1Container.innerHTML = '';
+  sem2Container.innerHTML = '';
+
+  let visibleCount = 0;
+  let sem1Visible = 0;
+  let sem2Visible = 0;
+
+  CURRICULUM_UNITS.forEach(u => {
+    // Check tab match
+    const matchesTab = (currentLessonTab === 'all') || 
+                     (currentLessonTab === 'sem1' && u.semester === 'sem1') || 
+                     (currentLessonTab === 'sem2' && u.semester === 'sem2');
+
+    // Check search match
+    const query = currentLessonSearch.toLowerCase().trim();
+    const matchesSearch = !query || 
+                        u.title.toLowerCase().includes(query) || 
+                        u.topics.toLowerCase().includes(query) || 
+                        u.grammar.toLowerCase().includes(query) || 
+                        String(u.unit) === query ||
+                        `unit ${u.unit}`.includes(query);
+
+    if (!matchesTab || !matchesSearch) return;
+
+    visibleCount++;
+    if (u.semester === 'sem1') sem1Visible++;
+    if (u.semester === 'sem2') sem2Visible++;
+
+    const card = document.createElement('article');
+    card.className = `glass-card fade-in ${u.isCurrent ? 'current-target' : ''}`;
+    if (u.isCurrent) {
+      card.style.borderColor = 'var(--primary)';
+      card.style.borderWidth = '2px';
+      card.style.boxShadow = 'var(--shadow-level2)';
+    }
+
+    let statusBadge = '';
+    if (u.status === 'Completed') {
+      statusBadge = `<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: #006b71; background: var(--secondary-container); padding: 2px 10px; border-radius: var(--rounded-full);"><span class="material-symbols-outlined" style="font-size: 14px; font-variation-settings: 'FILL' 1;">check_circle</span>Completed</span>`;
+    } else if (u.status === 'In Progress') {
+      statusBadge = `<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: #004f53; background: rgba(114, 245, 255, 0.6); padding: 2px 10px; border-radius: var(--rounded-full);"><span class="material-symbols-outlined" style="font-size: 14px;">pending</span>In Progress</span>`;
+    } else {
+      statusBadge = `<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 600; color: var(--on-surface-variant); background: var(--surface-variant); padding: 2px 10px; border-radius: var(--rounded-full);"><span class="material-symbols-outlined" style="font-size: 14px;">lock_open</span>Not Started</span>`;
+    }
+
+    const currentBadge = u.isCurrent ? `<div style="position: absolute; top: 0; right: 0; background: var(--primary); color: var(--on-primary); font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 4px 12px; border-bottom-left-radius: var(--rounded-md); letter-spacing: 0.5px;">Current Target</div>` : '';
+
+    card.innerHTML = `
+      ${currentBadge}
+      <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+            <span style="padding: 4px 12px; border-radius: var(--rounded-full); background: rgba(0, 105, 111, 0.12); color: var(--primary); font-weight: 700; font-size: 12px; border: 1px solid rgba(0, 105, 111, 0.2);">Unit ${u.unit}</span>
+            ${statusBadge}
+          </div>
+          <h3 style="font-size: 20px; font-weight: 700; color: var(--on-surface); margin-bottom: 8px; font-family: var(--font-display);">${u.title}</h3>
+          <p style="font-size: 14px; color: var(--on-surface-variant); line-height: 1.5; margin-bottom: 20px;">${u.desc}</p>
+        </div>
+        
+        <div>
+          <div style="background: ${u.isCurrent ? 'rgba(114, 245, 255, 0.2)' : 'var(--surface-container-low)'}; border-radius: var(--rounded-md); padding: 14px; border: 1px solid ${u.isCurrent ? 'rgba(0, 105, 111, 0.3)' : 'var(--outline-variant)'}; margin-bottom: 20px;">
+            <div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--primary); margin-bottom: 4px;">
+              <span class="material-symbols-outlined" style="font-size: 16px;">menu_book</span>
+              <span>Grammar Focus</span>
+            </div>
+            <p style="font-size: 13px; font-weight: 600; color: var(--on-surface-variant); margin: 0;">${u.grammar}</p>
+          </div>
+          
+          <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid rgba(132, 148, 149, 0.2);">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <div style="width: 64px; background: var(--surface-variant); height: 6px; border-radius: var(--rounded-full); overflow: hidden;">
+                <div style="background: var(--primary); height: 100%; width: ${u.progress}%; border-radius: var(--rounded-full);"></div>
+              </div>
+              <span style="font-size: 12px; font-weight: 700; color: ${u.progress > 0 ? 'var(--primary)' : 'var(--on-surface-variant)'};">${u.progress}%</span>
+            </div>
+            <button class="btn-unit-action" data-target="${u.targetTense}" style="background: ${u.isCurrent ? 'var(--primary)' : 'transparent'}; color: ${u.isCurrent ? 'var(--on-primary)' : 'var(--primary)'}; border: ${u.isCurrent ? 'none' : 'none'}; padding: 6px 12px; border-radius: var(--rounded-default); font-weight: 700; font-size: 13px; display: inline-flex; align-items: center; gap: 4px; cursor: pointer; transition: all 0.2s;">
+              <span>${u.isCurrent ? 'Continue Unit' : (u.progress === 100 ? 'Review Unit' : 'Start Unit')}</span>
+              <span class="material-symbols-outlined" style="font-size: 16px;">${u.isCurrent ? 'play_arrow' : 'arrow_forward'}</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Bind action button
+    const actionBtn = card.querySelector('.btn-unit-action');
+    if (actionBtn) {
+      actionBtn.addEventListener('click', () => {
+        showUnitDetails(u);
+      });
+    }
+
+    if (u.semester === 'sem1') {
+      sem1Container.appendChild(card);
+    } else {
+      sem2Container.appendChild(card);
+    }
+  });
+
+  // Handle visibility of section headers and no-results
+  const sem1Sec = document.getElementById('app-sem1-container');
+  const sem2Sec = document.getElementById('app-sem2-container');
+  const noResultsSec = document.getElementById('app-lessons-no-results');
+
+  if (sem1Sec) sem1Sec.style.display = (sem1Visible > 0 || (currentLessonTab === 'sem1' && visibleCount === 0)) ? 'block' : 'none';
+  if (sem2Sec) sem2Sec.style.display = (sem2Visible > 0 || (currentLessonTab === 'sem2' && visibleCount === 0)) ? 'block' : 'none';
+  
+  if (noResultsSec) {
+    if (visibleCount === 0) {
+      noResultsSec.style.display = 'block';
+      if (sem1Sec) sem1Sec.style.display = 'none';
+      if (sem2Sec) sem2Sec.style.display = 'none';
+    } else {
+      noResultsSec.style.display = 'none';
+    }
+  }
+
+  // Setup listeners for search and filters if not already attached
+  setupLessonsFiltersOnce();
+}
+
+let lessonsFiltersSetup = false;
+function setupLessonsFiltersOnce() {
+  if (lessonsFiltersSetup) return;
+  lessonsFiltersSetup = true;
+
+  const searchInput = document.getElementById('app-curriculum-search');
+  const clearBtn = document.getElementById('app-clear-search');
+  const resetBtn = document.getElementById('app-reset-search');
+  const tabButtons = document.querySelectorAll('.app-lesson-tab');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      currentLessonSearch = e.target.value;
+      if (clearBtn) clearBtn.style.display = currentLessonSearch.trim() ? 'block' : 'none';
+      renderLessonsOverview();
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      currentLessonSearch = '';
+      clearBtn.style.display = 'none';
+      renderLessonsOverview();
+      if (searchInput) searchInput.focus();
+    });
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      currentLessonSearch = '';
+      if (clearBtn) clearBtn.style.display = 'none';
+      currentLessonTab = 'all';
+      updateLessonTabStyles();
+      renderLessonsOverview();
+    });
+  }
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentLessonTab = btn.getAttribute('data-filter') || 'all';
+      updateLessonTabStyles();
+      renderLessonsOverview();
+    });
+  });
+
+  function updateLessonTabStyles() {
+    tabButtons.forEach(btn => {
+      if (btn.getAttribute('data-filter') === currentLessonTab) {
+        btn.style.background = 'var(--primary)';
+        btn.style.color = 'var(--on-primary)';
+        btn.style.fontWeight = '700';
+      } else {
+        btn.style.background = 'transparent';
+        btn.style.color = 'var(--on-surface-variant)';
+        btn.style.fontWeight = '600';
+      }
+    });
+  }
+}
+
+function showUnitDetails(unitData) {
+  // Populate placeholders
+  const badge = document.getElementById('ud-sidebar-badge');
+  const unitNum = document.getElementById('ud-sidebar-unit-num');
+  const sidebarTitle = document.getElementById('ud-sidebar-title');
+  const mainTitle = document.getElementById('ud-main-title');
+  const mainDesc = document.getElementById('ud-main-desc');
+  const learningPoints = document.getElementById('ud-learning-points');
+  const btnContinue = document.getElementById('ud-btn-continue');
+  
+  if (badge) badge.textContent = `U${unitData.unit}`;
+  if (unitNum) unitNum.textContent = unitData.unit;
+  if (sidebarTitle) sidebarTitle.textContent = unitData.title;
+  
+  // Set main title in Vietnamese/English
+  if (mainTitle) mainTitle.textContent = `Tổng quan bài học: ${unitData.title}`;
+  if (mainDesc) mainDesc.textContent = unitData.desc;
+  
+  // Update learning points dynamically based on topics and grammar
+  if (learningPoints) {
+    learningPoints.innerHTML = `
+      <li style="display: flex; align-items: flex-start; gap: 16px;">
+        <span class="material-symbols-outlined" style="color: var(--primary); font-size: 20px; margin-top: 2px;">radio_button_unchecked</span>
+        <span style="font-size: 15px; color: var(--on-surface); line-height: 1.5;">Từ vựng chủ đề: ${unitData.topics.split(' ').slice(0, 5).join(', ')} và hơn thế nữa.</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; gap: 16px;">
+        <span class="material-symbols-outlined" style="color: var(--primary); font-size: 20px; margin-top: 2px;">radio_button_unchecked</span>
+        <span style="font-size: 15px; color: var(--on-surface); line-height: 1.5;">Ngữ pháp trọng tâm: ${unitData.grammar}</span>
+      </li>
+      <li style="display: flex; align-items: flex-start; gap: 16px;">
+        <span class="material-symbols-outlined" style="color: var(--primary); font-size: 20px; margin-top: 2px;">radio_button_unchecked</span>
+        <span style="font-size: 15px; color: var(--on-surface); line-height: 1.5;">Kỹ năng giao tiếp thực tế và ứng dụng từ vựng vào đời sống.</span>
+      </li>
+    `;
+  }
+  
+  // Bind continue button to start practice
+  if (btnContinue) {
+    // Clone node to clear previous event listeners
+    const newBtn = btnContinue.cloneNode(true);
+    btnContinue.parentNode.replaceChild(newBtn, btnContinue);
+    newBtn.addEventListener('click', () => {
+      startPractice(unitData.targetTense);
+    });
+  }
+  
+  showScreen('unit-details');
 }

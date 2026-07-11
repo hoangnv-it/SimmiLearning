@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Grade 5 Comprehensive 45-Minute English Examination (Tiếng Anh 5 Global Success)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: var(--surface);
+      color: var(--on-surface);
+      padding: 40px 20px;
+      font-family: var(--font-body);
+    }
+    .exam-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--surface-container-lowest);
+      padding: 40px;
+      border-radius: var(--rounded-lg);
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--outline-variant);
+    }
+    .exam-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    .exam-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .school-info h3 {
+      margin: 0;
+      color: var(--primary);
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    .exam-title {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--on-surface);
+      margin: 6px 0;
+    }
+    .student-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+      background: var(--surface-container);
+      padding: 16px;
+      border-radius: var(--rounded-md);
+    }
+    .info-field {
+      font-weight: 600;
+    }
+    .part-section {
+      margin-top: 36px;
+    }
+    .part-title {
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      padding: 10px 16px;
+      border-radius: var(--rounded-md);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .question-item {
+      margin-bottom: 18px;
+      line-height: 1.6;
+    }
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 8px;
+      padding-left: 20px;
+    }
+    .reading-box {
+      background: var(--surface-container-low);
+      border-left: 4px solid var(--primary);
+      padding: 20px;
+      border-radius: var(--rounded-md);
+      margin: 16px 0;
+      line-height: 1.8;
+    }
+    .word-bank {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      background: var(--surface-container-high);
+      padding: 12px 16px;
+      border-radius: var(--rounded-sm);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .word-badge {
+      background: var(--surface);
+      border: 1px solid var(--outline);
+      padding: 4px 12px;
+      border-radius: var(--rounded-full);
+    }
+    .writing-line {
+      display: inline-block;
+      min-width: 280px;
+      border-bottom: 1.5px dotted var(--outline);
+      margin: 0 4px;
+    }
+    .answer-key-section {
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 2px dashed var(--outline);
+    }
+    @media print {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+      .exam-container {
+        box-shadow: none;
+        border: none;
+        padding: 20px;
+      }
+      .no-print {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div style="max-width: 900px; margin: 0 auto 20px; display: flex; justify-content: space-between; align-items: center;" class="no-print">
+    <a href="index.html" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none; padding: 8px 16px; border-radius: var(--rounded-md); border: 1px solid var(--outline); color: var(--on-surface);">
+      <span class="material-symbols-outlined">arrow_back</span>
+      Back to Dashboard
+    </a>
+    <button onclick="window.print()" class="btn-primary" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px;">
+      <span class="material-symbols-outlined">print</span>
+      Print Examination Paper
+    </button>
+  </div>
+
+  <div class="exam-container">
+    <!-- EXAM HEADER -->
+    <header class="exam-header">
+      <div class="exam-title-row">
+        <div class="school-info">
+          <h3>Ministry of Education and Training Standard</h3>
+          <h1 class="exam-title">COMPREHENSIVE END-OF-GRADE 5 ENGLISH EXAMINATION</h1>
+          <p style="color: var(--on-surface-variant); margin: 4px 0;">Curriculum: <strong>Tiếng Anh 5 Global Success</strong> | Time Allowed: <strong>45 Minutes</strong></p>
+        </div>
+        <div style="text-align: right;">
+          <span style="display: inline-block; padding: 6px 14px; background: rgba(0, 105, 111, 0.1); color: var(--primary); font-weight: 700; border-radius: var(--rounded-full); font-size: 14px;">Total Score: 10 Points</span>
+        </div>
+      </div>
+
+      <div class="student-info-grid">
+        <div class="info-field">Full Name: _________________________________</div>
+        <div class="info-field">Class: _______________</div>
+        <div class="info-field">School: _____________________________________</div>
+        <div class="info-field">Score: ________ / 10</div>
+      </div>
+    </header>
+
+    <!-- PART 1: USE OF ENGLISH -->
+    <section class="part-section">
+      <div class="part-title">
+        <span class="material-symbols-outlined">spellcheck</span>
+        PART 1: USE OF ENGLISH (Pronunciation, Vocabulary, Grammar) — 3.5 Points
+      </div>
+
+      <h4>A. Pronunciation (0.75 pt — 0.25 pt/question)</h4>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Choose the letter A, B, C, or D whose underlined part is pronounced differently from the others.</p>
+      
+      <div class="question-item">
+        <strong>1.</strong> Focus on ending sound <strong>-s / -es</strong>:
+        <div class="options-grid">
+          <div>A. book<u>s</u> (/s/)</div>
+          <div>B. lamp<u>s</u> (/s/)</div>
+          <div>C. friend<u>s</u> (/z/)</div>
+          <div>D. hat<u>s</u> (/s/)</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>2.</strong> Focus on ending sound <strong>-ed</strong>:
+        <div class="options-grid">
+          <div>A. visit<u>ed</u> (/ɪd/)</div>
+          <div>B. want<u>ed</u> (/ɪd/)</div>
+          <div>C. need<u>ed</u> (/ɪd/)</div>
+          <div>D. play<u>ed</u> (/d/)</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>3.</strong> Focus on ending sound <strong>-es / -s</strong>:
+        <div class="options-grid">
+          <div>A. watch<u>es</u> (/ɪz/)</div>
+          <div>B. wash<u>es</u> (/ɪz/)</div>
+          <div>C. live<u>s</u> (/z/)</div>
+          <div>D. brush<u>es</u> (/ɪz/)</div>
+        </div>
+      </div>
+
+      <h4 style="margin-top: 24px;">B. Vocabulary (1.25 pt — 0.25 pt/question)</h4>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Choose the best answer A, B, C, or D to complete each sentence or match topic items.</p>
+
+      <div class="question-item">
+        <strong>4. [Topic Vocabulary]</strong> Linh has a bad toothache. She should go to see the ________.
+        <div class="options-grid">
+          <div>A. dentist</div>
+          <div>B. teacher</div>
+          <div>C. farmer</div>
+          <div>D. architect</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>5. [Common Collocations]</strong> On Sundays, my family often goes on a ________ in the park near our house.
+        <div class="options-grid">
+          <div>A. homework</div>
+          <div>B. picnic</div>
+          <div>C. swimming</div>
+          <div>D. breakfast</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>6. [Word Connections]</strong> We usually ________ martial arts at the sports club on Saturday mornings.
+        <div class="options-grid">
+          <div>A. play</div>
+          <div>B. go</div>
+          <div>C. do</div>
+          <div>D. make</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>7. [Application in Context - Word Form]</strong> Ha Long Bay is a very ________ and famous place in Viet Nam.
+        <div class="options-grid">
+          <div>A. beauty (noun)</div>
+          <div>B. beautiful (adjective)</div>
+          <div>C. beautifully (adverb)</div>
+          <div>D. beautify (verb)</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>8. [Matching Topic Vocabulary]</strong> Match the health problem with the correct advice:
+        <div style="margin-top: 8px; padding-left: 20px;">
+          <div>1. a stomach ache &nbsp;&nbsp;➔&nbsp;&nbsp; a. shouldn't eat too much ice cream or sweet food</div>
+          <div>2. a sore throat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➔&nbsp;&nbsp; b. shouldn't drink cold water</div>
+        </div>
+        <div class="options-grid" style="margin-top: 8px;">
+          <div>A. 1-a, 2-b</div>
+          <div>B. 1-b, 2-a</div>
+          <div>C. 1-a, 2-a</div>
+          <div>D. 1-b, 2-b</div>
+        </div>
+      </div>
+
+      <h4 style="margin-top: 24px;">C. Grammar (1.5 pt — 0.25 pt/question)</h4>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Choose the correct grammatical item to complete each sentence.</p>
+
+      <div class="question-item">
+        <strong>9. [Adverb of Frequency]</strong> My mother ________ goes to work on Sundays because her office is closed on weekends.
+        <div class="options-grid">
+          <div>A. always</div>
+          <div>B. never</div>
+          <div>C. usually</div>
+          <div>D. often</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>10. [Preposition of Time]</strong> Vietnamese Children's Day is celebrated ________ June 1st every year.
+        <div class="options-grid">
+          <div>A. in</div>
+          <div>B. at</div>
+          <div>C. on</div>
+          <div>D. between</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>11. [Preposition of Place]</strong> Look! The school library is right ________ the computer room and the canteen.
+        <div class="options-grid">
+          <div>A. between</div>
+          <div>B. next to</div>
+          <div>C. under</div>
+          <div>D. in front</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>12. [Present Continuous vs. Simple Present]</strong> Listen! Mai and Lan ________ English songs in the classroom right now.
+        <div class="options-grid">
+          <div>A. sing</div>
+          <div>B. sings</div>
+          <div>C. are singing</div>
+          <div>D. will sing</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>13. [Future Simple Tense]</strong> Next summer holiday, my parents ________ me to visit Nha Trang Beach.
+        <div class="options-grid">
+          <div>A. will take</div>
+          <div>B. take</div>
+          <div>C. taking</div>
+          <div>D. took</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>14. [Possessive Pronouns]</strong> That blue bicycle belongs to Nam. It is ________.
+        <div class="options-grid">
+          <div>A. him</div>
+          <div>B. his</div>
+          <div>C. he</div>
+          <div>D. himself</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PART 2: READING -->
+    <section class="part-section">
+      <div class="part-title">
+        <span class="material-symbols-outlined">menu_book</span>
+        PART 2: READING — 3.5 Points
+      </div>
+
+      <h4>1. Guided Cloze (1.0 pt — 0.25 pt/blank)</h4>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Read the short paragraph below. Choose words from the Word Bank to fill in blanks (15) to (18). There is ONE extra word you do not need.</p>
+      
+      <div class="word-bank">
+        <span>Word Bank:</span>
+        <span class="word-badge">garden</span>
+        <span class="word-badge">her</span>
+        <span class="word-badge">excited</span>
+        <span class="word-badge">loves</span>
+        <span class="word-badge" style="text-decoration: line-through; opacity: 0.6;">yesterday (distractor)</span>
+      </div>
+
+      <div class="reading-box">
+        Every weekend, Minh and his sister enjoy spending time with their family. On Saturday mornings, Minh usually helps his father water the flowers in the <strong>(15) _________</strong>. After that, they often ride their bikes around the park. This summer holiday, Minh's family will visit Da Nang for four days. They are going to swim in the sea and eat delicious seafood. Minh's sister wants to buy some souvenirs for <strong>(16) _________</strong> best friends at school. Minh is very <strong>(17) _________</strong> because he <strong>(18) _________</strong> swimming and building sandcastles on the beach.
+      </div>
+
+      <div class="question-item">
+        <strong>15.</strong> Blank (15): __________________________ &nbsp;&nbsp;&nbsp;&nbsp; <strong>16.</strong> Blank (16): __________________________
+      </div>
+      <div class="question-item">
+        <strong>17.</strong> Blank (17): __________________________ &nbsp;&nbsp;&nbsp;&nbsp; <strong>18.</strong> Blank (18): __________________________
+      </div>
+
+      <h4 style="margin-top: 28px;">2. Reading Comprehension (2.5 pts total)</h4>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Read the passage below and answer the questions that follow.</p>
+
+      <div class="reading-box">
+        <h3 style="margin-top: 0;">My Memorable Summer Plans</h3>
+        Hello, my name is Phong. I am eleven years old and I have just finished Grade 5 at Nguyen Du Primary School in Ha Noi. I am very happy because summer vacation is finally here! Next week, my family will go to Ha Long Bay for three days. We will travel there by coach early in the morning. On the first day, my parents and I will take a boat trip around the beautiful islands and caves. On the second day, we will go swimming at Bai Chay Beach and eat fresh seafood. My sister, Hoa, wants to take lots of photos because her hobby is photography. I hope we will have a wonderful holiday together!
+      </div>
+
+      <h5 style="margin: 16px 0 8px; font-size: 15px;">Multiple Choice Questions (1.0 pt — 0.25 pt/question)</h5>
+
+      <div class="question-item">
+        <strong>19.</strong> How old is Phong?
+        <div class="options-grid">
+          <div>A. Nine years old</div>
+          <div>B. Ten years old</div>
+          <div>C. Eleven years old</div>
+          <div>D. Twelve years old</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>20.</strong> How will Phong's family travel to Ha Long Bay?
+        <div class="options-grid">
+          <div>A. By train</div>
+          <div>B. By coach</div>
+          <div>C. By plane</div>
+          <div>D. By car</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>21.</strong> What will Phong and his family do on the first day in Ha Long Bay?
+        <div class="options-grid">
+          <div>A. Go shopping in the city centre</div>
+          <div>B. Visit Nguyen Du Primary School</div>
+          <div>C. Take a boat trip around the islands and caves</div>
+          <div>D. Climb a high mountain</div>
+        </div>
+      </div>
+
+      <div class="question-item">
+        <strong>22.</strong> What is Hoa's hobby?
+        <div class="options-grid">
+          <div>A. Swimming</div>
+          <div>B. Eating seafood</div>
+          <div>C. Drawing pictures</div>
+          <div>D. Photography</div>
+        </div>
+      </div>
+
+      <h5 style="margin: 20px 0 8px; font-size: 15px;">Open-Ended Questions (1.5 pts — 0.5 pt/question)</h5>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Write a brief sentence or phrase to answer each question based on the passage.</p>
+
+      <div class="question-item">
+        <strong>23.</strong> How long will Phong's family stay in Ha Long Bay?<br/>
+        Answer: _________________________________________________________________________________
+      </div>
+
+      <div class="question-item">
+        <strong>24.</strong> Where will they go swimming on the second day?<br/>
+        Answer: _________________________________________________________________________________
+      </div>
+
+      <div class="question-item">
+        <strong>25.</strong> Why is Phong very happy?<br/>
+        Answer: _________________________________________________________________________________
+      </div>
+    </section>
+
+    <!-- PART 3: WRITING -->
+    <section class="part-section">
+      <div class="part-title">
+        <span class="material-symbols-outlined">edit_note</span>
+        PART 3: WRITING — 3.0 Points
+      </div>
+
+      <h4>1. Error Identification (0.75 pt — 0.25 pt/sentence)</h4>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Each sentence below has ONE grammatical mistake. Underline or circle the mistake and write the correction on the blank.</p>
+
+      <div class="question-item">
+        <strong>26.</strong> My brother <u>often go</u> to the sports club to play badminton after school.<br/>
+        Correction: _________________________________________
+      </div>
+
+      <div class="question-item">
+        <strong>27.</strong> Where <u>will you visited</u> during your summer holiday next month?<br/>
+        Correction: _________________________________________
+      </div>
+
+      <div class="question-item">
+        <strong>28.</strong> Look at that red school bag on the chair; is it <u>your</u>?<br/>
+        Correction: _________________________________________
+      </div>
+
+      <h4 style="margin-top: 24px;">2. Sentence Reordering (0.5 pt — 0.25 pt/sentence)</h4>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Arrange the scrambled words/phrases into meaningful, grammatically correct sentences.</p>
+
+      <div class="question-item">
+        <strong>29.</strong> usually / in the evening / My father / books / reads / .<br/>
+        ➔ ___________________________________________________________________________________
+      </div>
+
+      <div class="question-item">
+        <strong>30.</strong> will / Where / go / you / weekend / next / ?<br/>
+        ➔ ___________________________________________________________________________________
+      </div>
+
+      <h4 style="margin-top: 24px;">3. Sentence Transformation (0.5 pt — 0.25 pt/sentence)</h4>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Rewrite each sentence using the given starting words so that the meaning stays the same.</p>
+
+      <div class="question-item">
+        <strong>31.</strong> Let's go to Phu Quoc Island for our summer holiday!<br/>
+        ➔ What about ________________________________________________________________________?
+      </div>
+
+      <div class="question-item">
+        <strong>32.</strong> This pink book belongs to my sister.<br/>
+        ➔ This pink book is __________________________________________________________________.
+      </div>
+
+      <h4 style="margin-top: 24px;">4. Sentence Completion (0.5 pt — 0.25 pt/sentence)</h4>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Complete each sentence using the given word/phrase in bold and your own words.</p>
+
+      <div class="question-item">
+        <strong>33. (never)</strong> Quan has a bad toothache, so he _______________________________________________ before bedtime.
+      </div>
+
+      <div class="question-item">
+        <strong>34. (in front of)</strong> There is a big green tree right _______________________________________________ my school gate.
+      </div>
+
+      <h4 style="margin-top: 24px;">5. Paragraph Writing (0.75 pt)</h4>
+      <p style="font-style: italic; color: var(--on-surface-variant);">Choose <strong>ONE</strong> of the two topics below and write a short paragraph of <strong>50–60 words</strong>.</p>
+
+      <div class="reading-box" style="margin-bottom: 16px;">
+        <strong>Topic 1:</strong> Write about your daily routine before going to school.<br/>
+        <em>Hints: What time do you get up? What do you usually eat for breakfast? How do you go to school?</em><br/><br/>
+        <strong>Topic 2:</strong> Write about your dream summer holiday.<br/>
+        <em>Hints: Where will you go? Who will you go with? What activities will you do there?</em>
+      </div>
+
+      <div style="border: 1px solid var(--outline); border-radius: var(--rounded-md); padding: 16px; min-height: 180px; background: var(--surface);">
+        <p style="margin: 0 0 10px; color: var(--on-surface-variant); font-size: 14px;">Write your chosen topic number and paragraph below:</p>
+        <p style="line-height: 2.4;">
+          _____________________________________________________________________________________________________<br/>
+          _____________________________________________________________________________________________________<br/>
+          _____________________________________________________________________________________________________<br/>
+          _____________________________________________________________________________________________________<br/>
+          _____________________________________________________________________________________________________<br/>
+          _____________________________________________________________________________________________________
+        </p>
+      </div>
+    </section>
+
+    <!-- ANSWER KEY & RUBRIC -->
+    <section class="answer-key-section">
+      <div class="part-title" style="background: rgba(0, 105, 111, 0.15); color: var(--primary);">
+        <span class="material-symbols-outlined">fact_check</span>
+        TEACHER'S ANSWER KEY & GRADING RUBRIC
+      </div>
+
+      <h4>Part 1: Use of English (3.5 Points Total)</h4>
+      <p><strong>A. Pronunciation (0.75 pt):</strong> 1. C (friends /z/) &nbsp;|&nbsp; 2. D (played /d/) &nbsp;|&nbsp; 3. C (lives /z/)</p>
+      <p><strong>B. Vocabulary (1.25 pt):</strong> 4. A (dentist) &nbsp;|&nbsp; 5. B (picnic) &nbsp;|&nbsp; 6. C (do) &nbsp;|&nbsp; 7. B (beautiful) &nbsp;|&nbsp; 8. A (1-a, 2-b)</p>
+      <p><strong>C. Grammar (1.5 pt):</strong> 9. B (never) &nbsp;|&nbsp; 10. C (on) &nbsp;|&nbsp; 11. A (between) &nbsp;|&nbsp; 12. C (are singing) &nbsp;|&nbsp; 13. A (will take) &nbsp;|&nbsp; 14. B (his)</p>
+
+      <h4>Part 2: Reading (3.5 Points Total)</h4>
+      <p><strong>1. Guided Cloze (1.0 pt):</strong> (15) garden &nbsp;|&nbsp; (16) her &nbsp;|&nbsp; (17) excited &nbsp;|&nbsp; (18) loves</p>
+      <p><strong>2. Reading Comprehension — Multiple Choice (1.0 pt):</strong> 19. C &nbsp;|&nbsp; 20. B &nbsp;|&nbsp; 21. C &nbsp;|&nbsp; 22. D</p>
+      <p><strong>Reading Comprehension — Open-Ended (1.5 pts):</strong></p>
+      <ul>
+        <li><strong>23.</strong> They will stay there for three days. (or: For three days.)</li>
+        <li><strong>24.</strong> They will go swimming at Bai Chay Beach. (or: At Bai Chay Beach.)</li>
+        <li><strong>25.</strong> Because summer vacation is finally here / Because he has just finished Grade 5 and summer vacation has started.</li>
+      </ul>
+
+      <h4>Part 3: Writing (3.0 Points Total)</h4>
+      <p><strong>1. Error Identification (0.75 pt):</strong></p>
+      <ul>
+        <li><strong>26.</strong> Mistake: <u>go</u> ➔ Correction: <strong>goes</strong></li>
+        <li><strong>27.</strong> Mistake: <u>visited</u> ➔ Correction: <strong>visit</strong></li>
+        <li><strong>28.</strong> Mistake: <u>your</u> ➔ Correction: <strong>yours</strong></li>
+      </ul>
+
+      <p><strong>2. Sentence Reordering (0.5 pt):</strong></p>
+      <ul>
+        <li><strong>29.</strong> My father usually reads books in the evening.</li>
+        <li><strong>30.</strong> Where will you go next weekend?</li>
+      </ul>
+
+      <p><strong>3. Sentence Transformation (0.5 pt):</strong></p>
+      <ul>
+        <li><strong>31.</strong> What about going to Phu Quoc Island for our summer holiday?</li>
+        <li><strong>32.</strong> This pink book is hers. (or: This pink book is my sister's.)</li>
+      </ul>
+
+      <p><strong>4. Sentence Completion (0.5 pt — Accept reasonable grammatical completions):</strong></p>
+      <ul>
+        <li><strong>33. Example:</strong> Quan has a bad toothache, so he <strong>never eats</strong> candy before bedtime.</li>
+        <li><strong>34. Example:</strong> There is a big green tree right <strong>in front of</strong> my school gate.</li>
+      </ul>
+
+      <p><strong>5. Paragraph Writing Grading Rubric (0.75 pt total for 50–60 words):</strong></p>
+      <table style="width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 14px;">
+        <thead>
+          <tr style="background: var(--surface-container-high); text-align: left;">
+            <th style="padding: 10px; border: 1px solid var(--outline);">Criterion</th>
+            <th style="padding: 10px; border: 1px solid var(--outline);">Points</th>
+            <th style="padding: 10px; border: 1px solid var(--outline);">Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 10px; border: 1px solid var(--outline);"><strong>Task Completion & Length</strong></td>
+            <td style="padding: 10px; border: 1px solid var(--outline);">0.25 pt</td>
+            <td style="padding: 10px; border: 1px solid var(--outline);">Addresses the chosen topic clearly within the 50–60 word range with coherent ideas.</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid var(--outline);"><strong>Vocabulary (Grade 5 Scope)</strong></td>
+            <td style="padding: 10px; border: 1px solid var(--outline);">0.25 pt</td>
+            <td style="padding: 10px; border: 1px solid var(--outline);">Uses age-appropriate, topic-related vocabulary covered in Tiếng Anh 5 Global Success accurately.</td>
+          </tr>
+          <tr>
+            <td style="padding: 10px; border: 1px solid var(--outline);"><strong>Grammar & Spelling</strong></td>
+            <td style="padding: 10px; border: 1px solid var(--outline);">0.25 pt</td>
+            <td style="padding: 10px; border: 1px solid var(--outline);">Uses simple present / future simple / adverbs correctly with minimal spelling or punctuation errors.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+</body>
+</html>
