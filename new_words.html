@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>SimmiLearning - Daily New Vocabulary Words</title>
-  <meta name="description" content="Explore daily curated English vocabulary words grouped by date. Listen to pronunciation, review definitions, and expand your vocabulary."/>
-  
+  <meta name="description"
+    content="Explore daily curated English vocabulary words grouped by date. Listen to pronunciation, review definitions, and expand your vocabulary." />
+
   <!-- Material Symbols and Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <link href="style.css" rel="stylesheet"/>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+
   <style>
     /* Specific styles for New Words page */
     .words-hero {
@@ -22,6 +25,7 @@
       overflow: hidden;
       box-shadow: var(--shadow-level2);
     }
+
     .words-hero::after {
       content: "";
       position: absolute;
@@ -34,6 +38,7 @@
       filter: blur(36px);
       pointer-events: none;
     }
+
     .search-filter-bar {
       display: flex;
       gap: 16px;
@@ -42,6 +47,7 @@
       position: relative;
       z-index: 2;
     }
+
     .search-input-wrapper {
       flex: 1;
       min-width: 280px;
@@ -49,12 +55,14 @@
       display: flex;
       align-items: center;
     }
+
     .search-input-wrapper .material-symbols-outlined {
       position: absolute;
       left: 16px;
       color: var(--on-surface-variant);
       pointer-events: none;
     }
+
     .search-input {
       width: 100%;
       height: 48px;
@@ -68,19 +76,23 @@
       box-shadow: var(--shadow-sm);
       transition: all 0.2s ease;
     }
+
     .search-input:focus {
       outline: none;
       border-color: var(--inverse-primary);
       box-shadow: 0 0 0 3px rgba(80, 217, 226, 0.3);
     }
+
     .filter-btn-group {
       display: flex;
       gap: 8px;
     }
+
     .date-group-section {
       margin-bottom: 40px;
       animation: fadeIn 0.4s ease;
     }
+
     .date-group-header {
       display: flex;
       align-items: center;
@@ -90,6 +102,7 @@
       border-bottom: 2px solid var(--primary);
       margin-bottom: 20px;
     }
+
     .date-badge {
       display: inline-flex;
       align-items: center;
@@ -101,17 +114,20 @@
       font-weight: 700;
       font-size: 14px;
     }
+
     .date-theme-title {
       font-family: var(--font-display);
       font-size: 18px;
       font-weight: 700;
       color: var(--on-surface);
     }
+
     .words-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: var(--spacing-md);
     }
+
     .word-card {
       background: var(--surface-container-lowest);
       border: 1px solid var(--outline-variant);
@@ -125,23 +141,27 @@
       position: relative;
       overflow: hidden;
     }
+
     .word-card:hover {
       transform: translateY(-4px);
       box-shadow: var(--shadow-md);
       border-color: var(--primary);
     }
+
     .word-header {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       margin-bottom: 12px;
     }
+
     .word-title-area {
       display: flex;
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
     }
+
     .word-title {
       font-family: var(--font-display);
       font-size: 22px;
@@ -149,6 +169,7 @@
       color: var(--primary);
       margin: 0;
     }
+
     .word-type {
       background: var(--surface-variant);
       color: var(--on-surface-variant);
@@ -158,6 +179,7 @@
       border-radius: var(--rounded-sm);
       text-transform: lowercase;
     }
+
     .word-level {
       background: rgba(0, 105, 111, 0.1);
       color: var(--primary);
@@ -167,6 +189,7 @@
       padding: 2px 8px;
       border-radius: var(--rounded-full);
     }
+
     .audio-btn {
       width: 36px;
       height: 36px;
@@ -181,11 +204,13 @@
       transition: all 0.2s ease;
       flex-shrink: 0;
     }
+
     .audio-btn:hover {
       background: var(--primary);
       color: var(--on-primary);
       transform: scale(1.08);
     }
+
     .phonetic-text {
       font-family: var(--font-body);
       font-size: 14px;
@@ -193,9 +218,11 @@
       margin-bottom: 12px;
       font-style: italic;
     }
+
     .meaning-block {
       margin-bottom: 14px;
     }
+
     .meaning-label {
       font-size: 11px;
       font-weight: 700;
@@ -205,12 +232,14 @@
       margin-bottom: 4px;
       display: block;
     }
+
     .meaning-text {
       font-size: 15px;
       line-height: 1.5;
       color: var(--on-surface);
       margin: 0;
     }
+
     .example-box {
       background: var(--surface-container-low);
       border-left: 3px solid var(--primary);
@@ -218,6 +247,7 @@
       border-radius: 0 var(--rounded-sm) var(--rounded-sm) 0;
       margin-bottom: 14px;
     }
+
     .example-box p {
       font-size: 14px;
       line-height: 1.5;
@@ -225,6 +255,7 @@
       font-style: italic;
       margin: 0;
     }
+
     .vietnamese-pill {
       display: inline-flex;
       align-items: center;
@@ -238,10 +269,12 @@
       border: 1px solid rgba(0, 105, 111, 0.15);
       margin-top: auto;
     }
+
     .loading-container {
       text-align: center;
       padding: 80px 20px;
     }
+
     .spinner {
       width: 48px;
       height: 48px;
@@ -251,13 +284,25 @@
       animation: spin 1s infinite linear;
       margin: 0 auto 16px;
     }
+
     @keyframes spin {
-      to { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     .empty-state {
       text-align: center;
       padding: 60px 20px;
@@ -265,6 +310,7 @@
       border-radius: var(--rounded-lg);
       margin: 20px 0;
     }
+
     .view-toggle-group {
       display: inline-flex;
       background: var(--surface-container-low);
@@ -273,6 +319,7 @@
       padding: 3px;
       gap: 4px;
     }
+
     .view-toggle-btn {
       display: inline-flex;
       align-items: center;
@@ -288,10 +335,12 @@
       transition: all 0.2s ease;
       font-family: var(--font-body);
     }
+
     .view-toggle-btn:hover {
       color: var(--on-surface);
       background: rgba(0, 105, 111, 0.06);
     }
+
     .view-toggle-btn.active {
       background: var(--surface-container-lowest);
       color: var(--primary);
@@ -299,11 +348,13 @@
       font-weight: 700;
       border: 1px solid rgba(0, 105, 111, 0.15);
     }
+
     .words-list {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
+
     .word-list-item {
       background: var(--surface-container-lowest);
       border: 1px solid var(--outline-variant);
@@ -316,17 +367,20 @@
       box-shadow: var(--shadow-sm);
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
+
     .word-list-item:hover {
       transform: translateX(4px);
       box-shadow: var(--shadow-md);
       border-color: var(--primary);
     }
+
     .word-list-left {
       display: flex;
       align-items: center;
       gap: 14px;
       flex-wrap: wrap;
     }
+
     .word-list-title {
       font-family: var(--font-display);
       font-size: 18px;
@@ -334,30 +388,36 @@
       color: var(--primary);
       margin: 0;
     }
+
     .word-list-right {
       display: flex;
       align-items: center;
       gap: 14px;
       flex-shrink: 0;
     }
+
     .word-card.missed-card {
       border: 2px solid #f57c00 !important;
       background: #fff8e1 !important;
       box-shadow: 0 4px 12px rgba(245, 124, 0, 0.15) !important;
     }
+
     body[data-theme="dark"] .word-card.missed-card {
       background: rgba(245, 124, 0, 0.15) !important;
       border-color: #ffb74d !important;
     }
+
     .word-list-item.missed-item {
       border: 2px solid #f57c00 !important;
       background: #fff8e1 !important;
       box-shadow: 0 4px 12px rgba(245, 124, 0, 0.12) !important;
     }
+
     body[data-theme="dark"] .word-list-item.missed-item {
       background: rgba(245, 124, 0, 0.15) !important;
       border-color: #ffb74d !important;
     }
+
     .missed-badge {
       display: inline-flex;
       align-items: center;
@@ -371,6 +431,7 @@
       border: 1px solid #ffb300;
       margin-left: 6px;
     }
+
     body[data-theme="dark"] .missed-badge {
       background: rgba(230, 81, 0, 0.4);
       color: #ffe082;
@@ -378,6 +439,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Top Navigation Bar -->
@@ -387,25 +449,28 @@
         <span class="material-symbols-outlined filled">language</span>
         SimmiLearning
       </a>
-      
+
       <!-- Desktop Navigation links -->
       <nav class="nav-links" aria-label="Main Navigation">
         <a href="index.html" class="nav-link">Dashboard</a>
-        <a href="index.html#lessons" class="nav-link" onclick="localStorage.setItem('simmi-nav', 'lessons');">Lessons</a>
+        <a href="index.html#lessons" class="nav-link"
+          onclick="localStorage.setItem('simmi-nav', 'lessons');">Lessons</a>
         <a href="index.html" class="nav-link">Practice</a>
         <a href="new_words.html" class="nav-link active" style="font-weight: 700; color: var(--primary);">New Words</a>
       </nav>
-      
+
       <!-- Action buttons -->
       <div class="header-actions">
         <!-- Back to Dashboard Button -->
-        <a href="index.html" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: var(--rounded-full); text-decoration: none; font-size: 13px; font-weight: 600; border: 1px solid var(--outline-variant); color: var(--on-surface);">
+        <a href="index.html" class="btn-secondary"
+          style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: var(--rounded-full); text-decoration: none; font-size: 13px; font-weight: 600; border: 1px solid var(--outline-variant); color: var(--on-surface);">
           <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
           <span>Dashboard</span>
         </a>
 
         <!-- Language Toggle Button -->
-        <button id="lang-toggle-btn" class="icon-btn" aria-label="Switch language" style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: var(--rounded-full); border: 1px solid rgba(132, 148, 149, 0.2); height: 40px; margin-right: 4px; color: var(--on-surface-variant);">
+        <button id="lang-toggle-btn" class="icon-btn" aria-label="Switch language"
+          style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: var(--rounded-full); border: 1px solid rgba(132, 148, 149, 0.2); height: 40px; margin-right: 4px; color: var(--on-surface-variant);">
           <span class="material-symbols-outlined" style="font-size: 20px;">translate</span>
           <span id="lang-label" style="font-family: var(--font-display); font-size: 13px; font-weight: 700;">EN</span>
         </button>
@@ -422,23 +487,28 @@
     <!-- Hero Section -->
     <section class="words-hero fade-in">
       <div style="position: relative; z-index: 2;">
-        <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.15); padding: 4px 14px; border-radius: var(--rounded-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
+        <div
+          style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.15); padding: 4px 14px; border-radius: var(--rounded-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
           <span class="material-symbols-outlined" style="font-size: 16px;">auto_stories</span>
           <span id="hero-badge-text">Daily Vocabulary Archive</span>
         </div>
-        <h1 id="hero-title-text" class="text-display" style="color: #ffffff; font-size: 36px; margin-bottom: 8px;">New Vocabulary Words</h1>
+        <h1 id="hero-title-text" class="text-display" style="color: #ffffff; font-size: 36px; margin-bottom: 8px;">New
+          Vocabulary Words</h1>
         <p id="hero-sub-text" style="font-size: 16px; opacity: 0.9; max-width: 680px; line-height: 1.5; margin: 0;">
-          Explore daily curated English vocabulary items, phonetic transcripts, and practical examples grouped by date. Listen to audio pronunciations to master your speaking fluency.
+          Explore daily curated English vocabulary items, phonetic transcripts, and practical examples grouped by date.
+          Listen to audio pronunciations to master your speaking fluency.
         </p>
 
         <!-- Search and Filter Bar -->
         <div class="search-filter-bar">
           <div class="search-input-wrapper">
             <span class="material-symbols-outlined">search</span>
-            <input type="text" id="search-input" class="search-input" placeholder="Search words, meanings, or topics..."/>
+            <input type="text" id="search-input" class="search-input"
+              placeholder="Search words, meanings, or topics..." />
           </div>
           <div class="filter-btn-group">
-            <button id="toggle-all-btn" class="btn-secondary" style="background: var(--surface-container-lowest); color: var(--on-surface); border: 1px solid var(--outline-variant); border-radius: var(--rounded-full); padding: 0 18px; height: 48px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
+            <button id="toggle-all-btn" class="btn-secondary"
+              style="background: var(--surface-container-lowest); color: var(--on-surface); border: 1px solid var(--outline-variant); border-radius: var(--rounded-full); padding: 0 18px; height: 48px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
               <span class="material-symbols-outlined" style="font-size: 20px;">unfold_less</span>
               <span id="toggle-all-label">Collapse All</span>
             </button>
@@ -451,7 +521,8 @@
     <div id="words-container">
       <div class="loading-container">
         <div class="spinner"></div>
-        <p style="color: var(--on-surface-variant); font-weight: 600;">Loading vocabulary data from new_words.json...</p>
+        <p style="color: var(--on-surface-variant); font-weight: 600;">Loading vocabulary data from new_words.json...
+        </p>
       </div>
     </div>
   </main>
@@ -724,7 +795,7 @@
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'en-US';
-      utterance.rate = 0.9; // Slightly slower for clear pronunciation
+      utterance.rate = 0.5; // Slow speed for easy listening and learning pronunciation
       window.speechSynthesis.speak(utterance);
     }
 
@@ -800,4 +871,5 @@
     }
   </script>
 </body>
+
 </html>

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>SimmiLearning - Daily Vocabulary Test</title>
-  <meta name="description" content="Test your vocabulary knowledge with interactive single-choice and free-text matching questions."/>
-  
+  <meta name="description"
+    content="Test your vocabulary knowledge with interactive single-choice and free-text matching questions." />
+
   <!-- Material Symbols and Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-  <link href="style.css" rel="stylesheet"/>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+
   <style>
     .test-hero {
       background: linear-gradient(135deg, var(--primary) 0%, #004246 100%);
@@ -21,6 +24,7 @@
       overflow: hidden;
       box-shadow: var(--shadow-level2);
     }
+
     .test-hero::after {
       content: "";
       position: absolute;
@@ -33,6 +37,7 @@
       filter: blur(36px);
       pointer-events: none;
     }
+
     .test-progress-container {
       background: var(--surface-container-lowest);
       border: 1px solid var(--outline-variant);
@@ -44,6 +49,7 @@
       flex-direction: column;
       gap: 12px;
     }
+
     .progress-bar-wrapper {
       width: 100%;
       height: 10px;
@@ -51,12 +57,14 @@
       border-radius: var(--rounded-full);
       overflow: hidden;
     }
+
     .progress-bar-fill {
       height: 100%;
       background: var(--primary);
       border-radius: var(--rounded-full);
       transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     .test-card {
       background: var(--surface-container-lowest);
       border: 1px solid var(--outline-variant);
@@ -66,6 +74,7 @@
       margin-bottom: 32px;
       position: relative;
     }
+
     .question-badge {
       display: inline-flex;
       align-items: center;
@@ -80,6 +89,7 @@
       letter-spacing: 0.5px;
       margin-bottom: 16px;
     }
+
     .question-prompt {
       font-family: var(--font-display);
       font-size: 24px;
@@ -88,6 +98,7 @@
       line-height: 1.4;
       margin: 0 0 24px 0;
     }
+
     .word-type-pill {
       background: var(--surface-variant);
       color: var(--on-surface-variant);
@@ -97,12 +108,14 @@
       border-radius: var(--rounded-sm);
       margin-left: 8px;
     }
+
     .options-list {
       display: grid;
       grid-template-columns: 1fr;
       gap: 12px;
       margin-bottom: 28px;
     }
+
     .option-btn {
       width: 100%;
       text-align: left;
@@ -120,26 +133,31 @@
       justify-content: space-between;
       transition: all 0.2s ease;
     }
+
     .option-btn:hover:not(:disabled) {
       border-color: var(--primary);
       background: rgba(0, 105, 111, 0.04);
       transform: translateY(-2px);
     }
+
     .option-btn.selected {
       border-color: var(--primary);
       background: rgba(0, 105, 111, 0.08);
       color: var(--primary);
     }
+
     .option-btn.correct {
       border-color: #2e7d32;
       background: #e8f5e9;
       color: #1b5e20;
     }
+
     .option-btn.wrong {
       border-color: #c62828;
       background: #ffebee;
       color: #b71c1c;
     }
+
     .option-circle {
       width: 24px;
       height: 24px;
@@ -151,24 +169,29 @@
       flex-shrink: 0;
       transition: all 0.2s ease;
     }
+
     .option-btn.selected .option-circle {
       border-color: var(--primary);
       background: var(--primary);
       color: var(--on-primary);
     }
+
     .option-btn.correct .option-circle {
       border-color: #2e7d32;
       background: #2e7d32;
       color: #ffffff;
     }
+
     .option-btn.wrong .option-circle {
       border-color: #c62828;
       background: #c62828;
       color: #ffffff;
     }
+
     .free-text-input-wrapper {
       margin-bottom: 28px;
     }
+
     .test-input {
       width: 100%;
       height: 58px;
@@ -183,21 +206,25 @@
       box-shadow: var(--shadow-sm);
       transition: all 0.2s ease;
     }
+
     .test-input:focus {
       outline: none;
       border-color: var(--primary);
       box-shadow: 0 0 0 4px rgba(0, 105, 111, 0.15);
     }
+
     .test-input.correct {
       border-color: #2e7d32;
       background: #f1f8e9;
       color: #1b5e20;
     }
+
     .test-input.wrong {
       border-color: #c62828;
       background: #ffebee;
       color: #b71c1c;
     }
+
     .hint-panel {
       background: var(--surface-container-low);
       border-left: 4px solid #fbc02d;
@@ -207,9 +234,11 @@
       display: none;
       animation: fadeIn 0.3s ease;
     }
+
     .hint-panel.visible {
       display: block;
     }
+
     .feedback-banner {
       padding: 18px 24px;
       border-radius: var(--rounded-lg);
@@ -221,18 +250,21 @@
       line-height: 1.5;
       animation: fadeIn 0.3s ease;
     }
+
     .feedback-banner.correct {
       display: flex;
       background: #e8f5e9;
       border: 1px solid #a5d6a7;
       color: #1b5e20;
     }
+
     .feedback-banner.wrong {
       display: flex;
       background: #ffebee;
       border: 1px solid #ef9a9a;
       color: #b71c1c;
     }
+
     .test-actions {
       display: flex;
       justify-content: space-between;
@@ -242,6 +274,7 @@
       border-top: 1px solid var(--outline-variant);
       padding-top: 24px;
     }
+
     .results-card {
       background: var(--surface-container-lowest);
       border: 1px solid var(--outline-variant);
@@ -251,6 +284,7 @@
       text-align: center;
       margin-bottom: 32px;
     }
+
     .score-circle {
       width: 140px;
       height: 140px;
@@ -265,24 +299,28 @@
       border: 6px solid var(--primary);
       box-shadow: var(--shadow-md);
     }
+
     .score-percentage {
       font-family: var(--font-display);
       font-size: 32px;
       font-weight: 800;
       line-height: 1;
     }
+
     .score-text {
       font-size: 14px;
       font-weight: 700;
       opacity: 0.8;
       margin-top: 4px;
     }
+
     .breakdown-list {
       list-style: none;
       padding: 0;
       margin: 32px 0;
       text-align: left;
     }
+
     .breakdown-item {
       padding: 16px 20px;
       border-bottom: 1px solid var(--outline-variant);
@@ -291,9 +329,11 @@
       justify-content: space-between;
       gap: 16px;
     }
+
     .breakdown-item:last-child {
       border-bottom: none;
     }
+
     .audio-btn {
       width: 36px;
       height: 36px;
@@ -308,17 +348,27 @@
       transition: all 0.2s ease;
       flex-shrink: 0;
     }
+
     .audio-btn:hover {
       background: var(--primary);
       color: var(--on-primary);
       transform: scale(1.08);
     }
+
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Top Navigation Bar -->
@@ -328,25 +378,28 @@
         <span class="material-symbols-outlined filled">language</span>
         SimmiLearning
       </a>
-      
+
       <!-- Desktop Navigation links -->
       <nav class="nav-links" aria-label="Main Navigation">
         <a href="index.html" class="nav-link">Dashboard</a>
-        <a href="index.html#lessons" class="nav-link" onclick="localStorage.setItem('simmi-nav', 'lessons');">Lessons</a>
+        <a href="index.html#lessons" class="nav-link"
+          onclick="localStorage.setItem('simmi-nav', 'lessons');">Lessons</a>
         <a href="index.html" class="nav-link">Practice</a>
         <a href="new_words.html" class="nav-link active" style="font-weight: 700; color: var(--primary);">New Words</a>
       </nav>
-      
+
       <!-- Action buttons -->
       <div class="header-actions">
         <!-- Back to Vocabulary List Button -->
-        <a href="new_words.html" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: var(--rounded-full); text-decoration: none; font-size: 13px; font-weight: 600; border: 1px solid var(--outline-variant); color: var(--on-surface);">
+        <a href="new_words.html" class="btn-secondary"
+          style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: var(--rounded-full); text-decoration: none; font-size: 13px; font-weight: 600; border: 1px solid var(--outline-variant); color: var(--on-surface);">
           <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
           <span>Exit Test</span>
         </a>
 
         <!-- Language Toggle Button -->
-        <button id="lang-toggle-btn" class="icon-btn" aria-label="Switch language" style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: var(--rounded-full); border: 1px solid rgba(132, 148, 149, 0.2); height: 40px; margin-right: 4px; color: var(--on-surface-variant);">
+        <button id="lang-toggle-btn" class="icon-btn" aria-label="Switch language"
+          style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: var(--rounded-full); border: 1px solid rgba(132, 148, 149, 0.2); height: 40px; margin-right: 4px; color: var(--on-surface-variant);">
           <span class="material-symbols-outlined" style="font-size: 20px;">translate</span>
           <span id="lang-label" style="font-family: var(--font-display); font-size: 13px; font-weight: 700;">EN</span>
         </button>
@@ -363,12 +416,15 @@
     <!-- Hero Section -->
     <section id="test-header-section" class="test-hero fade-in">
       <div style="position: relative; z-index: 2;">
-        <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.15); padding: 4px 14px; border-radius: var(--rounded-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
+        <div
+          style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.15); padding: 4px 14px; border-radius: var(--rounded-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
           <span class="material-symbols-outlined" style="font-size: 16px;">quiz</span>
           <span id="hero-date-badge">Vocabulary Mastery Test</span>
         </div>
-        <h1 id="test-title" class="text-display" style="color: #ffffff; font-size: 32px; margin-bottom: 6px;">Loading Test...</h1>
-        <p id="test-subtitle" style="font-size: 15.5px; opacity: 0.9; margin: 0;">Complete all single-choice and exact free-text matching questions for this date.</p>
+        <h1 id="test-title" class="text-display" style="color: #ffffff; font-size: 32px; margin-bottom: 6px;">Loading
+          Test...</h1>
+        <p id="test-subtitle" style="font-size: 15.5px; opacity: 0.9; margin: 0;">Complete all single-choice and exact
+          free-text matching questions for this date.</p>
       </div>
     </section>
 
@@ -393,7 +449,9 @@
         <div id="hint-panel" class="hint-panel">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
             <div>
-              <strong style="color: #f57f17; display: block; font-size: 12px; text-transform: uppercase; margin-bottom: 4px;">Hint / Pronunciation</strong>
+              <strong
+                style="color: #f57f17; display: block; font-size: 12px; text-transform: uppercase; margin-bottom: 4px;">Hint
+                / Pronunciation</strong>
               <span id="hint-text" style="font-style: italic; color: var(--on-surface);"></span>
             </div>
             <button id="hint-audio-btn" class="audio-btn" title="Listen to pronunciation">
@@ -407,9 +465,11 @@
 
         <!-- Free Text Input Container -->
         <div id="free-text-container" class="free-text-input-wrapper" style="display: none;">
-          <input type="text" id="free-text-input" class="test-input" placeholder="Type exact English word or phrase here..." autocomplete="off"/>
+          <input type="text" id="free-text-input" class="test-input"
+            placeholder="Type exact English word or phrase here..." autocomplete="off" />
           <p style="font-size: 13px; color: var(--on-surface-variant); margin: 8px 0 0 4px;">
-            <span class="material-symbols-outlined" style="font-size: 16px; vertical-align: -3px; color: var(--primary);">info</span>
+            <span class="material-symbols-outlined"
+              style="font-size: 16px; vertical-align: -3px; color: var(--primary);">info</span>
             Must match exactly word by word compared to data from new_words.json.
           </p>
         </div>
@@ -428,12 +488,14 @@
 
         <!-- Action Bar inside card -->
         <div class="test-actions">
-          <button id="toggle-hint-btn" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--rounded-full); font-weight: 600; cursor: pointer;">
+          <button id="toggle-hint-btn" class="btn-secondary"
+            style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--rounded-full); font-weight: 600; cursor: pointer;">
             <span class="material-symbols-outlined" style="font-size: 18px; color: #fbc02d;">lightbulb</span>
             <span id="hint-btn-label">Show Hint</span>
           </button>
 
-          <button id="check-next-btn" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; border-radius: var(--rounded-full); font-size: 16px; font-weight: 700; cursor: pointer; min-width: 180px; justify-content: center;">
+          <button id="check-next-btn" class="btn-primary"
+            style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; border-radius: var(--rounded-full); font-size: 16px; font-weight: 700; cursor: pointer; min-width: 180px; justify-content: center;">
             <span id="check-btn-text">Check Answer</span>
             <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
           </button>
@@ -448,21 +510,29 @@
           <span id="final-percentage" class="score-percentage">100%</span>
           <span id="final-score-text" class="score-text">31 / 31</span>
         </div>
-        <h2 id="results-title" style="font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--on-surface); margin: 0 0 8px 0;">Excellent Work!</h2>
-        <p id="results-subtitle" style="color: var(--on-surface-variant); font-size: 16px; max-width: 500px; margin: 0 auto 28px;">You have completed the vocabulary test for this date.</p>
+        <h2 id="results-title"
+          style="font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--on-surface); margin: 0 0 8px 0;">
+          Excellent Work!</h2>
+        <p id="results-subtitle"
+          style="color: var(--on-surface-variant); font-size: 16px; max-width: 500px; margin: 0 auto 28px;">You have
+          completed the vocabulary test for this date.</p>
 
         <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-          <button onclick="restartTest()" class="btn-primary" style="padding: 14px 32px; border-radius: var(--rounded-full); font-size: 16px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
+          <button onclick="restartTest()" class="btn-primary"
+            style="padding: 14px 32px; border-radius: var(--rounded-full); font-size: 16px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
             <span class="material-symbols-outlined">refresh</span>
             <span>Retake Test</span>
           </button>
-          <a href="new_words.html" class="btn-secondary" style="padding: 14px 32px; border-radius: var(--rounded-full); font-size: 16px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; color: var(--on-surface); border: 1px solid var(--outline-variant);">
+          <a href="new_words.html" class="btn-secondary"
+            style="padding: 14px 32px; border-radius: var(--rounded-full); font-size: 16px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; color: var(--on-surface); border: 1px solid var(--outline-variant);">
             <span class="material-symbols-outlined">menu_book</span>
             <span>Vocabulary List</span>
           </a>
         </div>
 
-        <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--on-surface); margin: 40px 0 16px; text-align: left;">Detailed Review</h3>
+        <h3
+          style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--on-surface); margin: 40px 0 16px; text-align: left;">
+          Detailed Review</h3>
         <ul id="results-breakdown-list" class="breakdown-list"></ul>
       </div>
     </div>
@@ -691,7 +761,7 @@
       document.getElementById('hint-panel').classList.remove('visible');
       document.getElementById('hint-btn-label').textContent = labels.showHint;
       document.getElementById('hint-text').textContent = q.hint || "Listen to pronunciation";
-      
+
       const hintAudioBtn = document.getElementById('hint-audio-btn');
       if (hintAudioBtn) {
         hintAudioBtn.onclick = () => speakWord(q.targetWord.word.replace(/'/g, "\\'"));
@@ -703,7 +773,7 @@
         .replace('{current}', currentIndex + 1)
         .replace('{total}', total);
       document.getElementById('score-counter-text').textContent = `Score: ${score}`;
-      
+
       const percent = ((currentIndex) / total) * 100;
       document.getElementById('progress-bar-fill').style.width = `${percent}%`;
 
@@ -965,7 +1035,7 @@
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'en-US';
-      utterance.rate = 0.9;
+      utterance.rate = 0.5; // Slow speed for easy listening and learning pronunciation
       window.speechSynthesis.speak(utterance);
     }
 
@@ -1026,4 +1096,5 @@
     }
   </script>
 </body>
+
 </html>
