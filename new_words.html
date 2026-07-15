@@ -265,6 +265,117 @@
       border-radius: var(--rounded-lg);
       margin: 20px 0;
     }
+    .view-toggle-group {
+      display: inline-flex;
+      background: var(--surface-container-low);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded-full);
+      padding: 3px;
+      gap: 4px;
+    }
+    .view-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--rounded-full);
+      border: none;
+      background: transparent;
+      color: var(--on-surface-variant);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-body);
+    }
+    .view-toggle-btn:hover {
+      color: var(--on-surface);
+      background: rgba(0, 105, 111, 0.06);
+    }
+    .view-toggle-btn.active {
+      background: var(--surface-container-lowest);
+      color: var(--primary);
+      box-shadow: var(--shadow-sm);
+      font-weight: 700;
+      border: 1px solid rgba(0, 105, 111, 0.15);
+    }
+    .words-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .word-list-item {
+      background: var(--surface-container-lowest);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded-lg);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .word-list-item:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .word-list-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .word-list-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0;
+    }
+    .word-list-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .word-card.missed-card {
+      border: 2px solid #f57c00 !important;
+      background: #fff8e1 !important;
+      box-shadow: 0 4px 12px rgba(245, 124, 0, 0.15) !important;
+    }
+    body[data-theme="dark"] .word-card.missed-card {
+      background: rgba(245, 124, 0, 0.15) !important;
+      border-color: #ffb74d !important;
+    }
+    .word-list-item.missed-item {
+      border: 2px solid #f57c00 !important;
+      background: #fff8e1 !important;
+      box-shadow: 0 4px 12px rgba(245, 124, 0, 0.12) !important;
+    }
+    body[data-theme="dark"] .word-list-item.missed-item {
+      background: rgba(245, 124, 0, 0.15) !important;
+      border-color: #ffb74d !important;
+    }
+    .missed-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #ffecb3;
+      color: #e65100;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: var(--rounded-full);
+      border: 1px solid #ffb300;
+      margin-left: 6px;
+    }
+    body[data-theme="dark"] .missed-badge {
+      background: rgba(230, 81, 0, 0.4);
+      color: #ffe082;
+      border-color: #ffa000;
+    }
   </style>
 </head>
 <body>
@@ -349,6 +460,7 @@
     // State management
     let wordsData = [];
     let currentLang = localStorage.getItem('simmilearning-lang') || 'en';
+    let currentViewMode = localStorage.getItem('simmilearning-words-view') || 'card';
     let isAllExpanded = true;
 
     // Translations for UI labels
@@ -360,6 +472,10 @@
         searchPlaceholder: "Search words, meanings, or topics...",
         collapseAll: "Collapse All",
         expandAll: "Expand All",
+        cardView: "Card view",
+        listView: "List view",
+        takeTest: "Take Test",
+        needsReview: "Needs Review",
         meaning: "Definition",
         example: "Example",
         vietnamese: "Vietnamese",
@@ -374,6 +490,10 @@
         searchPlaceholder: "Tìm từ khóa, nghĩa hoặc chủ đề...",
         collapseAll: "Thu gọn tất cả",
         expandAll: "Mở rộng tất cả",
+        cardView: "Dạng thẻ",
+        listView: "Danh sách",
+        takeTest: "Làm bài kiểm tra",
+        needsReview: "Cần ôn lại",
         meaning: "Định nghĩa",
         example: "Ví dụ",
         vietnamese: "Nghĩa tiếng Việt",
@@ -453,6 +573,10 @@
           totalWordsRendered += filteredWords.length;
           const countText = labels.wordsCount.replace('{count}', filteredWords.length);
 
+          const viewContainerClass = currentViewMode === 'card' ? 'words-grid' : 'words-list';
+          const missedWords = JSON.parse(localStorage.getItem('simmilearning-missed-words') || '{}');
+          const itemsHtml = filteredWords.map(word => currentViewMode === 'card' ? renderWordCard(word, labels, missedWords) : renderWordListItem(word, labels, missedWords)).join('');
+
           html += `
             <div class="date-group-section" data-date="${group.date}">
               <div class="date-group-header">
@@ -463,11 +587,27 @@
                   </span>
                   ${group.theme ? `<span class="date-theme-title">${group.theme}</span>` : ''}
                 </div>
-                <span style="font-size: 13px; font-weight: 600; color: var(--on-surface-variant);">${countText}</span>
+                <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+                  <a href="new_words_test.html?date=${group.date}" class="btn-primary" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px; border-radius: var(--rounded-full); font-size: 13px; font-weight: 700; text-decoration: none; box-shadow: var(--shadow-sm); transition: all 0.2s ease;">
+                    <span class="material-symbols-outlined" style="font-size: 18px;">quiz</span>
+                    <span>${labels.takeTest || 'Take Test'}</span>
+                  </a>
+                  <div class="view-toggle-group" aria-label="View mode selection">
+                    <button class="view-toggle-btn ${currentViewMode === 'card' ? 'active' : ''}" onclick="setViewMode('card')" title="${labels.cardView}">
+                      <span class="material-symbols-outlined" style="font-size: 18px;">grid_view</span>
+                      <span>${labels.cardView}</span>
+                    </button>
+                    <button class="view-toggle-btn ${currentViewMode === 'list' ? 'active' : ''}" onclick="setViewMode('list')" title="${labels.listView}">
+                      <span class="material-symbols-outlined" style="font-size: 18px;">view_list</span>
+                      <span>${labels.listView}</span>
+                    </button>
+                  </div>
+                  <span style="font-size: 13px; font-weight: 600; color: var(--on-surface-variant);">${countText}</span>
+                </div>
               </div>
 
-              <div class="words-grid">
-                ${filteredWords.map(word => renderWordCard(word, labels)).join('')}
+              <div class="${viewContainerClass}" style="${isAllExpanded ? '' : 'display: none;'}">
+                ${itemsHtml}
               </div>
             </div>
           `;
@@ -487,16 +627,30 @@
       }
     }
 
-    // Render single word card
-    function renderWordCard(word, labels) {
+    function setViewMode(mode) {
+      if (currentViewMode === mode) return;
+      currentViewMode = mode;
+      localStorage.setItem('simmilearning-words-view', mode);
+      renderWords(document.getElementById('search-input').value.trim());
+    }
+
+    // Render single word card (Card View)
+    function renderWordCard(word, labels, missedWords = {}) {
+      const isMissed = Boolean(missedWords[word.word.trim().toLowerCase()]);
       return `
-        <article class="word-card fade-in">
+        <article class="word-card fade-in ${isMissed ? 'missed-card' : ''}">
           <div>
             <div class="word-header">
               <div class="word-title-area">
                 <h3 class="word-title">${word.word}</h3>
                 ${word.type ? `<span class="word-type">${word.type}</span>` : ''}
                 ${word.level ? `<span class="word-level">${word.level}</span>` : ''}
+                ${isMissed ? `
+                  <span class="missed-badge" title="You missed this word in the test. Review it carefully!">
+                    <span class="material-symbols-outlined" style="font-size: 14px;">warning</span>
+                    <span>${labels.needsReview || 'Needs Review'}</span>
+                  </span>
+                ` : ''}
               </div>
               <button class="audio-btn" onclick="speakWord('${word.word.replace(/'/g, "\\'")}')" title="Listen to pronunciation" aria-label="Pronounce ${word.word}">
                 <span class="material-symbols-outlined" style="font-size: 20px;">volume_up</span>
@@ -527,6 +681,39 @@
       `;
     }
 
+    // Render single word list item (List View - without definition & example)
+    function renderWordListItem(word, labels, missedWords = {}) {
+      const isMissed = Boolean(missedWords[word.word.trim().toLowerCase()]);
+      return `
+        <article class="word-list-item fade-in ${isMissed ? 'missed-item' : ''}">
+          <div class="word-list-left">
+            <h3 class="word-list-title">${word.word}</h3>
+            ${word.type ? `<span class="word-type">${word.type}</span>` : ''}
+            ${word.phonetic ? `<span class="phonetic-text" style="margin: 0; font-size: 13.5px;">${word.phonetic}</span>` : ''}
+            ${word.level ? `<span class="word-level">${word.level}</span>` : ''}
+            ${isMissed ? `
+              <span class="missed-badge" title="You missed this word in the test. Review it carefully!">
+                <span class="material-symbols-outlined" style="font-size: 14px;">warning</span>
+                <span>${labels.needsReview || 'Needs Review'}</span>
+              </span>
+            ` : ''}
+          </div>
+
+          <div class="word-list-right">
+            ${word.vietnamese ? `
+              <div class="vietnamese-pill" style="margin: 0;">
+                <span class="material-symbols-outlined" style="font-size: 18px;">translate</span>
+                <span>${word.vietnamese}</span>
+              </div>
+            ` : ''}
+            <button class="audio-btn" onclick="speakWord('${word.word.replace(/'/g, "\\'")}')" title="Listen to pronunciation" aria-label="Pronounce ${word.word}">
+              <span class="material-symbols-outlined" style="font-size: 20px;">volume_up</span>
+            </button>
+          </div>
+        </article>
+      `;
+    }
+
     // Text to Speech Pronunciation
     function speakWord(text) {
       if (!('speechSynthesis' in window)) {
@@ -544,13 +731,13 @@
     // Expand/Collapse Sections
     function toggleAllSections() {
       isAllExpanded = !isAllExpanded;
-      const grids = document.querySelectorAll('.words-grid');
+      const containers = document.querySelectorAll('.words-grid, .words-list');
       const btnIcon = document.querySelector('#toggle-all-btn .material-symbols-outlined');
       const btnLabel = document.getElementById('toggle-all-label');
       const labels = UI_LABELS[currentLang];
 
-      grids.forEach(grid => {
-        grid.style.display = isAllExpanded ? 'grid' : 'none';
+      containers.forEach(container => {
+        container.style.display = isAllExpanded ? (container.classList.contains('words-grid') ? 'grid' : 'flex') : 'none';
       });
 
       if (btnIcon && btnLabel) {

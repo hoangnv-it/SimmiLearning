@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>SimmiLearning - Daily Vocabulary Test</title>
+  <meta name="description" content="Test your vocabulary knowledge with interactive single-choice and free-text matching questions."/>
+  
+  <!-- Material Symbols and Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  
+  <style>
+    .test-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #004246 100%);
+      color: var(--on-primary);
+      border-radius: var(--rounded-xl);
+      padding: var(--spacing-xl) var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-level2);
+    }
+    .test-hero::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+      width: 240px;
+      height: 240px;
+      background: rgba(80, 217, 226, 0.15);
+      border-radius: 50%;
+      filter: blur(36px);
+      pointer-events: none;
+    }
+    .test-progress-container {
+      background: var(--surface-container-lowest);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded-lg);
+      padding: 16px 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .progress-bar-wrapper {
+      width: 100%;
+      height: 10px;
+      background: var(--surface-variant);
+      border-radius: var(--rounded-full);
+      overflow: hidden;
+    }
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--primary);
+      border-radius: var(--rounded-full);
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .test-card {
+      background: var(--surface-container-lowest);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded-xl);
+      padding: 36px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .question-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      padding: 6px 14px;
+      border-radius: var(--rounded-full);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .question-prompt {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--on-surface);
+      line-height: 1.4;
+      margin: 0 0 24px 0;
+    }
+    .word-type-pill {
+      background: var(--surface-variant);
+      color: var(--on-surface-variant);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--rounded-sm);
+      margin-left: 8px;
+    }
+    .options-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .option-btn {
+      width: 100%;
+      text-align: left;
+      background: var(--surface-container-lowest);
+      border: 2px solid var(--outline-variant);
+      border-radius: var(--rounded-lg);
+      padding: 16px 20px;
+      font-family: var(--font-body);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--on-surface);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+    .option-btn:hover:not(:disabled) {
+      border-color: var(--primary);
+      background: rgba(0, 105, 111, 0.04);
+      transform: translateY(-2px);
+    }
+    .option-btn.selected {
+      border-color: var(--primary);
+      background: rgba(0, 105, 111, 0.08);
+      color: var(--primary);
+    }
+    .option-btn.correct {
+      border-color: #2e7d32;
+      background: #e8f5e9;
+      color: #1b5e20;
+    }
+    .option-btn.wrong {
+      border-color: #c62828;
+      background: #ffebee;
+      color: #b71c1c;
+    }
+    .option-circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid var(--outline-variant);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 0.2s ease;
+    }
+    .option-btn.selected .option-circle {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: var(--on-primary);
+    }
+    .option-btn.correct .option-circle {
+      border-color: #2e7d32;
+      background: #2e7d32;
+      color: #ffffff;
+    }
+    .option-btn.wrong .option-circle {
+      border-color: #c62828;
+      background: #c62828;
+      color: #ffffff;
+    }
+    .free-text-input-wrapper {
+      margin-bottom: 28px;
+    }
+    .test-input {
+      width: 100%;
+      height: 58px;
+      padding: 0 20px;
+      border-radius: var(--rounded-lg);
+      border: 2px solid var(--outline-variant);
+      background: var(--surface-container-lowest);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: 18px;
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+    .test-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(0, 105, 111, 0.15);
+    }
+    .test-input.correct {
+      border-color: #2e7d32;
+      background: #f1f8e9;
+      color: #1b5e20;
+    }
+    .test-input.wrong {
+      border-color: #c62828;
+      background: #ffebee;
+      color: #b71c1c;
+    }
+    .hint-panel {
+      background: var(--surface-container-low);
+      border-left: 4px solid #fbc02d;
+      padding: 16px 20px;
+      border-radius: 0 var(--rounded-md) var(--rounded-md) 0;
+      margin-bottom: 24px;
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+    .hint-panel.visible {
+      display: block;
+    }
+    .feedback-banner {
+      padding: 18px 24px;
+      border-radius: var(--rounded-lg);
+      margin-bottom: 24px;
+      display: none;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 15.5px;
+      line-height: 1.5;
+      animation: fadeIn 0.3s ease;
+    }
+    .feedback-banner.correct {
+      display: flex;
+      background: #e8f5e9;
+      border: 1px solid #a5d6a7;
+      color: #1b5e20;
+    }
+    .feedback-banner.wrong {
+      display: flex;
+      background: #ffebee;
+      border: 1px solid #ef9a9a;
+      color: #b71c1c;
+    }
+    .test-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-top: 1px solid var(--outline-variant);
+      padding-top: 24px;
+    }
+    .results-card {
+      background: var(--surface-container-lowest);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded-xl);
+      padding: 48px 36px;
+      box-shadow: var(--shadow-level2);
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .score-circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      border: 6px solid var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+    .score-percentage {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .score-text {
+      font-size: 14px;
+      font-weight: 700;
+      opacity: 0.8;
+      margin-top: 4px;
+    }
+    .breakdown-list {
+      list-style: none;
+      padding: 0;
+      margin: 32px 0;
+      text-align: left;
+    }
+    .breakdown-item {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--outline-variant);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .breakdown-item:last-child {
+      border-bottom: none;
+    }
+    .audio-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--surface-container);
+      border: none;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+    .audio-btn:hover {
+      background: var(--primary);
+      color: var(--on-primary);
+      transform: scale(1.08);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="header-bar">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <span class="material-symbols-outlined filled">language</span>
+        SimmiLearning
+      </a>
+      
+      <!-- Desktop Navigation links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="index.html#lessons" class="nav-link" onclick="localStorage.setItem('simmi-nav', 'lessons');">Lessons</a>
+        <a href="index.html" class="nav-link">Practice</a>
+        <a href="new_words.html" class="nav-link active" style="font-weight: 700; color: var(--primary);">New Words</a>
+      </nav>
+      
+      <!-- Action buttons -->
+      <div class="header-actions">
+        <!-- Back to Vocabulary List Button -->
+        <a href="new_words.html" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: var(--rounded-full); text-decoration: none; font-size: 13px; font-weight: 600; border: 1px solid var(--outline-variant); color: var(--on-surface);">
+          <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+          <span>Exit Test</span>
+        </a>
+
+        <!-- Language Toggle Button -->
+        <button id="lang-toggle-btn" class="icon-btn" aria-label="Switch language" style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: var(--rounded-full); border: 1px solid rgba(132, 148, 149, 0.2); height: 40px; margin-right: 4px; color: var(--on-surface-variant);">
+          <span class="material-symbols-outlined" style="font-size: 20px;">translate</span>
+          <span id="lang-label" style="font-family: var(--font-display); font-size: 13px; font-weight: 700;">EN</span>
+        </button>
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle dark mode">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-canvas" style="max-width: 900px; margin: 0 auto; padding: 32px 20px;">
+    <!-- Hero Section -->
+    <section id="test-header-section" class="test-hero fade-in">
+      <div style="position: relative; z-index: 2;">
+        <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.15); padding: 4px 14px; border-radius: var(--rounded-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
+          <span class="material-symbols-outlined" style="font-size: 16px;">quiz</span>
+          <span id="hero-date-badge">Vocabulary Mastery Test</span>
+        </div>
+        <h1 id="test-title" class="text-display" style="color: #ffffff; font-size: 32px; margin-bottom: 6px;">Loading Test...</h1>
+        <p id="test-subtitle" style="font-size: 15.5px; opacity: 0.9; margin: 0;">Complete all single-choice and exact free-text matching questions for this date.</p>
+      </div>
+    </section>
+
+    <!-- Quiz Progress Bar -->
+    <div id="quiz-screen" style="display: none;">
+      <div class="test-progress-container fade-in">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <span id="question-counter-text" style="font-weight: 700; color: var(--on-surface);">Question 1 of 31</span>
+          <span id="score-counter-text" style="font-weight: 700; color: var(--primary);">Score: 0</span>
+        </div>
+        <div class="progress-bar-wrapper">
+          <div id="progress-bar-fill" class="progress-bar-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Question Card -->
+      <div class="test-card fade-in">
+        <span id="q-badge" class="question-badge">Single Choice</span>
+        <h2 id="q-prompt" class="question-prompt">Loading question...</h2>
+
+        <!-- Hint Panel -->
+        <div id="hint-panel" class="hint-panel">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+            <div>
+              <strong style="color: #f57f17; display: block; font-size: 12px; text-transform: uppercase; margin-bottom: 4px;">Hint / Pronunciation</strong>
+              <span id="hint-text" style="font-style: italic; color: var(--on-surface);"></span>
+            </div>
+            <button id="hint-audio-btn" class="audio-btn" title="Listen to pronunciation">
+              <span class="material-symbols-outlined" style="font-size: 20px;">volume_up</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Single Choice Options Container -->
+        <div id="options-container" class="options-list" style="display: none;"></div>
+
+        <!-- Free Text Input Container -->
+        <div id="free-text-container" class="free-text-input-wrapper" style="display: none;">
+          <input type="text" id="free-text-input" class="test-input" placeholder="Type exact English word or phrase here..." autocomplete="off"/>
+          <p style="font-size: 13px; color: var(--on-surface-variant); margin: 8px 0 0 4px;">
+            <span class="material-symbols-outlined" style="font-size: 16px; vertical-align: -3px; color: var(--primary);">info</span>
+            Must match exactly word by word compared to data from new_words.json.
+          </p>
+        </div>
+
+        <!-- Feedback Banner -->
+        <div id="feedback-banner" class="feedback-banner">
+          <span id="feedback-icon" class="material-symbols-outlined" style="font-size: 24px; flex-shrink: 0;"></span>
+          <div style="flex: 1;">
+            <strong id="feedback-title" style="display: block; margin-bottom: 4px;"></strong>
+            <span id="feedback-desc"></span>
+          </div>
+          <button id="feedback-audio-btn" class="audio-btn" title="Listen to correct word" style="display: none;">
+            <span class="material-symbols-outlined" style="font-size: 20px;">volume_up</span>
+          </button>
+        </div>
+
+        <!-- Action Bar inside card -->
+        <div class="test-actions">
+          <button id="toggle-hint-btn" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 18px; border-radius: var(--rounded-full); font-weight: 600; cursor: pointer;">
+            <span class="material-symbols-outlined" style="font-size: 18px; color: #fbc02d;">lightbulb</span>
+            <span id="hint-btn-label">Show Hint</span>
+          </button>
+
+          <button id="check-next-btn" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; border-radius: var(--rounded-full); font-size: 16px; font-weight: 700; cursor: pointer; min-width: 180px; justify-content: center;">
+            <span id="check-btn-text">Check Answer</span>
+            <span class="material-symbols-outlined" style="font-size: 20px;">arrow_forward</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Screen -->
+    <div id="results-screen" style="display: none;">
+      <div class="results-card fade-in">
+        <div class="score-circle">
+          <span id="final-percentage" class="score-percentage">100%</span>
+          <span id="final-score-text" class="score-text">31 / 31</span>
+        </div>
+        <h2 id="results-title" style="font-family: var(--font-display); font-size: 28px; font-weight: 800; color: var(--on-surface); margin: 0 0 8px 0;">Excellent Work!</h2>
+        <p id="results-subtitle" style="color: var(--on-surface-variant); font-size: 16px; max-width: 500px; margin: 0 auto 28px;">You have completed the vocabulary test for this date.</p>
+
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <button onclick="restartTest()" class="btn-primary" style="padding: 14px 32px; border-radius: var(--rounded-full); font-size: 16px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
+            <span class="material-symbols-outlined">refresh</span>
+            <span>Retake Test</span>
+          </button>
+          <a href="new_words.html" class="btn-secondary" style="padding: 14px 32px; border-radius: var(--rounded-full); font-size: 16px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; color: var(--on-surface); border: 1px solid var(--outline-variant);">
+            <span class="material-symbols-outlined">menu_book</span>
+            <span>Vocabulary List</span>
+          </a>
+        </div>
+
+        <h3 style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--on-surface); margin: 40px 0 16px; text-align: left;">Detailed Review</h3>
+        <ul id="results-breakdown-list" class="breakdown-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    let wordsData = [];
+    let allWordsInDataset = [];
+    let currentGroup = null;
+    let testQuestions = [];
+    let currentIndex = 0;
+    let score = 0;
+    let selectedOptionIndex = null;
+    let isAnswerChecked = false;
+    let userAnswers = []; // records { question, isCorrect, userAnswer }
+    let currentLang = localStorage.getItem('simmilearning-lang') || 'en';
+
+    const UI_LABELS = {
+      en: {
+        testTitle: "Vocabulary Test",
+        testSub: "Complete all single-choice and exact free-text matching questions for this date.",
+        questionCounter: "Question {current} of {total}",
+        singleChoiceBadge: "Single Choice",
+        freeTextBadge: "Free Text Input (Vietnamese to English)",
+        showHint: "Show Hint",
+        hideHint: "Hide Hint",
+        checkAnswer: "Check Answer",
+        nextQuestion: "Next Question",
+        viewResults: "View Results",
+        correctTitle: "Correct! Excellent work.",
+        wrongTitle: "Incorrect. Let's review the exact match.",
+        exactAnswerIs: "The correct English word/phrase is:",
+        selectOptionAlert: "Please select an option first.",
+        typeTextAlert: "Please type your answer first.",
+        resultsTitleGreat: "Excellent Mastery!",
+        resultsTitleGood: "Good Practice!",
+        resultsTitleNeedPractice: "Keep Practicing!",
+        retake: "Retake Test",
+        backToList: "Vocabulary List"
+      },
+      vi: {
+        testTitle: "Bài Kiểm Tra Từ Vựng",
+        testSub: "Hoàn thành tất cả các câu hỏi trắc nghiệm và tự luận điền từ chính xác cho ngày này.",
+        questionCounter: "Câu hỏi {current} / {total}",
+        singleChoiceBadge: "Trắc nghiệm chọn đáp án",
+        freeTextBadge: "Điền từ tiếng Anh chính xác (Từ tiếng Việt sang tiếng Anh)",
+        showHint: "Xem Gợi ý",
+        hideHint: "Ẩn Gợi ý",
+        checkAnswer: "Kiểm tra Đáp án",
+        nextQuestion: "Câu tiếp theo",
+        viewResults: "Xem Kết quả",
+        correctTitle: "Chính xác! Làm tốt lắm.",
+        wrongTitle: "Chưa chính xác. Hãy xem đáp án chuẩn:",
+        exactAnswerIs: "Từ/cụm từ tiếng Anh chính xác là:",
+        selectOptionAlert: "Vui lòng chọn một đáp án trước.",
+        typeTextAlert: "Vui lòng nhập câu trả lời của bạn trước.",
+        resultsTitleGreat: "Xuất sắc!",
+        resultsTitleGood: "Làm tốt lắm!",
+        resultsTitleNeedPractice: "Hãy cố gắng luyện tập thêm nhé!",
+        retake: "Làm lại bài kiểm tra",
+        backToList: "Danh sách từ vựng"
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      initLanguage();
+      loadTestSession();
+
+      document.getElementById('theme-toggle-btn').addEventListener('click', toggleTheme);
+      document.getElementById('lang-toggle-btn').addEventListener('click', toggleLanguage);
+      document.getElementById('toggle-hint-btn').addEventListener('click', toggleHint);
+      document.getElementById('check-next-btn').addEventListener('click', handleCheckOrNext);
+
+      // Support pressing Enter in free text box
+      document.getElementById('free-text-input').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          handleCheckOrNext();
+        }
+      });
+    });
+
+    async function loadTestSession() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const targetDate = urlParams.get('date');
+
+      try {
+        const response = await fetch('new_words.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        wordsData = await response.json();
+
+        // Collect all words across all dates for distractors
+        allWordsInDataset = [];
+        wordsData.forEach(g => {
+          if (g.words) allWordsInDataset.push(...g.words);
+        });
+
+        // Find target group
+        if (targetDate) {
+          currentGroup = wordsData.find(g => g.date === targetDate);
+        }
+        if (!currentGroup && wordsData.length > 0) {
+          currentGroup = wordsData[0]; // fallback to first date
+        }
+
+        if (!currentGroup || !currentGroup.words || currentGroup.words.length === 0) {
+          alert("No vocabulary words found for testing.");
+          window.location.href = 'new_words.html';
+          return;
+        }
+
+        // Update hero title with date
+        const badgeEl = document.getElementById('hero-date-badge');
+        if (badgeEl) badgeEl.textContent = currentGroup.dateFormatted || currentGroup.date;
+        const titleEl = document.getElementById('test-title');
+        const labels = UI_LABELS[currentLang];
+        if (titleEl) titleEl.textContent = `${labels.testTitle} — ${currentGroup.dateFormatted || currentGroup.date}`;
+
+        generateQuestions();
+        startTest();
+      } catch (error) {
+        console.error("Failed to load test data:", error);
+        alert("Could not load vocabulary data from new_words.json.");
+      }
+    }
+
+    function generateQuestions() {
+      const words = [...currentGroup.words];
+      // Shuffle the words
+      for (let i = words.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [words[i], words[j]] = [words[j], words[i]];
+      }
+
+      testQuestions = words.map((wordObj, index) => {
+        // We alternate question types to make it varied:
+        // Every 3rd question (or index % 3 === 2) is Free Text Input (Vietnamese to English exact matching)
+        // Others are Single Choice (Vietnamese meaning or English definition)
+        const typeChoice = index % 3;
+
+        if (typeChoice === 2) {
+          // Free Text Input: Vietnamese -> exact English word
+          return {
+            type: 'free-text',
+            targetWord: wordObj,
+            prompt: `Translate from Vietnamese to English:\n"${wordObj.vietnamese}"`,
+            promptVi: `Dịch từ tiếng Việt sang tiếng Anh:\n"${wordObj.vietnamese}"`,
+            hint: wordObj.phonetic || wordObj.meaning,
+            typeBadge: wordObj.type
+          };
+        } else if (typeChoice === 0 && wordObj.vietnamese) {
+          // Single Choice: English word -> choose Vietnamese meaning
+          const distractors = getRandomDistractors(wordObj, 'vietnamese', 3);
+          const options = shuffleArray([wordObj.vietnamese, ...distractors]);
+          const correctIdx = options.indexOf(wordObj.vietnamese);
+          return {
+            type: 'single-choice',
+            targetWord: wordObj,
+            prompt: `What is the Vietnamese meaning of "${wordObj.word}"?`,
+            promptVi: `Nghĩa tiếng Việt của "${wordObj.word}" là gì?`,
+            options: options,
+            correctIndex: correctIdx,
+            hint: wordObj.phonetic || wordObj.meaning,
+            typeBadge: wordObj.type
+          };
+        } else {
+          // Single Choice: Definition/Meaning -> choose English word
+          const distractors = getRandomDistractors(wordObj, 'word', 3);
+          const options = shuffleArray([wordObj.word, ...distractors]);
+          const correctIdx = options.indexOf(wordObj.word);
+          return {
+            type: 'single-choice',
+            targetWord: wordObj,
+            prompt: `Which word matches this definition:\n"${wordObj.meaning}"?`,
+            promptVi: `Từ nào có định nghĩa sau:\n"${wordObj.meaning}"?`,
+            options: options,
+            correctIndex: correctIdx,
+            hint: wordObj.vietnamese || wordObj.phonetic,
+            typeBadge: wordObj.type
+          };
+        }
+      });
+    }
+
+    function getRandomDistractors(targetWord, field, count) {
+      const candidates = allWordsInDataset
+        .filter(w => w.word !== targetWord.word && w[field])
+        .map(w => w[field]);
+      const uniqueCandidates = [...new Set(candidates)];
+      return shuffleArray(uniqueCandidates).slice(0, count);
+    }
+
+    function shuffleArray(arr) {
+      const res = [...arr];
+      for (let i = res.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [res[i], res[j]] = [res[j], res[i]];
+      }
+      return res;
+    }
+
+    function startTest() {
+      currentIndex = 0;
+      score = 0;
+      userAnswers = [];
+      document.getElementById('quiz-screen').style.display = 'block';
+      document.getElementById('results-screen').style.display = 'none';
+      loadQuestion();
+    }
+
+    function loadQuestion() {
+      const q = testQuestions[currentIndex];
+      if (!q) {
+        showResults();
+        return;
+      }
+
+      selectedOptionIndex = null;
+      isAnswerChecked = false;
+      const labels = UI_LABELS[currentLang];
+
+      // Reset feedback and hint
+      document.getElementById('feedback-banner').style.display = 'none';
+      document.getElementById('feedback-banner').className = 'feedback-banner';
+      document.getElementById('hint-panel').classList.remove('visible');
+      document.getElementById('hint-btn-label').textContent = labels.showHint;
+      document.getElementById('hint-text').textContent = q.hint || "Listen to pronunciation";
+      
+      const hintAudioBtn = document.getElementById('hint-audio-btn');
+      if (hintAudioBtn) {
+        hintAudioBtn.onclick = () => speakWord(q.targetWord.word.replace(/'/g, "\\'"));
+      }
+
+      // Progress and Counters
+      const total = testQuestions.length;
+      document.getElementById('question-counter-text').textContent = labels.questionCounter
+        .replace('{current}', currentIndex + 1)
+        .replace('{total}', total);
+      document.getElementById('score-counter-text').textContent = `Score: ${score}`;
+      
+      const percent = ((currentIndex) / total) * 100;
+      document.getElementById('progress-bar-fill').style.width = `${percent}%`;
+
+      // Prompt and badge
+      const promptEl = document.getElementById('q-prompt');
+      promptEl.innerHTML = (currentLang === 'vi' ? q.promptVi : q.prompt) + (q.typeBadge ? `<span class="word-type-pill">${q.typeBadge}</span>` : '');
+      document.getElementById('q-badge').textContent = q.type === 'single-choice' ? labels.singleChoiceBadge : labels.freeTextBadge;
+
+      // Render containers based on type
+      const optionsContainer = document.getElementById('options-container');
+      const freeTextContainer = document.getElementById('free-text-container');
+      const freeTextInput = document.getElementById('free-text-input');
+
+      if (q.type === 'single-choice') {
+        freeTextContainer.style.display = 'none';
+        optionsContainer.style.display = 'grid';
+        optionsContainer.innerHTML = '';
+
+        q.options.forEach((optText, idx) => {
+          const btn = document.createElement('button');
+          btn.className = 'option-btn';
+          btn.innerHTML = `
+            <span>${optText}</span>
+            <div class="option-circle"></div>
+          `;
+          btn.onclick = () => selectOption(idx);
+          optionsContainer.appendChild(btn);
+        });
+      } else {
+        optionsContainer.style.display = 'none';
+        freeTextContainer.style.display = 'block';
+        freeTextInput.value = '';
+        freeTextInput.className = 'test-input';
+        freeTextInput.disabled = false;
+        freeTextInput.focus();
+      }
+
+      // Action button text
+      document.getElementById('check-btn-text').textContent = labels.checkAnswer;
+    }
+
+    function selectOption(index) {
+      if (isAnswerChecked) return;
+      selectedOptionIndex = index;
+      const buttons = document.querySelectorAll('#options-container .option-btn');
+      buttons.forEach((btn, idx) => {
+        if (idx === index) btn.classList.add('selected');
+        else btn.classList.remove('selected');
+      });
+    }
+
+    function toggleHint() {
+      const hintPanel = document.getElementById('hint-panel');
+      const labels = UI_LABELS[currentLang];
+      hintPanel.classList.toggle('visible');
+      document.getElementById('hint-btn-label').textContent = hintPanel.classList.contains('visible') ? labels.hideHint : labels.showHint;
+    }
+
+    function handleCheckOrNext() {
+      const q = testQuestions[currentIndex];
+      const labels = UI_LABELS[currentLang];
+
+      if (!isAnswerChecked) {
+        // Check answer step
+        if (q.type === 'single-choice') {
+          if (selectedOptionIndex === null) {
+            alert(labels.selectOptionAlert);
+            return;
+          }
+          verifySingleChoiceAnswer();
+        } else {
+          const userInput = document.getElementById('free-text-input').value.trim();
+          if (!userInput) {
+            alert(labels.typeTextAlert);
+            return;
+          }
+          verifyFreeTextAnswer(userInput);
+        }
+      } else {
+        // Next question step
+        currentIndex++;
+        if (currentIndex < testQuestions.length) {
+          loadQuestion();
+        } else {
+          showResults();
+        }
+      }
+    }
+
+    function verifySingleChoiceAnswer() {
+      isAnswerChecked = true;
+      const q = testQuestions[currentIndex];
+      const labels = UI_LABELS[currentLang];
+      const buttons = document.querySelectorAll('#options-container .option-btn');
+      const isCorrect = selectedOptionIndex === q.correctIndex;
+
+      if (isCorrect) score++;
+      document.getElementById('score-counter-text').textContent = `Score: ${score}`;
+
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === q.correctIndex) btn.classList.add('correct');
+        else if (idx === selectedOptionIndex && !isCorrect) btn.classList.add('wrong');
+      });
+
+      userAnswers.push({
+        question: q,
+        isCorrect: isCorrect,
+        userAnswer: q.options[selectedOptionIndex]
+      });
+
+      trackMissedWord(q.targetWord, isCorrect);
+      showFeedbackBanner(isCorrect, q.targetWord);
+      updateActionBtnForNext();
+    }
+
+    function verifyFreeTextAnswer(userInput) {
+      isAnswerChecked = true;
+      const q = testQuestions[currentIndex];
+      const targetWord = q.targetWord.word.trim();
+      const inputEl = document.getElementById('free-text-input');
+      inputEl.disabled = true;
+
+      // Exact word matching: check if exact lower-case match or matches any slash/dash alternatives
+      const normInput = userInput.toLowerCase();
+      const normTarget = targetWord.toLowerCase();
+      let isCorrect = normInput === normTarget;
+
+      if (!isCorrect && (normTarget.includes('/') || normTarget.includes('—') || normTarget.includes(','))) {
+        const parts = normTarget.split(/[/—,]/).map(p => p.trim()).filter(Boolean);
+        isCorrect = parts.some(p => p === normInput);
+      }
+
+      if (isCorrect) {
+        score++;
+        inputEl.classList.add('correct');
+      } else {
+        inputEl.classList.add('wrong');
+      }
+      document.getElementById('score-counter-text').textContent = `Score: ${score}`;
+
+      userAnswers.push({
+        question: q,
+        isCorrect: isCorrect,
+        userAnswer: userInput
+      });
+
+      trackMissedWord(q.targetWord, isCorrect);
+      showFeedbackBanner(isCorrect, q.targetWord);
+      updateActionBtnForNext();
+    }
+
+    function trackMissedWord(targetWord, isCorrect) {
+      try {
+        const missedWords = JSON.parse(localStorage.getItem('simmilearning-missed-words') || '{}');
+        const wordKey = targetWord.word.trim().toLowerCase();
+        if (!isCorrect) {
+          missedWords[wordKey] = {
+            word: targetWord.word,
+            vietnamese: targetWord.vietnamese || '',
+            date: targetWord.date || (currentGroup ? currentGroup.date : ''),
+            lastMissed: new Date().toISOString()
+          };
+        } else {
+          delete missedWords[wordKey];
+        }
+        localStorage.setItem('simmilearning-missed-words', JSON.stringify(missedWords));
+      } catch (e) {
+        console.error('Error tracking missed words:', e);
+      }
+    }
+
+    function showFeedbackBanner(isCorrect, targetWord) {
+      const banner = document.getElementById('feedback-banner');
+      const labels = UI_LABELS[currentLang];
+      banner.style.display = 'flex';
+      banner.className = `feedback-banner ${isCorrect ? 'correct' : 'wrong'}`;
+
+      const icon = document.getElementById('feedback-icon');
+      icon.textContent = isCorrect ? 'check_circle' : 'error';
+      icon.style.color = isCorrect ? '#2e7d32' : '#c62828';
+
+      const title = document.getElementById('feedback-title');
+      title.textContent = isCorrect ? labels.correctTitle : labels.wrongTitle;
+
+      const desc = document.getElementById('feedback-desc');
+      if (isCorrect) {
+        desc.textContent = `${targetWord.word} — ${targetWord.vietnamese}`;
+      } else {
+        desc.innerHTML = `${labels.exactAnswerIs} <strong style="color: #b71c1c; font-size: 16px;">${targetWord.word}</strong> (${targetWord.vietnamese})`;
+      }
+
+      const audioBtn = document.getElementById('feedback-audio-btn');
+      audioBtn.style.display = 'flex';
+      audioBtn.onclick = () => speakWord(targetWord.word.replace(/'/g, "\\'"));
+
+      // Proactively pronounce if correct or incorrect to reinforce learning
+      speakWord(targetWord.word.replace(/'/g, "\\'"));
+    }
+
+    function updateActionBtnForNext() {
+      const labels = UI_LABELS[currentLang];
+      const isLast = currentIndex === testQuestions.length - 1;
+      document.getElementById('check-btn-text').textContent = isLast ? labels.viewResults : labels.nextQuestion;
+    }
+
+    function showResults() {
+      document.getElementById('quiz-screen').style.display = 'none';
+      document.getElementById('results-screen').style.display = 'block';
+
+      const total = testQuestions.length;
+      const percentage = Math.round((score / total) * 100);
+      const labels = UI_LABELS[currentLang];
+
+      document.getElementById('final-percentage').textContent = `${percentage}%`;
+      document.getElementById('final-score-text').textContent = `${score} / ${total}`;
+
+      const titleEl = document.getElementById('results-title');
+      if (percentage >= 80) titleEl.textContent = labels.resultsTitleGreat;
+      else if (percentage >= 60) titleEl.textContent = labels.resultsTitleGood;
+      else titleEl.textContent = labels.resultsTitleNeedPractice;
+
+      const listEl = document.getElementById('results-breakdown-list');
+      listEl.innerHTML = '';
+
+      userAnswers.forEach((ans) => {
+        const item = document.createElement('li');
+        item.className = 'breakdown-item';
+        item.innerHTML = `
+          <div style="display: flex; align-items: center; gap: 12px; flex: 1;">
+            <span class="material-symbols-outlined" style="color: ${ans.isCorrect ? '#2e7d32' : '#c62828'}; font-size: 24px;">
+              ${ans.isCorrect ? 'check_circle' : 'cancel'}
+            </span>
+            <div>
+              <strong style="font-size: 16px; color: var(--on-surface); display: block;">${ans.question.targetWord.word}</strong>
+              <span style="font-size: 14px; color: var(--on-surface-variant);">${ans.question.targetWord.vietnamese}</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 13.5px; padding: 4px 10px; border-radius: var(--rounded-sm); background: ${ans.isCorrect ? '#e8f5e9' : '#ffebee'}; color: ${ans.isCorrect ? '#1b5e20' : '#b71c1c'}; font-weight: 600;">
+              ${ans.userAnswer}
+            </span>
+            <button class="audio-btn" onclick="speakWord('${ans.question.targetWord.word.replace(/'/g, "\\'")}')" title="Pronounce">
+              <span class="material-symbols-outlined" style="font-size: 20px;">volume_up</span>
+            </button>
+          </div>
+        `;
+        listEl.appendChild(item);
+      });
+    }
+
+    function restartTest() {
+      generateQuestions();
+      startTest();
+    }
+
+    function speakWord(text) {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.9;
+      window.speechSynthesis.speak(utterance);
+    }
+
+    function initTheme() {
+      const savedTheme = localStorage.getItem('simmilearning-theme') || 'light';
+      document.body.setAttribute('data-theme', savedTheme);
+      updateThemeIcon(savedTheme);
+    }
+
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme') || 'light';
+      const next = current === 'light' ? 'dark' : 'light';
+      document.body.setAttribute('data-theme', next);
+      localStorage.setItem('simmilearning-theme', next);
+      updateThemeIcon(next);
+    }
+
+    function updateThemeIcon(theme) {
+      const icon = document.querySelector('#theme-toggle-btn span');
+      if (icon) icon.textContent = theme === 'light' ? 'dark_mode' : 'light_mode';
+    }
+
+    function initLanguage() {
+      updateLanguageUI();
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'vi' : 'en';
+      localStorage.setItem('simmilearning-lang', currentLang);
+      updateLanguageUI();
+      if (testQuestions.length > 0 && document.getElementById('quiz-screen').style.display !== 'none') {
+        loadQuestion();
+      }
+    }
+
+    function updateLanguageUI() {
+      const labels = UI_LABELS[currentLang];
+      const langLabel = document.getElementById('lang-label');
+      if (langLabel) langLabel.textContent = currentLang.toUpperCase();
+      if (currentGroup) {
+        document.getElementById('test-title').textContent = `${labels.testTitle} — ${currentGroup.dateFormatted || currentGroup.date}`;
+      }
+      document.getElementById('test-subtitle').textContent = labels.testSub;
+      const hintBtn = document.getElementById('hint-btn-label');
+      if (hintBtn) {
+        const isVis = document.getElementById('hint-panel').classList.contains('visible');
+        hintBtn.textContent = isVis ? labels.hideHint : labels.showHint;
+      }
+      const checkBtn = document.getElementById('check-btn-text');
+      if (checkBtn) {
+        if (isAnswerChecked) {
+          const isLast = currentIndex === testQuestions.length - 1;
+          checkBtn.textContent = isLast ? labels.viewResults : labels.nextQuestion;
+        } else {
+          checkBtn.textContent = labels.checkAnswer;
+        }
+      }
+    }
+  </script>
+</body>
+</html>
