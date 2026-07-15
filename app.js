@@ -34,6 +34,7 @@ const TRANSLATIONS = {
     heroSubtitle: "Select an English tense to focus your practice session today. Consistency is key to fluency.",
     
     startPractice: "Start Practice",
+    exploreVocabulary: "Explore Vocabulary",
     practiceSession: "Practice Session",
     questionCounter: "Question {current} of {total}",
     selectOptionPrompt: "Select the most appropriate option below.",
@@ -82,6 +83,11 @@ const TRANSLATIONS = {
         name: "Grade 5 Final Exam",
         badge: "Comprehensive 45'",
         description: "Comprehensive English Exam for Grade 5 (Global Success): Pronunciation, Vocabulary, Grammar & Reading."
+      },
+      "new-words": {
+        name: "New Words",
+        badge: "Vocabulary",
+        description: "Expand your vocabulary with daily curated lists of new words, idioms, and expressions grouped by date."
       }
     },
     
@@ -104,6 +110,7 @@ const TRANSLATIONS = {
     heroSubtitle: "Chọn một thì tiếng Anh để bắt đầu luyện tập hôm nay. Kiên trì là chìa khóa để thành thạo.",
     
     startPractice: "Bắt đầu Luyện tập",
+    exploreVocabulary: "Khám phá Từ vựng",
     practiceSession: "Phiên Luyện tập",
     questionCounter: "Câu hỏi {current} trên {total}",
     selectOptionPrompt: "Chọn đáp án thích hợp nhất bên dưới.",
@@ -152,6 +159,11 @@ const TRANSLATIONS = {
         name: "Đề Thi Khảo Sát Lớp 5",
         badge: "Đề Thi 45 Phút",
         description: "Đề thi tổng hợp Tiếng Anh lớp 5 (Global Success): Phát âm, Từ vựng, Ngữ pháp & Đọc hiểu."
+      },
+      "new-words": {
+        name: "Từ vựng mới",
+        badge: "Từ vựng",
+        description: "Mở rộng vốn từ vựng với các danh sách từ mới, thành ngữ và cụm từ được tổng hợp theo ngày."
       }
     },
     
@@ -488,10 +500,17 @@ function renderTenseSelection() {
         <p>"${data.example}"</p>
       </div>
       <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-        <button class="btn-primary" onclick="startPractice('${tenseId}')" style="flex: 1;">
-          ${t('startPractice')}
-          <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
-        </button>
+        ${tenseId === 'new-words' ? `
+          <a href="new_words.html" class="btn-primary" style="flex: 1; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+            <span>${t('exploreVocabulary') || 'Explore Vocabulary'}</span>
+            <span class="material-symbols-outlined" style="font-size: 18px;">menu_book</span>
+          </a>
+        ` : `
+          <button class="btn-primary" onclick="startPractice('${tenseId}')" style="flex: 1;">
+            ${t('startPractice')}
+            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+          </button>
+        `}
         ${tenseId === 'grade-5-exam' ? `
           <a href="grade5_exam.html" target="_blank" class="btn-secondary" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; border-radius: var(--rounded-md); text-decoration: none; font-weight: 600; border: 1px solid var(--primary); color: var(--primary);">
             <span class="material-symbols-outlined" style="font-size: 18px;">description</span>
@@ -500,6 +519,15 @@ function renderTenseSelection() {
         ` : ''}
       </div>
     `;
+
+    if (tenseId === 'new-words') {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', (e) => {
+        if (!e.target.closest('a, button')) {
+          window.location.href = 'new_words.html';
+        }
+      });
+    }
 
     container.appendChild(card);
   });
@@ -530,6 +558,10 @@ function preparePracticeQuestions(questions, count = 10) {
 
 // Start quiz session for a tense
 window.startPractice = function(tenseId) {
+  if (tenseId === 'new-words') {
+    window.location.href = 'new_words.html';
+    return;
+  }
   const tenseData = QUESTIONS_DATABASE[tenseId];
   if (!tenseData) return;
 
@@ -790,6 +822,7 @@ function renderResultsScreen() {
 
     // Evaluate tenses based on history records
     Object.entries(QUESTIONS_DATABASE).forEach(([tenseId, data]) => {
+      if (tenseId === 'new-words') return;
       const record = state.history[tenseId];
       const localizedName = getTenseTranslation(tenseId, 'name');
       const listItem = document.createElement('li');

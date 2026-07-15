@@ -3333,5 +3333,13 @@ const QUESTIONS_DATABASE = {
         "hint": "The passage states: 'for four days'."
       }
     ]
+  },
+  "new-words": {
+    "name": "New Words",
+    "badge": "Vocabulary",
+    "icon": "auto_stories",
+    "description": "Expand your vocabulary with daily curated lists of new words, idioms, and expressions grouped by date.",
+    "example": "Serendipity (n.) /ˌser.ənˈdɪp.ə.ti/ — The chance occurrence of events in a beneficial way.",
+    "questions": []
   }
 };

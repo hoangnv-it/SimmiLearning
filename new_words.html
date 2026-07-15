@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>SimmiLearning - Daily New Vocabulary Words</title>
+  <meta name="description" content="Explore daily curated English vocabulary words grouped by date. Listen to pronunciation, review definitions, and expand your vocabulary."/>
+  
+  <!-- Material Symbols and Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  
+  <style>
+    /* Specific styles for New Words page */
+    .words-hero {
+      background: linear-gradient(135deg, var(--primary) 0%, #004246 100%);
+      color: var(--on-primary);
+      border-radius: var(--rounded-xl);
+      padding: var(--spacing-xl) var(--spacing-lg);
+      margin-bottom: var(--spacing-xl);
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-level2);
+    }
+    .words-hero::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      bottom: -40px;
+      width: 240px;
+      height: 240px;
+      background: rgba(80, 217, 226, 0.15);
+      border-radius: 50%;
+      filter: blur(36px);
+      pointer-events: none;
+    }
+    .search-filter-bar {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+      position: relative;
+      z-index: 2;
+    }
+    .search-input-wrapper {
+      flex: 1;
+      min-width: 280px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .search-input-wrapper .material-symbols-outlined {
+      position: absolute;
+      left: 16px;
+      color: var(--on-surface-variant);
+      pointer-events: none;
+    }
+    .search-input {
+      width: 100%;
+      height: 48px;
+      padding: 0 16px 0 48px;
+      border-radius: var(--rounded-full);
+      border: 1px solid var(--outline-variant);
+      background: var(--surface-container-lowest);
+      color: var(--on-surface);
+      font-family: var(--font-body);
+      font-size: 15px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.2s ease;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--inverse-primary);
+      box-shadow: 0 0 0 3px rgba(80, 217, 226, 0.3);
+    }
+    .filter-btn-group {
+      display: flex;
+      gap: 8px;
+    }
+    .date-group-section {
+      margin-bottom: 40px;
+      animation: fadeIn 0.4s ease;
+    }
+    .date-group-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--primary);
+      margin-bottom: 20px;
+    }
+    .date-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      padding: 6px 16px;
+      border-radius: var(--rounded-full);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .date-theme-title {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--on-surface);
+    }
+    .words-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: var(--spacing-md);
+    }
+    .word-card {
+      background: var(--surface-container-lowest);
+      border: 1px solid var(--outline-variant);
+      border-radius: var(--rounded-lg);
+      padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .word-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary);
+    }
+    .word-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .word-title-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .word-title {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 0;
+    }
+    .word-type {
+      background: var(--surface-variant);
+      color: var(--on-surface-variant);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--rounded-sm);
+      text-transform: lowercase;
+    }
+    .word-level {
+      background: rgba(0, 105, 111, 0.1);
+      color: var(--primary);
+      border: 1px solid rgba(0, 105, 111, 0.2);
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: var(--rounded-full);
+    }
+    .audio-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--surface-container);
+      border: none;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+    .audio-btn:hover {
+      background: var(--primary);
+      color: var(--on-primary);
+      transform: scale(1.08);
+    }
+    .phonetic-text {
+      font-family: var(--font-body);
+      font-size: 14px;
+      color: var(--outline);
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    .meaning-block {
+      margin-bottom: 14px;
+    }
+    .meaning-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--on-surface-variant);
+      margin-bottom: 4px;
+      display: block;
+    }
+    .meaning-text {
+      font-size: 15px;
+      line-height: 1.5;
+      color: var(--on-surface);
+      margin: 0;
+    }
+    .example-box {
+      background: var(--surface-container-low);
+      border-left: 3px solid var(--primary);
+      padding: 10px 12px;
+      border-radius: 0 var(--rounded-sm) var(--rounded-sm) 0;
+      margin-bottom: 14px;
+    }
+    .example-box p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--on-surface-variant);
+      font-style: italic;
+      margin: 0;
+    }
+    .vietnamese-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0, 105, 111, 0.08);
+      color: var(--primary);
+      padding: 6px 12px;
+      border-radius: var(--rounded-md);
+      font-size: 13.5px;
+      font-weight: 600;
+      border: 1px solid rgba(0, 105, 111, 0.15);
+      margin-top: auto;
+    }
+    .loading-container {
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid var(--surface-variant);
+      border-top-color: var(--primary);
+      border-radius: 50%;
+      animation: spin 1s infinite linear;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+      background: var(--surface-container-low);
+      border-radius: var(--rounded-lg);
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="header-bar">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <span class="material-symbols-outlined filled">language</span>
+        SimmiLearning
+      </a>
+      
+      <!-- Desktop Navigation links -->
+      <nav class="nav-links" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Dashboard</a>
+        <a href="index.html#lessons" class="nav-link" onclick="localStorage.setItem('simmi-nav', 'lessons');">Lessons</a>
+        <a href="index.html" class="nav-link">Practice</a>
+        <a href="new_words.html" class="nav-link active" style="font-weight: 700; color: var(--primary);">New Words</a>
+      </nav>
+      
+      <!-- Action buttons -->
+      <div class="header-actions">
+        <!-- Back to Dashboard Button -->
+        <a href="index.html" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: var(--rounded-full); text-decoration: none; font-size: 13px; font-weight: 600; border: 1px solid var(--outline-variant); color: var(--on-surface);">
+          <span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+          <span>Dashboard</span>
+        </a>
+
+        <!-- Language Toggle Button -->
+        <button id="lang-toggle-btn" class="icon-btn" aria-label="Switch language" style="display: flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: var(--rounded-full); border: 1px solid rgba(132, 148, 149, 0.2); height: 40px; margin-right: 4px; color: var(--on-surface-variant);">
+          <span class="material-symbols-outlined" style="font-size: 20px;">translate</span>
+          <span id="lang-label" style="font-family: var(--font-display); font-size: 13px; font-weight: 700;">EN</span>
+        </button>
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle-btn" class="icon-btn" aria-label="Toggle dark mode">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main class="main-canvas" style="max-width: 1200px; margin: 0 auto; padding: 32px 24px;">
+    <!-- Hero Section -->
+    <section class="words-hero fade-in">
+      <div style="position: relative; z-index: 2;">
+        <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, 0.15); padding: 4px 14px; border-radius: var(--rounded-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 12px;">
+          <span class="material-symbols-outlined" style="font-size: 16px;">auto_stories</span>
+          <span id="hero-badge-text">Daily Vocabulary Archive</span>
+        </div>
+        <h1 id="hero-title-text" class="text-display" style="color: #ffffff; font-size: 36px; margin-bottom: 8px;">New Vocabulary Words</h1>
+        <p id="hero-sub-text" style="font-size: 16px; opacity: 0.9; max-width: 680px; line-height: 1.5; margin: 0;">
+          Explore daily curated English vocabulary items, phonetic transcripts, and practical examples grouped by date. Listen to audio pronunciations to master your speaking fluency.
+        </p>
+
+        <!-- Search and Filter Bar -->
+        <div class="search-filter-bar">
+          <div class="search-input-wrapper">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" id="search-input" class="search-input" placeholder="Search words, meanings, or topics..."/>
+          </div>
+          <div class="filter-btn-group">
+            <button id="toggle-all-btn" class="btn-secondary" style="background: var(--surface-container-lowest); color: var(--on-surface); border: 1px solid var(--outline-variant); border-radius: var(--rounded-full); padding: 0 18px; height: 48px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
+              <span class="material-symbols-outlined" style="font-size: 20px;">unfold_less</span>
+              <span id="toggle-all-label">Collapse All</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Words Container where JSON data is rendered -->
+    <div id="words-container">
+      <div class="loading-container">
+        <div class="spinner"></div>
+        <p style="color: var(--on-surface-variant); font-weight: 600;">Loading vocabulary data from new_words.json...</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // State management
+    let wordsData = [];
+    let currentLang = localStorage.getItem('simmilearning-lang') || 'en';
+    let isAllExpanded = true;
+
+    // Translations for UI labels
+    const UI_LABELS = {
+      en: {
+        heroBadge: "Daily Vocabulary Archive",
+        heroTitle: "New Vocabulary Words",
+        heroSub: "Explore daily curated English vocabulary items, phonetic transcripts, and practical examples grouped by date. Listen to audio pronunciations to master your speaking fluency.",
+        searchPlaceholder: "Search words, meanings, or topics...",
+        collapseAll: "Collapse All",
+        expandAll: "Expand All",
+        meaning: "Definition",
+        example: "Example",
+        vietnamese: "Vietnamese",
+        emptyTitle: "No vocabulary words found",
+        emptySub: "Try adjusting your search terms or keywords.",
+        wordsCount: "{count} words"
+      },
+      vi: {
+        heroBadge: "Kho Từ Vựng Hàng Ngày",
+        heroTitle: "Từ Vựng Tiếng Anh Mới",
+        heroSub: "Khám phá danh sách từ vựng tiếng Anh được chọn lọc và tổng hợp theo từng ngày, kèm phát âm phonetic và ví dụ thực tế. Lắng nghe phát âm chuẩn để tự tin giao tiếp.",
+        searchPlaceholder: "Tìm từ khóa, nghĩa hoặc chủ đề...",
+        collapseAll: "Thu gọn tất cả",
+        expandAll: "Mở rộng tất cả",
+        meaning: "Định nghĩa",
+        example: "Ví dụ",
+        vietnamese: "Nghĩa tiếng Việt",
+        emptyTitle: "Không tìm thấy từ vựng phù hợp",
+        emptySub: "Hãy thử kiểm tra lại từ khóa tìm kiếm của bạn.",
+        wordsCount: "{count} từ"
+      }
+    };
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+      initTheme();
+      initLanguage();
+      fetchWordsData();
+
+      // Event listeners
+      document.getElementById('search-input').addEventListener('input', (e) => {
+        renderWords(e.target.value.trim());
+      });
+
+      document.getElementById('toggle-all-btn').addEventListener('click', toggleAllSections);
+      document.getElementById('theme-toggle-btn').addEventListener('click', toggleTheme);
+      document.getElementById('lang-toggle-btn').addEventListener('click', toggleLanguage);
+    });
+
+    // Fetch JSON data
+    async function fetchWordsData() {
+      const container = document.getElementById('words-container');
+      try {
+        const response = await fetch('new_words.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        wordsData = await response.json();
+        renderWords();
+      } catch (error) {
+        console.error('Failed to load vocabulary data:', error);
+        container.innerHTML = `
+          <div class="empty-state" style="border: 1px solid var(--error); background: var(--error-container); color: var(--on-error-container);">
+            <span class="material-symbols-outlined" style="font-size: 48px; color: var(--error);">error</span>
+            <h3 style="margin: 12px 0 6px;">Failed to Load Vocabulary Data</h3>
+            <p style="margin: 0;">Could not fetch <code>new_words.json</code>. Ensure the local server is running and the file exists.</p>
+          </div>
+        `;
+      }
+    }
+
+    // Render grouped words
+    function renderWords(searchQuery = '') {
+      const container = document.getElementById('words-container');
+      const labels = UI_LABELS[currentLang];
+
+      if (!wordsData || wordsData.length === 0) {
+        container.innerHTML = `<div class="empty-state"><p>No vocabulary items available.</p></div>`;
+        return;
+      }
+
+      const query = searchQuery.toLowerCase();
+      let totalWordsRendered = 0;
+      let html = '';
+
+      wordsData.forEach(group => {
+        // Filter words matching query
+        const filteredWords = group.words.filter(item => {
+          if (!query) return true;
+          return (
+            item.word.toLowerCase().includes(query) ||
+            item.meaning.toLowerCase().includes(query) ||
+            (item.vietnamese && item.vietnamese.toLowerCase().includes(query)) ||
+            (group.theme && group.theme.toLowerCase().includes(query)) ||
+            group.date.includes(query) ||
+            group.dateFormatted.toLowerCase().includes(query)
+          );
+        });
+
+        if (filteredWords.length > 0) {
+          totalWordsRendered += filteredWords.length;
+          const countText = labels.wordsCount.replace('{count}', filteredWords.length);
+
+          html += `
+            <div class="date-group-section" data-date="${group.date}">
+              <div class="date-group-header">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+                  <span class="date-badge">
+                    <span class="material-symbols-outlined" style="font-size: 18px;">calendar_today</span>
+                    <span>${group.dateFormatted || group.date}</span>
+                  </span>
+                  ${group.theme ? `<span class="date-theme-title">${group.theme}</span>` : ''}
+                </div>
+                <span style="font-size: 13px; font-weight: 600; color: var(--on-surface-variant);">${countText}</span>
+              </div>
+
+              <div class="words-grid">
+                ${filteredWords.map(word => renderWordCard(word, labels)).join('')}
+              </div>
+            </div>
+          `;
+        }
+      });
+
+      if (totalWordsRendered === 0) {
+        container.innerHTML = `
+          <div class="empty-state fade-in">
+            <span class="material-symbols-outlined" style="font-size: 48px; color: var(--outline);">search_off</span>
+            <h3 style="font-size: 20px; font-weight: 700; margin: 12px 0 6px;">${labels.emptyTitle}</h3>
+            <p style="color: var(--on-surface-variant); margin: 0;">${labels.emptySub}</p>
+          </div>
+        `;
+      } else {
+        container.innerHTML = html;
+      }
+    }
+
+    // Render single word card
+    function renderWordCard(word, labels) {
+      return `
+        <article class="word-card fade-in">
+          <div>
+            <div class="word-header">
+              <div class="word-title-area">
+                <h3 class="word-title">${word.word}</h3>
+                ${word.type ? `<span class="word-type">${word.type}</span>` : ''}
+                ${word.level ? `<span class="word-level">${word.level}</span>` : ''}
+              </div>
+              <button class="audio-btn" onclick="speakWord('${word.word.replace(/'/g, "\\'")}')" title="Listen to pronunciation" aria-label="Pronounce ${word.word}">
+                <span class="material-symbols-outlined" style="font-size: 20px;">volume_up</span>
+              </button>
+            </div>
+
+            ${word.phonetic ? `<div class="phonetic-text">${word.phonetic}</div>` : ''}
+
+            <div class="meaning-block">
+              <span class="meaning-label">${labels.meaning}</span>
+              <p class="meaning-text">${word.meaning}</p>
+            </div>
+
+            ${word.example ? `
+              <div class="example-box">
+                <p>"${word.example}"</p>
+              </div>
+            ` : ''}
+          </div>
+
+          ${word.vietnamese ? `
+            <div class="vietnamese-pill">
+              <span class="material-symbols-outlined" style="font-size: 18px;">translate</span>
+              <span>${word.vietnamese}</span>
+            </div>
+          ` : ''}
+        </article>
+      `;
+    }
+
+    // Text to Speech Pronunciation
+    function speakWord(text) {
+      if (!('speechSynthesis' in window)) {
+        alert("Sorry, your browser does not support text-to-speech.");
+        return;
+      }
+      // Cancel previous utterances
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.9; // Slightly slower for clear pronunciation
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Expand/Collapse Sections
+    function toggleAllSections() {
+      isAllExpanded = !isAllExpanded;
+      const grids = document.querySelectorAll('.words-grid');
+      const btnIcon = document.querySelector('#toggle-all-btn .material-symbols-outlined');
+      const btnLabel = document.getElementById('toggle-all-label');
+      const labels = UI_LABELS[currentLang];
+
+      grids.forEach(grid => {
+        grid.style.display = isAllExpanded ? 'grid' : 'none';
+      });
+
+      if (btnIcon && btnLabel) {
+        btnIcon.textContent = isAllExpanded ? 'unfold_less' : 'unfold_more';
+        btnLabel.textContent = isAllExpanded ? labels.collapseAll : labels.expandAll;
+      }
+    }
+
+    // Theme logic
+    function initTheme() {
+      const savedTheme = localStorage.getItem('simmilearning-theme') || 'light';
+      document.body.setAttribute('data-theme', savedTheme);
+      updateThemeIcon(savedTheme);
+    }
+
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme') || 'light';
+      const next = current === 'light' ? 'dark' : 'light';
+      document.body.setAttribute('data-theme', next);
+      localStorage.setItem('simmilearning-theme', next);
+      updateThemeIcon(next);
+    }
+
+    function updateThemeIcon(theme) {
+      const icon = document.querySelector('#theme-toggle-btn span');
+      if (icon) icon.textContent = theme === 'light' ? 'dark_mode' : 'light_mode';
+    }
+
+    // Language logic
+    function initLanguage() {
+      updateLanguageUI();
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'vi' : 'en';
+      localStorage.setItem('simmilearning-lang', currentLang);
+      updateLanguageUI();
+      renderWords(document.getElementById('search-input').value.trim());
+    }
+
+    function updateLanguageUI() {
+      const labels = UI_LABELS[currentLang];
+      const langLabel = document.getElementById('lang-label');
+      if (langLabel) langLabel.textContent = currentLang.toUpperCase();
+
+      const heroBadge = document.getElementById('hero-badge-text');
+      if (heroBadge) heroBadge.textContent = labels.heroBadge;
+
+      const heroTitle = document.getElementById('hero-title-text');
+      if (heroTitle) heroTitle.textContent = labels.heroTitle;
+
+      const heroSub = document.getElementById('hero-sub-text');
+      if (heroSub) heroSub.textContent = labels.heroSub;
+
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) searchInput.placeholder = labels.searchPlaceholder;
+
+      const btnLabel = document.getElementById('toggle-all-label');
+      if (btnLabel) btnLabel.textContent = isAllExpanded ? labels.collapseAll : labels.expandAll;
+    }
+  </script>
+</body>
+</html>
