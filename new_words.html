@@ -1150,18 +1150,47 @@
       `;
     }
 
-    // Text to Speech Pronunciation
+    // Cached English voices to ensure accurate pronunciation across all devices
+    let englishVoices = [];
+    function ensureEnglishVoicesLoaded() {
+      if (!('speechSynthesis' in window)) return;
+      const voices = window.speechSynthesis.getVoices();
+      englishVoices = voices.filter(v => v.lang.toLowerCase().startsWith('en') || v.lang.toLowerCase().includes('en-'));
+    }
+    if ('speechSynthesis' in window) {
+      ensureEnglishVoicesLoaded();
+      if (window.speechSynthesis.onvoiceschanged !== undefined) {
+        window.speechSynthesis.onvoiceschanged = ensureEnglishVoicesLoaded;
+      }
+    }
+
+    // Text to Speech Pronunciation - Guaranteed English
     function speakWord(text) {
-      Logger.info(`Pronouncing text via SpeechSynthesis: "${text}"`);
       if (!('speechSynthesis' in window)) {
         alert("Sorry, your browser does not support text-to-speech.");
         return;
       }
-      // Cancel previous utterances
+      if (englishVoices.length === 0) {
+        ensureEnglishVoicesLoaded();
+      }
+
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'en-US';
       utterance.rate = 0.5; // Slow speed for easy listening and learning pronunciation
+
+      if (englishVoices.length > 0) {
+        // Prioritize US/UK English voices or Google/Natural voices, then fallback to any available English voice
+        const preferredVoice = englishVoices.find(v => v.lang.replace('_', '-').toLowerCase() === 'en-us' && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Samantha') || v.name.includes('English')))
+                            || englishVoices.find(v => v.lang.replace('_', '-').toLowerCase() === 'en-us')
+                            || englishVoices.find(v => v.lang.replace('_', '-').toLowerCase().startsWith('en-'))
+                            || englishVoices[0];
+        if (preferredVoice) {
+          utterance.voice = preferredVoice;
+        }
+      }
+
+      Logger.info(`Pronouncing text via SpeechSynthesis: "${text}" | Voice: ${utterance.voice ? utterance.voice.name + ' (' + utterance.voice.lang + ')' : 'Default (' + utterance.lang + ')'}`);
       window.speechSynthesis.speak(utterance);
     }
 

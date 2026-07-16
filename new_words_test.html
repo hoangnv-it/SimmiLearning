@@ -1030,12 +1030,41 @@
       startTest();
     }
 
+    // Cached English voices to guarantee accurate pronunciation across all devices
+    let englishVoices = [];
+    function ensureEnglishVoicesLoaded() {
+      if (!('speechSynthesis' in window)) return;
+      const voices = window.speechSynthesis.getVoices();
+      englishVoices = voices.filter(v => v.lang.toLowerCase().startsWith('en') || v.lang.toLowerCase().includes('en-'));
+    }
+    if ('speechSynthesis' in window) {
+      ensureEnglishVoicesLoaded();
+      if (window.speechSynthesis.onvoiceschanged !== undefined) {
+        window.speechSynthesis.onvoiceschanged = ensureEnglishVoicesLoaded;
+      }
+    }
+
     function speakWord(text) {
       if (!('speechSynthesis' in window)) return;
+      if (englishVoices.length === 0) {
+        ensureEnglishVoicesLoaded();
+      }
+
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'en-US';
       utterance.rate = 0.5; // Slow speed for easy listening and learning pronunciation
+
+      if (englishVoices.length > 0) {
+        const preferredVoice = englishVoices.find(v => v.lang.replace('_', '-').toLowerCase() === 'en-us' && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Samantha') || v.name.includes('English')))
+                            || englishVoices.find(v => v.lang.replace('_', '-').toLowerCase() === 'en-us')
+                            || englishVoices.find(v => v.lang.replace('_', '-').toLowerCase().startsWith('en-'))
+                            || englishVoices[0];
+        if (preferredVoice) {
+          utterance.voice = preferredVoice;
+        }
+      }
+
       window.speechSynthesis.speak(utterance);
     }
 
