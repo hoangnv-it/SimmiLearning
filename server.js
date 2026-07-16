@@ -3,6 +3,13 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = 8080;
+const LOG_LEVEL = 'INFO';
+
+function logInfo(...args) {
+    if (LOG_LEVEL === 'INFO' || LOG_LEVEL === 'DEBUG') {
+        console.log('[INFO]', new Date().toISOString(), ...args);
+    }
+}
 
 const MIME_TYPES = {
     '.html': 'text/html',
@@ -22,11 +29,13 @@ const MIME_TYPES = {
 };
 
 const server = http.createServer((req, res) => {
+    logInfo(`${req.method} ${req.url}`);
     // Decode URI to handle spaces and special chars in filenames
     let decodedUrl;
     try {
         decodedUrl = decodeURIComponent(req.url);
     } catch (e) {
+        logInfo(`Bad Request URI: ${req.url}`);
         res.statusCode = 400;
         res.end('Bad Request');
         return;
@@ -79,9 +88,11 @@ const server = http.createServer((req, res) => {
 
         fs.readFile(fileToServe, (err, content) => {
             if (err) {
+                logInfo(`Error serving ${fileToServe}: ${err.code}`);
                 res.statusCode = 500;
                 res.end(`Server Error: ${err.code}`);
             } else {
+                logInfo(`Served 200 OK -> ${path.basename(fileToServe)} (${contentType})`);
                 res.writeHead(200, { 'Content-Type': contentType });
                 res.end(content, 'utf-8');
             }
@@ -90,6 +101,6 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}/`);
-    console.log('Press Ctrl+C to stop.');
+    console.log(`[INFO] Server running at http://localhost:${PORT}/ (LOG_LEVEL: ${LOG_LEVEL})`);
+    console.log('[INFO] Press Ctrl+C to stop.');
 });
