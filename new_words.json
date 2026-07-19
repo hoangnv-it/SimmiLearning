@@ -1,5 +1,699 @@
 [
   {
+    "date": "2026-07-19",
+    "dateFormatted": "July 19, 2026",
+    "theme": "Daily Collocations & School Vocabulary",
+    "words": [
+      {
+        "word": "Play football",
+        "type": "phrase / v.",
+        "phonetic": "/pleɪ ˈfʊt.bɔːl/",
+        "meaning": "To participate in a game of soccer or football.",
+        "example": "We usually play football on the school field after classes.",
+        "vietnamese": "Chơi bóng đá / bóng đá"
+      },
+      {
+        "word": "Play the piano",
+        "type": "phrase / v.",
+        "phonetic": "/pleɪ ðə piˈæn.oʊ/",
+        "meaning": "To perform music using a keyboard musical instrument with keys that strike strings.",
+        "example": "She learned how to play the piano when she was just six years old.",
+        "vietnamese": "Chơi đàn dương cầm / đàn dương cầm"
+      },
+      {
+        "word": "Play sports",
+        "type": "phrase / v.",
+        "phonetic": "/pleɪ spɔːrts/",
+        "meaning": "To take part in physical athletic activities or competitive games.",
+        "example": "It is important to play sports regularly to stay healthy and fit.",
+        "vietnamese": "Chơi thể thao / thể thao"
+      },
+      {
+        "word": "Play badminton",
+        "type": "phrase / v.",
+        "phonetic": "/pleɪ ˈbæd.mɪn.tən/",
+        "meaning": "To play a racket sport across a net using a lightweight shuttlecock.",
+        "example": "My friends and I play badminton in the park every morning.",
+        "vietnamese": "Chơi cầu lông / cầu lông"
+      },
+      {
+        "word": "Play the violin",
+        "type": "phrase / v.",
+        "phonetic": "/pleɪ ðə ˌvaɪəˈlɪn/",
+        "meaning": "To perform music on a four-stringed wooden instrument played with a bow.",
+        "example": "He practices every evening to play the violin in the school orchestra.",
+        "vietnamese": "Chơi đàn vĩ cầm / đàn vĩ cầm"
+      },
+      {
+        "word": "Play basketball",
+        "type": "phrase / v.",
+        "phonetic": "/pleɪ ˈbæs.kət.bɔːl/",
+        "meaning": "To play a team sport where players try to throw a ball through a raised hoop.",
+        "example": "They meet at the gymnasium on weekends to play basketball.",
+        "vietnamese": "Chơi bóng rổ / bóng rổ"
+      },
+      {
+        "word": "Do judo",
+        "type": "phrase / v.",
+        "phonetic": "/duː ˈdʒuː.doʊ/",
+        "meaning": "To practice a modern Japanese martial art and combat sport focusing on throwing and grappling.",
+        "example": "He started to do judo three years ago to learn self-defense and discipline.",
+        "vietnamese": "Tập võ ju-đô / võ ju-đô"
+      },
+      {
+        "word": "Do housework",
+        "type": "phrase / v.",
+        "phonetic": "/duː ˈhaʊs.wɝːk/",
+        "meaning": "To perform domestic chores such as cleaning, washing, and tidying around the house.",
+        "example": "All family members share the responsibility to do housework during the weekend.",
+        "vietnamese": "Làm việc nhà / việc nhà"
+      },
+      {
+        "word": "Do homework",
+        "type": "phrase / v.",
+        "phonetic": "/duː ˈhoʊm.wɝːk/",
+        "meaning": "To complete school assignments or exercises given by teachers to be done outside of class.",
+        "example": "Be sure to do your homework carefully before going out to play.",
+        "vietnamese": "Làm bài tập về nhà / bài tập về nhà"
+      },
+      {
+        "word": "Do aerobics",
+        "type": "phrase / v.",
+        "phonetic": "/duː erˈoʊ.bɪks/",
+        "meaning": "To perform energetic physical exercises done to music to strengthen the heart and lungs.",
+        "example": "My mother likes to do aerobics with her neighbors at the community center every morning.",
+        "vietnamese": "Tập thể dục nhịp điệu / thể dục nhịp điệu"
+      },
+      {
+        "word": "Do exercise",
+        "type": "phrase / v.",
+        "phonetic": "/duː ˈek.sɚ.saɪz/",
+        "meaning": "To engage in physical activity to improve health, strength, and fitness.",
+        "example": "Doctors recommend that people do exercise for at least thirty minutes daily.",
+        "vietnamese": "Tập thể dục / bài thể dục"
+      },
+      {
+        "word": "Do karate",
+        "type": "phrase / v.",
+        "phonetic": "/duː kəˈrɑː.t̬i/",
+        "meaning": "To practice a traditional Japanese martial art using hands and feet for self-defense.",
+        "example": "She goes to the martial arts club twice a week to do karate.",
+        "vietnamese": "Tập võ ka-ra-te / võ ka-ra-te"
+      },
+      {
+        "word": "Have music lessons",
+        "type": "phrase / v.",
+        "phonetic": "/hæv ˈmjuː.zɪk ˌles.ənz/",
+        "meaning": "To attend scheduled classes or instructional periods for learning music or playing an instrument.",
+        "example": "We have music lessons in the school auditorium every Tuesday morning.",
+        "vietnamese": "Có tiết học âm nhạc / tiết học âm nhạc"
+      },
+      {
+        "word": "Have lunch",
+        "type": "phrase / v.",
+        "phonetic": "/hæv lʌnttʃ/",
+        "meaning": "To eat the midday meal.",
+        "example": "We usually have lunch at the school cafeteria around noon.",
+        "vietnamese": "Ăn trưa / bữa trưa"
+      },
+      {
+        "word": "Have breakfast",
+        "type": "phrase / v.",
+        "phonetic": "/hæv ˈbrek.fəst/",
+        "meaning": "To eat the first meal of the day after waking up in the morning.",
+        "example": "I always have breakfast before heading out to school.",
+        "vietnamese": "Ăn sáng / bữa sáng"
+      },
+      {
+        "word": "Have drawings",
+        "type": "phrase / v.",
+        "phonetic": "/hæv ˈdrɔː.ɪŋz/",
+        "meaning": "To possess, display, or produce pictures made with pencil, pen, or charcoal.",
+        "example": "The art gallery will have drawings displayed by talented young students next week.",
+        "vietnamese": "Có bản vẽ / bức vẽ"
+      },
+      {
+        "word": "Have paintings",
+        "type": "phrase / v.",
+        "phonetic": "/hæv ˈpeɪn.tɪŋz/",
+        "meaning": "To possess, create, or exhibit artistic compositions created using oil, watercolor, or acrylic paint.",
+        "example": "We have colorful paintings hanging on the walls of our classroom.",
+        "vietnamese": "Có bức họa / tranh vẽ"
+      },
+      {
+        "word": "Have dinner",
+        "type": "phrase / v.",
+        "phonetic": "/hæv ˈdɪn.ɚ/",
+        "meaning": "To eat the main evening meal of the day.",
+        "example": "Our entire family gathers at seven o'clock every evening to have dinner together.",
+        "vietnamese": "Ăn tối / bữa tối"
+      },
+      {
+        "word": "Have English lesson",
+        "type": "phrase / v.",
+        "phonetic": "/hæv ˈɪŋ.ɡlɪʃ ˌles.ən/",
+        "meaning": "To attend a class or session where the English language is taught.",
+        "example": "We have English lesson on Mondays, Wednesdays, and Fridays.",
+        "vietnamese": "Có tiết học tiếng Anh / tiết học tiếng Anh"
+      },
+      {
+        "word": "Study history",
+        "type": "phrase / v.",
+        "phonetic": "/ˈstʌd.i ˈhɪs.t̬ɚ.i/",
+        "meaning": "To learn about past events, historical figures, and the development of human civilization.",
+        "example": "Students study history to understand how different cultures and nations evolved over time.",
+        "vietnamese": "Học lịch sử / lịch sử"
+      },
+      {
+        "word": "Study English",
+        "type": "phrase / v.",
+        "phonetic": "/ˈstʌd.i ˈɪŋ.ɡlɪʃ/",
+        "meaning": "To learn the grammar, vocabulary, reading, and speaking skills of the English language.",
+        "example": "Many students study English to prepare for international scholarship opportunities.",
+        "vietnamese": "Học tiếng Anh / tiếng Anh"
+      },
+      {
+        "word": "Study vocabulary",
+        "type": "phrase / v.",
+        "phonetic": "/ˈstʌd.i voʊˈkæb.jə.ler.i/",
+        "meaning": "To memorize and practice new words and their meanings in a language.",
+        "example": "I spend fifteen minutes every night to study vocabulary using flashcards.",
+        "vietnamese": "Học từ vựng / từ vựng"
+      },
+      {
+        "word": "Study geography",
+        "type": "phrase / v.",
+        "phonetic": "/ˈstʌd.i dʒiˈɑː.ɡrə.fi/",
+        "meaning": "To learn about the physical features of the earth, its atmosphere, and human populations.",
+        "example": "When we study geography, we examine maps, continents, oceans, and different climates.",
+        "vietnamese": "Học địa lý / địa lý"
+      },
+      {
+        "word": "Study science",
+        "type": "phrase / v.",
+        "phonetic": "/ˈstʌd.i ˈsaɪ.əns/",
+        "meaning": "To learn about the natural and physical world through systematic observation and experiments.",
+        "example": "In middle school, students study science subjects like biology, chemistry, and physics.",
+        "vietnamese": "Học khoa học / khoa học"
+      },
+      {
+        "word": "Study subjects",
+        "type": "phrase / v.",
+        "phonetic": "/ˈstʌd.i ˈsʌb.jekts/",
+        "meaning": "To learn various academic branches of knowledge in a school curriculum.",
+        "example": "We study subjects such as mathematics, literature, history, and foreign languages every semester.",
+        "vietnamese": "Học các môn học / các môn học"
+      },
+      {
+        "word": "Study maths",
+        "type": "phrase / v.",
+        "phonetic": "/ˈstʌd.i mæθs/",
+        "meaning": "To learn numbers, quantities, geometry, algebra, and mathematical formulas.",
+        "example": "He loves to study maths and enjoys solving challenging algebraic problems.",
+        "vietnamese": "Học toán học / toán học"
+      },
+      {
+        "word": "Uniforms",
+        "type": "n.",
+        "phonetic": "/ˈjuː.nə.fɔːrmz/",
+        "meaning": "Distinctive sets of clothing worn by all members of an organization, school, or team.",
+        "example": "Students in Vietnam wear neat white shirts and dark trousers as school uniforms.",
+        "vietnamese": "Đồng phục"
+      },
+      {
+        "word": "Boarding school",
+        "type": "n.",
+        "phonetic": "/ˈbɔːr.dɪŋ ˌskuːl/",
+        "meaning": "A school where pupils live and study during the school term.",
+        "example": "Her parents sent her to a prestigious boarding school where she lives on campus during the week.",
+        "vietnamese": "Trường nội trú"
+      },
+      {
+        "word": "Library",
+        "type": "n.",
+        "phonetic": "/ˈlaɪ.brer.i/",
+        "meaning": "A building or room containing collections of books, periodicals, and resources for reading or borrowing.",
+        "example": "During the break, many students visit the school library to read reference books.",
+        "vietnamese": "Thư viện"
+      },
+      {
+        "word": "Classmates",
+        "type": "n.",
+        "phonetic": "/ˈklæs.meɪts/",
+        "meaning": "Students who attend the same class or grade as you at school.",
+        "example": "My classmates are very friendly and always help one another with difficult assignments.",
+        "vietnamese": "Bạn cùng lớp"
+      },
+      {
+        "word": "Favourite",
+        "type": "adj. / n.",
+        "phonetic": "/ˈfeɪ.vər.ɪt/",
+        "meaning": "Preferred before all others of the same kind; liked best.",
+        "example": "English and mathematics are my two favourite subjects at school.",
+        "vietnamese": "Yêu thích"
+      },
+      {
+        "word": "Smart",
+        "type": "adj.",
+        "phonetic": "/smɑːrt/",
+        "meaning": "Intelligent and quick-witted; also neat, clean, and well-dressed in appearance.",
+        "example": "He looks very smart in his new school uniform and is also a very smart student in class.",
+        "vietnamese": "Bảnh bao / thông minh"
+      },
+      {
+        "word": "International",
+        "type": "adj.",
+        "phonetic": "/ˌɪn.t̬ɚˈnæʃ.ən.əl/",
+        "meaning": "Involving or relating to two or more countries across the world.",
+        "example": "She dreams of studying abroad at an international university in the future.",
+        "vietnamese": "Quốc tế"
+      },
+      {
+        "word": "The same",
+        "type": "phrase / adj.",
+        "phonetic": "/ðə seɪm/",
+        "meaning": "Identical or not different in quality, type, or characteristics.",
+        "example": "We both bought the same English dictionary at the bookstore yesterday.",
+        "vietnamese": "Giống nhau"
+      },
+      {
+        "word": "In the same class",
+        "type": "phrase",
+        "phonetic": "/ɪn ðə seɪm klæs/",
+        "meaning": "Attending the exact same grade, homeroom, or academic course alongside someone else.",
+        "example": "We have been best friends since childhood and we are still in the same class this year.",
+        "vietnamese": "Học cùng lớp"
+      },
+      {
+        "word": "Require",
+        "type": "v.",
+        "phonetic": "/rɪˈkwaɪr/",
+        "meaning": "To need something for a specific purpose or make it mandatory by rule.",
+        "example": "Most international companies require their applicants to have good English communication skills.",
+        "vietnamese": "Yêu cầu"
+      },
+      {
+        "word": "English-speaking teacher",
+        "type": "n.",
+        "phonetic": "/ˈɪŋ.ɡlɪʃ ˌspiː.kɪŋ ˈtiː.tʃɚ/",
+        "meaning": "An instructor whose native or primary spoken language is English.",
+        "example": "Our school hired an English-speaking teacher to help students improve their pronunciation.",
+        "vietnamese": "Giáo viên nói tiếng Anh"
+      },
+      {
+        "word": "Favourite teacher",
+        "type": "n.",
+        "phonetic": "/ˈfeɪ.vər.ɪt ˈtiː.tʃɚ/",
+        "meaning": "The educator or instructor that a student likes more than any other.",
+        "example": "Mr. David is my favourite teacher because his English lessons are always lively and engaging.",
+        "vietnamese": "Giáo viên yêu thích"
+      },
+      {
+        "word": "Borrow",
+        "type": "v.",
+        "phonetic": "/ˈbɑːr.oʊ/",
+        "meaning": "To take and use something belonging to someone else with the intention of returning it soon.",
+        "example": "May I borrow your pen and ruler for a moment during the test?",
+        "vietnamese": "Mượn"
+      },
+      {
+        "word": "Be at home",
+        "type": "phrase / v.",
+        "phonetic": "/bi æt hoʊm/",
+        "meaning": "To stay or remain inside one's own house or residence.",
+        "example": "On rainy Sunday afternoons, I prefer to be at home reading my favorite books.",
+        "vietnamese": "Ở nhà"
+      },
+      {
+        "word": "She is at home",
+        "type": "sentence",
+        "phonetic": "/ʃiː ɪz æt hoʊm/",
+        "meaning": "A statement indicating that a female subject is currently staying inside her residence.",
+        "example": "She is at home today resting because she caught a slight cold.",
+        "vietnamese": "Cô ấy ở nhà"
+      },
+      {
+        "word": "Put on",
+        "type": "phrase / v.",
+        "phonetic": "/pʊt ɑːn/",
+        "meaning": "To dress yourself in a piece of clothing, shoes, or accessories.",
+        "example": "Be sure to put on a warm sweater before walking outside in the chilly morning.",
+        "vietnamese": "Mặc đồ"
+      },
+      {
+        "word": "Coat",
+        "type": "n.",
+        "phonetic": "/koʊt/",
+        "meaning": "An outer garment with sleeves worn outdoors to protect against cold or rain.",
+        "example": "He hung his heavy winter coat inside the wardrobe when he entered the house.",
+        "vietnamese": "Áo khoác"
+      },
+      {
+        "word": "Go out",
+        "type": "phrase / v.",
+        "phonetic": "/ɡoʊ aʊt/",
+        "meaning": "To leave one's house or room to attend a social event, walk outside, or run errands.",
+        "example": "We plan to go out for a nice dinner at a restaurant this weekend.",
+        "vietnamese": "Đi ra ngoài"
+      },
+      {
+        "word": "Once a week",
+        "type": "phrase / adv.",
+        "phonetic": "/wʌns ə wiːk/",
+        "meaning": "Happening one time during every seven-day period.",
+        "example": "We attend an English conversation club once a week to practice speaking.",
+        "vietnamese": "Một lần 1 tuần"
+      },
+      {
+        "word": "Twice a week",
+        "type": "phrase / adv.",
+        "phonetic": "/twaɪs ə wiːk/",
+        "meaning": "Happening two times during every seven-day period.",
+        "example": "She practices playing the piano twice a week with her music teacher.",
+        "vietnamese": "Hai lần 1 tuần"
+      },
+      {
+        "word": "Three times a week",
+        "type": "phrase / adv.",
+        "phonetic": "/θriː taɪmz ə wiːk/",
+        "meaning": "Happening three separate times during every seven-day period.",
+        "example": "Our class meets at the gymnasium three times a week for physical education.",
+        "vietnamese": "Ba lần một tuần"
+      },
+      {
+        "word": "Boarder",
+        "type": "n.",
+        "phonetic": "/ˈbɔːr.dɚ/",
+        "meaning": "A student who lives and sleeps at school during the academic term rather than going home daily.",
+        "example": "As a boarder, he shares a dormitory room with three other classmates on the school campus.",
+        "vietnamese": "Học sinh nội trú"
+      }
+    ]
+  },
+  {
+    "date": "2026-07-18",
+    "dateFormatted": "July 18, 2026",
+    "theme": "Daily Vocabulary & Expressions",
+    "words": [
+      {
+        "word": "Villa",
+        "type": "n.",
+        "phonetic": "/ˈvɪl.ə/",
+        "meaning": "A large and luxurious country house or residential property.",
+        "example": "They rented a beautiful seaside villa for their summer vacation.",
+        "vietnamese": "Biệt thự"
+      },
+      {
+        "word": "Chest of drawers",
+        "type": "n.",
+        "phonetic": "/ˌtʃest əv ˈdrɔː.ɚz/",
+        "meaning": "A piece of furniture with multiple horizontal drawers for storing clothes and personal items.",
+        "example": "She organized all her folded shirts inside the chest of drawers.",
+        "vietnamese": "Tủ có ngăn kéo"
+      },
+      {
+        "word": "Townhouse",
+        "type": "n.",
+        "phonetic": "/ˈtaʊn.haʊs/",
+        "meaning": "A tall, narrow residential building that shares one or both side walls with neighboring houses.",
+        "example": "They recently bought a modern three-story townhouse near the city center.",
+        "vietnamese": "Nhà phố"
+      },
+      {
+        "word": "Stilt house",
+        "type": "n.",
+        "phonetic": "/stɪlt haʊs/",
+        "meaning": "A wooden house built on elevated poles or pillars above ground or over water.",
+        "example": "Traditional stilt houses protect residents from floods and wild animals.",
+        "vietnamese": "Nhà sàn"
+      },
+      {
+        "word": "Dishwasher",
+        "type": "n.",
+        "phonetic": "/ˈdɪʃˌwɑː.ʃɚ/",
+        "meaning": "A kitchen appliance that automatically washes and rinses dishes and cutlery.",
+        "example": "After dinner, we loaded the dirty plates and bowls into the dishwasher.",
+        "vietnamese": "Máy rửa chén"
+      },
+      {
+        "word": "Furniture",
+        "type": "n.",
+        "phonetic": "/ˈfɝː.nɪ.tʃɚ/",
+        "meaning": "Large movable items such as tables, chairs, and beds used to make a house suitable for living.",
+        "example": "They went to the home store to buy wooden furniture for their new living room.",
+        "vietnamese": "Đồ đạc trong nhà"
+      },
+      {
+        "word": "Nephew",
+        "type": "n.",
+        "phonetic": "/ˈnef.juː/",
+        "meaning": "The son of your brother or sister, or the son of your spouse's brother or sister.",
+        "example": "My nephew loves playing football with his uncle every weekend.",
+        "vietnamese": "Cháu trai"
+      },
+      {
+        "word": "Niece",
+        "type": "n.",
+        "phonetic": "/niːs/",
+        "meaning": "The daughter of your brother or sister, or the daughter of your spouse's brother or sister.",
+        "example": "I bought a cute teddy bear as a birthday gift for my niece.",
+        "vietnamese": "Cháu gái"
+      },
+      {
+        "word": "Meadow",
+        "type": "n.",
+        "phonetic": "/ˈmed.oʊ/",
+        "meaning": "A field with wild grass and colorful wildflowers.",
+        "example": "The cows were peacefully grazing on green grass in the sunny meadow.",
+        "vietnamese": "Bãi cỏ"
+      },
+      {
+        "word": "Suburb",
+        "type": "n.",
+        "phonetic": "/ˈsʌb.ɝːb/",
+        "meaning": "A residential area situated on the outskirts of a city or town.",
+        "example": "Many families prefer living in a quiet suburb away from the crowded city center.",
+        "vietnamese": "Ngoại ô"
+      },
+      {
+        "word": "Convenient",
+        "type": "adj.",
+        "phonetic": "/kənˈviː.ni.ənt/",
+        "meaning": "Fitting in well with a person's needs, activities, and plans without causing trouble or difficulty.",
+        "example": "Living near the subway station is very convenient for commuting to work every day.",
+        "vietnamese": "Tiện lợi"
+      },
+      {
+        "word": "Be good at",
+        "type": "phrase / adj.",
+        "phonetic": "/bi ɡʊd æt/",
+        "meaning": "To be skillful, talented, or proficient in performing a particular task or activity.",
+        "example": "She practiced every day and has grown to be good at playing the piano and painting.",
+        "vietnamese": "Giỏi cái gì"
+      },
+      {
+        "word": "Wake up / Get up",
+        "type": "phrase / v.",
+        "phonetic": "/weɪk ʌp/ — /ɡet ʌp/",
+        "meaning": "To stop sleeping and get out of bed in the morning.",
+        "example": "I usually wake up at 6:00 AM and get up immediately to prepare for school.",
+        "vietnamese": "Thức dậy"
+      },
+      {
+        "word": "Calendar",
+        "type": "n.",
+        "phonetic": "/ˈkæl.ən.dɚ/",
+        "meaning": "A chart or system showing days, weeks, and months of a particular year.",
+        "example": "She marked the date of her final English exam on her wall calendar.",
+        "vietnamese": "Lịch"
+      },
+      {
+        "word": "Record",
+        "type": "v.",
+        "phonetic": "/rɪˈkɔːrd/",
+        "meaning": "To capture sound or speech on a device or electronic media so that it can be listened to later.",
+        "example": "The teacher asked the students to record their voices while reading the English dialogue.",
+        "vietnamese": "Ghi âm"
+      },
+      {
+        "word": "Luggage",
+        "type": "n.",
+        "phonetic": "/ˈlʌɡ.ɪdʒ/",
+        "meaning": "Suitcases, bags, and packages containing personal items packed for a journey.",
+        "example": "We checked in our heavy luggage at the airport counter before passing through security.",
+        "vietnamese": "Hành lý"
+      },
+      {
+        "word": "Kind of food",
+        "type": "phrase / n.",
+        "phonetic": "/kaɪnd əv fuːd/",
+        "meaning": "A category, variety, or type of edible nourishment or cuisine.",
+        "example": "What kind of food do you like to cook when hosting guests at home?",
+        "vietnamese": "Loại đồ ăn"
+      },
+      {
+        "word": "Kind of music",
+        "type": "phrase / n.",
+        "phonetic": "/kaɪnd əv ˈmjuː.zɪk/",
+        "meaning": "A genre, category, or style of musical compositions.",
+        "example": "Pop and classical are my favorite kinds of music to listen to while relaxing.",
+        "vietnamese": "Loại âm nhạc"
+      },
+      {
+        "word": "Kind of person",
+        "type": "phrase / n.",
+        "phonetic": "/kaɪnd əv ˈpɝː.sən/",
+        "meaning": "A type of human personality, character traits, or individual temperament.",
+        "example": "He is the kind of person who is always ready to help people in need.",
+        "vietnamese": "Kiểu người"
+      },
+      {
+        "word": "Secondary school",
+        "type": "n.",
+        "phonetic": "/ˈsek.ən.der.i ˌskuːl/",
+        "meaning": "A school for young people, usually between the ages of 11 and 16 or 18.",
+        "example": "After finishing primary school, children transition to study at secondary school.",
+        "vietnamese": "Trường cấp 2"
+      },
+      {
+        "word": "Comfortable",
+        "type": "adj.",
+        "phonetic": "/ˈkʌm.fɚ.t̬ə.bəl/",
+        "meaning": "Providing physical ease and relaxation; feeling pleasant and free from stress or pain.",
+        "example": "This new sofa is extremely comfortable and makes watching movies much more relaxing.",
+        "vietnamese": "Tiện lợi, thoải mái"
+      },
+      {
+        "word": "Of course",
+        "type": "phrase / adv.",
+        "phonetic": "/əv ˈkɔːrs/",
+        "meaning": "Used to give a polite agreement, confirmation, or permission; certainly or obviously.",
+        "example": "When I asked if I could borrow her dictionary, she smiled and said, 'Of course!'",
+        "vietnamese": "Tất nhiên"
+      },
+      {
+        "word": "Wardrobe",
+        "type": "n.",
+        "phonetic": "/ˈwɔːr.droʊb/",
+        "meaning": "A tall piece of furniture or cabinet inside a bedroom used for hanging and storing clothes.",
+        "example": "She hung her winter coats and shirts neatly inside the large wooden wardrobe.",
+        "vietnamese": "Tủ quần áo"
+      },
+      {
+        "word": "Solar system",
+        "type": "n.",
+        "phonetic": "/ˈsoʊ.lɚ ˌsɪs.təm/",
+        "meaning": "The sun together with the eight planets and other celestial bodies that orbit around it.",
+        "example": "Earth is the third planet from the sun in our solar system.",
+        "vietnamese": "Hệ mặt trời"
+      },
+      {
+        "word": "Planet",
+        "type": "n.",
+        "phonetic": "/ˈplæn.ɪt/",
+        "meaning": "A large round celestial body that orbits around a star, such as Earth or Mars.",
+        "example": "Scientists are using powerful telescopes to study distant planets across the galaxy.",
+        "vietnamese": "Hành tinh"
+      },
+      {
+        "word": "State",
+        "type": "n.",
+        "phonetic": "/steɪt/",
+        "meaning": "A territory or organized political community forming part of a federal republic, such as a state in the USA.",
+        "example": "California is the most populous state in the United States of America.",
+        "vietnamese": "Bang"
+      },
+      {
+        "word": "Messy",
+        "type": "adj.",
+        "phonetic": "/ˈmes.i/",
+        "meaning": "Untidy, dirty, or disorganized.",
+        "example": "His bedroom was so messy with toys and books scattered all over the floor.",
+        "vietnamese": "Bừa bãi"
+      },
+      {
+        "word": "Dirty",
+        "type": "adj.",
+        "phonetic": "/ˈdɝː.t̬i/",
+        "meaning": "Covered or marked with unclean substances such as mud, dust, or stains.",
+        "example": "Be sure to wash your dirty hands thoroughly before eating dinner.",
+        "vietnamese": "Bẩn"
+      },
+      {
+        "word": "Bowl",
+        "type": "n.",
+        "phonetic": "/boʊl/",
+        "meaning": "A round, deep dish or container used for holding soup, rice, or other food.",
+        "example": "She served a hot, delicious bowl of chicken noodle soup for lunch.",
+        "vietnamese": "Cái bát"
+      },
+      {
+        "word": "Chopsticks",
+        "type": "n.",
+        "phonetic": "/ˈtʃɑːp.stɪk/",
+        "meaning": "One of a pair of thin, slender wooden or plastic sticks used especially in East Asian countries to eat food.",
+        "example": "He learned how to hold and eat noodles skillfully using a pair of wooden chopsticks.",
+        "vietnamese": "Đũa"
+      },
+      {
+        "word": "Cap",
+        "type": "n.",
+        "phonetic": "/kæp/",
+        "meaning": "A type of soft headwear with a visor or curved peak projecting in front to shade the eyes.",
+        "example": "He wore a blue baseball cap to protect his eyes from the bright sunlight.",
+        "vietnamese": "Mũ lưỡi trai"
+      },
+      {
+        "word": "Tidy up",
+        "type": "phrase / v.",
+        "phonetic": "/ˈtaɪ.di ʌp/",
+        "meaning": "To clean, organize, and put things back in their proper places so that a room or area looks neat.",
+        "example": "Every Sunday morning, we spend an hour helping our parents tidy up the house.",
+        "vietnamese": "Dọn dẹp"
+      },
+      {
+        "word": "That's a good idea",
+        "type": "sentence / phrase",
+        "phonetic": "/ðæts ə ɡʊd aɪˈdiː.ə/",
+        "meaning": "An expression of strong approval and agreement with someone's suggestion or proposal.",
+        "example": "'Let's go to the library to study together this afternoon.' — 'That's a good idea!'",
+        "vietnamese": "Đó là ý kiến hay"
+      },
+      {
+        "word": "Put",
+        "type": "v.",
+        "phonetic": "/pʊt/",
+        "meaning": "To move or place something into a particular position or location.",
+        "example": "Please put your textbooks and notebooks neatly on the desk.",
+        "vietnamese": "Đặt, để"
+      },
+      {
+        "word": "Bookshelf",
+        "type": "n.",
+        "phonetic": "/ˈbʊk.ʃelf/",
+        "meaning": "A shelf or set of shelves built to hold and store books.",
+        "example": "She arranged her favorite storybooks alphabetically on the wooden bookshelf.",
+        "vietnamese": "Kệ sách"
+      },
+      {
+        "word": "Cozy",
+        "type": "adj.",
+        "phonetic": "/ˈkoʊ.zi/",
+        "meaning": "Giving a feeling of comfort, warmth, and relaxation in a small or intimate space.",
+        "example": "On rainy winter nights, we like to read books in our cozy living room near the fireplace.",
+        "vietnamese": "Thoải mái, dễ chịu"
+      },
+      {
+        "word": "Concert",
+        "type": "n.",
+        "phonetic": "/ˈkɑːn.sɚt/",
+        "meaning": "A musical performance given in public by singers or instrumental musicians.",
+        "example": "Hundreds of fans gathered at the stadium to watch their favorite singer perform in a live concert.",
+        "vietnamese": "Buổi hòa nhạc"
+      }
+    ]
+  },
+  {
     "date": "2026-07-15",
     "dateFormatted": "July 15, 2026",
     "theme": "Daily Vocabulary & Expressions",

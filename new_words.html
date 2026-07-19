@@ -812,8 +812,8 @@
       <div class="filter-btn-group">
         <button id="toggle-all-btn" class="btn-secondary"
           style="background: var(--surface-container-lowest); color: var(--on-surface); border: 1px solid var(--outline-variant); border-radius: var(--rounded-full); padding: 0 18px; height: 48px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
-          <span class="material-symbols-outlined" style="font-size: 20px;">unfold_less</span>
-          <span id="toggle-all-label">Collapse All</span>
+          <span class="material-symbols-outlined" style="font-size: 20px;">unfold_more</span>
+          <span id="toggle-all-label">Expand All</span>
         </button>
       </div>
     </div>
@@ -851,7 +851,7 @@
     let wordsData = [];
     let currentLang = localStorage.getItem('simmilearning-lang') || 'en';
     let currentViewMode = localStorage.getItem('simmilearning-words-view') || 'card';
-    let isAllExpanded = true;
+    let isAllExpanded = false;
     let collapsedGroups = new Set();
 
     // Translations for UI labels
@@ -932,6 +932,9 @@
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         wordsData = await response.json();
+        if (!isAllExpanded) {
+          wordsData.forEach(g => collapsedGroups.add(g.date));
+        }
         const totalItems = wordsData.reduce((acc, g) => acc + (g.words ? g.words.length : 0), 0);
         Logger.info(`Successfully loaded vocabulary dataset: ${wordsData.length} date groups containing ${totalItems} total words.`);
         renderWords();
@@ -1001,7 +1004,7 @@
           const missedWords = JSON.parse(localStorage.getItem('simmilearning-missed-words') || '{}');
           const itemsHtml = filteredWords.map(word => currentViewMode === 'card' ? renderWordCard(word, labels, missedWords) : renderWordListItem(word, labels, missedWords)).join('');
 
-          const isGroupExpanded = isAllExpanded && !collapsedGroups.has(group.date);
+          const isGroupExpanded = !collapsedGroups.has(group.date);
           html += `
             <div class="date-group-section" data-date="${group.date}">
               <div class="date-group-header">
@@ -1313,8 +1316,12 @@
       const searchInput = document.getElementById('search-input');
       if (searchInput) searchInput.placeholder = labels.searchPlaceholder;
 
+      const btnIcon = document.querySelector('#toggle-all-btn .material-symbols-outlined');
       const btnLabel = document.getElementById('toggle-all-label');
-      if (btnLabel) btnLabel.textContent = isAllExpanded ? labels.collapseAll : labels.expandAll;
+      if (btnIcon && btnLabel) {
+        btnIcon.textContent = isAllExpanded ? 'unfold_less' : 'unfold_more';
+        btnLabel.textContent = isAllExpanded ? labels.collapseAll : labels.expandAll;
+      }
     }
   </script>
 </body>
