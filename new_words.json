@@ -1,5 +1,188 @@
 [
   {
+    "date": "2026-07-23",
+    "dateFormatted": "July 23, 2026",
+    "theme": "School Supplies, Collocations & Classroom Expressions",
+    "words": [
+      {
+        "word": "Knock",
+        "type": "v. / n.",
+        "phonetic": "/nɑːk/",
+        "meaning": "To strike a surface such as a door repeatedly to attract attention.",
+        "example": "Please knock on the door before entering the teacher's office.",
+        "vietnamese": "Gõ cửa"
+      },
+      {
+        "word": "Around",
+        "type": "prep. / adv.",
+        "phonetic": "/əˈraʊnd/",
+        "meaning": "Located in or on various sides of something; surrounding.",
+        "example": "There are many green trees and colorful flowers around our school.",
+        "vietnamese": "Xung quanh"
+      },
+      {
+        "word": "Excited",
+        "type": "adj.",
+        "phonetic": "/ɪkˈsaɪ.t̬ɪd/",
+        "meaning": "Feeling or showing happiness and enthusiastic eagerness.",
+        "example": "The students are very excited about their upcoming field trip.",
+        "vietnamese": "Hứng thú / phấn khích"
+      },
+      {
+        "word": "Calculator",
+        "type": "n.",
+        "phonetic": "/ˈkæl.kjə.leɪ.t̬ɚ/",
+        "meaning": "A small electronic device used for performing mathematical calculations.",
+        "example": "You can use a pocket calculator during the math examination.",
+        "vietnamese": "Máy tính cầm tay"
+      },
+      {
+        "word": "Uniform",
+        "type": "n.",
+        "phonetic": "/ˈjuː.nə.fɔːrm/",
+        "meaning": "A specific set of clothes worn by members of an organization or students at a school.",
+        "example": "Students must wear a clean white uniform on Monday mornings.",
+        "vietnamese": "Đồng phục"
+      },
+      {
+        "word": "Sure",
+        "type": "adj. / adv.",
+        "phonetic": "/ʃʊr/",
+        "meaning": "Confident and having no doubt about something; certain.",
+        "example": "I am sure that we will pass the English test with high marks.",
+        "vietnamese": "Chắc chắn"
+      },
+      {
+        "word": "Pencil sharpener",
+        "type": "n.",
+        "phonetic": "/ˈpen.səl ˌʃɑːr.pən.ɚ/",
+        "meaning": "A device used to sharpen the writing point of a pencil.",
+        "example": "May I borrow your pencil sharpener because my pencil lead broke?",
+        "vietnamese": "Cái gọt bút chì"
+      },
+      {
+        "word": "Compass",
+        "type": "n.",
+        "phonetic": "/ˈkʌm.pəs/",
+        "meaning": "A V-shaped instrument used for drawing circles or an instrument showing magnetic direction.",
+        "example": "We use a pair of compasses to draw accurate circles in geometry class.",
+        "vietnamese": "Cái compa / la bàn"
+      },
+      {
+        "word": "Knife sharpener",
+        "type": "n.",
+        "phonetic": "/naɪf ˌʃɑːr.pən.ɚ/",
+        "meaning": "A tool or gadget designed to sharpen the blades of knives.",
+        "example": "My father bought a handy knife sharpener to keep the kitchen knives sharp.",
+        "vietnamese": "Cái mài dao"
+      },
+      {
+        "word": "Textbook",
+        "type": "n.",
+        "phonetic": "/ˈtekst.bʊk/",
+        "meaning": "A book used as a standard source of information for the study of a subject.",
+        "example": "Please open your English textbook to page twenty-five.",
+        "vietnamese": "Sách giáo khoa"
+      },
+      {
+        "word": "Workbook",
+        "type": "n.",
+        "phonetic": "/ˈwɝːk.bʊk/",
+        "meaning": "A student's book containing exercises and practice problems complementing a textbook.",
+        "example": "Complete exercises one and two in your grammar workbook for homework.",
+        "vietnamese": "Sách bài tập"
+      },
+      {
+        "word": "Expression",
+        "type": "n.",
+        "phonetic": "/ɪkˈspreʃ.ən/",
+        "meaning": "A word, phrase, or form of words used to express an idea or thought.",
+        "example": "'That's a good idea' is a common English expression used to show agreement.",
+        "vietnamese": "Cụm từ / sự diễn đạt"
+      },
+      {
+        "word": "Check",
+        "type": "v. / n.",
+        "phonetic": "/tʃek/",
+        "meaning": "To examine something in order to determine its accuracy, quality, or condition.",
+        "example": "Always check your answers carefully before handing in your exam paper.",
+        "vietnamese": "Kiểm tra"
+      },
+      {
+        "word": "Mean",
+        "type": "v.",
+        "phonetic": "/miːn/",
+        "meaning": "To signify, convey, or intend to express a particular meaning.",
+        "example": "What does this new vocabulary word mean in Vietnamese?",
+        "vietnamese": "Có nghĩa là / có ý là"
+      },
+      {
+        "word": "Poem",
+        "type": "n.",
+        "phonetic": "/ˈpoʊ.əm/",
+        "meaning": "A piece of writing in which words are chosen for their sound and imagery, often arranged in rhyming lines.",
+        "example": "The teacher asked us to read and memorize a famous English poem.",
+        "vietnamese": "Bài thơ"
+      },
+      {
+        "word": "Partner",
+        "type": "n.",
+        "phonetic": "/ˈpɑːrt.nɚ/",
+        "meaning": "A person who takes part in an activity or task with another person.",
+        "example": "Turn to your partner and practice the dialogue together.",
+        "vietnamese": "Bạn đồng hành / bạn cùng học"
+      },
+      {
+        "word": "Forget",
+        "type": "v.",
+        "phonetic": "/fɚˈɡet/",
+        "meaning": "To fail to remember or recall information, places, or events.",
+        "example": "Don't forget to bring your textbooks and notebooks to school tomorrow.",
+        "vietnamese": "Quên"
+      },
+      {
+        "word": "A pair",
+        "type": "phrase / n.",
+        "phonetic": "/ə per/",
+        "meaning": "Two related things intended to be used together, or two people associated with each other.",
+        "example": "He bought a new pair of shoes and a pair of scissors.",
+        "vietnamese": "Một cặp / một đôi"
+      },
+      {
+        "word": "Work in pairs",
+        "type": "phrase / v.",
+        "phonetic": "/wɝːk ɪn perz/",
+        "meaning": "To cooperate or perform an activity in groups of two people.",
+        "example": "The teacher asked the students to work in pairs to solve the math puzzle.",
+        "vietnamese": "Làm việc theo cặp (2 người)"
+      },
+      {
+        "word": "Play music",
+        "type": "phrase / v.",
+        "phonetic": "/pleɪ ˈmjuː.zɪk/",
+        "meaning": "To produce musical sounds using instruments or audio equipment.",
+        "example": "We like to play music together during our free time on weekends.",
+        "vietnamese": "Chơi nhạc"
+      },
+      {
+        "word": "Have a lesson",
+        "type": "phrase / v.",
+        "phonetic": "/hæv ə ˈles.ən/",
+        "meaning": "To attend or participate in a period of learning or teaching.",
+        "example": "We have a lesson in history every Thursday morning.",
+        "vietnamese": "Có một tiết học"
+      },
+      {
+        "word": "Have an English lesson",
+        "type": "phrase / v.",
+        "phonetic": "/hæv ən ˈɪŋ.ɡlɪʃ ˌles.ən/",
+        "meaning": "To attend a class or period dedicated to learning the English language.",
+        "example": "Our class will have an English lesson after the morning recess.",
+        "vietnamese": "Có tiết học tiếng Anh"
+      }
+    ]
+  },
+  {
     "date": "2026-07-19",
     "dateFormatted": "July 19, 2026",
     "theme": "Daily Collocations & School Vocabulary",
