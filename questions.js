@@ -4748,6 +4748,556 @@ const QUESTIONS_DATABASE = {
         ],
         "answerIndex": 0,
         "hint": "The passage states: 'for four days'."
+      },
+      {
+        "question": "[Pronunciation] Choose the word whose underlined part is pronounced differently from the others: A. washed  B. worked  C. played  D. stopped",
+        "options": [
+          "washed (/t/)",
+          "worked (/t/)",
+          "played (/d/)",
+          "stopped (/t/)"
+        ],
+        "answerIndex": 2,
+        "hint": "'played' ends in a voiced sound so 'ed' is pronounced /d/. The others end in voiceless sounds so 'ed' is /t/."
+      },
+      {
+        "question": "[Pronunciation] Choose the word whose underlined part is pronounced differently from the others: A. sugar  B. see  C. sit  D. sing",
+        "options": [
+          "sugar (/ʃ/)",
+          "see (/s/)",
+          "sit (/s/)",
+          "sing (/s/)"
+        ],
+        "answerIndex": 0,
+        "hint": "In 'sugar', the 's' is pronounced as /ʃ/ (sh), while the others are /s/."
+      },
+      {
+        "question": "[Pronunciation] Choose the word whose underlined part is pronounced differently: A. hour  B. house  C. hot  D. head",
+        "options": [
+          "hour (silent h)",
+          "house (/h/)",
+          "hot (/h/)",
+          "head (/h/)"
+        ],
+        "answerIndex": 0,
+        "hint": "The 'h' in 'hour' is silent."
+      },
+      {
+        "question": "[Pronunciation] Choose the word whose underlined part is pronounced differently: A. faces  B. apples  C. places  D. watches",
+        "options": [
+          "faces (/ɪz/)",
+          "apples (/z/)",
+          "places (/ɪz/)",
+          "watches (/ɪz/)"
+        ],
+        "answerIndex": 1,
+        "hint": "'apples' ends in /z/, while the others end in /ɪz/ because they end in sibilant sounds."
+      },
+      {
+        "question": "[Pronunciation] Choose the word whose underlined part is pronounced differently: A. nice  B. bicycle  C. ride  D. live",
+        "options": [
+          "nice (/aɪ/)",
+          "bicycle (/aɪ/)",
+          "ride (/aɪ/)",
+          "live (/ɪ/)"
+        ],
+        "answerIndex": 3,
+        "hint": "The 'i' in 'live' is pronounced /ɪ/, while the others are /aɪ/."
+      },
+      {
+        "question": "[Word Stress] Choose the word with a different stress pattern: A. doctor  B. student  C. advice  D. parent",
+        "options": [
+          "doctor",
+          "student",
+          "advice",
+          "parent"
+        ],
+        "answerIndex": 2,
+        "hint": "'advice' is stressed on the second syllable, the others on the first."
+      },
+      {
+        "question": "[Word Stress] Choose the word with a different stress pattern: A. beautiful  B. expensive  C. difficult  D. interesting",
+        "options": [
+          "beautiful",
+          "expensive",
+          "difficult",
+          "interesting"
+        ],
+        "answerIndex": 1,
+        "hint": "'expensive' is stressed on the second syllable, the others on the first."
+      },
+      {
+        "question": "[Word Stress] Choose the word with a different stress pattern: A. engineer  B. volunteer  C. Japanese  D. volleyball",
+        "options": [
+          "engineer",
+          "volunteer",
+          "Japanese",
+          "volleyball"
+        ],
+        "answerIndex": 3,
+        "hint": "'volleyball' is stressed on the first syllable, the others on the third."
+      },
+      {
+        "question": "[Word Stress] Choose the word with a different stress pattern: A. family  B. museum  C. cinema  D. gallery",
+        "options": [
+          "family",
+          "museum",
+          "cinema",
+          "gallery"
+        ],
+        "answerIndex": 1,
+        "hint": "'museum' is stressed on the second syllable, the others on the first."
+      },
+      {
+        "question": "[Word Stress] Choose the word with a different stress pattern: A. invite  B. visit  C. become  D. agree",
+        "options": [
+          "invite",
+          "visit",
+          "become",
+          "agree"
+        ],
+        "answerIndex": 1,
+        "hint": "'visit' is stressed on the first syllable, the others are verbs stressed on the second."
+      },
+      {
+        "question": "My father often ______ the gardening on Sunday mornings.",
+        "options": [
+          "does",
+          "makes",
+          "plays",
+          "has"
+        ],
+        "answerIndex": 0,
+        "hint": "The collocation is 'do the gardening'."
+      },
+      {
+        "question": "I can't ______ this math problem. It's too difficult.",
+        "options": [
+          "work out",
+          "look for",
+          "turn off",
+          "get up"
+        ],
+        "answerIndex": 0,
+        "hint": "'Work out' means to solve a problem."
+      },
+      {
+        "question": "It's raining heavily outside. Don't forget to put ______ your raincoat.",
+        "options": [
+          "in",
+          "on",
+          "up",
+          "off"
+        ],
+        "answerIndex": 1,
+        "hint": "'Put on' means to wear."
+      },
+      {
+        "question": "She has a ______ of stamps from many different countries.",
+        "options": [
+          "collection",
+          "collect",
+          "collector",
+          "collecting"
+        ],
+        "answerIndex": 0,
+        "hint": "We need a noun here. 'Collection' means a group of objects accumulated."
+      },
+      {
+        "question": "Nam is a very ______ student. He always helps his friends.",
+        "options": [
+          "help",
+          "helpful",
+          "helpless",
+          "helping"
+        ],
+        "answerIndex": 1,
+        "hint": "Adjective 'helpful' means willing to help other people."
+      },
+      {
+        "question": "They are looking forward to ______ their grandparents next weekend.",
+        "options": [
+          "visit",
+          "visiting",
+          "visited",
+          "visits"
+        ],
+        "answerIndex": 1,
+        "hint": "The phrase 'look forward to' is followed by a gerund (V-ing)."
+      },
+      {
+        "question": "Ho Chi Minh City is the largest ______ in Vietnam.",
+        "options": [
+          "country",
+          "capital",
+          "city",
+          "village"
+        ],
+        "answerIndex": 2,
+        "hint": "Ho Chi Minh City is a city, not the capital (Hanoi is)."
+      },
+      {
+        "question": "My sister is very ______ of spiders. She screams when she sees one.",
+        "options": [
+          "scary",
+          "scared",
+          "fear",
+          "afraid"
+        ],
+        "answerIndex": 3,
+        "hint": "'Afraid' takes the preposition 'of'."
+      },
+      {
+        "question": "If you don't know the meaning of this word, look it ______ in the dictionary.",
+        "options": [
+          "up",
+          "on",
+          "at",
+          "for"
+        ],
+        "answerIndex": 0,
+        "hint": "'Look up' means to search for information in a dictionary or reference book."
+      },
+      {
+        "question": "We should ______ more trees to make the air cleaner.",
+        "options": [
+          "cut down",
+          "plant",
+          "water",
+          "pick"
+        ],
+        "answerIndex": 1,
+        "hint": "'Plant trees' is the appropriate action to make air cleaner."
+      },
+      {
+        "question": "Neither my brother nor my sister ______ going to the cinema tonight.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "answerIndex": 0,
+        "hint": "With 'neither... nor...', the verb agrees with the noun closer to it. 'My sister' is singular."
+      },
+      {
+        "question": "She asked me what my name ______.",
+        "options": [
+          "is",
+          "was",
+          "has been",
+          "were"
+        ],
+        "answerIndex": 1,
+        "hint": "Reported speech shifts the tense one step back (is -> was)."
+      },
+      {
+        "question": "The boy ______ is playing soccer over there is my cousin.",
+        "options": [
+          "who",
+          "which",
+          "whom",
+          "whose"
+        ],
+        "answerIndex": 0,
+        "hint": "'Who' is the relative pronoun used for people as the subject of the clause."
+      },
+      {
+        "question": "This is the most beautiful dress she ______.",
+        "options": [
+          "has ever bought",
+          "ever buys",
+          "ever bought",
+          "had ever bought"
+        ],
+        "answerIndex": 0,
+        "hint": "The superlative 'the most' is often followed by the Present Perfect with 'ever'."
+      },
+      {
+        "question": "I suggest ______ to the beach this weekend.",
+        "options": [
+          "to go",
+          "going",
+          "go",
+          "went"
+        ],
+        "answerIndex": 1,
+        "hint": "The verb 'suggest' is followed by a gerund (V-ing)."
+      },
+      {
+        "question": "He has been learning English ______ he was six years old.",
+        "options": [
+          "for",
+          "since",
+          "in",
+          "when"
+        ],
+        "answerIndex": 1,
+        "hint": "'Since' is used with a point in time in the past for Present Perfect."
+      },
+      {
+        "question": "Would you mind ______ the window? It's getting cold.",
+        "options": [
+          "close",
+          "to close",
+          "closing",
+          "closed"
+        ],
+        "answerIndex": 2,
+        "hint": "The phrase 'Would you mind' is followed by a gerund (V-ing)."
+      },
+      {
+        "question": "Unless you ______ hard, you will fail the exam.",
+        "options": [
+          "study",
+          "don't study",
+          "studied",
+          "will study"
+        ],
+        "answerIndex": 0,
+        "hint": "'Unless' means 'if not', so it takes an affirmative verb in the first conditional."
+      },
+      {
+        "question": "It took him two hours ______ his homework yesterday.",
+        "options": [
+          "finish",
+          "to finish",
+          "finishing",
+          "finished"
+        ],
+        "answerIndex": 1,
+        "hint": "The structure is: It takes/took + someone + time + to-infinitive."
+      },
+      {
+        "question": "The book was ______ interesting that I couldn't put it down.",
+        "options": [
+          "too",
+          "such",
+          "so",
+          "very"
+        ],
+        "answerIndex": 2,
+        "hint": "The structure is: so + adjective + that clause."
+      },
+      {
+        "question": "[Find the error] My brother likes (A) playing (B) football and (C) read (D) comic books.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answerIndex": 3,
+        "hint": "Parallel structure with 'and' requires 'reading' to match 'playing' after 'likes'."
+      },
+      {
+        "question": "[Find the error] How (A) many (B) milk do you (C) want for (D) breakfast?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answerIndex": 1,
+        "hint": "'Milk' is an uncountable noun, so we must use 'much' instead of 'many'."
+      },
+      {
+        "question": "[Find the error] She is (A) the more (B) intelligent student (C) in my (D) class.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answerIndex": 1,
+        "hint": "For superlative comparison among all students in a class, we use 'the most'."
+      },
+      {
+        "question": "[Find the error] I didn't (A) went (B) to school yesterday (C) because I (D) was sick.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answerIndex": 1,
+        "hint": "After auxiliary 'didn't', the main verb must be in its base form ('go', not 'went')."
+      },
+      {
+        "question": "[Find the error] The weather (A) today is (B) much more hotter (C) than (D) yesterday.",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answerIndex": 2,
+        "hint": "'Hotter' is already a comparative adjective. We don't use 'more' with it. It should be just 'much hotter'."
+      },
+      {
+        "question": "Tom: 'Thank you for your help.' - Mary: '______.'",
+        "options": [
+          "You're welcome",
+          "Yes, please",
+          "No, thanks",
+          "Me too"
+        ],
+        "answerIndex": 0,
+        "hint": "'You're welcome' is the polite response to 'Thank you'."
+      },
+      {
+        "question": "Lan: 'Would you like some more tea?' - Hoa: '______.'",
+        "options": [
+          "Yes, I do",
+          "No, thanks. I've had enough",
+          "You're welcome",
+          "I like tea"
+        ],
+        "answerIndex": 1,
+        "hint": "'Would you like...' is an offer. 'No, thanks' is a polite way to decline."
+      },
+      {
+        "question": "Peter: 'What a beautiful dress you are wearing!' - Jane: '______.'",
+        "options": [
+          "I'm glad you like it",
+          "It's not good",
+          "Yes, it is",
+          "I don't think so"
+        ],
+        "answerIndex": 0,
+        "hint": "When accepting a compliment, 'I'm glad you like it' or 'Thank you' is appropriate."
+      },
+      {
+        "question": "They arrived ______ London ______ a cold morning.",
+        "options": [
+          "in / on",
+          "at / in",
+          "in / in",
+          "at / on"
+        ],
+        "answerIndex": 0,
+        "hint": "Arrive 'in' a big city/country. Use 'on' before a specific day/morning with an adjective ('on a cold morning')."
+      },
+      {
+        "question": "My birthday is ______ the 15th of August.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "for"
+        ],
+        "answerIndex": 1,
+        "hint": "We use 'on' before a specific date."
+      },
+      {
+        "question": "The boy fell ______ his bike and broke his arm.",
+        "options": [
+          "down",
+          "off",
+          "out of",
+          "away"
+        ],
+        "answerIndex": 1,
+        "hint": "The phrasal verb 'fall off' means to drop from a position on a surface (like a bike or horse)."
+      },
+      {
+        "question": "He is very good ______ playing chess.",
+        "options": [
+          "in",
+          "at",
+          "on",
+          "with"
+        ],
+        "answerIndex": 1,
+        "hint": "The adjective 'good' takes the preposition 'at' (good at something)."
+      },
+      {
+        "question": "I am interested ______ reading science books.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "about"
+        ],
+        "answerIndex": 0,
+        "hint": "The adjective 'interested' takes the preposition 'in'."
+      },
+      {
+        "question": "Could you turn ______ the radio? The baby is sleeping.",
+        "options": [
+          "on",
+          "down",
+          "up",
+          "in"
+        ],
+        "answerIndex": 1,
+        "hint": "'Turn down' means to lower the volume."
+      },
+      {
+        "question": "We are going to have a trip ______ the mountains next week.",
+        "options": [
+          "to",
+          "at",
+          "in",
+          "for"
+        ],
+        "answerIndex": 0,
+        "hint": "We use 'to' for movement towards a destination (a trip to the mountains)."
+      },
+      {
+        "question": "Choose the sentence that has the closest meaning: 'He is the tallest boy in the class.'",
+        "options": [
+          "No one in the class is as tall as him.",
+          "He is taller than some boys in the class.",
+          "Everyone in the class is taller than him.",
+          "He is not as tall as other boys."
+        ],
+        "answerIndex": 0,
+        "hint": "Superlative can be rewritten using 'No one... is as + adj + as'."
+      },
+      {
+        "question": "Choose the sentence that has the closest meaning: 'I have never eaten this kind of food before.'",
+        "options": [
+          "This is the first time I have eaten this kind of food.",
+          "I used to eat this kind of food.",
+          "I will never eat this kind of food.",
+          "I ate this kind of food a long time ago."
+        ],
+        "answerIndex": 0,
+        "hint": "'never... before' is equivalent to 'This is the first time...'."
+      },
+      {
+        "question": "Choose the sentence that has the closest meaning: 'They started learning English 5 years ago.'",
+        "options": [
+          "They have learned English for 5 years.",
+          "They have learned English since 5 years.",
+          "They learning English 5 years ago.",
+          "They didn't learn English 5 years ago."
+        ],
+        "answerIndex": 0,
+        "hint": "Past Simple 'started + V-ing + time ago' equals Present Perfect 'have + V3/ed + for + time'."
+      },
+      {
+        "question": "Choose the sentence that has the closest meaning: 'Because of the heavy rain, we couldn't go camping.'",
+        "options": [
+          "Because it rained heavily, we couldn't go camping.",
+          "Although it rained heavily, we went camping.",
+          "In spite of the heavy rain, we went camping.",
+          "Because the rain is heavy, we can go camping."
+        ],
+        "answerIndex": 0,
+        "hint": "'Because of + Noun Phrase' equals 'Because + Clause'."
+      },
+      {
+        "question": "Choose the sentence that has the closest meaning: ''Don't play football in the street, boys,' said the policeman.'",
+        "options": [
+          "The policeman asked the boys not to play football in the street.",
+          "The policeman asked the boys to play football in the street.",
+          "The policeman said the boys don't play football in the street.",
+          "The policeman told the boys not playing football in the street."
+        ],
+        "answerIndex": 0,
+        "hint": "Reported command: 'tell/ask someone (not) to do something'."
       }
     ]
   },

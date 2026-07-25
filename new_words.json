@@ -1,5 +1,284 @@
 [
   {
+    "date": "2026-07-25",
+    "dateFormatted": "July 25, 2026",
+    "theme": "General Vocabulary",
+    "words": [
+      {
+        "word": "Hard working",
+        "type": "adj.",
+        "phonetic": "/ˌhɑːrdˈwɜːrkɪŋ/",
+        "meaning": "Putting a lot of effort into a job and doing it well.",
+        "example": "She is a hard-working student who always gets good grades.",
+        "vietnamese": "làm việc chăm chỉ"
+      },
+      {
+        "word": "Noisy",
+        "type": "adj.",
+        "phonetic": "/ˈnɔɪzi/",
+        "meaning": "Making a lot of noise.",
+        "example": "The classroom was very noisy before the teacher arrived.",
+        "vietnamese": "ồn ào"
+      },
+      {
+        "word": "Get dressed",
+        "type": "phr. v.",
+        "phonetic": "/ɡet drest/",
+        "meaning": "To put clothes on yourself.",
+        "example": "After taking a shower, I get dressed for school.",
+        "vietnamese": "mặc áo quần"
+      },
+      {
+        "word": "One meter long",
+        "type": "adj.",
+        "phonetic": "/wʌn ˈmiːtər lɔːŋ/",
+        "meaning": "Measuring one meter in length.",
+        "example": "The table is about one meter long.",
+        "vietnamese": "dài 1 mét"
+      },
+      {
+        "word": "I don't care",
+        "type": "phr.",
+        "phonetic": "/aɪ doʊnt ker/",
+        "meaning": "Used to say that you are not interested in something or do not worry about it.",
+        "example": "I don't care what they think about me.",
+        "vietnamese": "tôi không quan tâm"
+      },
+      {
+        "word": "Pronounce",
+        "type": "v.",
+        "phonetic": "/prəˈnaʊns/",
+        "meaning": "To make the sound of a word or letter in a particular way.",
+        "example": "How do you pronounce this word?",
+        "vietnamese": "phát âm"
+      },
+      {
+        "word": "Fast",
+        "type": "adj. / adv.",
+        "phonetic": "/fæst/",
+        "meaning": "Moving or capable of moving at high speed.",
+        "example": "He runs very fast.",
+        "vietnamese": "nhanh"
+      },
+      {
+        "word": "Slow",
+        "type": "adj. / adv.",
+        "phonetic": "/sloʊ/",
+        "meaning": "Moving or operating, or designed to do so, only at a low speed.",
+        "example": "The turtle is a slow animal.",
+        "vietnamese": "chậm"
+      },
+      {
+        "word": "Underline",
+        "type": "v.",
+        "phonetic": "/ˌʌndərˈlaɪn/",
+        "meaning": "To draw a line under a word, especially in order to show its importance.",
+        "example": "Please underline the new words in your book.",
+        "vietnamese": "gạch chân"
+      },
+      {
+        "word": "Meaning",
+        "type": "n.",
+        "phonetic": "/ˈmiːnɪŋ/",
+        "meaning": "What is meant by a word, text, concept, or action.",
+        "example": "What is the meaning of this sentence?",
+        "vietnamese": "nghĩa"
+      },
+      {
+        "word": "Competition",
+        "type": "n.",
+        "phonetic": "/ˌkɑːmpəˈtɪʃn/",
+        "meaning": "An event or contest in which people compete.",
+        "example": "She won first prize in the singing competition.",
+        "vietnamese": "cuộc thi / sự cạnh tranh"
+      },
+      {
+        "word": "Office",
+        "type": "n.",
+        "phonetic": "/ˈɑːfɪs/",
+        "meaning": "A room, set of rooms, or building used as a place for commercial, professional, or bureaucratic work.",
+        "example": "My father works in a big office in the city center.",
+        "vietnamese": "văn phòng"
+      },
+      {
+        "word": "Closest friend",
+        "type": "n.",
+        "phonetic": "/ˈkloʊsɪst frend/",
+        "meaning": "A person's most intimate or best friend.",
+        "example": "Mary is my closest friend; we share everything.",
+        "vietnamese": "bạn thân"
+      },
+      {
+        "word": "Jealous",
+        "type": "adj.",
+        "phonetic": "/ˈdʒeləs/",
+        "meaning": "Feeling or showing envy of someone or their achievements and advantages.",
+        "example": "He was jealous of his brother's success.",
+        "vietnamese": "ghen tị"
+      },
+      {
+        "word": "Perform",
+        "type": "v.",
+        "phonetic": "/pərˈfɔːrm/",
+        "meaning": "To present a form of entertainment to an audience.",
+        "example": "The students will perform a play at the end of the year.",
+        "vietnamese": "biểu diễn"
+      },
+      {
+        "word": "Joke",
+        "type": "n.",
+        "phonetic": "/dʒoʊk/",
+        "meaning": "A thing that someone says to cause amusement or laughter, especially a story with a funny punchline.",
+        "example": "He told a very funny joke yesterday.",
+        "vietnamese": "đùa"
+      },
+      {
+        "word": "Appearance",
+        "type": "n.",
+        "phonetic": "/əˈpɪrəns/",
+        "meaning": "The way that someone or something looks.",
+        "example": "You shouldn't judge people by their appearance.",
+        "vietnamese": "vẻ bề ngoài"
+      },
+      {
+        "word": "Strict",
+        "type": "adj.",
+        "phonetic": "/strɪkt/",
+        "meaning": "Demanding that rules concerning behavior are obeyed and observed.",
+        "example": "Our math teacher is very strict about doing homework.",
+        "vietnamese": "nghiêm nghị / nghiêm khắc"
+      },
+      {
+        "word": "Funny",
+        "type": "adj.",
+        "phonetic": "/ˈfʌni/",
+        "meaning": "Causing laughter or amusement; humorous.",
+        "example": "That movie was so funny!",
+        "vietnamese": "vui nhộn"
+      },
+      {
+        "word": "Honest",
+        "type": "adj.",
+        "phonetic": "/ˈɑːnɪst/",
+        "meaning": "Free of deceit and untruthfulness; sincere.",
+        "example": "To be honest, I didn't like the food.",
+        "vietnamese": "trung thực / thật thà"
+      },
+      {
+        "word": "Afford",
+        "type": "v.",
+        "phonetic": "/əˈfɔːrd/",
+        "meaning": "Have enough money to pay for.",
+        "example": "I can't afford to buy a new car right now.",
+        "vietnamese": "đủ khả năng chi trả"
+      },
+      {
+        "word": "A person",
+        "type": "n.",
+        "phonetic": "/ə ˈpɜːrsn/",
+        "meaning": "A human being regarded as an individual.",
+        "example": "He is a very kind person.",
+        "vietnamese": "một người"
+      },
+      {
+        "word": "Few",
+        "type": "det. / pron.",
+        "phonetic": "/fjuː/",
+        "meaning": "A small number of.",
+        "example": "I have a few questions to ask you.",
+        "vietnamese": "một vài"
+      },
+      {
+        "word": "Word",
+        "type": "n.",
+        "phonetic": "/wɜːrd/",
+        "meaning": "A single distinct meaningful element of speech or writing.",
+        "example": "How many words are there in this essay?",
+        "vietnamese": "từ"
+      },
+      {
+        "word": "Public",
+        "type": "adj. / n.",
+        "phonetic": "/ˈpʌblɪk/",
+        "meaning": "Of or concerning the people as a whole.",
+        "example": "We should use public transport to reduce pollution.",
+        "vietnamese": "công cộng"
+      },
+      {
+        "word": "Congratulations",
+        "type": "n.",
+        "phonetic": "/kənˌɡrætʃuˈleɪʃnz/",
+        "meaning": "Words expressing praise for an achievement or good wishes on a special occasion.",
+        "example": "Congratulations on passing your exam!",
+        "vietnamese": "chúc mừng"
+      },
+      {
+        "word": "Speech",
+        "type": "n.",
+        "phonetic": "/spiːtʃ/",
+        "meaning": "A formal address or discourse delivered to an audience.",
+        "example": "The principal gave a speech at the opening ceremony.",
+        "vietnamese": "bài phát biểu"
+      },
+      {
+        "word": "Wonder",
+        "type": "n.",
+        "phonetic": "/ˈwʌndər/",
+        "meaning": "A feeling of surprise mingled with admiration, caused by something beautiful, unexpected, unfamiliar, or inexplicable.",
+        "example": "The Great Wall of China is one of the wonders of the world.",
+        "vietnamese": "kỳ quan"
+      },
+      {
+        "word": "Committee",
+        "type": "n.",
+        "phonetic": "/kəˈmɪti/",
+        "meaning": "A group of people appointed for a specific function.",
+        "example": "The committee will decide on the new rules.",
+        "vietnamese": "ủy ban"
+      },
+      {
+        "word": "Responsibility",
+        "type": "n.",
+        "phonetic": "/rɪˌspɑːnsəˈbɪləti/",
+        "meaning": "The state or fact of having a duty to deal with something.",
+        "example": "It is your responsibility to finish the project on time.",
+        "vietnamese": "trách nhiệm"
+      },
+      {
+        "word": "Safety",
+        "type": "n.",
+        "phonetic": "/ˈseɪfti/",
+        "meaning": "The condition of being protected from or unlikely to cause danger, risk, or injury.",
+        "example": "Safety should always be your first priority.",
+        "vietnamese": "sự an toàn"
+      },
+      {
+        "word": "Religious",
+        "type": "adj.",
+        "phonetic": "/rɪˈlɪdʒəs/",
+        "meaning": "Relating to or believing in a religion.",
+        "example": "They had a traditional religious wedding.",
+        "vietnamese": "thuộc về tôn giáo"
+      },
+      {
+        "word": "Die of",
+        "type": "phr. v.",
+        "phonetic": "/daɪ ʌv/",
+        "meaning": "To stop living because of a disease or condition.",
+        "example": "Many people die of cancer every year.",
+        "vietnamese": "chết vì"
+      },
+      {
+        "word": "Belief",
+        "type": "n.",
+        "phonetic": "/bɪˈliːf/",
+        "meaning": "An acceptance that a statement is true or that something exists.",
+        "example": "I have a strong belief in the power of education.",
+        "vietnamese": "niềm tin"
+      }
+    ]
+  },
+  {
     "date": "2026-07-23",
     "dateFormatted": "July 23, 2026",
     "theme": "School Supplies, Collocations & Classroom Expressions",
