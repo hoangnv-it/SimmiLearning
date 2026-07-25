@@ -16,7 +16,9 @@ const QUESTIONS_DATABASE = {
           "has drunk"
         ],
         "answerIndex": 0,
-        "hint": "This is a daily habit. Use the base form + 's' for third-person singular subjects (he/she/it)."
+        "hint": "This is a daily habit. Use the base form + 's' for third-person singular subjects (he/she/it).",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Water ______ at 100 degrees Celsius.",
@@ -27,7 +29,9 @@ const QUESTIONS_DATABASE = {
           "boil"
         ],
         "answerIndex": 0,
-        "hint": "This is a general scientific truth. Scientific laws use the simple present tense."
+        "hint": "This is a general scientific truth. Scientific laws use the simple present tense.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "They ______ to school by bus.",
@@ -38,7 +42,9 @@ const QUESTIONS_DATABASE = {
           "went"
         ],
         "answerIndex": 0,
-        "hint": "For plural subjects like 'They', the simple present verb does not take a final -s."
+        "hint": "For plural subjects like 'They', the simple present verb does not take a final -s.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "The sun ______ in the east.",
@@ -49,7 +55,9 @@ const QUESTIONS_DATABASE = {
           "risen"
         ],
         "answerIndex": 0,
-        "hint": "This is a regular natural fact. Use the third-person singular ending for 'the sun' (rises)."
+        "hint": "This is a regular natural fact. Use the third-person singular ending for 'the sun' (rises).",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "We ______ have any milk left.",
@@ -60,7 +68,9 @@ const QUESTIONS_DATABASE = {
           "hasn't"
         ],
         "answerIndex": 0,
-        "hint": "To form negative sentences in Simple Present for 'We', use the auxiliary verb 'do not' (don't)."
+        "hint": "To form negative sentences in Simple Present for 'We', use the auxiliary verb 'do not' (don't).",
+        "group": "negative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "My father ______ newspaper every morning before going to work.",
@@ -71,7 +81,9 @@ const QUESTIONS_DATABASE = {
           "is reading"
         ],
         "answerIndex": 0,
-        "hint": "'Every morning' is a habit in present. Subject 'My father' is singular, so add -s to 'read'."
+        "hint": "'Every morning' is a habit in present. Subject 'My father' is singular, so add -s to 'read'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "She ______ to like horror movies. She prefers comedies.",
@@ -82,7 +94,9 @@ const QUESTIONS_DATABASE = {
           "isn't seeming"
         ],
         "answerIndex": 1,
-        "hint": "'seem' is a stative verb and is not used in the continuous form. Use Simple Present negative for singular subject."
+        "hint": "'seem' is a stative verb and is not used in the continuous form. Use Simple Present negative for singular subject.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "The train for Hanoi ______ at 6:00 AM tomorrow morning.",
@@ -93,7 +107,9 @@ const QUESTIONS_DATABASE = {
           "will have left"
         ],
         "answerIndex": 2,
-        "hint": "Timetables and schedules (like train times) use the Simple Present even for future arrangements."
+        "hint": "Timetables and schedules (like train times) use the Simple Present even for future arrangements.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "I always ______ up early to do exercise.",
@@ -104,7 +120,9 @@ const QUESTIONS_DATABASE = {
           "get"
         ],
         "answerIndex": 3,
-        "hint": "'always' indicates a daily routine. Subject 'I' takes the base form of the verb 'get'."
+        "hint": "'always' indicates a daily routine. Subject 'I' takes the base form of the verb 'get'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "They ______ chocolate because it is too sweet for them.",
@@ -115,7 +133,9 @@ const QUESTIONS_DATABASE = {
           "haven't liked"
         ],
         "answerIndex": 2,
-        "hint": "Stative verb 'like' in negative with plural subject 'They' uses 'don't like'."
+        "hint": "Stative verb 'like' in negative with plural subject 'They' uses 'don't like'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "The Earth ______ around the Sun.",
@@ -126,7 +146,9 @@ const QUESTIONS_DATABASE = {
           "revolve"
         ],
         "answerIndex": 0,
-        "hint": "A scientific fact/general truth uses Simple Present tense with a singular verb for 'The Earth'."
+        "hint": "A scientific fact/general truth uses Simple Present tense with a singular verb for 'The Earth'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "______ your brother play football on weekends?",
@@ -137,7 +159,9 @@ const QUESTIONS_DATABASE = {
           "Has"
         ],
         "answerIndex": 2,
-        "hint": "For question form in Simple Present with singular subject 'your brother', use auxiliary verb 'Does'."
+        "hint": "For question form in Simple Present with singular subject 'your brother', use auxiliary verb 'Does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "How often ______ you go to the dentist?",
@@ -148,7 +172,9 @@ const QUESTIONS_DATABASE = {
           "have"
         ],
         "answerIndex": 0,
-        "hint": "'How often' asks about frequency. Plural/second-person singular subject 'you' takes 'do'."
+        "hint": "'How often' asks about frequency. Plural/second-person singular subject 'you' takes 'do'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "She ______ very tired after a long day at school.",
@@ -159,7 +185,9 @@ const QUESTIONS_DATABASE = {
           "am"
         ],
         "answerIndex": 2,
-        "hint": "To Be verb for singular subject 'She' in Simple Present is 'is'."
+        "hint": "To Be verb for singular subject 'She' in Simple Present is 'is'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "English ______ an important language in today's globalized world.",
@@ -170,7 +198,9 @@ const QUESTIONS_DATABASE = {
           "are"
         ],
         "answerIndex": 1,
-        "hint": "General fact about 'English' (singular subject) uses the verb 'is'."
+        "hint": "General fact about 'English' (singular subject) uses the verb 'is'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "My sisters ______ very hard to pass the high school entrance exam.",
@@ -181,7 +211,9 @@ const QUESTIONS_DATABASE = {
           "studied"
         ],
         "answerIndex": 0,
-        "hint": "Plural subject 'My sisters' takes the base verb 'study' in Simple Present."
+        "hint": "Plural subject 'My sisters' takes the base verb 'study' in Simple Present.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Rice ______ not grow in cold climates.",
@@ -192,7 +224,9 @@ const QUESTIONS_DATABASE = {
           "do"
         ],
         "answerIndex": 1,
-        "hint": "Negative statement of general fact. 'Rice' is uncountable (singular), so we use 'does not' (does)."
+        "hint": "Negative statement of general fact. 'Rice' is uncountable (singular), so we use 'does not' (does).",
+        "group": "negative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "______ they live near your house in Hanoi?",
@@ -203,7 +237,9 @@ const QUESTIONS_DATABASE = {
           "Are"
         ],
         "answerIndex": 0,
-        "hint": "Yes/No question in Simple Present for plural subject 'they' uses 'Do'."
+        "hint": "Yes/No question in Simple Present for plural subject 'they' uses 'Do'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "The library ______ at 8 PM on weekdays.",
@@ -214,7 +250,9 @@ const QUESTIONS_DATABASE = {
           "closes"
         ],
         "answerIndex": 3,
-        "hint": "Schedules/operating hours use Simple Present with singular ending 'closes' for 'The library'."
+        "hint": "Schedules/operating hours use Simple Present with singular ending 'closes' for 'The library'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Honesty ______ the best policy.",
@@ -225,7 +263,9 @@ const QUESTIONS_DATABASE = {
           "was"
         ],
         "answerIndex": 1,
-        "hint": "A well-known proverb/general truth uses the simple present tense 'is'."
+        "hint": "A well-known proverb/general truth uses the simple present tense 'is'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "My cats ______ sleeping on the sofa.",
@@ -236,7 +276,9 @@ const QUESTIONS_DATABASE = {
           "are loving"
         ],
         "answerIndex": 2,
-        "hint": "'love' is a stative verb (emotion) and is plural here to agree with 'My cats'."
+        "hint": "'love' is a stative verb (emotion) and is plural here to agree with 'My cats'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "He ______ late for class, which annoys the teacher.",
@@ -247,7 +289,9 @@ const QUESTIONS_DATABASE = {
           "always is"
         ],
         "answerIndex": 0,
-        "hint": "Adverbs of frequency (always) come AFTER the auxiliary verb 'to be' ('is always')."
+        "hint": "Adverbs of frequency (always) come AFTER the auxiliary verb 'to be' ('is always').",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Water ______ at 0 degrees Celsius.",
@@ -258,7 +302,9 @@ const QUESTIONS_DATABASE = {
           "is freezing"
         ],
         "answerIndex": 1,
-        "hint": "Scientific fact about water freezing. Use singular present verb form 'freezes'."
+        "hint": "Scientific fact about water freezing. Use singular present verb form 'freezes'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Vegetarians ______ meat or fish.",
@@ -269,7 +315,9 @@ const QUESTIONS_DATABASE = {
           "doesn't eat"
         ],
         "answerIndex": 1,
-        "hint": "General statement about a group 'Vegetarians' (plural) uses 'don't eat'."
+        "hint": "General statement about a group 'Vegetarians' (plural) uses 'don't eat'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Every Sunday, Lan ______ her grandparents in the countryside.",
@@ -280,7 +328,9 @@ const QUESTIONS_DATABASE = {
           "is visiting"
         ],
         "answerIndex": 1,
-        "hint": "'Every Sunday' is a regular routine. Singular subject 'Lan' takes 'visits'."
+        "hint": "'Every Sunday' is a regular routine. Singular subject 'Lan' takes 'visits'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "I ______ understand this grammar rule at all.",
@@ -291,7 +341,9 @@ const QUESTIONS_DATABASE = {
           "haven't"
         ],
         "answerIndex": 1,
-        "hint": "'understand' is a stative verb of mental state. Use auxiliary 'don't' for subject 'I'."
+        "hint": "'understand' is a stative verb of mental state. Use auxiliary 'don't' for subject 'I'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "The plane ______ off at 10 PM tonight.",
@@ -302,7 +354,9 @@ const QUESTIONS_DATABASE = {
           "take"
         ],
         "answerIndex": 1,
-        "hint": "Official schedules (flight times) use Simple Present: 'takes off'."
+        "hint": "Official schedules (flight times) use Simple Present: 'takes off'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "My mother ______ a teacher in a high school.",
@@ -313,7 +367,9 @@ const QUESTIONS_DATABASE = {
           "is"
         ],
         "answerIndex": 3,
-        "hint": "Stating someone's occupation uses Simple Present to be verb 'is' for singular subject."
+        "hint": "Stating someone's occupation uses Simple Present to be verb 'is' for singular subject.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Usually, my friends ______ homework in the library.",
@@ -324,7 +380,9 @@ const QUESTIONS_DATABASE = {
           "do"
         ],
         "answerIndex": 3,
-        "hint": "'Usually' indicates a habit. Plural subject 'my friends' takes 'do'."
+        "hint": "'Usually' indicates a habit. Plural subject 'my friends' takes 'do'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "______ she have a laptop for online learning?",
@@ -335,7 +393,9 @@ const QUESTIONS_DATABASE = {
           "Does"
         ],
         "answerIndex": 3,
-        "hint": "Present tense question with main verb 'have' and singular subject 'she' requires auxiliary 'Does'."
+        "hint": "Present tense question with main verb 'have' and singular subject 'she' requires auxiliary 'Does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "He ______ his teeth twice a day.",
@@ -346,7 +406,9 @@ const QUESTIONS_DATABASE = {
           "brush"
         ],
         "answerIndex": 0,
-        "hint": "Habit/routine. Verbs ending in -sh add -es for singular subjects: 'brushes'."
+        "hint": "Habit/routine. Verbs ending in -sh add -es for singular subjects: 'brushes'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "The national anthem of Vietnam ______ at the start of school assemblies.",
@@ -357,7 +419,9 @@ const QUESTIONS_DATABASE = {
           "played"
         ],
         "answerIndex": 2,
-        "hint": "General routine in passive voice ('is played' - Hiện tại đơn bị động)."
+        "hint": "General routine in passive voice ('is played' - Hiện tại đơn bị động).",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Cats ______ mice.",
@@ -368,7 +432,9 @@ const QUESTIONS_DATABASE = {
           "catch"
         ],
         "answerIndex": 3,
-        "hint": "General truth about cats. Plural subject 'Cats' takes base verb 'catch'."
+        "hint": "General truth about cats. Plural subject 'Cats' takes base verb 'catch'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "This soup ______ delicious.",
@@ -379,7 +445,9 @@ const QUESTIONS_DATABASE = {
           "has tasted"
         ],
         "answerIndex": 0,
-        "hint": "'taste' is a stative verb of senses when describing quality. Use Simple Present 'tastes'."
+        "hint": "'taste' is a stative verb of senses when describing quality. Use Simple Present 'tastes'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "We ______ out on Mondays because restaurants are crowded.",
@@ -390,7 +458,9 @@ const QUESTIONS_DATABASE = {
           "don't go"
         ],
         "answerIndex": 3,
-        "hint": "Routine negative statement. Plural subject 'We' takes 'don't go'."
+        "hint": "Routine negative statement. Plural subject 'We' takes 'don't go'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "My uncle ______ in a big hospital in Ho Chi Minh City.",
@@ -401,7 +471,9 @@ const QUESTIONS_DATABASE = {
           "works"
         ],
         "answerIndex": 3,
-        "hint": "Permanent job situation uses Simple Present. Singular subject 'My uncle' takes 'works'."
+        "hint": "Permanent job situation uses Simple Present. Singular subject 'My uncle' takes 'works'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "How much ______ this textbook cost?",
@@ -412,7 +484,9 @@ const QUESTIONS_DATABASE = {
           "does"
         ],
         "answerIndex": 3,
-        "hint": "Question about price with main verb 'cost'. Singular noun 'this textbook' takes auxiliary 'does'."
+        "hint": "Question about price with main verb 'cost'. Singular noun 'this textbook' takes auxiliary 'does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Light ______ faster than sound.",
@@ -423,7 +497,9 @@ const QUESTIONS_DATABASE = {
           "traveled"
         ],
         "answerIndex": 2,
-        "hint": "Universal truth (uncountable noun 'Light' takes singular verb 'travels')."
+        "hint": "Universal truth (uncountable noun 'Light' takes singular verb 'travels').",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "I ______ ready for the next lesson.",
@@ -434,7 +510,9 @@ const QUESTIONS_DATABASE = {
           "am"
         ],
         "answerIndex": 3,
-        "hint": "'I' always takes 'am' as the present tense To Be verb."
+        "hint": "'I' always takes 'am' as the present tense To Be verb.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Many children ______ playing video games too much.",
@@ -445,7 +523,9 @@ const QUESTIONS_DATABASE = {
           "are enjoying"
         ],
         "answerIndex": 1,
-        "hint": "General state/hobby. Plural subject 'Many children' takes 'enjoy'."
+        "hint": "General state/hobby. Plural subject 'Many children' takes 'enjoy'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "My class ______ at 7:30 AM every morning.",
@@ -456,7 +536,9 @@ const QUESTIONS_DATABASE = {
           "start"
         ],
         "answerIndex": 1,
-        "hint": "'Every morning' routine. Singular subject 'My class' takes 'starts'."
+        "hint": "'Every morning' routine. Singular subject 'My class' takes 'starts'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "______ he speak English fluently?",
@@ -467,7 +549,9 @@ const QUESTIONS_DATABASE = {
           "Does"
         ],
         "answerIndex": 3,
-        "hint": "Ability/state question. Singular subject 'he' takes auxiliary 'Does'."
+        "hint": "Ability/state question. Singular subject 'he' takes auxiliary 'Does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Dogs ______ loyal animals.",
@@ -478,7 +562,9 @@ const QUESTIONS_DATABASE = {
           "is"
         ],
         "answerIndex": 2,
-        "hint": "General statement about a group 'Dogs' (plural) uses 'are'."
+        "hint": "General statement about a group 'Dogs' (plural) uses 'are'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "The local market ______ fresh vegetables every day.",
@@ -489,7 +575,9 @@ const QUESTIONS_DATABASE = {
           "sells"
         ],
         "answerIndex": 3,
-        "hint": "Repeated daily activity. Singular subject 'The local market' takes 'sells'."
+        "hint": "Repeated daily activity. Singular subject 'The local market' takes 'sells'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "She ______ very happy when she gets good grades.",
@@ -500,7 +588,9 @@ const QUESTIONS_DATABASE = {
           "is feeling"
         ],
         "answerIndex": 0,
-        "hint": "General conditional state. Singular subject 'She' takes 'feels'."
+        "hint": "General conditional state. Singular subject 'She' takes 'feels'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "They ______ always late for school assemblies.",
@@ -511,7 +601,9 @@ const QUESTIONS_DATABASE = {
           "is"
         ],
         "answerIndex": 2,
-        "hint": "To Be verb matching plural 'They' is 'are'."
+        "hint": "To Be verb matching plural 'They' is 'are'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Monkeys ______ trees very well.",
@@ -522,7 +614,9 @@ const QUESTIONS_DATABASE = {
           "climb"
         ],
         "answerIndex": 3,
-        "hint": "General truth about monkeys (plural) climbing trees. Use 'climb'."
+        "hint": "General truth about monkeys (plural) climbing trees. Use 'climb'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "This school ______ more than one thousand students.",
@@ -533,7 +627,9 @@ const QUESTIONS_DATABASE = {
           "had"
         ],
         "answerIndex": 0,
-        "hint": "State of possession. Singular collective noun 'This school' takes 'has'."
+        "hint": "State of possession. Singular collective noun 'This school' takes 'has'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "It ______ heavily in June in Southern Vietnam.",
@@ -544,7 +640,9 @@ const QUESTIONS_DATABASE = {
           "rains"
         ],
         "answerIndex": 3,
-        "hint": "Seasonal weather habit. Singular impersonal 'It' takes 'rains'."
+        "hint": "Seasonal weather habit. Singular impersonal 'It' takes 'rains'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Where ______ your grandparents live?",
@@ -555,7 +653,9 @@ const QUESTIONS_DATABASE = {
           "do"
         ],
         "answerIndex": 3,
-        "hint": "Information question. Plural subject 'your grandparents' takes auxiliary 'do'."
+        "hint": "Information question. Plural subject 'your grandparents' takes auxiliary 'do'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "She ______ know the answer to this difficult question.",
@@ -566,7 +666,9 @@ const QUESTIONS_DATABASE = {
           "don't"
         ],
         "answerIndex": 0,
-        "hint": "Stative verb 'know' in negative form with singular 'she' uses 'doesn't'."
+        "hint": "Stative verb 'know' in negative form with singular 'she' uses 'doesn't'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Trees ______ carbon dioxide and release oxygen.",
@@ -577,7 +679,9 @@ const QUESTIONS_DATABASE = {
           "absorbs"
         ],
         "answerIndex": 1,
-        "hint": "Scientific fact about trees (plural). Use base form 'absorb'."
+        "hint": "Scientific fact about trees (plural). Use base form 'absorb'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "I ______ rarely watch TV in the evening.",
@@ -588,7 +692,9 @@ const QUESTIONS_DATABASE = {
           "do"
         ],
         "answerIndex": 2,
-        "hint": "'rarely' is a frequency adverb placed directly before the main verb. No auxiliary needed in affirmative."
+        "hint": "'rarely' is a frequency adverb placed directly before the main verb. No auxiliary needed in affirmative.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "The post office ______ at 5:00 PM.",
@@ -599,7 +705,9 @@ const QUESTIONS_DATABASE = {
           "closes"
         ],
         "answerIndex": 3,
-        "hint": "Standard daily schedule. Singular noun 'The post office' takes 'closes'."
+        "hint": "Standard daily schedule. Singular noun 'The post office' takes 'closes'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "My mother ______ delicious food for our family every day.",
@@ -610,7 +718,9 @@ const QUESTIONS_DATABASE = {
           "is cooking"
         ],
         "answerIndex": 2,
-        "hint": "Daily habit. Singular subject 'My mother' takes 'cooks'."
+        "hint": "Daily habit. Singular subject 'My mother' takes 'cooks'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "What time ______ you usually get up?",
@@ -621,7 +731,9 @@ const QUESTIONS_DATABASE = {
           "do"
         ],
         "answerIndex": 3,
-        "hint": "Question about habits. Second-person 'you' takes auxiliary 'do'."
+        "hint": "Question about habits. Second-person 'you' takes auxiliary 'do'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "We ______ English lessons three times a week.",
@@ -632,7 +744,9 @@ const QUESTIONS_DATABASE = {
           "had"
         ],
         "answerIndex": 2,
-        "hint": "Weekly schedule. Plural subject 'We' takes 'have'."
+        "hint": "Weekly schedule. Plural subject 'We' takes 'have'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "He ______ his homework right after school.",
@@ -643,7 +757,9 @@ const QUESTIONS_DATABASE = {
           "has done"
         ],
         "answerIndex": 2,
-        "hint": "Singular subject 'He' takes 'does' (do + es) for routines."
+        "hint": "Singular subject 'He' takes 'does' (do + es) for routines.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "The moon ______ light from the sun.",
@@ -654,7 +770,9 @@ const QUESTIONS_DATABASE = {
           "reflected"
         ],
         "answerIndex": 2,
-        "hint": "Scientific fact. Singular subject 'The moon' takes 'reflects'."
+        "hint": "Scientific fact. Singular subject 'The moon' takes 'reflects'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "They ______ like noisy places.",
@@ -665,7 +783,9 @@ const QUESTIONS_DATABASE = {
           "aren't"
         ],
         "answerIndex": 2,
-        "hint": "Negative habit/preference. Plural subject 'They' takes auxiliary 'don't'."
+        "hint": "Negative habit/preference. Plural subject 'They' takes auxiliary 'don't'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "Our teacher ______ us a lot of useful knowledge.",
@@ -676,7 +796,9 @@ const QUESTIONS_DATABASE = {
           "give"
         ],
         "answerIndex": 2,
-        "hint": "General truth/routine. Singular subject 'Our teacher' takes 'gives'."
+        "hint": "General truth/routine. Singular subject 'Our teacher' takes 'gives'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "My friends ______ very helpful and kind.",
@@ -687,7 +809,9 @@ const QUESTIONS_DATABASE = {
           "are"
         ],
         "answerIndex": 3,
-        "hint": "Stating quality. Plural subject 'My friends' takes 'are'."
+        "hint": "Stating quality. Plural subject 'My friends' takes 'are'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "How ______ you spell your name?",
@@ -698,7 +822,9 @@ const QUESTIONS_DATABASE = {
           "does"
         ],
         "answerIndex": 0,
-        "hint": "Instruction/habit question. Second person 'you' takes auxiliary 'do'."
+        "hint": "Instruction/habit question. Second person 'you' takes auxiliary 'do'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "A rectangle ______ four right angles.",
@@ -709,7 +835,9 @@ const QUESTIONS_DATABASE = {
           "has"
         ],
         "answerIndex": 3,
-        "hint": "Mathematical fact. Singular subject 'A rectangle' takes 'has'."
+        "hint": "Mathematical fact. Singular subject 'A rectangle' takes 'has'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
       },
       {
         "question": "He ______ lazy. He always studies hard.",
@@ -720,7 +848,1296 @@ const QUESTIONS_DATABASE = {
           "isn't"
         ],
         "answerIndex": 3,
-        "hint": "To Be verb negative representing general character state. Singular subject 'He' takes 'isn't'."
+        "hint": "To Be verb negative representing general character state. Singular subject 'He' takes 'isn't'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "He ______ (watch) television every evening after dinner.",
+        "options": [
+          "watches",
+          "watch",
+          "is watching",
+          "watched"
+        ],
+        "answerIndex": 0,
+        "hint": "For simple present with singular subject 'He', verbs ending in -ch take an -es ending: 'watches'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "She ______ (study) chemistry at Cambridge University.",
+        "options": [
+          "studies",
+          "study",
+          "studying",
+          "studied"
+        ],
+        "answerIndex": 0,
+        "hint": "When a verb ends in consonant + y (study), change 'y' to 'i' and add '-es' for singular subjects: 'studies'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "My older brother ______ (have) a brand new car.",
+        "options": [
+          "has",
+          "have",
+          "having",
+          "haves"
+        ],
+        "answerIndex": 0,
+        "hint": "The irregular verb 'have' transforms to 'has' for third-person singular subjects.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "The international flight ______ (arrive) at 8:45 AM on weekdays.",
+        "options": [
+          "arrives",
+          "arrive",
+          "arriving",
+          "arrived"
+        ],
+        "answerIndex": 0,
+        "hint": "Fixed timetables use simple present. Add '-s' to regular verb 'arrive' for singular subject 'The flight'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "David usually ______ (do) his homework immediately after school.",
+        "options": [
+          "does",
+          "do",
+          "doing",
+          "done"
+        ],
+        "answerIndex": 0,
+        "hint": "With third-person singular subject 'David', the verb 'do' changes to 'does'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "Sarah ______ (teach) English grammar at the community college.",
+        "options": [
+          "teaches",
+          "teach",
+          "teaching",
+          "taught"
+        ],
+        "answerIndex": 0,
+        "hint": "Verbs ending in -ch add '-es' for third-person singular subjects: 'teaches'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "The Earth ______ (revolve) around the Sun in about 365 days.",
+        "options": [
+          "revolves",
+          "revolve",
+          "revolving",
+          "revolved"
+        ],
+        "answerIndex": 0,
+        "hint": "General astronomical truths use simple present. Add '-s' for singular noun 'The Earth'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "He ______ (try) his absolute best in every sports competition.",
+        "options": [
+          "tries",
+          "try",
+          "trying",
+          "tried"
+        ],
+        "answerIndex": 0,
+        "hint": "For verbs ending in consonant + y, replace 'y' with 'ies' for singular subject 'He': 'tries'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "My cat ______ (catch) mice in the garden whenever it is sunny.",
+        "options": [
+          "catches",
+          "catch",
+          "catching",
+          "catched"
+        ],
+        "answerIndex": 0,
+        "hint": "Verbs ending in -ch add '-es' when used with a singular subject ('My cat'): 'catches'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "Water ______ (freeze) at 0 degrees Celsius under standard pressure.",
+        "options": [
+          "freezes",
+          "freeze",
+          "freezing",
+          "froze"
+        ],
+        "answerIndex": 0,
+        "hint": "Scientific laws use simple present. Uncountable noun 'Water' acts as singular: add '-s' to make 'freezes'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "My uncle ______ (fix) clocks and vintage electronics as a hobby.",
+        "options": [
+          "fixes",
+          "fix",
+          "fixing",
+          "fixed"
+        ],
+        "answerIndex": 0,
+        "hint": "Verbs ending in -x take '-es' for third-person singular: 'fixes'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "Mary ______ (wash) her car every Saturday morning.",
+        "options": [
+          "washes",
+          "wash",
+          "washing",
+          "washed"
+        ],
+        "answerIndex": 0,
+        "hint": "Verbs ending in -sh add '-es' for singular subjects: 'washes'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "The train ______ (depart) from platform 4 at exactly 7:00 PM.",
+        "options": [
+          "departs",
+          "depart",
+          "departing",
+          "departed"
+        ],
+        "answerIndex": 0,
+        "hint": "Schedules take simple present. Add '-s' to make 'departs'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "He ______ (carry) a heavy backpack to university every day.",
+        "options": [
+          "carries",
+          "carry",
+          "carrying",
+          "carried"
+        ],
+        "answerIndex": 0,
+        "hint": "Change consonant + y to '-ies' for third-person singular: 'carries'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "My grandfather ______ (enjoy) classical music in the evenings.",
+        "options": [
+          "enjoys",
+          "enjoy",
+          "enjoying",
+          "enjoyes"
+        ],
+        "answerIndex": 0,
+        "hint": "When a verb ends in vowel + y ('enjoy'), simply add '-s' without changing 'y': 'enjoys'.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "I ______ eat junk food because I prefer a healthy balanced diet.",
+        "options": [
+          "do not",
+          "does not",
+          "am not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "With 1st person singular 'I' and action verb 'eat', use the auxiliary 'do not' (don't).",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "She ______ ready for the upcoming final examination today.",
+        "options": [
+          "is not",
+          "does not",
+          "do not",
+          "are not"
+        ],
+        "answerIndex": 0,
+        "hint": "'Ready' is an adjective requiring a 'to be' verb. Singular 'She' takes 'is not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "We ______ have enough free time to visit the national art museum.",
+        "options": [
+          "do not",
+          "are not",
+          "does not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural subject 'We' with action verb 'have' requires auxiliary 'do not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "He ______ understand how to solve this advanced algebra problem.",
+        "options": [
+          "does not",
+          "do not",
+          "is not",
+          "am not"
+        ],
+        "answerIndex": 0,
+        "hint": "3rd person singular subject 'He' with action verb 'understand' requires auxiliary 'does not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "They ______ at the regional office because today is a public holiday.",
+        "options": [
+          "are not",
+          "do not",
+          "does not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "Prepositional phrase 'at the office' describing location requires 'to be' verb. Plural 'They' takes 'are not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "My laptop ______ working properly after the latest OS update.",
+        "options": [
+          "is not",
+          "does not",
+          "do not",
+          "are not"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular noun 'My laptop' describing current status requires 'is not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "You ______ seem very happy with the team's final decision.",
+        "options": [
+          "do not",
+          "are not",
+          "does not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "Second person 'You' with stative action verb 'seem' takes auxiliary 'do not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "I ______ tired enough to go to sleep at 9:00 PM.",
+        "options": [
+          "am not",
+          "do not",
+          "does not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "'Tired' is an adjective requiring the verb 'to be' for 'I', which is 'am not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "The central library ______ open on Sunday mornings.",
+        "options": [
+          "is not",
+          "does not",
+          "do not",
+          "are not"
+        ],
+        "answerIndex": 0,
+        "hint": "'Open' acts as an adjective state here for singular 'library', requiring 'is not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "Our dogs ______ like swimming in the backyard swimming pool.",
+        "options": [
+          "do not",
+          "are not",
+          "does not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural noun 'Our dogs' takes the auxiliary 'do not' before action verb 'like'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "Mr. Johnson ______ teach physics; he teaches organic chemistry.",
+        "options": [
+          "does not",
+          "is not",
+          "do not",
+          "are not"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject with base action verb 'teach' requires auxiliary 'does not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "The students ______ enthusiastic about the extra homework assignment.",
+        "options": [
+          "are not",
+          "do not",
+          "does not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "'Enthusiastic' is an adjective. Plural subject 'students' requires 'are not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "______ she take the express subway to work every morning?",
+        "options": [
+          "Does",
+          "Do",
+          "Is",
+          "Are"
+        ],
+        "answerIndex": 0,
+        "hint": "For Yes/No simple present questions with action verb 'take' and singular subject 'she', start with 'Does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "______ you speak fluent English and conversational Spanish?",
+        "options": [
+          "Do",
+          "Does",
+          "Are",
+          "Is"
+        ],
+        "answerIndex": 0,
+        "hint": "Second person 'you' with action verb 'speak' requires starting auxiliary 'Do'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Where ______ your grandparents live currently?",
+        "options": [
+          "do",
+          "does",
+          "are",
+          "is"
+        ],
+        "answerIndex": 0,
+        "hint": "In a Wh-question with plural subject 'your grandparents' and verb 'live', use auxiliary 'do'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "What time ______ the supermarket open on Sunday evenings?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "has"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'the supermarket' with action verb 'open' requires auxiliary 'does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Why ______ he always complain about the humid summer weather?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "are"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'he' with verb 'complain' requires auxiliary 'does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "______ they active members of the university chess club?",
+        "options": [
+          "Are",
+          "Do",
+          "Does",
+          "Is"
+        ],
+        "answerIndex": 0,
+        "hint": "This Yes/No question asks about state/identity (no action verb), requiring 'to be' for plural 'they': 'Are'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "How often ______ Peter visit his relatives in the countryside?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "has"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular proper noun 'Peter' with action verb 'visit' requires auxiliary 'does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "______ your little brother enjoy playing strategic video games?",
+        "options": [
+          "Does",
+          "Do",
+          "Is",
+          "Has"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'your little brother' takes starting auxiliary 'Does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "When ______ the final exam session officially begin?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "are"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular event 'the final exam session' takes auxiliary 'does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "______ I on the correct registration list for today's seminar?",
+        "options": [
+          "Am",
+          "Do",
+          "Is",
+          "Are"
+        ],
+        "answerIndex": 0,
+        "hint": "Status question with subject 'I' requires 'to be' form: 'Am'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "What ______ she usually eat for breakfast before going to school?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "has"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'she' with action verb 'eat' takes auxiliary 'does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Where ______ we put our coats during the facility tour?",
+        "options": [
+          "do",
+          "does",
+          "are",
+          "is"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural subject 'we' takes auxiliary 'do'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "My mother always ______ (go) to the traditional market early in the morning.",
+        "options": [
+          "goes",
+          "go",
+          "going",
+          "is going"
+        ],
+        "answerIndex": 0,
+        "hint": "Verbs ending in -o (go, do) take '-es' with 3rd person singular subjects ('My mother'): goes.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "Nam ______ (brush) his teeth twice a day after meals.",
+        "options": [
+          "brushes",
+          "brush",
+          "brushs",
+          "brushing"
+        ],
+        "answerIndex": 0,
+        "hint": "Verbs ending in -sh add '-es' for singular subjects like 'Nam': brushes.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "We usually ______ (visit) our grandparents in the countryside every summer.",
+        "options": [
+          "visit",
+          "visits",
+          "visiting",
+          "visited"
+        ],
+        "answerIndex": 0,
+        "hint": "With plural subject 'We', keep the verb in its base infinitive form: visit.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "The Chao Phraya river and the Red River ______ (flow) out into the sea.",
+        "options": [
+          "flow",
+          "flows",
+          "flowing",
+          "is flowing"
+        ],
+        "answerIndex": 0,
+        "hint": "Two rivers connected by 'and' form a plural subject, so the verb stays in base form: flow.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "Mai never ______ (watch) cartoon shows on school days.",
+        "options": [
+          "watches",
+          "watch",
+          "watchs",
+          "watching"
+        ],
+        "answerIndex": 0,
+        "hint": "Verbs ending in -ch add '-es' for singular subjects: watches (Mẹo: O, CH, S, X, SH, Z thêm -es).",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "Binh and Lan ______ (study) English together at the central library every Saturday.",
+        "options": [
+          "study",
+          "studies",
+          "studying",
+          "studied"
+        ],
+        "answerIndex": 0,
+        "hint": "Compound subject 'Binh and Lan' is plural (They), so keep the verb 'study' in base form.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "The sun ______ (shine) brightly during summer in central Vietnam.",
+        "options": [
+          "shines",
+          "shine",
+          "shining",
+          "shiningly"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular noun 'The sun' takes '-s' ending on regular verb 'shine': shines.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "My father ______ (drive) his motorbike to work every morning at 7:30.",
+        "options": [
+          "drives",
+          "drive",
+          "driving",
+          "drove"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'My father' requires adding '-s' to 'drive': drives.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "Our geometry class always ______ (finish) at 11:15 AM on Fridays.",
+        "options": [
+          "finishes",
+          "finish",
+          "finishs",
+          "finishing"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'Our geometry class' with verb ending in -sh takes '-es': finishes.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "He ______ (fix) household appliances whenever something stops working.",
+        "options": [
+          "fixes",
+          "fix",
+          "fixs",
+          "fixing"
+        ],
+        "answerIndex": 0,
+        "hint": "Verbs ending in -x add '-es' for 3rd person singular subjects ('He'): fixes.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "Babies often ______ (cry) when they are hungry or sleepy.",
+        "options": [
+          "cry",
+          "cries",
+          "crying",
+          "cryings"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural noun 'Babies' takes the plural verb form without changes: cry.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "My little sister ______ (have) two new English workbooks.",
+        "options": [
+          "has",
+          "have",
+          "haves",
+          "having"
+        ],
+        "answerIndex": 0,
+        "hint": "Irregular verb 'have' transforms to 'has' for third-person singular subjects.",
+        "group": "affirmative",
+        "subgroup": "conjugation"
+      },
+      {
+        "question": "She ______ to school on foot every Monday.",
+        "options": [
+          "goes",
+          "go",
+          "going",
+          "gone"
+        ],
+        "answerIndex": 0,
+        "hint": "Third-person singular 'She' requires verb + es: goes.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "They ______ in a small town near Da Nang city.",
+        "options": [
+          "live",
+          "lives",
+          "living",
+          "lived"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural subject 'They' requires base verb: live.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Which sentence puts the frequency adverb in the correct position?",
+        "options": [
+          "She always reads literature at night.",
+          "She reads always literature at night.",
+          "She always read literature at night.",
+          "Always she read literature at night."
+        ],
+        "answerIndex": 0,
+        "hint": "Adverbs of frequency (always, usually) stand BEFORE the main verb and require proper verb ending (-s).",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "My brother ______ a mechanical engineer at an electronic firm in Hanoi.",
+        "options": [
+          "is",
+          "are",
+          "am",
+          "be"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular noun 'My brother' takes the linking 'to be' verb: is.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "We ______ tea and cakes at our favorite coffee shop on weekend mornings.",
+        "options": [
+          "enjoy",
+          "enjoys",
+          "enjoying",
+          "enjoyed"
+        ],
+        "answerIndex": 0,
+        "hint": "1st person plural subject 'We' takes base infinitive verb: enjoy.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "The biology museum ______ its doors to visitors at 8:00 AM daily.",
+        "options": [
+          "opens",
+          "open",
+          "opening",
+          "to open"
+        ],
+        "answerIndex": 0,
+        "hint": "Schedules and timetables for singular institutions take simple present verb with -s: opens.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "My uncle and aunt ______ rice farming in the Mekong Delta.",
+        "options": [
+          "do",
+          "does",
+          "doing",
+          "did"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural subject 'My uncle and aunt' takes base auxiliary/main verb 'do'.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Which of the following affirmative sentences is grammatically CORRECT?",
+        "options": [
+          "My mother cooks Pho every Sunday.",
+          "He play football after classes.",
+          "They goes to the cinema twice a week.",
+          "She like reading comic books."
+        ],
+        "answerIndex": 0,
+        "hint": "'My mother cooks' correctly agrees in subject and verb number.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Tom and Jerry ______ best friends despite their silly arguments.",
+        "options": [
+          "are",
+          "is",
+          "am",
+          "be"
+        ],
+        "answerIndex": 0,
+        "hint": "Two subjects joined by 'and' require plural 'to be' verb: are.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "It usually ______ a lot in Hue during the winter months.",
+        "options": [
+          "rains",
+          "rain",
+          "raining",
+          "to rain"
+        ],
+        "answerIndex": 0,
+        "hint": "Impersonal pronoun 'It' describing general weather patterns takes singular verb: rains.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Mr. Quang ______ history at a public high school in Ho Chi Minh City.",
+        "options": [
+          "teaches",
+          "teach",
+          "teachings",
+          "taught"
+        ],
+        "answerIndex": 0,
+        "hint": "Verbs ending in -ch take '-es' with singular subjects ('Mr. Quang'): teaches.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Good students always ______ hard to pass their end-of-term exams.",
+        "options": [
+          "study",
+          "studies",
+          "studying",
+          "studied"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural noun 'Good students' takes base verb: study.",
+        "group": "affirmative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "I ______ drink coffee late in the afternoon because it prevents me from sleeping.",
+        "options": [
+          "do not",
+          "does not",
+          "am not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "Subject 'I' with action verb 'drink' uses auxiliary 'do not' (don't).",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "My younger brother ______ like eating bitter vegetables.",
+        "options": [
+          "does not",
+          "do not",
+          "is not",
+          "am not"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular noun 'My younger brother' before action verb 'like' requires 'does not' (doesn't).",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "We ______ hungry right now, so we will eat dinner later.",
+        "options": [
+          "are not",
+          "do not",
+          "does not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "'Hungry' is an adjective, requiring 'to be' verb. Plural 'We' takes 'are not' (aren't).",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "Her grandparents ______ walk to the park when the weather is rainy.",
+        "options": [
+          "do not",
+          "does not",
+          "are not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural subject 'Her grandparents' takes auxiliary 'do not' before the action verb 'walk'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "Our English homework for tonight ______ very difficult to accomplish.",
+        "options": [
+          "is not",
+          "does not",
+          "do not",
+          "are not"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'Our English homework' before adjective 'difficult' takes 'is not' (isn't).",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "You ______ listen to loud music while studying in the school library.",
+        "options": [
+          "do not",
+          "does not",
+          "are not",
+          "am not"
+        ],
+        "answerIndex": 0,
+        "hint": "Second person 'You' takes auxiliary 'do not' before action verb 'listen'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "I ______ late for class today; the bell hasn't rung yet.",
+        "options": [
+          "am not",
+          "do not",
+          "does not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "Adjective 'late' requires 'to be'. For pronoun 'I', use 'am not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "This bus ______ go directly to Ben Thanh market; you need to transfer.",
+        "options": [
+          "does not",
+          "do not",
+          "is not",
+          "are not"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular noun 'This bus' before action verb 'go' requires auxiliary 'does not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "Those oranges in the fruit stand ______ sweet enough to buy.",
+        "options": [
+          "are not",
+          "do not",
+          "does not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural noun 'Those oranges' before adjective 'sweet' requires 'are not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "My pet dog ______ bark at strangers during the daytime.",
+        "options": [
+          "does not",
+          "do not",
+          "is not",
+          "are not"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'My pet dog' before verb 'bark' requires 'does not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "Mr. and Mrs. Smith ______ from England; they come from Canada.",
+        "options": [
+          "are not",
+          "do not",
+          "does not",
+          "is not"
+        ],
+        "answerIndex": 0,
+        "hint": "Preposition of origin 'from England' requires 'to be' verb for plural subject: 'are not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "It ______ matter if we arrive five minutes early to the meeting.",
+        "options": [
+          "does not",
+          "do not",
+          "is not",
+          "are not"
+        ],
+        "answerIndex": 0,
+        "hint": "Pronoun 'It' with main verb 'matter' requires auxiliary 'does not'.",
+        "group": "negative",
+        "subgroup": "auxiliary"
+      },
+      {
+        "question": "She ______ breakfast at home on weekdays.",
+        "options": [
+          "doesn't eat",
+          "don't eat",
+          "doesn't eats",
+          "not eat"
+        ],
+        "answerIndex": 0,
+        "hint": "After auxiliary 'doesn't', the main verb MUST be in base infinitive form (eat, NOT eats).",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "We ______ enough milk to bake a chocolate cake for the party.",
+        "options": [
+          "don't have",
+          "doesn't have",
+          "not have",
+          "don't has"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural subject 'We' takes 'don't have'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Which of the following negative sentences is grammatically CORRECT?",
+        "options": [
+          "He doesn't like spicy food at all.",
+          "They don't plays volleyball after school.",
+          "She don't go to work on Sundays.",
+          "I doesn't watch TV every evening."
+        ],
+        "answerIndex": 0,
+        "hint": "'He doesn't like' correctly pairs singular auxiliary with a base infinitive verb.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "My classmates ______ up late on weeknights because they have early classes.",
+        "options": [
+          "don't stay",
+          "doesn't stay",
+          "not stay",
+          "don't stays"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural noun 'My classmates' requires 'don't stay'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Water ______ at 50 degrees Celsius under typical atmospheric pressure.",
+        "options": [
+          "doesn't boil",
+          "don't boil",
+          "isn't boil",
+          "doesn't boils"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular uncountable subject 'Water' takes negative auxiliary 'doesn't boil'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "My little cat ______ outside when it is dark and cold.",
+        "options": [
+          "doesn't go",
+          "don't go",
+          "isn't go",
+          "not goes"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'My little cat' takes 'doesn't go'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "You and I ______ eye to eye on this particular topic, but that's fine.",
+        "options": [
+          "don't see",
+          "doesn't see",
+          "not see",
+          "aren't see"
+        ],
+        "answerIndex": 0,
+        "hint": "Compound subject 'You and I' equals 'We', requiring 'don't see'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "My best friend ______ Japanese, but she speaks fluent Chinese and English.",
+        "options": [
+          "doesn't speak",
+          "don't speak",
+          "doesn't speaks",
+          "isn't speak"
+        ],
+        "answerIndex": 0,
+        "hint": "After 'doesn't', never add -s to the main verb: doesn't speak.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "His father ______ across the river by boat anymore; he uses the new bridge.",
+        "options": [
+          "doesn't travel",
+          "don't travel",
+          "doesn't travels",
+          "not travel"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'His father' requires 'doesn't travel'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Bats ______ insects only; some species consume fruits and nectar.",
+        "options": [
+          "don't eat",
+          "doesn't eat",
+          "don't eats",
+          "aren't eat"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural subject 'Bats' takes 'don't eat'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "This department store ______ handmade pottery from Bat Trang village.",
+        "options": [
+          "doesn't sell",
+          "don't sell",
+          "isn't sell",
+          "doesn't sells"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular noun 'This department store' takes 'doesn't sell'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "I ______ the meaning of this traditional Vietnamese idiom.",
+        "options": [
+          "don't understand",
+          "doesn't understand",
+          "am not understand",
+          "not understand"
+        ],
+        "answerIndex": 0,
+        "hint": "With pronoun 'I', use 'don't understand'.",
+        "group": "negative",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "______ your father work at the district general hospital?",
+        "options": [
+          "Does",
+          "Do",
+          "Is",
+          "Are"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'your father' with action verb 'work' requires starting auxiliary 'Does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "______ they live in a modern apartment in downtown Hanoi?",
+        "options": [
+          "Do",
+          "Does",
+          "Are",
+          "Is"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural subject 'they' with action verb 'live' requires starting auxiliary 'Do'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "What time ______ your first class usually start on Tuesday?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "are"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'your first class' with verb 'start' requires question auxiliary 'does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Where ______ Mr. and Mrs. Hoang spend their summer holidays?",
+        "options": [
+          "do",
+          "does",
+          "are",
+          "is"
+        ],
+        "answerIndex": 0,
+        "hint": "Plural compound subject 'Mr. and Mrs. Hoang' takes auxiliary 'do'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "______ she always clean her bedroom on Sunday mornings?",
+        "options": [
+          "Does",
+          "Do",
+          "Is",
+          "Has"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'she' with verb 'clean' takes auxiliary 'Does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Why ______ Lan always walk to school instead of riding her bicycle?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "has"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular subject 'Lan' with verb 'walk' takes question auxiliary 'does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "______ you ready to present your group report to the teacher?",
+        "options": [
+          "Are",
+          "Do",
+          "Does",
+          "Is"
+        ],
+        "answerIndex": 0,
+        "hint": "'Ready' is an adjective describing state, requiring 'to be' verb for second person: 'Are'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "How many hours a week ______ Peter practice playing the guitar?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "are"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular noun 'Peter' with action verb 'practice' takes 'does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "______ this traditional dish contain peanuts or soy sauce?",
+        "options": [
+          "Does",
+          "Do",
+          "Is",
+          "Are"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular noun 'this traditional dish' with verb 'contain' requires starting auxiliary 'Does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "When ______ the public library close on weekday afternoons?",
+        "options": [
+          "does",
+          "do",
+          "is",
+          "has"
+        ],
+        "answerIndex": 0,
+        "hint": "Singular facility 'the public library' with verb 'close' takes auxiliary 'does'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "Who ______ to participate in our English speaking contest this weekend?",
+        "options": [
+          "wants",
+          "want",
+          "do want",
+          "does wants"
+        ],
+        "answerIndex": 0,
+        "hint": "When 'Who' is the subject of a simple present question asking about identity/choice, use 3rd person singular verb form: wants.",
+        "group": "question",
+        "subgroup": "multiple_choice"
+      },
+      {
+        "question": "______ we allowed to use our electronic calculators during the physics test?",
+        "options": [
+          "Are",
+          "Do",
+          "Does",
+          "Is"
+        ],
+        "answerIndex": 0,
+        "hint": "Passive adjective state 'allowed to use' with subject 'we' requires plural 'to be' auxiliary: 'Are'.",
+        "group": "question",
+        "subgroup": "multiple_choice"
       }
     ]
   },

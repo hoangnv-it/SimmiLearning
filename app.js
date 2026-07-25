@@ -13,6 +13,8 @@ const state = {
   language: 'en', // 'en' | 'vi'
   currentScreen: 'selection', // 'selection' | 'practice' | 'results'
   selectedTenseId: null,
+  selectedGroup: 'all',
+  selectedSubgroup: 'all',
   questions: [],
   currentQuestionIndex: 0,
   selectedOptionIndex: null,
@@ -97,7 +99,18 @@ const TRANSLATIONS = {
     
     notPracticed: "Not Practiced Yet",
     noStrengthsYet: "No tenses at 80%+ yet. Keep practicing!",
-    masteredAll: "Outstanding! You have mastered all tenses!"
+    masteredAll: "Outstanding! You have mastered all tenses!",
+    
+    groupAll: "🌟 All Topics",
+    groupAffirmative: "➕ Câu khẳng định (Affirmative)",
+    groupNegative: "➖ Câu phủ định (Negative)",
+    groupQuestion: "❓ Câu nghi vấn (Questions)",
+    subgroupAll: "Tất cả (All)",
+    subgroupConjugation: "✍️ Chia động từ (Verb Transformation)",
+    subgroupMcqAffirmative: "🎯 Multiple Choice (Affirmative)",
+    subgroupAuxiliary: "⚡ be/do/does + not (Auxiliary)",
+    subgroupMcqNegative: "🎯 Multiple Choice (Negative)",
+    subgroupMcqQuestion: "🎯 Multiple Choice (Questions)"
   },
   vi: {
     logo: "SimmiLearning",
@@ -173,7 +186,18 @@ const TRANSLATIONS = {
     
     notPracticed: "Chưa Luyện tập",
     noStrengthsYet: "Chưa có thì nào đạt 80%+. Hãy tiếp tục cố gắng nhé!",
-    masteredAll: "Xuất sắc! Bạn đã làm chủ tất cả các thì!"
+    masteredAll: "Xuất sắc! Bạn đã làm chủ tất cả các thì!",
+    
+    groupAll: "🌟 Tổng hợp (All)",
+    groupAffirmative: "➕ Câu khẳng định",
+    groupNegative: "➖ Câu phủ định",
+    groupQuestion: "❓ Câu nghi vấn",
+    subgroupAll: "Tất cả",
+    subgroupConjugation: "✍️ Chia động từ",
+    subgroupMcqAffirmative: "🎯 Trắc nghiệm (Khẳng định)",
+    subgroupAuxiliary: "⚡ Thêm be/do/does + not",
+    subgroupMcqNegative: "🎯 Trắc nghiệm (Phủ định)",
+    subgroupMcqQuestion: "🎯 Trắc nghiệm (Nghi vấn)"
   }
 };
 
@@ -285,6 +309,9 @@ function applyTranslations() {
     const indicator = document.getElementById('practice-tense-indicator');
     if (indicator && state.selectedTenseId) {
       indicator.textContent = getTenseTranslation(state.selectedTenseId, 'name');
+    }
+    if (typeof renderPracticeGroupSelectors === 'function') {
+      renderPracticeGroupSelectors();
     }
     // Refresh counter
     const totalQuestions = state.questions.length;
@@ -568,7 +595,9 @@ window.startPractice = function(tenseId) {
   // Initialize practice state
   const questionCount = tenseId === 'grade-5-exam' ? 30 : 10;
   state.selectedTenseId = tenseId;
-  state.questions = preparePracticeQuestions(tenseData.questions, questionCount);
+  state.selectedGroup = 'all';
+  state.selectedSubgroup = 'all';
+  state.questions = preparePracticeQuestions(getFilteredQuestions(tenseId, 'all', 'all'), questionCount);
   state.currentQuestionIndex = 0;
   state.selectedOptionIndex = null;
   state.isAnswerChecked = false;
@@ -580,12 +609,134 @@ window.startPractice = function(tenseId) {
     indicator.textContent = getTenseTranslation(tenseId, 'name');
   }
 
+  // Render categorized option selectors
+  renderPracticeGroupSelectors();
+
   // Load first question
   loadQuestion();
 
   // Navigate
   showScreen('practice');
 };
+
+function getFilteredQuestions(tenseId, group, subgroup) {
+  const tenseData = QUESTIONS_DATABASE[tenseId];
+  if (!tenseData || !tenseData.questions) return [];
+  
+  if (tenseId !== 'simple-present') {
+    return tenseData.questions;
+  }
+  
+  return tenseData.questions.filter(q => {
+    if (group && group !== 'all') {
+      if (q.group !== group) return false;
+    }
+    if (subgroup && subgroup !== 'all') {
+      if (q.subgroup !== subgroup) return false;
+    }
+    return true;
+  });
+}
+
+function renderPracticeGroupSelectors() {
+  const container = document.getElementById('practice-options-bar');
+  if (!container) return;
+  
+  if (state.selectedTenseId !== 'simple-present') {
+    container.style.display = 'none';
+    container.innerHTML = '';
+    return;
+  }
+  
+  container.style.display = 'flex';
+  container.innerHTML = '';
+  
+  // Tier 1 (Main Groups)
+  const tier1 = document.createElement('div');
+  tier1.className = 'practice-tier-1';
+  
+  const mainGroups = [
+    { id: 'all', key: 'groupAll' },
+    { id: 'affirmative', key: 'groupAffirmative' },
+    { id: 'negative', key: 'groupNegative' },
+    { id: 'question', key: 'groupQuestion' }
+  ];
+  
+  mainGroups.forEach(grp => {
+    const btn = document.createElement('button');
+    btn.className = `filter-pill ${state.selectedGroup === grp.id ? 'active' : ''}`;
+    btn.textContent = t(grp.key);
+    btn.addEventListener('click', () => {
+      if (state.selectedGroup === grp.id) return;
+      switchPracticeCategory(grp.id, 'all');
+    });
+    tier1.appendChild(btn);
+  });
+  
+  container.appendChild(tier1);
+  
+  // Tier 2 (Subgroups)
+  if (state.selectedGroup !== 'all') {
+    const tier2 = document.createElement('div');
+    tier2.className = 'practice-tier-2';
+    
+    let subOptions = [];
+    if (state.selectedGroup === 'affirmative') {
+      subOptions = [
+        { id: 'all', key: 'subgroupAll' },
+        { id: 'conjugation', key: 'subgroupConjugation' },
+        { id: 'multiple_choice', key: 'subgroupMcqAffirmative' }
+      ];
+    } else if (state.selectedGroup === 'negative') {
+      subOptions = [
+        { id: 'all', key: 'subgroupAll' },
+        { id: 'auxiliary', key: 'subgroupAuxiliary' },
+        { id: 'multiple_choice', key: 'subgroupMcqNegative' }
+      ];
+    } else if (state.selectedGroup === 'question') {
+      subOptions = [
+        { id: 'multiple_choice', key: 'subgroupMcqQuestion' }
+      ];
+      if (state.selectedSubgroup === 'all') {
+        state.selectedSubgroup = 'multiple_choice';
+      }
+    }
+    
+    subOptions.forEach(sub => {
+      const btn = document.createElement('button');
+      btn.className = `filter-pill sub-pill ${state.selectedSubgroup === sub.id ? 'active' : ''}`;
+      btn.textContent = t(sub.key);
+      btn.addEventListener('click', () => {
+        if (state.selectedSubgroup === sub.id) return;
+        switchPracticeCategory(state.selectedGroup, sub.id);
+      });
+      tier2.appendChild(btn);
+    });
+    
+    container.appendChild(tier2);
+  }
+}
+
+function switchPracticeCategory(group, subgroup) {
+  state.selectedGroup = group;
+  state.selectedSubgroup = subgroup;
+  
+  if (group === 'question' && subgroup === 'all') {
+    state.selectedSubgroup = 'multiple_choice';
+  }
+  
+  const filtered = getFilteredQuestions(state.selectedTenseId, state.selectedGroup, state.selectedSubgroup);
+  const questionCount = Math.min(10, filtered.length || 10);
+  
+  state.questions = preparePracticeQuestions(filtered, questionCount);
+  state.currentQuestionIndex = 0;
+  state.selectedOptionIndex = null;
+  state.isAnswerChecked = false;
+  state.score = 0;
+  
+  renderPracticeGroupSelectors();
+  loadQuestion();
+}
 
 // Load a single question to the layout
 function loadQuestion() {
