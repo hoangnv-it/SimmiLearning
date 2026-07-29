@@ -1,5 +1,367 @@
 [
   {
+    "date": "2026-07-29",
+    "dateFormatted": "July 29, 2026",
+    "theme": "Daily Vocabulary",
+    "audios": [
+      "audio/7-29-2026-1.aac",
+      "audio/7-29-2026-2.aac"
+    ],
+    "words": [
+      {
+        "word": "Kitchen",
+        "index": 1,
+        "type": "n.",
+        "phonetic": "/ˈkɪtʃɪn/",
+        "meaning": "A room or area where food is prepared and cooked.",
+        "example": "We usually eat breakfast in the kitchen.",
+        "vietnamese": "nhà bếp"
+      },
+      {
+        "word": "Bench",
+        "index": 2,
+        "type": "n.",
+        "phonetic": "/bentʃ/",
+        "meaning": "A long, usually hard seat for two or more people, often found in public places.",
+        "example": "They sat on a park bench and talked.",
+        "vietnamese": "ghế dài"
+      },
+      {
+        "word": "Wheel",
+        "index": 3,
+        "type": "n.",
+        "phonetic": "/wiːl/",
+        "meaning": "A circular object that revolves on an axle and is fixed below a vehicle to enable it to move easily over the ground.",
+        "example": "The car has four wheels.",
+        "vietnamese": "bánh xe"
+      },
+      {
+        "word": "Dictionary",
+        "index": 4,
+        "type": "n.",
+        "phonetic": "/ˈdɪkʃəneri/",
+        "meaning": "A book or electronic resource that lists the words of a language and gives their meaning.",
+        "example": "I use a dictionary to look up new words.",
+        "vietnamese": "từ điển"
+      },
+      {
+        "word": "Upstairs",
+        "index": 5,
+        "type": "adv.",
+        "phonetic": "/ˌʌpˈsterz/",
+        "meaning": "On or to an upper floor of a building.",
+        "example": "She went upstairs to her bedroom.",
+        "vietnamese": "tầng trên"
+      },
+      {
+        "word": "Spend time",
+        "index": 6,
+        "type": "phr.",
+        "phonetic": "/spend taɪm/",
+        "meaning": "To use time doing something or being somewhere.",
+        "example": "I like to spend time with my family on weekends.",
+        "vietnamese": "dành thời gian"
+      },
+      {
+        "word": "Subject",
+        "index": 7,
+        "type": "n.",
+        "phonetic": "/ˈsʌbdʒɪkt/",
+        "meaning": "An area of knowledge that is studied in school, college, or university.",
+        "example": "Math is my favorite subject.",
+        "vietnamese": "môn học"
+      },
+      {
+        "word": "International",
+        "index": 8,
+        "type": "adj.",
+        "phonetic": "/ˌɪntərˈnæʃnəl/",
+        "meaning": "Existing, occurring, or carried on between two or more nations.",
+        "example": "She works for an international company.",
+        "vietnamese": "quốc tế"
+      },
+      {
+        "word": "Photography",
+        "index": 9,
+        "type": "n.",
+        "phonetic": "/fəˈtɑːɡrəfi/",
+        "meaning": "The art or practice of taking and processing photographs.",
+        "example": "He is very interested in photography.",
+        "vietnamese": "nhiếp ảnh"
+      },
+      {
+        "word": "Ready",
+        "index": 10,
+        "type": "adj.",
+        "phonetic": "/ˈredi/",
+        "meaning": "In a suitable state for an action or situation; fully prepared.",
+        "example": "Are you ready to go?",
+        "vietnamese": "sẵn sàng"
+      },
+      {
+        "word": "Physics",
+        "index": 11,
+        "type": "n.",
+        "phonetic": "/ˈfɪzɪks/",
+        "meaning": "The branch of science concerned with the nature and properties of matter and energy.",
+        "example": "He studies physics at university.",
+        "vietnamese": "vật lý"
+      },
+      {
+        "word": "Season",
+        "index": 12,
+        "type": "n.",
+        "phonetic": "/ˈsiːzn/",
+        "meaning": "Each of the four divisions of the year marked by particular weather patterns and daylight hours.",
+        "example": "Autumn is my favorite season.",
+        "vietnamese": "mùa"
+      },
+      {
+        "word": "Spring",
+        "index": 13,
+        "type": "n.",
+        "phonetic": "/sprɪŋ/",
+        "meaning": "The season after winter and before summer, in which vegetation begins to appear.",
+        "example": "Flowers bloom in the spring.",
+        "vietnamese": "mùa xuân"
+      },
+      {
+        "word": "Summer",
+        "index": 14,
+        "type": "n.",
+        "phonetic": "/ˈsʌmər/",
+        "meaning": "The warmest season of the year, between spring and autumn.",
+        "example": "We go to the beach in the summer.",
+        "vietnamese": "mùa hè"
+      },
+      {
+        "word": "Autumn",
+        "index": 15,
+        "type": "n.",
+        "phonetic": "/ˈɔːtəm/",
+        "meaning": "The season after summer and before winter, when leaves fall from trees.",
+        "example": "The leaves turn red in autumn.",
+        "vietnamese": "mùa thu"
+      },
+      {
+        "word": "Winter",
+        "index": 16,
+        "type": "n.",
+        "phonetic": "/ˈwɪntər/",
+        "meaning": "The coldest season of the year, between autumn and spring.",
+        "example": "It snows a lot in the winter.",
+        "vietnamese": "mùa đông"
+      },
+      {
+        "word": "Language",
+        "index": 17,
+        "type": "n.",
+        "phonetic": "/ˈlæŋɡwɪdʒ/",
+        "meaning": "The method of human communication, either spoken or written.",
+        "example": "She speaks three different languages fluently.",
+        "vietnamese": "ngôn ngữ"
+      },
+      {
+        "word": "Favorite",
+        "index": 18,
+        "type": "adj.",
+        "phonetic": "/ˈfeɪvərɪt/",
+        "meaning": "Preferred before all others of the same kind.",
+        "example": "Blue is my favorite color.",
+        "vietnamese": "yêu thích"
+      },
+      {
+        "word": "Wonderful",
+        "index": 19,
+        "type": "adj.",
+        "phonetic": "/ˈwʌndərfl/",
+        "meaning": "Inspiring delight, pleasure, or admiration; extremely good.",
+        "example": "We had a wonderful time at the party.",
+        "vietnamese": "tuyệt vời"
+      },
+      {
+        "word": "Experiment",
+        "index": 20,
+        "type": "n.",
+        "phonetic": "/ɪkˈsperɪmənt/",
+        "meaning": "A scientific procedure undertaken to make a discovery or test a hypothesis.",
+        "example": "They are doing a chemistry experiment.",
+        "vietnamese": "thí nghiệm"
+      },
+      {
+        "word": "Laboratory",
+        "index": 21,
+        "type": "n.",
+        "phonetic": "/ˈlæbrətɔːri/",
+        "meaning": "A room or building equipped for scientific experiments, research, or teaching.",
+        "example": "The scientists are working in the laboratory.",
+        "vietnamese": "phòng thí nghiệm"
+      },
+      {
+        "word": "Workshop",
+        "index": 22,
+        "type": "n.",
+        "phonetic": "/ˈwɜːrkʃɑːp/",
+        "meaning": "A room or building in which goods are manufactured or repaired.",
+        "example": "He is repairing a chair in his workshop.",
+        "vietnamese": "xưởng"
+      },
+      {
+        "word": "Chemistry",
+        "index": 23,
+        "type": "n.",
+        "phonetic": "/ˈkemɪstri/",
+        "meaning": "The branch of science that deals with the identification of the substances of which matter is composed.",
+        "example": "She got an A in chemistry.",
+        "vietnamese": "hóa học"
+      },
+      {
+        "word": "Duty",
+        "index": 24,
+        "type": "n.",
+        "phonetic": "/ˈduːti/",
+        "meaning": "A moral or legal obligation; a responsibility.",
+        "example": "It is my duty to protect the country.",
+        "vietnamese": "nhiệm vụ"
+      },
+      {
+        "word": "Have to",
+        "index": 25,
+        "type": "phr.",
+        "phonetic": "/hæv tuː/",
+        "meaning": "Used to show that you must do something.",
+        "example": "I have to finish my homework today.",
+        "vietnamese": "phải"
+      },
+      {
+        "word": "Clean",
+        "index": 26,
+        "type": "v.",
+        "phonetic": "/kliːn/",
+        "meaning": "To make something free from dirt, marks, or stains.",
+        "example": "You need to clean your room.",
+        "vietnamese": "dọn dẹp"
+      },
+      {
+        "word": "Everything",
+        "index": 27,
+        "type": "pron.",
+        "phonetic": "/ˈevriθɪŋ/",
+        "meaning": "All things; all the things of a group or class.",
+        "example": "Everything is going to be okay.",
+        "vietnamese": "mọi thứ"
+      },
+      {
+        "word": "A bit",
+        "index": 28,
+        "type": "phr.",
+        "phonetic": "/ə bɪt/",
+        "meaning": "A short time or distance; a small amount.",
+        "example": "I am a bit tired today.",
+        "vietnamese": "một chút"
+      },
+      {
+        "word": "Friendly",
+        "index": 29,
+        "type": "adj.",
+        "phonetic": "/ˈfrendli/",
+        "meaning": "Kind and pleasant.",
+        "example": "The people in this town are very friendly.",
+        "vietnamese": "thân thiện"
+      },
+      {
+        "word": "Join",
+        "index": 30,
+        "type": "v.",
+        "phonetic": "/dʒɔɪn/",
+        "meaning": "To become a member or employee of an organization.",
+        "example": "I want to join the soccer club.",
+        "vietnamese": "tham gia"
+      },
+      {
+        "word": "Club",
+        "index": 31,
+        "type": "n.",
+        "phonetic": "/klʌb/",
+        "meaning": "An association or organization dedicated to a particular interest or activity.",
+        "example": "She is the president of the chess club.",
+        "vietnamese": "câu lạc bộ"
+      },
+      {
+        "word": "Forget",
+        "index": 32,
+        "type": "v.",
+        "phonetic": "/fərˈɡet/",
+        "meaning": "Fail to remember.",
+        "example": "Don't forget to lock the door.",
+        "vietnamese": "quên"
+      },
+      {
+        "word": "Remember",
+        "index": 33,
+        "type": "v.",
+        "phonetic": "/rɪˈmembər/",
+        "meaning": "Have in or be able to bring to one's mind an awareness of someone or something.",
+        "example": "Do you remember my name?",
+        "vietnamese": "nhớ"
+      },
+      {
+        "word": "Try",
+        "index": 34,
+        "type": "v.",
+        "phonetic": "/traɪ/",
+        "meaning": "Make an attempt or effort to do something.",
+        "example": "I will try my best to help you.",
+        "vietnamese": "cố gắng"
+      },
+      {
+        "word": "Arrive",
+        "index": 35,
+        "type": "v.",
+        "phonetic": "/əˈraɪv/",
+        "meaning": "Reach a place at the end of a journey or a stage in a journey.",
+        "example": "What time will you arrive at the station?",
+        "vietnamese": "đến nơi"
+      },
+      {
+        "word": "On time",
+        "index": 36,
+        "type": "phr.",
+        "phonetic": "/ɑːn taɪm/",
+        "meaning": "Punctual; not late.",
+        "example": "The train arrived exactly on time.",
+        "vietnamese": "đúng giờ"
+      },
+      {
+        "word": "Prepare",
+        "index": 37,
+        "type": "v.",
+        "phonetic": "/prɪˈper/",
+        "meaning": "Make (something) ready for use or consideration.",
+        "example": "I need to prepare for my exam tomorrow.",
+        "vietnamese": "chuẩn bị"
+      },
+      {
+        "word": "Work in pairs",
+        "index": 38,
+        "type": "phr.",
+        "phonetic": "/wɜːrk ɪn perz/",
+        "meaning": "To work together with one other person.",
+        "example": "The teacher asked us to work in pairs for this exercise.",
+        "vietnamese": "làm việc theo cặp"
+      },
+      {
+        "word": "Listen to",
+        "index": 39,
+        "type": "phr.",
+        "phonetic": "/ˈlɪsn tuː/",
+        "meaning": "To give one's attention to a sound.",
+        "example": "I like to listen to music while studying.",
+        "vietnamese": "lắng nghe"
+      }
+    ]
+  },
+  {
     "date": "2026-07-25",
     "dateFormatted": "July 25, 2026",
     "theme": "General Vocabulary",

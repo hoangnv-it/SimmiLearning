@@ -1020,6 +1020,11 @@
                     </span>
                   </div>
                   ${group.theme ? `<h2 class="date-theme-title">${group.theme}</h2>` : ''}
+                  ${group.audios && group.audios.length > 0 ? `
+                    <div class="date-audios" style="margin-top: 10px; display: flex; gap: 10px; flex-wrap: wrap;" onclick="event.stopPropagation()">
+                      ${group.audios.map(audioSrc => `<audio controls src="${audioSrc}" style="height: 36px; max-width: 200px;"></audio>`).join('')}
+                    </div>
+                  ` : ''}
                 </div>
                 <div class="date-header-right">
                   <div class="view-toggle-group" aria-label="View mode selection">
@@ -1081,7 +1086,10 @@
           <div>
             <div class="word-header">
               <div class="word-title-area">
-                <h3 class="word-title">${word.word}</h3>
+                <h3 class="word-title" style="display: flex; align-items: center; gap: 8px;">
+                  ${word.index ? `<span class="word-index" style="background-color: var(--primary); color: var(--on-primary); padding: 2px 8px; border-radius: 12px; font-size: 14px; font-weight: 700; line-height: 1.2; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">#${word.index}</span>` : ''}
+                  ${word.word}
+                </h3>
                 ${word.type ? `<span class="word-type">${word.type}</span>` : ''}
                 ${word.level ? `<span class="word-level">${word.level}</span>` : ''}
                 ${isMissed ? `
@@ -1126,7 +1134,10 @@
       return `
         <article class="word-list-item fade-in ${isMissed ? 'missed-item' : ''}">
           <div class="word-list-left">
-            <h3 class="word-list-title">${word.word}</h3>
+            <h3 class="word-list-title" style="display: flex; align-items: center; gap: 8px;">
+              ${word.index ? `<span class="word-index" style="background-color: var(--primary); color: var(--on-primary); padding: 2px 8px; border-radius: 12px; font-size: 14px; font-weight: 700; line-height: 1.2; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">#${word.index}</span>` : ''}
+              ${word.word}
+            </h3>
             ${word.type ? `<span class="word-type">${word.type}</span>` : ''}
             ${word.phonetic ? `<span class="phonetic-text" style="margin: 0; font-size: 13.5px;">${word.phonetic}</span>` : ''}
             ${word.level ? `<span class="word-level">${word.level}</span>` : ''}
