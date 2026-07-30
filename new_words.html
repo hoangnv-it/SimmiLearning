@@ -744,10 +744,9 @@
       <!-- Desktop Navigation links -->
       <nav class="nav-links" aria-label="Main Navigation">
         <a href="index.html" class="nav-link">Dashboard</a>
-        <a href="index.html#lessons" class="nav-link"
-          onclick="localStorage.setItem('simmi-nav', 'lessons');">Lessons</a>
+        <a href="index.html#lessons" class="nav-link">Lessons</a>
         <a href="index.html" class="nav-link">Practice</a>
-        <a href="new_words.html" class="nav-link active" style="font-weight: 700; color: var(--primary);">New Words</a>
+        <a href="index.html#history" class="nav-link">History</a>
       </nav>
 
       <!-- Action buttons -->
@@ -1002,6 +1001,7 @@
 
           const viewContainerClass = currentViewMode === 'card' ? 'words-grid' : 'words-list';
           const missedWords = JSON.parse(localStorage.getItem('simmilearning-missed-words') || '{}');
+          const groupMissedCount = filteredWords.filter(w => Boolean(missedWords[w.word.trim().toLowerCase()])).length;
           const itemsHtml = filteredWords.map(word => currentViewMode === 'card' ? renderWordCard(word, labels, missedWords) : renderWordListItem(word, labels, missedWords)).join('');
 
           const isGroupExpanded = !collapsedGroups.has(group.date);
@@ -1018,6 +1018,12 @@
                       <span class="material-symbols-outlined" style="font-size: 18px;">auto_stories</span>
                       <span>${countText}</span>
                     </span>
+                    ${groupMissedCount > 0 ? `
+                    <span class="word-count-badge" style="background: rgba(211, 47, 47, 0.1); color: #d32f2f; border: 1px solid rgba(211, 47, 47, 0.2);">
+                      <span class="material-symbols-outlined" style="font-size: 18px;">warning</span>
+                      <span>${groupMissedCount} ${labels.needsReview || 'cần ôn lại'}</span>
+                    </span>
+                    ` : ''}
                   </div>
                   ${group.theme ? `<h2 class="date-theme-title">${group.theme}</h2>` : ''}
                   ${group.audios && group.audios.length > 0 ? `
