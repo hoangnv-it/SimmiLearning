@@ -990,6 +990,24 @@
 
       document.getElementById('final-percentage').textContent = `${percentage}%`;
       document.getElementById('final-score-text').textContent = `${score} / ${total}`;
+      
+      // Log tracking event
+      try {
+        const logString = localStorage.getItem('simmilearning-tracking-log');
+        let logs = logString ? JSON.parse(logString) : [];
+        const dateFormatted = currentGroup ? (currentGroup.dateFormatted || currentGroup.date) : 'Unknown Date';
+        const desc = `New Word: practice date ${dateFormatted}, ${score}/${total} words correct`;
+        
+        logs.unshift({
+          timestamp: new Date().toISOString(),
+          description: desc
+        });
+        
+        if (logs.length > 1000) logs = logs.slice(0, 1000);
+        localStorage.setItem('simmilearning-tracking-log', JSON.stringify(logs));
+      } catch (e) {
+        console.error("Failed to save tracking log", e);
+      }
 
       const titleEl = document.getElementById('results-title');
       if (percentage >= 80) titleEl.textContent = labels.resultsTitleGreat;

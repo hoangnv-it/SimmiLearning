@@ -30,6 +30,7 @@ const TRANSLATIONS = {
     navDashboard: "Dashboard",
     navLessons: "Lessons",
     navPractice: "Practice",
+    navHistory: "History",
     navGuide: "Grammar Guide",
     
     heroTitle: "Master the Flow of Time",
@@ -114,10 +115,11 @@ const TRANSLATIONS = {
   },
   vi: {
     logo: "SimmiLearning",
-    navDashboard: "Trang chính",
+    navDashboard: "Bảng điều khiển",
     navLessons: "Bài học",
     navPractice: "Luyện tập",
-    navGuide: "Hướng dẫn Ngữ pháp",
+    navHistory: "Lịch sử",
+    navGuide: "Cẩm nang Ngữ pháp",
     
     heroTitle: "Làm Chủ Dòng Thời Gian",
     heroSubtitle: "Chọn một thì tiếng Anh để bắt đầu luyện tập hôm nay. Kiên trì là chìa khóa để thành thạo.",
@@ -233,6 +235,8 @@ function applyTranslations() {
   if (navLessons) navLessons.textContent = t('navLessons');
   const navPractice = document.getElementById('nav-practice');
   if (navPractice) navPractice.textContent = t('navPractice');
+  const navHistory = document.getElementById('nav-history');
+  if (navHistory) navHistory.textContent = t('navHistory');
   const navGuide = document.getElementById('nav-guide');
   if (navGuide) navGuide.textContent = t('navGuide');
 
@@ -404,6 +408,15 @@ function setupGlobalEventListeners() {
       showUnitDetails(CURRICULUM_UNITS[3]);
     });
   }
+  
+  const navHistory = document.getElementById('nav-history');
+  if (navHistory) {
+    navHistory.addEventListener('click', (e) => {
+      e.preventDefault();
+      showScreen('history');
+      renderHistoryScreen();
+    });
+  }
 
   // Hint Button
   const hintBtn = document.getElementById('hint-btn');
@@ -444,7 +457,7 @@ function showScreen(screenId) {
   state.currentScreen = screenId;
 
   // Deactivate all screens
-  const screens = ['selection', 'lessons', 'unit-details', 'practice', 'results'];
+  const screens = ['selection', 'lessons', 'unit-details', 'practice', 'results', 'history'];
   screens.forEach(id => {
     const el = document.getElementById(`screen-${id}`);
     if (el) {
@@ -466,17 +479,22 @@ function showScreen(screenId) {
   const navDashboard = document.getElementById('nav-dashboard');
   const navLessons = document.getElementById('nav-lessons');
   const navPractice = document.getElementById('nav-practice');
+  const navHistory = document.getElementById('nav-history');
   
   if (navDashboard && navLessons && navPractice) {
     navDashboard.classList.remove('active');
     navLessons.classList.remove('active');
     navPractice.classList.remove('active');
+    if (navHistory) navHistory.classList.remove('active');
+    
     if (screenId === 'selection') {
       navDashboard.classList.add('active');
     } else if (screenId === 'lessons') {
       navLessons.classList.add('active');
     } else if (screenId === 'practice') {
       navPractice.classList.add('active');
+    } else if (screenId === 'history' && navHistory) {
+      navHistory.classList.add('active');
     }
   }
 
@@ -938,6 +956,12 @@ function finishPracticeSession() {
   // Save score to history
   saveTenseResult(state.selectedTenseId, state.score, state.questions.length);
 
+  // Log tracking event
+  const tenseName = TRANSLATIONS[state.language].tenses[state.selectedTenseId]?.name || state.selectedTenseId;
+  const groupText = state.selectedGroup !== 'all' ? `: phần "${state.selectedGroup}"` : '';
+  const desc = `${tenseName}${groupText}, ${state.score}/${state.questions.length} correct`;
+  window.logLearningEvent(desc);
+
   // Load results metrics
   renderResultsScreen();
 
@@ -1254,6 +1278,85 @@ function loadHistory() {
       state.history = {};
     }
   }
+}
+
+// Global tracking logger
+window.logLearningEvent = function(description) {
+  try {
+    const logString = localStorage.getItem('simmilearning-tracking-log');
+    let logs = logString ? JSON.parse(logString) : [];
+    
+    // Add new event at the beginning (newest first)
+    logs.unshift({
+      timestamp: new Date().toISOString(),
+      description: description
+    });
+    
+    // Cap at 1000 items to avoid localStorage bloat
+    if (logs.length > 1000) {
+      logs = logs.slice(0, 1000);
+    }
+    
+    localStorage.setItem('simmilearning-tracking-log', JSON.stringify(logs));
+  } catch (e) {
+    console.error("Failed to save tracking log", e);
+  }
+};
+
+function renderHistoryScreen() {
+  const listEl = document.getElementById('history-tracking-list');
+  if (!listEl) return;
+  listEl.innerHTML = '';
+  
+  let logs = [];
+  try {
+    const logString = localStorage.getItem('simmilearning-tracking-log');
+    if (logString) logs = JSON.parse(logString);
+  } catch (e) {
+    console.error("Failed to load tracking log", e);
+  }
+  
+  if (logs.length === 0) {
+    listEl.innerHTML = `
+      <div style="padding: 24px; text-align: center; color: var(--on-surface-variant);">
+        No tracking history found yet. Start practicing to see your progress here!
+      </div>
+    `;
+    return;
+  }
+  
+  logs.forEach(log => {
+    const dateObj = new Date(log.timestamp);
+    const dateStr = dateObj.toLocaleDateString(state.language === 'vi' ? 'vi-VN' : 'en-US', {
+      year: 'numeric', month: 'short', day: 'numeric',
+      hour: '2-digit', minute: '2-digit'
+    });
+    
+    const row = document.createElement('div');
+    row.style.cssText = `
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      border-radius: var(--rounded-md);
+      background: var(--surface-container);
+      border: 1px solid var(--outline);
+    `;
+    
+    row.innerHTML = `
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary-container); color: var(--on-primary-container); display: flex; align-items: center; justify-content: center;">
+          <span class="material-symbols-outlined">menu_book</span>
+        </div>
+        <div>
+          <div style="font-weight: 600; color: var(--on-surface); font-size: 15px;">${log.description}</div>
+          <div style="font-size: 13px; color: var(--on-surface-variant); margin-top: 4px;">${dateStr}</div>
+        </div>
+      </div>
+    `;
+    
+    listEl.appendChild(row);
+  });
 }
 
 // Tiếng Anh 8 Global Success Curriculum Data
