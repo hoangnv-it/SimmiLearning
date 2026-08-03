@@ -983,7 +983,8 @@
 
       wordsData.forEach(group => {
         // Filter words matching query
-        const filteredWords = group.words.filter(item => {
+        const wordsArray = group.words || [];
+        const filteredWords = wordsArray.filter(item => {
           if (!query) return true;
           return (
             item.word.toLowerCase().includes(query) ||
@@ -991,11 +992,17 @@
             (item.vietnamese && item.vietnamese.toLowerCase().includes(query)) ||
             (group.theme && group.theme.toLowerCase().includes(query)) ||
             group.date.includes(query) ||
-            group.dateFormatted.toLowerCase().includes(query)
+            (group.dateFormatted && group.dateFormatted.toLowerCase().includes(query))
           );
         });
 
-        if (filteredWords.length > 0) {
+        const isAudioOnlyGroup = wordsArray.length === 0 && group.audios && group.audios.length > 0;
+        const groupMatchesQuery = !query || 
+            (group.theme && group.theme.toLowerCase().includes(query)) ||
+            group.date.includes(query) ||
+            (group.dateFormatted && group.dateFormatted.toLowerCase().includes(query));
+
+        if (filteredWords.length > 0 || (isAudioOnlyGroup && groupMatchesQuery)) {
           totalWordsRendered += filteredWords.length;
           const countText = labels.wordsCount.replace('{count}', filteredWords.length);
 
@@ -1063,7 +1070,7 @@
         }
       });
 
-      if (totalWordsRendered === 0) {
+      if (html === '') {
         container.innerHTML = `
           <div class="empty-state fade-in">
             <span class="material-symbols-outlined" style="font-size: 48px; color: var(--outline);">search_off</span>

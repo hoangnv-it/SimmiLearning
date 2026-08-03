@@ -1,5 +1,256 @@
 [
   {
+    "date": "2026-08-02",
+    "dateFormatted": "August 2, 2026",
+    "theme": "Daily Vocabulary",
+    "words": [
+      {
+        "word": "Stool",
+        "index": 1,
+        "type": "n.",
+        "phonetic": "/stuːl/",
+        "meaning": "A seat without a back or arms.",
+        "example": "He sat on a stool at the bar.",
+        "vietnamese": "Ghế đẩu"
+      },
+      {
+        "word": "Soccer",
+        "index": 2,
+        "type": "n.",
+        "phonetic": "/ˈsɑːkər/",
+        "meaning": "A game played by two teams of eleven players with a round ball.",
+        "example": "They play soccer every Sunday.",
+        "vietnamese": "Bóng đá"
+      },
+      {
+        "word": "Terrible",
+        "index": 3,
+        "type": "adj.",
+        "phonetic": "/ˈterəbl/",
+        "meaning": "Extremely bad or serious.",
+        "example": "The weather was terrible.",
+        "vietnamese": "Kinh khủng, tồi tệ"
+      },
+      {
+        "word": "Worse",
+        "index": 4,
+        "type": "adj.",
+        "phonetic": "/wɜːrs/",
+        "meaning": "Of poorer quality or lower standard.",
+        "example": "The situation is getting worse.",
+        "vietnamese": "Tệ hơn"
+      },
+      {
+        "word": "Profession",
+        "index": 5,
+        "type": "n.",
+        "phonetic": "/prəˈfeʃn/",
+        "meaning": "A paid occupation, especially one that involves prolonged training.",
+        "example": "She is a lawyer by profession.",
+        "vietnamese": "Nghề nghiệp"
+      },
+      {
+        "word": "Title",
+        "index": 6,
+        "type": "n.",
+        "phonetic": "/ˈtaɪtl/",
+        "meaning": "A name that describes someone's position or job.",
+        "example": "What is your job title?",
+        "vietnamese": "Tựa đề, chức danh"
+      },
+      {
+        "word": "Line",
+        "index": 7,
+        "type": "n.",
+        "phonetic": "/laɪn/",
+        "meaning": "A long, narrow mark or band.",
+        "example": "Draw a straight line.",
+        "vietnamese": "Hàng thẳng, đường kẻ"
+      },
+      {
+        "word": "Invention",
+        "index": 8,
+        "type": "n.",
+        "phonetic": "/ɪnˈvenʃn/",
+        "meaning": "Something that has never been made before.",
+        "example": "The telephone is a great invention.",
+        "vietnamese": "Sự phát minh"
+      },
+      {
+        "word": "Interview",
+        "index": 9,
+        "type": "n.",
+        "phonetic": "/ˈɪntərvjuː/",
+        "meaning": "A formal meeting in which one or more persons question, consult, or evaluate another person.",
+        "example": "She had a job interview yesterday.",
+        "vietnamese": "Phỏng vấn"
+      },
+      {
+        "word": "Decide",
+        "index": 10,
+        "type": "v.",
+        "phonetic": "/dɪˈsaɪd/",
+        "meaning": "Come to a resolution in the mind as a result of consideration.",
+        "example": "I decided to go home early.",
+        "vietnamese": "Quyết định"
+      },
+      {
+        "word": "Cheap",
+        "index": 11,
+        "type": "adj.",
+        "phonetic": "/tʃiːp/",
+        "meaning": "Low in price.",
+        "example": "This phone is very cheap.",
+        "vietnamese": "Rẻ"
+      },
+      {
+        "word": "Party",
+        "index": 12,
+        "type": "n.",
+        "phonetic": "/ˈpɑːrti/",
+        "meaning": "A social gathering of invited guests.",
+        "example": "Are you going to the party tonight?",
+        "vietnamese": "Bữa tiệc"
+      },
+      {
+        "word": "Journey",
+        "index": 13,
+        "type": "n.",
+        "phonetic": "/ˈdʒɜːrni/",
+        "meaning": "An act of traveling from one place to another.",
+        "example": "Have a safe journey!",
+        "vietnamese": "Cuộc hành trình"
+      },
+      {
+        "word": "Generous",
+        "index": 14,
+        "type": "adj.",
+        "phonetic": "/ˈdʒenərəs/",
+        "meaning": "Showing a readiness to give more of something than is strictly necessary or expected.",
+        "example": "It was generous of him to offer to pay for the meal.",
+        "vietnamese": "Hào phóng, phóng khoáng"
+      },
+      {
+        "word": "Left",
+        "index": 15,
+        "type": "adj. / v.",
+        "phonetic": "/left/",
+        "meaning": "On, towards, or relating to the side of a human body or of a thing that is to the west when the person or thing is facing north.",
+        "example": "Turn left at the corner.",
+        "vietnamese": "Rời đi, bên trái, bỏ quên"
+      },
+      {
+        "word": "Lecture",
+        "index": 16,
+        "type": "n.",
+        "phonetic": "/ˈlektʃər/",
+        "meaning": "An educational talk to an audience, especially to students in a university or college.",
+        "example": "We attended a lecture on history.",
+        "vietnamese": "Bài giảng"
+      },
+      {
+        "word": "a",
+        "index": 17,
+        "type": "art.",
+        "phonetic": "/ə/",
+        "meaning": "Used when referring to someone or something for the first time in a text or conversation.",
+        "example": "I bought a book.",
+        "vietnamese": "Một (mạo từ)"
+      },
+      {
+        "word": "Environment",
+        "index": 18,
+        "type": "n.",
+        "phonetic": "/ɪnˈvaɪrənmənt/",
+        "meaning": "The surroundings or conditions in which a person, animal, or plant lives or operates.",
+        "example": "We must protect the environment.",
+        "vietnamese": "Môi trường"
+      },
+      {
+        "word": "Environmental",
+        "index": 19,
+        "type": "adj.",
+        "phonetic": "/ɪnˌvaɪrənˈmentl/",
+        "meaning": "Relating to the natural world and the impact of human activity on its condition.",
+        "example": "There are many environmental issues today.",
+        "vietnamese": "Thuộc về môi trường"
+      },
+      {
+        "word": "Environmentalist",
+        "index": 20,
+        "type": "n.",
+        "phonetic": "/ɪnˌvaɪrənˈmentəlɪst/",
+        "meaning": "A person who considers that protecting the environment is very important.",
+        "example": "He is a famous environmentalist.",
+        "vietnamese": "Nhà hoạt động môi trường"
+      },
+      {
+        "word": "Issue",
+        "index": 21,
+        "type": "n.",
+        "phonetic": "/ˈɪʃuː/",
+        "meaning": "An important topic or problem for debate or discussion.",
+        "example": "Pollution is a global issue.",
+        "vietnamese": "Vấn đề, số phát hành"
+      },
+      {
+        "word": "Share",
+        "index": 22,
+        "type": "v.",
+        "phonetic": "/ʃer/",
+        "meaning": "To have or use something at the same time as someone else.",
+        "example": "They share a room.",
+        "vietnamese": "Chia sẻ"
+      },
+      {
+        "word": "View",
+        "index": 23,
+        "type": "n.",
+        "phonetic": "/vjuː/",
+        "meaning": "The ability to see something or to be seen from a particular place.",
+        "example": "The view from the window is beautiful.",
+        "vietnamese": "Khung cảnh, quan điểm"
+      },
+      {
+        "word": "ill = sick",
+        "index": 24,
+        "type": "adj.",
+        "phonetic": "/ɪl/ = /sɪk/",
+        "meaning": "Suffering from an illness or disease or feeling unwell.",
+        "example": "He is ill today.",
+        "vietnamese": "Bị ốm, bị bệnh"
+      },
+      {
+        "word": "tooth",
+        "index": 25,
+        "type": "n.",
+        "phonetic": "/tuːθ/",
+        "meaning": "One of the hard white objects in the mouth.",
+        "example": "My tooth hurts.",
+        "vietnamese": "Cái răng"
+      },
+      {
+        "word": "brush the teeth",
+        "index": 26,
+        "type": "phr.",
+        "phonetic": "/brʌʃ ðə tiːθ/",
+        "meaning": "To clean one's teeth with a toothbrush.",
+        "example": "You should brush your teeth twice a day.",
+        "vietnamese": "Đánh răng"
+      }
+    ]
+  },
+  {
+    "date": "2026-07-31",
+    "dateFormatted": "July 31, 2026",
+    "theme": "Listening Practice",
+    "audios": [
+      "audio/7-31-2026-1.aac",
+      "audio/7-31-2026-2.aac"
+    ],
+    "words": []
+  },
+  {
     "date": "2026-07-29",
     "dateFormatted": "July 29, 2026",
     "theme": "Daily Vocabulary",

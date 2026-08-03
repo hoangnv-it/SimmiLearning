@@ -651,6 +651,15 @@
         const labels = UI_LABELS[currentLang];
         if (titleEl) titleEl.textContent = `${labels.testTitle} — ${currentGroup.dateFormatted || currentGroup.date}`;
 
+        const subtitleEl = document.getElementById('test-subtitle');
+        if (subtitleEl) {
+          subtitleEl.innerHTML = 'Complete all single-choice and exact free-text matching questions for this date.';
+          if (currentGroup.audios && currentGroup.audios.length > 0) {
+             const audioHtml = currentGroup.audios.map(src => `<audio controls src="${src}" style="height: 36px; max-width: 200px;"></audio>`).join('');
+             subtitleEl.innerHTML += `<div style="margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;">${audioHtml}</div>`;
+          }
+        }
+
         generateQuestions();
         startTest();
       } catch (error) {
@@ -668,6 +677,17 @@
       }
 
       testQuestions = words.map((wordObj, index) => {
+        if (wordObj.type === 'audio-dictation') {
+          return {
+            type: 'free-text',
+            targetWord: wordObj,
+            prompt: `#${wordObj.index}`,
+            promptVi: `#${wordObj.index}`,
+            hint: "Listen to the audio to identify the word",
+            typeBadge: "Dictation"
+          };
+        }
+
         // We alternate question types to make it varied:
         // Every 3rd question (or index % 3 === 2) is Free Text Input (Vietnamese to English exact matching)
         // Others are Single Choice (Vietnamese meaning or English definition)
