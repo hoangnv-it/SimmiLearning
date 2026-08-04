@@ -3,6 +3,10 @@
     "date": "2026-08-02",
     "dateFormatted": "August 2, 2026",
     "theme": "Daily Vocabulary",
+    "audios": [
+      "audio/8-2-2026-1.aac",
+      "audio/8-2-2026-2.aac"
+    ],
     "words": [
       {
         "word": "Stool",
