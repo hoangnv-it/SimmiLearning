@@ -46,6 +46,10 @@
       border-color: #f57c00;
     }
 
+    .metric-card.check-card:hover {
+      border-color: #7b2ff7;
+    }
+
     .metric-icon-wrapper {
       width: 56px;
       height: 56px;
@@ -78,6 +82,18 @@
       border-color: #ffa000;
     }
 
+    .metric-icon-wrapper.check-icon {
+      background: rgba(123, 47, 247, 0.1);
+      color: #7b2ff7;
+      border: 1px solid rgba(123, 47, 247, 0.2);
+    }
+
+    body[data-theme="dark"] .metric-icon-wrapper.check-icon {
+      background: rgba(179, 136, 255, 0.18);
+      color: #b388ff;
+      border-color: rgba(179, 136, 255, 0.3);
+    }
+
     .metric-content {
       flex: 1;
       margin-right: 16px;
@@ -108,6 +124,38 @@
 
     body[data-theme="dark"] .metric-card.review-card .metric-value {
       color: #ffb74d;
+    }
+
+    .metric-card.check-card .metric-value {
+      color: #7b2ff7;
+    }
+
+    body[data-theme="dark"] .metric-card.check-card .metric-value {
+      color: #b388ff;
+    }
+
+    .check-card-btn {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, #7b2ff7 0%, #5d11d8 100%);
+      color: #ffffff !important;
+      border: none;
+      border-radius: var(--rounded-full);
+      padding: 6px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(123, 47, 247, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .check-card-btn:hover {
+      background: linear-gradient(135deg, #6a1ee0 0%, #4b09b5 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(123, 47, 247, 0.4);
     }
 
     .metric-sub {
@@ -799,6 +847,22 @@
           <span class="material-symbols-outlined" style="font-size: 32px;">warning</span>
         </div>
       </article>
+
+      <!-- New Words Check Metric Card -->
+      <article class="metric-card check-card">
+        <div class="metric-content">
+          <span id="metric-check-title" class="metric-label">New Words Check</span>
+          <div id="metric-check-value" class="metric-value">20 <span style="font-size: 15px; font-weight: 600; opacity: 0.85;">words</span></div>
+          <p id="metric-check-sub" class="metric-sub">Smart review test prioritizing forgotten & difficult words</p>
+          <a href="new_words_test.html?mode=check" id="start-check-btn" class="check-card-btn">
+            <span class="material-symbols-outlined" style="font-size: 18px;">psychology</span>
+            <span id="start-check-btn-text">Start Check</span>
+          </a>
+        </div>
+        <div class="metric-icon-wrapper check-icon">
+          <span class="material-symbols-outlined" style="font-size: 32px;">psychology</span>
+        </div>
+      </article>
     </section>
 
     <!-- Search and Filter Bar -->
@@ -860,6 +924,10 @@
         totalWordsSub: "All curated English words across daily lessons",
         needsReviewTitle: "Needs Review",
         needsReviewSub: "Words missed during practice tests needing focus",
+        checkTitle: "New Words Check",
+        checkSub: "Smart review test prioritizing forgotten & difficult words",
+        checkUnit: "words",
+        startCheck: "Start Check",
         searchPlaceholder: "Search words, meanings, or topics...",
         collapseAll: "Collapse All",
         expandAll: "Expand All",
@@ -883,6 +951,10 @@
         totalWordsSub: "Toàn bộ từ vựng đã tổng hợp trong kho bài học",
         needsReviewTitle: "Từ cần ôn lại",
         needsReviewSub: "Các từ bạn trả lời chưa đúng trong bài kiểm tra",
+        checkTitle: "Kiểm Tra Từ Mới",
+        checkSub: "Bài ôn thông minh ưu tiên từ chưa thuộc & khó nhớ",
+        checkUnit: "từ",
+        startCheck: "Bắt đầu kiểm tra",
         searchPlaceholder: "Tìm từ khóa, nghĩa hoặc chủ đề...",
         collapseAll: "Thu gọn tất cả",
         expandAll: "Mở rộng tất cả",
@@ -954,6 +1026,8 @@
       const totalWords = wordsData.reduce((acc, g) => acc + (g.words ? g.words.length : 0), 0);
       const missedWords = JSON.parse(localStorage.getItem('simmilearning-missed-words') || '{}');
       const reviewWords = wordsData.reduce((acc, g) => acc + (g.words ? g.words.filter(w => Boolean(missedWords[w.word.trim().toLowerCase()])).length : 0), 0);
+      const checkCount = Math.min(20, totalWords);
+      const labels = UI_LABELS[currentLang];
 
       const totalEl = document.getElementById('metric-total-value');
       if (totalEl) totalEl.textContent = totalWords;
@@ -961,7 +1035,10 @@
       const reviewEl = document.getElementById('metric-review-value');
       if (reviewEl) reviewEl.textContent = reviewWords;
 
-      Logger.info(`Metrics updated -> Total Vocabulary: ${totalWords} | Needs Review: ${reviewWords}`);
+      const checkEl = document.getElementById('metric-check-value');
+      if (checkEl) checkEl.innerHTML = `${checkCount} <span style="font-size: 15px; font-weight: 600; opacity: 0.85;">${labels.checkUnit || 'words'}</span>`;
+
+      Logger.info(`Metrics updated -> Total Vocabulary: ${totalWords} | Needs Review: ${reviewWords} | Check Pool: ${checkCount}`);
     }
 
     // Render grouped words
@@ -1336,6 +1413,15 @@
 
       const reviewSub = document.getElementById('metric-review-sub');
       if (reviewSub) reviewSub.textContent = labels.needsReviewSub;
+
+      const checkTitle = document.getElementById('metric-check-title');
+      if (checkTitle) checkTitle.textContent = labels.checkTitle;
+
+      const checkSub = document.getElementById('metric-check-sub');
+      if (checkSub) checkSub.textContent = labels.checkSub;
+
+      const startCheckBtnText = document.getElementById('start-check-btn-text');
+      if (startCheckBtnText) startCheckBtnText.textContent = labels.startCheck;
 
       const searchInput = document.getElementById('search-input');
       if (searchInput) searchInput.placeholder = labels.searchPlaceholder;

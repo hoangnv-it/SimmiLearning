@@ -548,11 +548,16 @@
     let isAnswerChecked = false;
     let userAnswers = []; // records { question, isCorrect, userAnswer }
     let currentLang = localStorage.getItem('simmilearning-lang') || 'en';
+    let testMode = 'date'; // 'date' or 'check'
+    let checkSelectedWords = [];
 
     const UI_LABELS = {
       en: {
         testTitle: "Vocabulary Test",
         testSub: "Complete all single-choice and exact free-text matching questions for this date.",
+        checkHeroBadge: "New Words Check",
+        checkTestTitle: "New Words Check — Smart Review",
+        checkTestSub: "20-question smart review test prioritizing forgotten, frequently missed, and older words.",
         questionCounter: "Question {current} of {total}",
         singleChoiceBadge: "Single Choice",
         freeTextBadge: "Free Text Input (Vietnamese to English)",
@@ -575,6 +580,9 @@
       vi: {
         testTitle: "Bài Kiểm Tra Từ Vựng",
         testSub: "Hoàn thành tất cả các câu hỏi trắc nghiệm và tự luận điền từ chính xác cho ngày này.",
+        checkHeroBadge: "Kiểm Tra Từ Mới",
+        checkTestTitle: "Bài Kiểm Tra Từ Mới — Ôn Tập Thông Minh",
+        checkTestSub: "Bài kiểm tra 20 câu thông minh ưu tiên các từ bạn chưa thuộc, hay làm sai và học đã lâu.",
         questionCounter: "Câu hỏi {current} / {total}",
         singleChoiceBadge: "Trắc nghiệm chọn đáp án",
         freeTextBadge: "Điền từ tiếng Anh chính xác (Từ tiếng Việt sang tiếng Anh)",
@@ -615,27 +623,122 @@
       });
     });
 
+    function computePriorityScore(wordObj) {
+      let score = 0;
+      const key = wordObj.word.trim().toLowerCase();
+
+      // P1 — Forgetting (NEEDS REVIEW) - weight: 100
+      const missedWords = JSON.parse(localStorage.getItem('simmilearning-missed-words') || '{}');
+      if (missedWords[key]) {
+        score += 100;
+      }
+
+      // P2 — Failure History - weight: up to 80
+      const history = JSON.parse(localStorage.getItem('simmilearning-incorrect-words-history') || '{}');
+      if (history[key]) {
+        const failCount = history[key].incorrectCount || 0;
+        score += Math.min(80, failCount * 20);
+      }
+
+      // P3 — Time Since Last Test / Last Missed - weight: up to 60 (stepped)
+      const lastDate = (history[key] && history[key].lastIncorrectDate) || (missedWords[key] && missedWords[key].lastMissed) || null;
+      if (lastDate) {
+        const daysSince = (Date.now() - new Date(lastDate).getTime()) / (1000 * 60 * 60 * 24);
+        if (daysSince > 14) score += 60;
+        else if (daysSince > 7) score += 40;
+        else if (daysSince > 3) score += 20;
+        else score += 10;
+      } else if (wordObj.groupDate) {
+        const groupAge = (Date.now() - new Date(wordObj.groupDate).getTime()) / (1000 * 60 * 60 * 24);
+        if (groupAge > 14) score += 30;
+        else if (groupAge > 7) score += 15;
+      }
+
+      // P4 — Importance - weight: up to 20
+      const importantTypes = ['v.', 'n.', 'adj.', 'adv.'];
+      if (importantTypes.includes(wordObj.type)) {
+        score += 20;
+      }
+
+      // P5 — Difficulty - weight: up to 20
+      if (wordObj.phonetic && wordObj.phonetic.length > 10) score += 10;
+      if (wordObj.type === 'phrase' || (wordObj.word && wordObj.word.includes(' '))) score += 10;
+
+      return score;
+    }
+
     async function loadTestSession() {
       const urlParams = new URLSearchParams(window.location.search);
       const targetDate = urlParams.get('date');
+      const mode = urlParams.get('mode');
+      testMode = mode === 'check' ? 'check' : 'date';
 
       try {
         const response = await fetch('new_words.json');
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         wordsData = await response.json();
 
-        // Collect all words across all dates for distractors
+        // Collect all words across all dates for distractors and check scoring
         allWordsInDataset = [];
+        const wordsWithGroup = [];
         wordsData.forEach(g => {
-          if (g.words) allWordsInDataset.push(...g.words);
+          if (g.words) {
+            g.words.forEach(w => {
+              const wordObj = {
+                ...w,
+                groupDate: g.date,
+                groupDateFormatted: g.dateFormatted || g.date
+              };
+              wordsWithGroup.push(wordObj);
+              allWordsInDataset.push(w);
+            });
+          }
         });
 
-        // Find target group
+        if (allWordsInDataset.length === 0) {
+          alert("No vocabulary words found for testing.");
+          window.location.href = 'new_words.html';
+          return;
+        }
+
+        const labels = UI_LABELS[currentLang];
+
+        if (testMode === 'check') {
+          // New Words Check Mode — Priority Scoring Algorithm
+          wordsWithGroup.forEach(w => {
+            w.priorityScore = computePriorityScore(w);
+          });
+
+          // Sort descending by priority score, with a small random jitter for ties
+          wordsWithGroup.sort((a, b) => {
+            const diff = b.priorityScore - a.priorityScore;
+            if (Math.abs(diff) > 0.001) return diff;
+            return Math.random() - 0.5;
+          });
+
+          checkSelectedWords = wordsWithGroup.slice(0, 20);
+
+          // Update Hero UI for Check Mode
+          const badgeEl = document.getElementById('hero-date-badge');
+          if (badgeEl) badgeEl.textContent = labels.checkHeroBadge;
+          
+          const titleEl = document.getElementById('test-title');
+          if (titleEl) titleEl.textContent = labels.checkTestTitle;
+
+          const subtitleEl = document.getElementById('test-subtitle');
+          if (subtitleEl) subtitleEl.textContent = labels.checkTestSub;
+
+          generateQuestionsFromWords(checkSelectedWords);
+          startTest();
+          return;
+        }
+
+        // Standard Per-Date Test Mode
         if (targetDate) {
           currentGroup = wordsData.find(g => g.date === targetDate);
         }
         if (!currentGroup && wordsData.length > 0) {
-          currentGroup = wordsData[0]; // fallback to first date
+          currentGroup = wordsData[0];
         }
 
         if (!currentGroup || !currentGroup.words || currentGroup.words.length === 0) {
@@ -644,23 +747,21 @@
           return;
         }
 
-        // Update hero title with date
         const badgeEl = document.getElementById('hero-date-badge');
         if (badgeEl) badgeEl.textContent = currentGroup.dateFormatted || currentGroup.date;
         const titleEl = document.getElementById('test-title');
-        const labels = UI_LABELS[currentLang];
         if (titleEl) titleEl.textContent = `${labels.testTitle} — ${currentGroup.dateFormatted || currentGroup.date}`;
 
         const subtitleEl = document.getElementById('test-subtitle');
         if (subtitleEl) {
-          subtitleEl.innerHTML = 'Complete all single-choice and exact free-text matching questions for this date.';
+          subtitleEl.innerHTML = labels.testSub;
           if (currentGroup.audios && currentGroup.audios.length > 0) {
              const audioHtml = currentGroup.audios.map(src => `<audio controls src="${src}" style="height: 36px; max-width: 200px;"></audio>`).join('');
              subtitleEl.innerHTML += `<div style="margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap;">${audioHtml}</div>`;
           }
         }
 
-        generateQuestions();
+        generateQuestionsFromWords(currentGroup.words);
         startTest();
       } catch (error) {
         console.error("Failed to load test data:", error);
@@ -668,9 +769,9 @@
       }
     }
 
-    function generateQuestions() {
-      const words = [...currentGroup.words];
-      // Shuffle the words
+    function generateQuestionsFromWords(wordsList) {
+      const words = [...wordsList];
+      // Shuffle the words order for question presentation
       for (let i = words.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [words[i], words[j]] = [words[j], words[i]];
@@ -688,13 +789,9 @@
           };
         }
 
-        // We alternate question types to make it varied:
-        // Every 3rd question (or index % 3 === 2) is Free Text Input (Vietnamese to English exact matching)
-        // Others are Single Choice (Vietnamese meaning or English definition)
         const typeChoice = index % 3;
 
         if (typeChoice === 2) {
-          // Free Text Input: Vietnamese -> exact English word
           return {
             type: 'free-text',
             targetWord: wordObj,
@@ -704,7 +801,6 @@
             typeBadge: wordObj.type
           };
         } else if (typeChoice === 0 && wordObj.vietnamese) {
-          // Single Choice: English word -> choose Vietnamese meaning
           const distractors = getRandomDistractors(wordObj, 'vietnamese', 3);
           const options = shuffleArray([wordObj.vietnamese, ...distractors]);
           const correctIdx = options.indexOf(wordObj.vietnamese);
@@ -719,7 +815,6 @@
             typeBadge: wordObj.type
           };
         } else {
-          // Single Choice: Definition/Meaning -> choose English word
           const distractors = getRandomDistractors(wordObj, 'word', 3);
           const options = shuffleArray([wordObj.word, ...distractors]);
           const correctIdx = options.indexOf(wordObj.word);
@@ -735,6 +830,14 @@
           };
         }
       });
+    }
+
+    function generateQuestions() {
+      if (testMode === 'check' && checkSelectedWords.length > 0) {
+        generateQuestionsFromWords(checkSelectedWords);
+      } else if (currentGroup && currentGroup.words) {
+        generateQuestionsFromWords(currentGroup.words);
+      }
     }
 
     function getRandomDistractors(targetWord, field, count) {
@@ -758,6 +861,7 @@
       currentIndex = 0;
       score = 0;
       userAnswers = [];
+      document.getElementById('test-header-section').style.display = 'block';
       document.getElementById('quiz-screen').style.display = 'block';
       document.getElementById('results-screen').style.display = 'none';
       loadQuestion();
@@ -904,7 +1008,7 @@
         userAnswer: q.options[selectedOptionIndex]
       });
 
-      trackMissedWord(q.targetWord, isCorrect);
+      trackMissedWord(q.targetWord, isCorrect, q.options[selectedOptionIndex], 'single-choice');
       showFeedbackBanner(isCorrect, q.targetWord);
       updateActionBtnForNext();
     }
@@ -940,28 +1044,74 @@
         userAnswer: userInput
       });
 
-      trackMissedWord(q.targetWord, isCorrect);
+      trackMissedWord(q.targetWord, isCorrect, userInput, 'free-text');
       showFeedbackBanner(isCorrect, q.targetWord);
       updateActionBtnForNext();
     }
 
-    function trackMissedWord(targetWord, isCorrect) {
+    function trackMissedWord(targetWord, isCorrect, userAnswer = '', questionType = '') {
       try {
         const missedWords = JSON.parse(localStorage.getItem('simmilearning-missed-words') || '{}');
         const wordKey = targetWord.word.trim().toLowerCase();
+        const now = new Date().toISOString();
+
         if (!isCorrect) {
           missedWords[wordKey] = {
             word: targetWord.word,
-            vietnamese: targetWord.vietnamese || '',
+            vietnamese: targetWord.vietnamese || targetWord.meaning || '',
             date: targetWord.date || (currentGroup ? currentGroup.date : ''),
-            lastMissed: new Date().toISOString()
+            lastMissed: now
           };
+          saveIncorrectWordHistory(targetWord, userAnswer, questionType, now);
         } else {
           delete missedWords[wordKey];
         }
         localStorage.setItem('simmilearning-missed-words', JSON.stringify(missedWords));
       } catch (e) {
         console.error('Error tracking missed words:', e);
+      }
+    }
+
+    function saveIncorrectWordHistory(targetWord, userAnswer = '', questionType = '', timestamp = new Date().toISOString()) {
+      try {
+        const incorrectHistory = JSON.parse(localStorage.getItem('simmilearning-incorrect-words-history') || '{}');
+        const wordKey = targetWord.word.trim().toLowerCase();
+
+        if (!incorrectHistory[wordKey]) {
+          incorrectHistory[wordKey] = {
+            word: targetWord.word,
+            vietnamese: targetWord.vietnamese || targetWord.meaning || '',
+            phonetic: targetWord.phonetic || '',
+            type: targetWord.type || '',
+            date: targetWord.date || (currentGroup ? currentGroup.date : ''),
+            incorrectCount: 1,
+            firstIncorrectDate: timestamp,
+            lastIncorrectDate: timestamp,
+            attempts: []
+          };
+        } else {
+          incorrectHistory[wordKey].incorrectCount = (incorrectHistory[wordKey].incorrectCount || 0) + 1;
+          incorrectHistory[wordKey].lastIncorrectDate = timestamp;
+          if (!incorrectHistory[wordKey].vietnamese && (targetWord.vietnamese || targetWord.meaning)) {
+            incorrectHistory[wordKey].vietnamese = targetWord.vietnamese || targetWord.meaning || '';
+          }
+          if (!incorrectHistory[wordKey].date && (targetWord.date || (currentGroup ? currentGroup.date : ''))) {
+            incorrectHistory[wordKey].date = targetWord.date || (currentGroup ? currentGroup.date : '');
+          }
+          if (!incorrectHistory[wordKey].attempts) {
+            incorrectHistory[wordKey].attempts = [];
+          }
+        }
+
+        incorrectHistory[wordKey].attempts.push({
+          timestamp: timestamp,
+          userAnswer: userAnswer,
+          questionType: questionType
+        });
+
+        localStorage.setItem('simmilearning-incorrect-words-history', JSON.stringify(incorrectHistory));
+      } catch (e) {
+        console.error('Error saving incorrect word history:', e);
       }
     }
 
@@ -1001,12 +1151,13 @@
 
     function showResults() {
       document.getElementById('quiz-screen').style.display = 'none';
+      document.getElementById('test-header-section').style.display = 'none';
       document.getElementById('results-screen').style.display = 'block';
 
       const total = testQuestions.length;
       const percentage = Math.round((score / total) * 100);
       const labels = UI_LABELS[currentLang];
-
+      
       document.getElementById('final-percentage').textContent = `${percentage}%`;
       document.getElementById('final-score-text').textContent = `${score} / ${total}`;
       
@@ -1014,7 +1165,9 @@
       try {
         const logString = localStorage.getItem('simmilearning-tracking-log');
         let logs = logString ? JSON.parse(logString) : [];
-        const dateFormatted = currentGroup ? (currentGroup.dateFormatted || currentGroup.date) : 'Unknown Date';
+        const dateFormatted = testMode === 'check' 
+          ? 'New Words Check (20 words)' 
+          : (currentGroup ? (currentGroup.dateFormatted || currentGroup.date) : 'Unknown Date');
         const desc = `New Word: practice date ${dateFormatted}, ${score}/${total} words correct`;
         
         logs.unshift({
@@ -1063,8 +1216,12 @@
     }
 
     function restartTest() {
-      generateQuestions();
-      startTest();
+      if (testMode === 'check') {
+        loadTestSession();
+      } else {
+        generateQuestions();
+        startTest();
+      }
     }
 
     // Cached English voices to guarantee accurate pronunciation across all devices
@@ -1141,10 +1298,15 @@
       const labels = UI_LABELS[currentLang];
       const langLabel = document.getElementById('lang-label');
       if (langLabel) langLabel.textContent = currentLang.toUpperCase();
-      if (currentGroup) {
+      if (testMode === 'check') {
+        const badgeEl = document.getElementById('hero-date-badge');
+        if (badgeEl) badgeEl.textContent = labels.checkHeroBadge;
+        document.getElementById('test-title').textContent = labels.checkTestTitle;
+        document.getElementById('test-subtitle').textContent = labels.checkTestSub;
+      } else if (currentGroup) {
         document.getElementById('test-title').textContent = `${labels.testTitle} — ${currentGroup.dateFormatted || currentGroup.date}`;
+        document.getElementById('test-subtitle').textContent = labels.testSub;
       }
-      document.getElementById('test-subtitle').textContent = labels.testSub;
       const hintBtn = document.getElementById('hint-btn-label');
       if (hintBtn) {
         const isVis = document.getElementById('hint-panel').classList.contains('visible');
