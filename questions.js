@@ -1,5 +1,143 @@
 // Automatically generated questions database
 const QUESTIONS_DATABASE = {
+  "yes-no-questions": {
+    "name": "Yes/No Questions",
+    "badge": "Structure",
+    "icon": "help_center",
+    "description": "Questions that can be answered with a simple yes or no.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "wh-questions": {
+    "name": "WH Questions",
+    "badge": "Structure",
+    "icon": "question_answer",
+    "description": "Questions starting with who, what, where, when, why, or how.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+
+  "past-continuous": {
+    "name": "Past Continuous",
+    "badge": "Foundational",
+    "icon": "history",
+    "description": "Actions in progress at a specific time in the past.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "present-perfect-continuous": {
+    "name": "Present Perfect Continuous",
+    "badge": "Advanced",
+    "icon": "hourglass_bottom",
+    "description": "Actions that started in the past and continue to the present.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "past-perfect": {
+    "name": "Past Perfect",
+    "badge": "Advanced",
+    "icon": "fast_rewind",
+    "description": "Actions completed before another action in the past.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "past-perfect-continuous": {
+    "name": "Past Perfect Continuous",
+    "badge": "Advanced",
+    "icon": "update",
+    "description": "Actions in progress up to a point in the past.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "simple-future": {
+    "name": "Simple Future",
+    "badge": "Foundational",
+    "icon": "forward",
+    "description": "Decisions, predictions, and future facts.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "future-continuous": {
+    "name": "Future Continuous",
+    "badge": "Core",
+    "icon": "trending_up",
+    "description": "Actions that will be in progress at a certain time in the future.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "future-perfect": {
+    "name": "Future Perfect",
+    "badge": "Advanced",
+    "icon": "done_all",
+    "description": "Actions that will be completed by a certain time in the future.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "future-perfect-continuous": {
+    "name": "Future Perfect Continuous",
+    "badge": "Mastery",
+    "icon": "sync",
+    "description": "Duration of an action up to a certain point in the future.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "passive-voice": {
+    "name": "Passive Voice",
+    "badge": "Structure",
+    "icon": "transform",
+    "description": "Focus on the action or receiver rather than the doer.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "conditionals": {
+    "name": "Conditionals",
+    "badge": "Structure",
+    "icon": "call_split",
+    "description": "If clauses and conditional outcomes.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "reported-speech": {
+    "name": "Reported Speech",
+    "badge": "Structure",
+    "icon": "record_voice_over",
+    "description": "Reporting what someone else said.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "comparisons": {
+    "name": "Comparisons",
+    "badge": "Structure",
+    "icon": "compare_arrows",
+    "description": "Comparing things, people or actions.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "relative-clauses": {
+    "name": "Relative Clauses",
+    "badge": "Advanced",
+    "icon": "link",
+    "description": "Clauses starting with who, which, that, etc.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "to-v-v-ing": {
+    "name": "To-V / V-ing",
+    "badge": "Advanced",
+    "icon": "join_inner",
+    "description": "Gerunds and Infinitives.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+  "question-tags": {
+    "name": "Question Tags",
+    "badge": "Advanced",
+    "icon": "help_outline",
+    "description": "Short questions at the end of statements.",
+    "example": "(Placeholder example)",
+    "questions": []
+  },
+
   "simple-present": {
     "name": "Simple Present",
     "badge": "Foundational",

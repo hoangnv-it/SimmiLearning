@@ -457,7 +457,7 @@ function showScreen(screenId) {
   state.currentScreen = screenId;
 
   // Deactivate all screens
-  const screens = ['selection', 'lessons', 'unit-details', 'practice', 'results', 'history'];
+  const screens = ['selection', 'lessons', 'unit-details', 'practice', 'results', 'history', 'theory'];
   screens.forEach(id => {
     const el = document.getElementById(`screen-${id}`);
     if (el) {
@@ -508,60 +508,92 @@ function showScreen(screenId) {
 
 // Load and Render selection cards dynamically
 function renderTenseSelection() {
-  const container = document.getElementById('tense-cards-grid');
-  if (!container) return;
+  const DASHBOARD_CATEGORIES = {
+    'grid-tenses': [
+      'simple-present', 'present-continuous', 'simple-past', 'past-continuous',
+      'present-perfect', 'present-perfect-continuous', 'past-perfect', 'past-perfect-continuous',
+      'simple-future', 'future-continuous', 'future-perfect', 'future-perfect-continuous'
+    ],
+    'grid-structures': [
+      'passive-voice', 'conditionals', 'reported-speech', 'comparisons', 'yes-no-questions', 'wh-questions'
+    ],
+    'grid-advanced': [
+      'relative-clauses', 'to-v-v-ing', 'question-tags'
+    ],
+    'grid-vocabulary': [
+      'new-words'
+    ],
+    'grid-others': [
+      'grade-5-exam'
+    ]
+  };
 
-  container.innerHTML = '';
-
-  Object.entries(QUESTIONS_DATABASE).forEach(([tenseId, data]) => {
+  const createCard = (tenseId, data) => {
     const card = document.createElement('article');
-    card.className = 'glass-card fade-in';
+    card.className = 'compact-card fade-in';
     
     // Check if user has practice score history for this tense
     const record = state.history[tenseId];
-    let scoreDisplay = '';
+    
+    let progressText = 'Not started yet';
+    let progressColor = 'var(--on-surface-variant)';
     if (record) {
-      scoreDisplay = `
-        <div class="card-badge" style="background-color: var(--primary-container); color: var(--on-primary-container);">
-          ${t('bestScore', { score: record.score, total: record.total })}
-        </div>
+      if (record.score === record.total && record.total > 0) {
+        progressText = 'Completed';
+        progressColor = '#2e7d32';
+      } else {
+        const pct = Math.round((record.score / record.total) * 100) || 0;
+        progressText = `In-progress (${pct}%)`;
+        progressColor = 'var(--primary)';
+      }
+    }
+
+    // Check for missing questions data
+    const hasData = data.questions && data.questions.length > 0;
+    const isSpecial = tenseId === 'new-words' || tenseId === 'grade-5-exam' || tenseId === 'yes-no-questions';
+    const isReady = hasData || isSpecial;
+
+    let actionButton = '';
+    if (!isReady) {
+      actionButton = `
+        <button class="btn-secondary" disabled style="opacity: 0.7; cursor: not-allowed; border: 1px dashed var(--on-surface-variant); padding: 8px 16px; font-size: 13px;">
+          Coming Soon
+        </button>
       `;
+    } else {
+      if (tenseId === 'new-words') {
+        actionButton = `
+          <a href="new_words.html" class="btn-primary" style="text-decoration: none; padding: 8px 16px; font-size: 13px;">
+            Start Learning
+          </a>
+        `;
+      } else if (tenseId === 'grade-5-exam') {
+        actionButton = `
+          <a href="grade5_exam.html" target="_blank" class="btn-primary" style="text-decoration: none; padding: 8px 16px; font-size: 13px;">
+            Start Learning
+          </a>
+        `;
+      } else {
+        actionButton = `
+          <button class="btn-primary" onclick="startPractice('${tenseId}')" style="padding: 8px 16px; font-size: 13px;">
+            Start Learning
+          </button>
+        `;
+      }
     }
 
     card.innerHTML = `
-      <div class="card-accent-bubble"></div>
-      <div class="card-top">
-        <div class="card-icon">
+      <div class="compact-card-left">
+        <div class="compact-card-icon">
           <span class="material-symbols-outlined">${data.icon}</span>
         </div>
-        <div style="display: flex; gap: 8px; align-items: center;">
-          <span class="card-badge">${getTenseTranslation(tenseId, 'badge')}</span>
-          ${scoreDisplay}
+        <div class="compact-card-info">
+          <h3 class="compact-card-title">${getTenseTranslation(tenseId, 'name')}</h3>
+          <span class="compact-card-status" style="color: ${progressColor};">${progressText}</span>
         </div>
       </div>
-      <h2>${getTenseTranslation(tenseId, 'name')}</h2>
-      <p>${getTenseTranslation(tenseId, 'description')}</p>
-      <div class="example-quote-card">
-        <p>"${data.example}"</p>
-      </div>
-      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-        ${tenseId === 'new-words' ? `
-          <a href="new_words.html" class="btn-primary" style="flex: 1; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
-            <span>${t('exploreVocabulary') || 'Explore Vocabulary'}</span>
-            <span class="material-symbols-outlined" style="font-size: 18px;">menu_book</span>
-          </a>
-        ` : `
-          <button class="btn-primary" onclick="startPractice('${tenseId}')" style="flex: 1;">
-            ${t('startPractice')}
-            <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
-          </button>
-        `}
-        ${tenseId === 'grade-5-exam' ? `
-          <a href="grade5_exam.html" target="_blank" class="btn-secondary" style="display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 10px 14px; border-radius: var(--rounded-md); text-decoration: none; font-weight: 600; border: 1px solid var(--primary); color: var(--primary);">
-            <span class="material-symbols-outlined" style="font-size: 18px;">description</span>
-            Full Exam Paper
-          </a>
-        ` : ''}
+      <div class="compact-card-right">
+        ${actionButton}
       </div>
     `;
 
@@ -574,7 +606,20 @@ function renderTenseSelection() {
       });
     }
 
-    container.appendChild(card);
+    return card;
+  };
+
+  Object.entries(DASHBOARD_CATEGORIES).forEach(([gridId, items]) => {
+    const container = document.getElementById(gridId);
+    if (!container) return;
+    container.innerHTML = '';
+    
+    items.forEach(tenseId => {
+      const data = QUESTIONS_DATABASE[tenseId];
+      if (data) {
+        container.appendChild(createCard(tenseId, data));
+      }
+    });
   });
 }
 
@@ -602,11 +647,58 @@ function preparePracticeQuestions(questions, count = 10) {
 }
 
 // Start quiz session for a tense
-window.startPractice = function(tenseId) {
+window.startPractice = async function(tenseId) {
   if (tenseId === 'new-words') {
     window.location.href = 'new_words.html';
     return;
   }
+  
+  const indicator = document.getElementById('practice-tense-indicator');
+  
+  if (tenseId === 'yes-no-questions') {
+    try {
+      const response = await fetch('yes_no_questions.json');
+      const data = await response.json();
+      
+      const theoryContainer = document.getElementById('theory-content-container');
+      if (theoryContainer) {
+        theoryContainer.innerHTML = data.theory;
+      }
+      
+      showScreen('theory');
+      
+      const startBtn = document.getElementById('btn-start-test-from-theory');
+      if (startBtn) {
+        startBtn.onclick = () => {
+          // Attach questions to db so getFilteredQuestions or others work
+          QUESTIONS_DATABASE['yes-no-questions'].questions = data.questions;
+          
+          state.selectedTenseId = tenseId;
+          state.selectedGroup = 'all';
+          state.selectedSubgroup = 'all';
+          state.questions = preparePracticeQuestions(data.questions, 10);
+          state.currentQuestionIndex = 0;
+          state.selectedOptionIndex = null;
+          state.isAnswerChecked = false;
+          state.score = 0;
+          
+          if (indicator) {
+            indicator.textContent = getTenseTranslation(tenseId, 'name');
+          }
+          
+          renderPracticeGroupSelectors();
+          loadQuestion();
+          showScreen('practice');
+        };
+      }
+      return;
+    } catch (err) {
+      console.error("Error loading yes/no questions", err);
+      alert("Failed to load theory and questions. Please try again.");
+      return;
+    }
+  }
+
   const tenseData = QUESTIONS_DATABASE[tenseId];
   if (!tenseData) return;
 
@@ -622,7 +714,6 @@ window.startPractice = function(tenseId) {
   state.score = 0;
 
   // Update header text
-  const indicator = document.getElementById('practice-tense-indicator');
   if (indicator) {
     indicator.textContent = getTenseTranslation(tenseId, 'name');
   }

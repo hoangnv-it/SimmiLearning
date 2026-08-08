@@ -1396,3 +1396,67 @@ button {
   background: rgba(211, 47, 47, 0.15);
   color: #d32f2f;
 }
+
+/* Custom Details/Summary styling */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] > summary .summary-chevron {
+  transform: rotate(180deg);
+}
+.summary-chevron {
+  transition: transform 0.3s ease;
+}
+
+/* Simplified compact card layout */
+.compact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(132, 148, 149, 0.2);
+  border-radius: var(--rounded-lg);
+  gap: 16px;
+  margin-bottom: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.compact-card-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+}
+.compact-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--rounded-md);
+  background: var(--surface-variant);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.compact-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.compact-card-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--on-surface);
+  margin: 0;
+}
+.compact-card-status {
+  font-size: 13px;
+  color: var(--on-surface-variant);
+  font-weight: 500;
+}
+.compact-card-right {
+  display: flex;
+  align-items: center;
+}

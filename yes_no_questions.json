@@ -1,0 +1,1305 @@
+{
+  "theory": "\n<div class=\"theory-content\">\n  <h2 class=\"text-headline-md\" style=\"color: var(--primary); margin-bottom: 16px;\">Lý thuyết Câu hỏi Yes/No (Lớp 6)</h2>\n  \n  <p class=\"text-body-lg\">Câu hỏi Yes/No (Yes/No Question) là dạng câu hỏi dùng để xác nhận thông tin. Câu trả lời luôn bắt đầu bằng <strong>Yes</strong> (Có) hoặc <strong>No</strong> (Không).</p>\n  \n  <div style=\"margin-top: 24px;\">\n    <h3 class=\"text-title-lg\" style=\"color: var(--on-surface); margin-bottom: 12px;\">1. Với động từ \"To be\" (am/is/are)</h3>\n    <ul style=\"padding-left: 20px; line-height: 1.6; color: var(--on-surface-variant);\">\n      <li><strong>Cấu trúc:</strong> Am/Is/Are + S + ...?</li>\n      <li><strong>Trả lời:</strong> Yes, S + am/is/are. / No, S + am not / isn't / aren't.</li>\n      <li><em>Ví dụ:</em> <strong>Are</strong> you a student? - Yes, I am.</li>\n    </ul>\n  </div>\n\n  <div style=\"margin-top: 24px;\">\n    <h3 class=\"text-title-lg\" style=\"color: var(--on-surface); margin-bottom: 12px;\">2. Với động từ thường (Hiện tại đơn & Quá khứ đơn)</h3>\n    <ul style=\"padding-left: 20px; line-height: 1.6; color: var(--on-surface-variant);\">\n      <li><strong>Cấu trúc (HTĐ):</strong> Do/Does + S + V(nguyên mẫu)?</li>\n      <li><strong>Trả lời (HTĐ):</strong> Yes, S + do/does. / No, S + don't/doesn't.</li>\n      <li><em>Ví dụ:</em> <strong>Does</strong> she like apples? - Yes, she does.</li>\n      <li style=\"margin-top: 8px;\"><strong>Cấu trúc (QKĐ):</strong> Did + S + V(nguyên mẫu)?</li>\n      <li><strong>Trả lời (QKĐ):</strong> Yes, S + did. / No, S + didn't.</li>\n      <li><em>Ví dụ:</em> <strong>Did</strong> they go to school yesterday? - No, they didn't.</li>\n    </ul>\n  </div>\n\n  <div style=\"margin-top: 24px;\">\n    <h3 class=\"text-title-lg\" style=\"color: var(--on-surface); margin-bottom: 12px;\">3. Với động từ khuyết thiếu (Can/Should/Will...)</h3>\n    <ul style=\"padding-left: 20px; line-height: 1.6; color: var(--on-surface-variant);\">\n      <li><strong>Cấu trúc:</strong> Can/Should/Will + S + V(nguyên mẫu)?</li>\n      <li><strong>Trả lời:</strong> Yes, S + can/should/will. / No, S + can't/shouldn't/won't.</li>\n      <li><em>Ví dụ:</em> <strong>Can</strong> you swim? - Yes, I can.</li>\n    </ul>\n  </div>\n</div>\n",
+  "questions": [
+    {
+      "question": "______ we play apples?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ he go to school?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she smart yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 3,
+      "hint": "Sử dụng to be số ít (Was) cho chủ ngữ 'she'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Hoa like football last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your mother read books ?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Dùng Can để hỏi về khả năng.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher sleep well?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher play apples last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher listen music ?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Dùng Can để hỏi về khả năng.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam tired yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 3,
+      "hint": "Sử dụng to be số ít (Was) cho chủ ngữ 'Nam'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ you teachers yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 2,
+      "hint": "Sử dụng to be số nhiều (Were) cho chủ ngữ 'you'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam happy yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 3,
+      "hint": "Sử dụng to be số ít (Was) cho chủ ngữ 'Nam'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ he play apples last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher eat pizza tomorrow?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Dùng Will cho thì tương lai đơn.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your mother sleep well?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she happy yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 3,
+      "hint": "Sử dụng to be số ít (Was) cho chủ ngữ 'she'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ it like football?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ it work hard last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ it play apples ?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Dùng Can để hỏi về khả năng.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ they students now?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng to be số nhiều (Are) cho chủ ngữ 'they'.",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ we study English last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your mother go to school tomorrow?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Dùng Will cho thì tương lai đơn.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she work hard?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam work hard?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ it smart now?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng to be số ít (Is) cho chủ ngữ 'it'.",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ it read books?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the students listen music tomorrow?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Dùng Will cho thì tương lai đơn.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Hoa listen music last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ it a teacher now?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng to be số ít (Is) cho chủ ngữ 'it'.",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ we read books?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she tired yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 3,
+      "hint": "Sử dụng to be số ít (Was) cho chủ ngữ 'she'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ you teachers now?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng to be số nhiều (Are) cho chủ ngữ 'you'.",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam happy now?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng to be số ít (Is) cho chủ ngữ 'Nam'.",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ he a student yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 3,
+      "hint": "Sử dụng to be số ít (Was) cho chủ ngữ 'he'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam and Hoa eat pizza?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam and Hoa at school yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 2,
+      "hint": "Sử dụng to be số nhiều (Were) cho chủ ngữ 'Nam and Hoa'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher listen music?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your friends like football ?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Dùng Can để hỏi về khả năng.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ they eat pizza last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the students sleep well last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher read books last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your friends read books last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the students eat pizza?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Hoa listen music tomorrow?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Dùng Will cho thì tương lai đơn.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ we sleep well?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher read books tomorrow?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Dùng Will cho thì tương lai đơn.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher go to school last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she study English last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the students play apples last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam and Hoa read books last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she go to school last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ you tired yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 2,
+      "hint": "Sử dụng to be số nhiều (Were) cho chủ ngữ 'you'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your mother play apples last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your friends eat pizza last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your friends watch TV?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam listen music ?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Dùng Can để hỏi về khả năng.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam and Hoa in the library yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 2,
+      "hint": "Sử dụng to be số nhiều (Were) cho chủ ngữ 'Nam and Hoa'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ you go to school last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ it go to school?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ you read books tomorrow?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Dùng Will cho thì tương lai đơn.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she tall yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 3,
+      "hint": "Sử dụng to be số ít (Was) cho chủ ngữ 'she'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ they watch TV last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your friends like football?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ you listen music?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your friends eat pizza?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Hoa go to school?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ you like football?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your mother eat pizza last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ we listen music?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam and Hoa read books last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the students work hard last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ it smart now?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng to be số ít (Is) cho chủ ngữ 'it'.",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ we sleep well?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the students listen music last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she eat pizza ?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Dùng Can để hỏi về khả năng.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Nam and Hoa sleep well?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ we teachers yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 2,
+      "hint": "Sử dụng to be số nhiều (Were) cho chủ ngữ 'we'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher eat pizza?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she work hard?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ you sleep well ?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Dùng Can để hỏi về khả năng.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ you go to school last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ it watch TV last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the students study English last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Hoa a teacher yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 3,
+      "hint": "Sử dụng to be số ít (Was) cho chủ ngữ 'Hoa'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Hoa listen music last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your friends sleep well ?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Dùng Can để hỏi về khả năng.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Hoa work hard?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she eat pizza ?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Dùng Can để hỏi về khả năng.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your mother watch TV?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher eat pizza tomorrow?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Dùng Will cho thì tương lai đơn.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the students eat pizza?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ we smart yesterday?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 2,
+      "hint": "Sử dụng to be số nhiều (Were) cho chủ ngữ 'we'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the teacher go to school?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she play apples tomorrow?",
+      "options": [
+        "Can",
+        "Will",
+        "Do",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Dùng Will cho thì tương lai đơn.",
+      "group": "modal-verbs",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ he sleep well last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ Hoa like football?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ the students students now?",
+      "options": [
+        "Are",
+        "Is",
+        "Were",
+        "Was"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng to be số nhiều (Are) cho chủ ngữ 'the students'.",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ your friends study English?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 0,
+      "hint": "Sử dụng 'Do' cho chủ ngữ số nhiều (I/you/we/they).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she listen music last week?",
+      "options": [
+        "Did",
+        "Do",
+        "Does",
+        "Were"
+      ],
+      "answerIndex": 0,
+      "hint": "Dấu hiệu 'last week' chỉ thì quá khứ đơn, mượn trợ động từ 'Did'.",
+      "group": "past-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ he watch TV?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    },
+    {
+      "question": "______ she play apples?",
+      "options": [
+        "Do",
+        "Does",
+        "Is",
+        "Are"
+      ],
+      "answerIndex": 1,
+      "hint": "Sử dụng 'Does' cho chủ ngữ số ít (he/she/it).",
+      "group": "present-simple",
+      "subgroup": "yes-no"
+    }
+  ]
+}
