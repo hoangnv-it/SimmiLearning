@@ -1,5 +1,319 @@
 [
   {
+    "date": "2026-08-09",
+    "dateFormatted": "August 9, 2026",
+    "theme": "Daily Vocabulary",
+    "audios": [],
+    "words": [
+      {
+        "word": "Look",
+        "index": 1,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "trông, nhìn"
+      },
+      {
+        "word": "Live",
+        "index": 2,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "sống"
+      },
+      {
+        "word": "Town house",
+        "index": 3,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nhà phố"
+      },
+      {
+        "word": "Country house",
+        "index": 4,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nhà ở quê"
+      },
+      {
+        "word": "Younger brother",
+        "index": 5,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "em trai"
+      },
+      {
+        "word": "Move",
+        "index": 6,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "chuyển đến"
+      },
+      {
+        "word": "Apartment",
+        "index": 7,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "căn hộ"
+      },
+      {
+        "word": "Next month",
+        "index": 8,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tháng sau"
+      },
+      {
+        "word": "There",
+        "index": 9,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ở đó"
+      },
+      {
+        "word": "They",
+        "index": 10,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "họ"
+      },
+      {
+        "word": "Had better",
+        "index": 11,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "phải, nên"
+      },
+      {
+        "word": "Had better + bare verb",
+        "index": 12,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cấu trúc khuyên ai nên làm gì"
+      },
+      {
+        "word": "It’s dinner time",
+        "index": 13,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đã đến giờ ăn tối"
+      },
+      {
+        "word": "Parents",
+        "index": 14,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ba mẹ"
+      },
+      {
+        "word": "Grandparents",
+        "index": 15,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ông bà"
+      },
+      {
+        "word": "Shelf",
+        "index": 16,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cái kệ"
+      },
+      {
+        "word": "Floor",
+        "index": 17,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "sàn nhà"
+      },
+      {
+        "word": "Like + V-ing",
+        "index": 18,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thích (sở thích lâu dài)"
+      },
+      {
+        "word": "Would like + TO verb",
+        "index": 19,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "muốn (làm ngay lúc nói)"
+      },
+      {
+        "word": "Luke likes sitting on the sofa",
+        "index": 20,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "Luke thích ngồi trên ghế sô pha"
+      },
+      {
+        "word": "Luke would like to sit on the sofa",
+        "index": 21,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "Luke muốn ngồi trên ghế sô pha (đã sửa lại chủ ngữ cho đúng)"
+      },
+      {
+        "word": "Think",
+        "index": 22,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "suy nghĩ"
+      },
+      {
+        "word": "Preposition",
+        "index": 23,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "giới từ"
+      },
+      {
+        "word": "In front of – behind",
+        "index": 24,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "trước – sau"
+      },
+      {
+        "word": "Next to – far from",
+        "index": 25,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "gần, bên cạnh – xa"
+      },
+      {
+        "word": "Under – on",
+        "index": 26,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "dưới – trên"
+      },
+      {
+        "word": "In – out",
+        "index": 27,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "trong – ngoài"
+      },
+      {
+        "word": "Between….and",
+        "index": 28,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ở giữa… và…"
+      },
+      {
+        "word": "Bowl",
+        "index": 29,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cái chén"
+      },
+      {
+        "word": "True",
+        "index": 30,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đúng"
+      },
+      {
+        "word": "False",
+        "index": 31,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "sai"
+      },
+      {
+        "word": "Cap",
+        "index": 32,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cái mũ"
+      },
+      {
+        "word": "Pillow",
+        "index": 33,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cái gối"
+      },
+      {
+        "word": "Clothes",
+        "index": 34,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "quần áo"
+      }
+    ]
+  },
+  {
     "date": "2026-08-02",
     "dateFormatted": "August 2, 2026",
     "theme": "Daily Vocabulary",

@@ -76,45 +76,12 @@
     <!-- VIEW 1: Dashboard / Selection -->
     <section id="screen-selection" class="view-section">
 
-      <details class="section-container" open style="margin-top: var(--spacing-xl); background: var(--surface); border: 1px solid rgba(132, 148, 149, 0.2); border-radius: var(--rounded-xl); padding: var(--spacing-md);">
+      <details class="section-container" style="margin-top: var(--spacing-xl); background: var(--surface); border: 1px solid rgba(132, 148, 149, 0.2); border-radius: var(--rounded-xl); padding: var(--spacing-md);">
         <summary style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-          <h2 class="text-headline-md" style="margin: 0; color: var(--on-surface);">Tenses</h2>
-          <span class="material-symbols-outlined summary-chevron" style="color: var(--on-surface-variant);">expand_more</span>
-        </summary>
-        <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(132, 148, 149, 0.1);">
-          <div id="grid-tenses" class="grid-container">
-            <!-- Populated by app.js -->
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="text-headline-md" style="margin: 0; color: var(--on-surface);">Vocabulary</h2>
+            <span style="color: var(--on-surface-variant); font-size: 14px; font-weight: 400; opacity: 0.9;">Explore new words and build your daily lexicon.</span>
           </div>
-        </div>
-      </details>
-
-      <details class="section-container" open style="margin-top: var(--spacing-xl); background: var(--surface); border: 1px solid rgba(132, 148, 149, 0.2); border-radius: var(--rounded-xl); padding: var(--spacing-md);">
-        <summary style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-          <h2 class="text-headline-md" style="margin: 0; color: var(--on-surface);">Sentence Structures</h2>
-          <span class="material-symbols-outlined summary-chevron" style="color: var(--on-surface-variant);">expand_more</span>
-        </summary>
-        <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(132, 148, 149, 0.1);">
-          <div id="grid-structures" class="grid-container">
-            <!-- Populated by app.js -->
-          </div>
-        </div>
-      </details>
-
-      <details class="section-container" open style="margin-top: var(--spacing-xl); background: var(--surface); border: 1px solid rgba(132, 148, 149, 0.2); border-radius: var(--rounded-xl); padding: var(--spacing-md);">
-        <summary style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-          <h2 class="text-headline-md" style="margin: 0; color: var(--on-surface);">Advanced Clauses & Structures</h2>
-          <span class="material-symbols-outlined summary-chevron" style="color: var(--on-surface-variant);">expand_more</span>
-        </summary>
-        <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(132, 148, 149, 0.1);">
-          <div id="grid-advanced" class="grid-container">
-            <!-- Populated by app.js -->
-          </div>
-        </div>
-      </details>
-
-      <details class="section-container" open style="margin-top: var(--spacing-xl); background: var(--surface); border: 1px solid rgba(132, 148, 149, 0.2); border-radius: var(--rounded-xl); padding: var(--spacing-md);">
-        <summary style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-          <h2 class="text-headline-md" style="margin: 0; color: var(--on-surface);">Vocabulary</h2>
           <span class="material-symbols-outlined summary-chevron" style="color: var(--on-surface-variant);">expand_more</span>
         </summary>
         <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(132, 148, 149, 0.1);">
@@ -124,9 +91,57 @@
         </div>
       </details>
 
-      <details class="section-container" open style="margin-top: var(--spacing-xl); background: var(--surface); border: 1px solid rgba(132, 148, 149, 0.2); border-radius: var(--rounded-xl); padding: var(--spacing-md);">
+      <details class="section-container" style="margin-top: var(--spacing-xl); background: var(--surface); border: 1px solid rgba(132, 148, 149, 0.2); border-radius: var(--rounded-xl); padding: var(--spacing-md);">
         <summary style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
-          <h2 class="text-headline-md" style="margin: 0; color: var(--on-surface);">Other Practice</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="text-headline-md" style="margin: 0; color: var(--on-surface);">Tenses</h2>
+            <span style="color: var(--on-surface-variant); font-size: 14px; font-weight: 400; opacity: 0.9;">Master the 12 English tenses with structured practice.</span>
+          </div>
+          <span class="material-symbols-outlined summary-chevron" style="color: var(--on-surface-variant);">expand_more</span>
+        </summary>
+        <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(132, 148, 149, 0.1);">
+          <div id="grid-tenses" class="grid-container">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+      </details>
+
+      <details class="section-container" style="margin-top: var(--spacing-xl); background: var(--surface); border: 1px solid rgba(132, 148, 149, 0.2); border-radius: var(--rounded-xl); padding: var(--spacing-md);">
+        <summary style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="text-headline-md" style="margin: 0; color: var(--on-surface);">Sentence Structures</h2>
+            <span style="color: var(--on-surface-variant); font-size: 14px; font-weight: 400; opacity: 0.9;">Learn common sentence patterns for effective communication.</span>
+          </div>
+          <span class="material-symbols-outlined summary-chevron" style="color: var(--on-surface-variant);">expand_more</span>
+        </summary>
+        <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(132, 148, 149, 0.1);">
+          <div id="grid-structures" class="grid-container">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+      </details>
+
+      <details class="section-container" style="margin-top: var(--spacing-xl); background: var(--surface); border: 1px solid rgba(132, 148, 149, 0.2); border-radius: var(--rounded-xl); padding: var(--spacing-md);">
+        <summary style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="text-headline-md" style="margin: 0; color: var(--on-surface);">Advanced Clauses & Structures</h2>
+            <span style="color: var(--on-surface-variant); font-size: 14px; font-weight: 400; opacity: 0.9;">Dive deeper into complex grammar rules and clauses.</span>
+          </div>
+          <span class="material-symbols-outlined summary-chevron" style="color: var(--on-surface-variant);">expand_more</span>
+        </summary>
+        <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(132, 148, 149, 0.1);">
+          <div id="grid-advanced" class="grid-container">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+      </details>
+
+      <details class="section-container" style="margin-top: var(--spacing-xl); background: var(--surface); border: 1px solid rgba(132, 148, 149, 0.2); border-radius: var(--rounded-xl); padding: var(--spacing-md);">
+        <summary style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; list-style: none;">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="text-headline-md" style="margin: 0; color: var(--on-surface);">Other Practice</h2>
+            <span style="color: var(--on-surface-variant); font-size: 14px; font-weight: 400; opacity: 0.9;">Additional exercises to reinforce your English skills.</span>
+          </div>
           <span class="material-symbols-outlined summary-chevron" style="color: var(--on-surface-variant);">expand_more</span>
         </summary>
         <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 1px solid rgba(132, 148, 149, 0.1);">
