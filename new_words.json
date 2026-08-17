@@ -1,5 +1,689 @@
 [
   {
+    "date": "2026-08-17",
+    "dateFormatted": "August 17, 2026",
+    "theme": "Daily Vocabulary",
+    "audios": [
+      "audio/8-17-2026.aac"
+    ],
+    "words": [
+      {
+        "word": "Bedsitter",
+        "index": 1,
+        "type": "",
+        "phonetic": "/'bed,sitə/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "buồng vừa để ngủ vừa để tiếp khách"
+      },
+      {
+        "word": "I can!",
+        "index": 2,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tôi có thể"
+      },
+      {
+        "word": "That’s very kind of you!",
+        "index": 3,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bạn thật tốt"
+      },
+      {
+        "word": "Don’t mention it!",
+        "index": 4,
+        "type": "",
+        "phonetic": "/'men∫n/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đựng bận tâm"
+      },
+      {
+        "word": "Daughter ['dɔ",
+        "index": 5,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tə]"
+      },
+      {
+        "word": "Suburb ['sʌbə",
+        "index": 6,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "b]"
+      },
+      {
+        "word": "Downstairs",
+        "index": 7,
+        "type": "",
+        "phonetic": "/'daunsteəz/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tầng dưới"
+      },
+      {
+        "word": "Upstairs",
+        "index": 8,
+        "type": "",
+        "phonetic": "/,ʌp'steəz/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tầng trên"
+      },
+      {
+        "word": "Outside",
+        "index": 9,
+        "type": "",
+        "phonetic": "/'autsaid/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bên ngoài"
+      },
+      {
+        "word": "Convenient [kən'vi",
+        "index": 10,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "njənt]"
+      },
+      {
+        "word": "Generous",
+        "index": 11,
+        "type": "",
+        "phonetic": "/'dʒenərəs/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "hào phóng"
+      },
+      {
+        "word": "Hard-working ['hɑ",
+        "index": 12,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "d'wə"
+      },
+      {
+        "word": "Member",
+        "index": 13,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thành viên"
+      },
+      {
+        "word": "Part",
+        "index": 14,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "phần"
+      },
+      {
+        "word": "Share",
+        "index": 15,
+        "type": "",
+        "phonetic": "/∫eə/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "chia sẻ"
+      },
+      {
+        "word": "Sink",
+        "index": 16,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bồn rửa mặt"
+      },
+      {
+        "word": "Pub",
+        "index": 17,
+        "type": "",
+        "phonetic": "/pʌb/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "quán rượu"
+      },
+      {
+        "word": "Take-away",
+        "index": 18,
+        "type": "",
+        "phonetic": "/'teik ə'wei/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "mang đi"
+      },
+      {
+        "word": "Take-away cofeee",
+        "index": 19,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cà phê mua mang về"
+      },
+      {
+        "word": "Cook",
+        "index": 20,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nấu ăn"
+      },
+      {
+        "word": "Cooker",
+        "index": 21,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bếp"
+      },
+      {
+        "word": "Hotel",
+        "index": 22,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "khách sạn"
+      },
+      {
+        "word": "Hostel",
+        "index": 23,
+        "type": "",
+        "phonetic": "/'hɔstəl/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nhà trọ"
+      },
+      {
+        "word": "Own",
+        "index": 24,
+        "type": "",
+        "phonetic": "/oun/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "riêng"
+      },
+      {
+        "word": "Fridge",
+        "index": 25,
+        "type": "",
+        "phonetic": "/fridʒ/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tủ lạnh"
+      },
+      {
+        "word": "Magazine [,mægə'zi",
+        "index": 26,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "n]"
+      },
+      {
+        "word": "Newspaper 'nju",
+        "index": 27,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "zpeipə]"
+      },
+      {
+        "word": "Conversation",
+        "index": 28,
+        "type": "",
+        "phonetic": "/,kɔnvə'sei∫n/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "mẫu hội thoại"
+      },
+      {
+        "word": "What is the weather like?",
+        "index": 29,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thời tiết như thế nào"
+      },
+      {
+        "word": "Luggage",
+        "index": 30,
+        "type": "",
+        "phonetic": "/'lʌgidʒ/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "hành lý"
+      },
+      {
+        "word": "Certain! ['sə",
+        "index": 31,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tn]"
+      },
+      {
+        "word": "Over there",
+        "index": 32,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đằng kia"
+      },
+      {
+        "word": "On the left",
+        "index": 33,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bên trái"
+      },
+      {
+        "word": "On the right",
+        "index": 34,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bên phải"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-15",
+    "dateFormatted": "August 15, 2026",
+    "theme": "Daily Vocabulary",
+    "audios": [],
+    "words": [
+      {
+        "word": "Kitchen",
+        "index": 1,
+        "type": "",
+        "phonetic": "/´kitʃin/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bếp"
+      },
+      {
+        "word": "Bench",
+        "index": 2,
+        "type": "",
+        "phonetic": "/bentʃ/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ghế dài"
+      },
+      {
+        "word": "Wheel",
+        "index": 3,
+        "type": "",
+        "phonetic": "/wil/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bánh xe"
+      },
+      {
+        "word": "Dictionary",
+        "index": 4,
+        "type": "",
+        "phonetic": "/'dik,ʃə,nə,ri/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "từ điển"
+      },
+      {
+        "word": "Upstairs",
+        "index": 5,
+        "type": "",
+        "phonetic": "/´ʌp´stɛəz/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tầng trên"
+      },
+      {
+        "word": "Spend time",
+        "index": 6,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "dành thời gian"
+      },
+      {
+        "word": "Subject",
+        "index": 7,
+        "type": "",
+        "phonetic": "/sʌbdʒɪk/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "môn học"
+      },
+      {
+        "word": "International",
+        "index": 8,
+        "type": "",
+        "phonetic": "/intə'næʃən(ə)l/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "quốc tế"
+      },
+      {
+        "word": "Photography",
+        "index": 9,
+        "type": "",
+        "phonetic": "/'fəutəu - grəfi/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "chụp ảnh"
+      },
+      {
+        "word": "Ready",
+        "index": 10,
+        "type": "",
+        "phonetic": "/'redi/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "Sẵn sàng"
+      },
+      {
+        "word": "Physics",
+        "index": 11,
+        "type": "",
+        "phonetic": "/fɪzɪks/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "môn vật lý"
+      },
+      {
+        "word": "Season /´si",
+        "index": 12,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "zən/"
+      },
+      {
+        "word": "Spring",
+        "index": 13,
+        "type": "",
+        "phonetic": "/sprɪŋ/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "mùa xuân"
+      },
+      {
+        "word": "Summer",
+        "index": 14,
+        "type": "",
+        "phonetic": "/ˈsʌmər/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "mùa hạ"
+      },
+      {
+        "word": "Autumn /ˈɔ",
+        "index": 15,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "təm/"
+      },
+      {
+        "word": "Winter",
+        "index": 16,
+        "type": "",
+        "phonetic": "/ˈwɪntər/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "mùa đông"
+      },
+      {
+        "word": "Language",
+        "index": 17,
+        "type": "",
+        "phonetic": "/ˈlæŋgwɪdʒ/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ngôn ngữ"
+      },
+      {
+        "word": "Favourite",
+        "index": 18,
+        "type": "",
+        "phonetic": "/ˈfeɪvərɪt/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "yêu thích"
+      },
+      {
+        "word": "Wonderful",
+        "index": 19,
+        "type": "",
+        "phonetic": "/´wʌndəful/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tuyệt vời"
+      },
+      {
+        "word": "Experiment",
+        "index": 20,
+        "type": "",
+        "phonetic": "/ɪkˈspɛrəmənt/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thử nghiệm"
+      },
+      {
+        "word": "Laboratory = lab",
+        "index": 21,
+        "type": "",
+        "phonetic": "/ləˈbɒrətri/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "phòng thí nghiệm"
+      },
+      {
+        "word": "Workshop /´wə",
+        "index": 22,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "k¸ʃɔp/ Hội thảo"
+      },
+      {
+        "word": "Chemistry",
+        "index": 23,
+        "type": "",
+        "phonetic": "/´kemistri/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "môn hoá"
+      },
+      {
+        "word": "Duty /'dju",
+        "index": 24,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ti/"
+      },
+      {
+        "word": "Have to",
+        "index": 25,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "phải"
+      },
+      {
+        "word": "Clean /kli",
+        "index": 26,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "n/"
+      },
+      {
+        "word": "Everything",
+        "index": 27,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "mọi thứ"
+      },
+      {
+        "word": "A bit",
+        "index": 28,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "một chút"
+      },
+      {
+        "word": "Friendly",
+        "index": 29,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thân thiện"
+      },
+      {
+        "word": "Join",
+        "index": 30,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tham gia"
+      },
+      {
+        "word": "Club",
+        "index": 31,
+        "type": "",
+        "phonetic": "/´klʌb/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "câu lạc bộ"
+      },
+      {
+        "word": "Forget",
+        "index": 32,
+        "type": "",
+        "phonetic": "/fə'get/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "quên"
+      },
+      {
+        "word": "Remember",
+        "index": 33,
+        "type": "",
+        "phonetic": "/rɪˈmɛmbər/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nhớ"
+      },
+      {
+        "word": "Try",
+        "index": 34,
+        "type": "",
+        "phonetic": "/trai/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thử, cố gắng"
+      },
+      {
+        "word": "Arrive",
+        "index": 35,
+        "type": "",
+        "phonetic": "/ə'raiv/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đến"
+      },
+      {
+        "word": "On time",
+        "index": 36,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đúng giờ"
+      },
+      {
+        "word": "Prepare",
+        "index": 37,
+        "type": "",
+        "phonetic": "/pri´peə/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "chuẩn bị"
+      },
+      {
+        "word": "Work in pair",
+        "index": 38,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "làm việc nhóm (2 người)"
+      },
+      {
+        "word": "Listen to",
+        "index": 39,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nghe"
+      },
+      {
+        "word": "Index",
+        "index": 40,
+        "type": "",
+        "phonetic": "/'indeks/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "Bảng mục lục"
+      }
+    ]
+  },
+  {
     "date": "2026-08-09",
     "dateFormatted": "August 9, 2026",
     "theme": "Daily Vocabulary",
