@@ -4,7 +4,7 @@ A web application designed to help users practice English grammar and vocabulary
 
 ## Tech Stack
 
-- **Frontend**: Vanilla HTML, CSS, and JavaScript. No external frameworks are used, ensuring a lightweight and fast user experience.
+- **Frontend**: Vanilla HTML, CSS, and JavaScript. No external frameworks are used, ensuring a lightweight and fast user experience..
 - **Backend / Serving**: Vanilla Node.js using the built-in `http` module to serve static files.
 
 ## Project Structure
