@@ -1177,7 +1177,7 @@
             <div class="word-header">
               <div class="word-title-area">
                 <h3 class="word-title" style="display: flex; align-items: center; gap: 8px;">
-                  ${word.index ? `<span class="word-index" style="background-color: var(--primary); color: var(--on-primary); padding: 2px 8px; border-radius: 12px; font-size: 14px; font-weight: 700; line-height: 1.2; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">#${word.index}</span>` : ''}
+                  ${word.index ? `<span class="word-index" style="background-color: var(--primary); color: var(--on-primary); padding: 2px 8px; border-radius: 12px; font-size: 14px; font-weight: 700; line-height: 1.2; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">#${word.index}${word.reference ? `, ${word.reference}` : ''}</span>` : ''}
                   ${word.word}
                 </h3>
                 ${word.type ? `<span class="word-type">${word.type}</span>` : ''}
@@ -1225,7 +1225,7 @@
         <article class="word-list-item fade-in ${isMissed ? 'missed-item' : ''}">
           <div class="word-list-left">
             <h3 class="word-list-title" style="display: flex; align-items: center; gap: 8px;">
-              ${word.index ? `<span class="word-index" style="background-color: var(--primary); color: var(--on-primary); padding: 2px 8px; border-radius: 12px; font-size: 14px; font-weight: 700; line-height: 1.2; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">#${word.index}</span>` : ''}
+              ${word.index ? `<span class="word-index" style="background-color: var(--primary); color: var(--on-primary); padding: 2px 8px; border-radius: 12px; font-size: 14px; font-weight: 700; line-height: 1.2; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">#${word.index}${word.reference ? `, ${word.reference}` : ''}</span>` : ''}
               ${word.word}
             </h3>
             ${word.type ? `<span class="word-type">${word.type}</span>` : ''}

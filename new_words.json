@@ -1,5 +1,877 @@
 [
   {
+    "date": "2026-08-23",
+    "dateFormatted": "August 23, 2026",
+    "theme": "Vocabulary Test Words",
+    "audios": [
+      "audio/8-22-2026-1.aac",
+      "audio/8-22-2026-2.aac"
+    ],
+    "words": [
+      {
+        "word": "neighbors",
+        "index": 1,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những người hàng xóm",
+        "reference": "Question 1, A"
+      },
+      {
+        "word": "friends",
+        "index": 2,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những người bạn",
+        "reference": "Question 1, B"
+      },
+      {
+        "word": "relatives",
+        "index": 3,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những người họ hàng",
+        "reference": "Question 1, C"
+      },
+      {
+        "word": "photographs",
+        "index": 4,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những bức ảnh",
+        "reference": "Question 1, D"
+      },
+      {
+        "word": "snacks",
+        "index": 5,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những món ăn nhẹ",
+        "reference": "Question 2, A"
+      },
+      {
+        "word": "follows",
+        "index": 6,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "theo dõi",
+        "reference": "Question 2, B"
+      },
+      {
+        "word": "titles",
+        "index": 7,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "các tiêu đề",
+        "reference": "Question 2, C"
+      },
+      {
+        "word": "writers",
+        "index": 8,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những nhà văn",
+        "reference": "Question 2, D"
+      },
+      {
+        "word": "streets",
+        "index": 9,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những con đường",
+        "reference": "Question 3, A"
+      },
+      {
+        "word": "phones",
+        "index": 10,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những chiếc điện thoại",
+        "reference": "Question 3, B"
+      },
+      {
+        "word": "books",
+        "index": 11,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những cuốn sách",
+        "reference": "Question 3, C"
+      },
+      {
+        "word": "makes",
+        "index": 12,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "làm / tạo ra",
+        "reference": "Question 3, D"
+      },
+      {
+        "word": "cities",
+        "index": 13,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những thành phố",
+        "reference": "Question 4, A"
+      },
+      {
+        "word": "satellites",
+        "index": 14,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "các vệ tinh",
+        "reference": "Question 4, B"
+      },
+      {
+        "word": "series",
+        "index": 15,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "chuỗi / sê-ri",
+        "reference": "Question 4, C"
+      },
+      {
+        "word": "workers",
+        "index": 16,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những công nhân",
+        "reference": "Question 4, D"
+      },
+      {
+        "word": "develops",
+        "index": 17,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "phát triển",
+        "reference": "Question 5, A"
+      },
+      {
+        "word": "takes",
+        "index": 18,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cầm / lấy",
+        "reference": "Question 5, B"
+      },
+      {
+        "word": "laughs",
+        "index": 19,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cười",
+        "reference": "Question 5, C"
+      },
+      {
+        "word": "volumes",
+        "index": 20,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "các tập sách / âm lượng",
+        "reference": "Question 5, D"
+      },
+      {
+        "word": "explains",
+        "index": 21,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "giải thích",
+        "reference": "Question 6, A"
+      },
+      {
+        "word": "wakes",
+        "index": 22,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thức dậy",
+        "reference": "Question 6, B"
+      },
+      {
+        "word": "phones",
+        "index": 23,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những chiếc điện thoại",
+        "reference": "Question 6, C"
+      },
+      {
+        "word": "names",
+        "index": 24,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tên",
+        "reference": "Question 6, D"
+      },
+      {
+        "word": "phones",
+        "index": 25,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những chiếc điện thoại",
+        "reference": "Question 7, A"
+      },
+      {
+        "word": "streets",
+        "index": 26,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những con đường",
+        "reference": "Question 7, B"
+      },
+      {
+        "word": "books",
+        "index": 27,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những cuốn sách",
+        "reference": "Question 7, C"
+      },
+      {
+        "word": "makes",
+        "index": 28,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "làm / tạo ra",
+        "reference": "Question 7, D"
+      },
+      {
+        "word": "proofs",
+        "index": 29,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bằng chứng",
+        "reference": "Question 8, A"
+      },
+      {
+        "word": "regions",
+        "index": 30,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "các vùng / miền",
+        "reference": "Question 8, B"
+      },
+      {
+        "word": "lifts",
+        "index": 31,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nâng lên / thang máy",
+        "reference": "Question 8, C"
+      },
+      {
+        "word": "rocks",
+        "index": 32,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những hòn đá",
+        "reference": "Question 8, D"
+      },
+      {
+        "word": "involves",
+        "index": 33,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bao gồm / liên quan",
+        "reference": "Question 9, A"
+      },
+      {
+        "word": "believes",
+        "index": 34,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tin tưởng",
+        "reference": "Question 9, B"
+      },
+      {
+        "word": "suggests",
+        "index": 35,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "gợi ý",
+        "reference": "Question 9, C"
+      },
+      {
+        "word": "steals",
+        "index": 36,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ăn cắp",
+        "reference": "Question 9, D"
+      },
+      {
+        "word": "serves",
+        "index": 37,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "phục vụ",
+        "reference": "Question 10, A"
+      },
+      {
+        "word": "blocks",
+        "index": 38,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "các khối / chặn",
+        "reference": "Question 10, B"
+      },
+      {
+        "word": "banks",
+        "index": 39,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "các ngân hàng",
+        "reference": "Question 10, C"
+      },
+      {
+        "word": "tourists",
+        "index": 40,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "khách du lịch",
+        "reference": "Question 10, D"
+      },
+      {
+        "word": "remembers",
+        "index": 41,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nhớ",
+        "reference": "Question 11, A"
+      },
+      {
+        "word": "cooks",
+        "index": 42,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nấu ăn",
+        "reference": "Question 11, B"
+      },
+      {
+        "word": "walls",
+        "index": 43,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những bức tường",
+        "reference": "Question 11, C"
+      },
+      {
+        "word": "pyramids",
+        "index": 44,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "các kim tự tháp",
+        "reference": "Question 11, D"
+      },
+      {
+        "word": "miles",
+        "index": 45,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "dặm (đơn vị đo)",
+        "reference": "Question 12, A"
+      },
+      {
+        "word": "words",
+        "index": 46,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những từ",
+        "reference": "Question 12, B"
+      },
+      {
+        "word": "accidents",
+        "index": 47,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "những tai nạn",
+        "reference": "Question 12, C"
+      },
+      {
+        "word": "names",
+        "index": 48,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tên",
+        "reference": "Question 12, D"
+      },
+      {
+        "word": "sports",
+        "index": 49,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "các môn thể thao",
+        "reference": "Question 13, A"
+      },
+      {
+        "word": "plays",
+        "index": 50,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "chơi / vở kịch",
+        "reference": "Question 13, B"
+      },
+      {
+        "word": "households",
+        "index": 51,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "các hộ gia đình",
+        "reference": "Question 13, C"
+      },
+      {
+        "word": "minds",
+        "index": 52,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tâm trí",
+        "reference": "Question 13, D"
+      }
+    ]
+  },
+  {
+    "date": "2026-08-21",
+    "dateFormatted": "August 21, 2026",
+    "theme": "Daily Vocabulary",
+    "audios": [],
+    "words": [
+      {
+        "word": "Villa",
+        "index": 1,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "biệt thự"
+      },
+      {
+        "word": "Chest of drawers",
+        "index": 2,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tủ có ngăn kéo"
+      },
+      {
+        "word": "Townhouse",
+        "index": 3,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nhà phố"
+      },
+      {
+        "word": "Stilt house",
+        "index": 4,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nhà sàn"
+      },
+      {
+        "word": "Dishwasher",
+        "index": 5,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "máy rửa chén"
+      },
+      {
+        "word": "Furniture",
+        "index": 6,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đồ đạc trong nhà"
+      },
+      {
+        "word": "Nephew",
+        "index": 7,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cháu trai"
+      },
+      {
+        "word": "Niece",
+        "index": 8,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cháu gái"
+      },
+      {
+        "word": "Meadow",
+        "index": 9,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bãi cỏ"
+      },
+      {
+        "word": "Suburb",
+        "index": 10,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ngoại ô"
+      },
+      {
+        "word": "Convenient",
+        "index": 11,
+        "type": "",
+        "phonetic": "/kənˈviːniənt/",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tiện lợi"
+      },
+      {
+        "word": "Be good at something",
+        "index": 12,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "giỏi cái gì đó"
+      },
+      {
+        "word": "Wake up = get up",
+        "index": 13,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thức dậy"
+      },
+      {
+        "word": "Calendar",
+        "index": 14,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "lịch"
+      },
+      {
+        "word": "Record",
+        "index": 15,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ghi âm"
+      },
+      {
+        "word": "Luggage",
+        "index": 16,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "hành lý"
+      },
+      {
+        "word": "Kind of food",
+        "index": 17,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "loại đồ ăn"
+      },
+      {
+        "word": "Kind of music",
+        "index": 18,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "loại âm nhạc"
+      },
+      {
+        "word": "Kind of person",
+        "index": 19,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "kiểu người"
+      },
+      {
+        "word": "Secondary school",
+        "index": 20,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "trường cấp hai"
+      },
+      {
+        "word": "Comfortable",
+        "index": 21,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thoải mái, dễ chịu"
+      },
+      {
+        "word": "Of course",
+        "index": 22,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tất nhiên"
+      },
+      {
+        "word": "Wardrobe",
+        "index": 23,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tủ quần áo"
+      },
+      {
+        "word": "Solar system",
+        "index": 24,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "hệ mặt trời"
+      },
+      {
+        "word": "Planet",
+        "index": 25,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "hành tinh"
+      },
+      {
+        "word": "State",
+        "index": 26,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bang, tiểu bang"
+      },
+      {
+        "word": "Messy",
+        "index": 27,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bừa bãi"
+      },
+      {
+        "word": "Dirty",
+        "index": 28,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bẩn"
+      },
+      {
+        "word": "Bowl",
+        "index": 29,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cái bát"
+      },
+      {
+        "word": "Chopstick",
+        "index": 30,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đũa"
+      },
+      {
+        "word": "Cap",
+        "index": 31,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "mũ lưỡi trai"
+      },
+      {
+        "word": "Tidy up",
+        "index": 32,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "dọn dẹp"
+      },
+      {
+        "word": "That’s a good idea",
+        "index": 33,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đó là ý kiến hay"
+      },
+      {
+        "word": "Put",
+        "index": 34,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đặt, để"
+      },
+      {
+        "word": "Bookshelf",
+        "index": 35,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "kệ sách"
+      },
+      {
+        "word": "Cozy",
+        "index": 36,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "ấm cúng, thoải mái dễ chịu"
+      },
+      {
+        "word": "Concert",
+        "index": 37,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "buổi hòa nhạc"
+      }
+    ]
+  },
+  {
     "date": "2026-08-17",
     "dateFormatted": "August 17, 2026",
     "theme": "Daily Vocabulary",
