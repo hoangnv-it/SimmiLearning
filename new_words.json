@@ -3,7 +3,9 @@
     "date": "2026-08-24",
     "dateFormatted": "August 24, 2026",
     "theme": "Daily Vocabulary",
-    "audios": [],
+    "audios": [
+      "audio/8-24-2026.aac"
+    ],
     "words": [
       {
         "word": "chest of drawers",
