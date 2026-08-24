@@ -1,5 +1,247 @@
 [
   {
+    "date": "2026-08-24",
+    "dateFormatted": "August 24, 2026",
+    "theme": "Daily Vocabulary",
+    "audios": [],
+    "words": [
+      {
+        "word": "chest of drawers",
+        "index": 1,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tủ có ngăn kéo"
+      },
+      {
+        "word": "fridge",
+        "index": 2,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tủ lạnh"
+      },
+      {
+        "word": "air-conditioner",
+        "index": 3,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "điều hoà"
+      },
+      {
+        "word": "wardrobe",
+        "index": 4,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tủ quần áo"
+      },
+      {
+        "word": "cooker",
+        "index": 5,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bếp nấu, cái bếp"
+      },
+      {
+        "word": "light",
+        "index": 6,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bóng đèn"
+      },
+      {
+        "word": "microwave",
+        "index": 7,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "lò vi sóng"
+      },
+      {
+        "word": "ceiling fan",
+        "index": 8,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "quạt trần"
+      },
+      {
+        "word": "sink",
+        "index": 9,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bồn rửa mặt"
+      },
+      {
+        "word": "plate",
+        "index": 10,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "cái đĩa"
+      },
+      {
+        "word": "rug",
+        "index": 11,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tấm thảm"
+      },
+      {
+        "word": "curtain",
+        "index": 12,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "rèm cửa"
+      },
+      {
+        "word": "villa",
+        "index": 13,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "biệt thự"
+      },
+      {
+        "word": "town house",
+        "index": 14,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nhà phố"
+      },
+      {
+        "word": "stilt house",
+        "index": 15,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "nhà sàn"
+      },
+      {
+        "word": "coat",
+        "index": 16,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "áo choàng"
+      },
+      {
+        "word": "bedside table",
+        "index": 17,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bàn kê bên cạnh giường"
+      },
+      {
+        "word": "carpet",
+        "index": 18,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thảm lớn trải phòng"
+      },
+      {
+        "word": "radiator",
+        "index": 19,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "lò sưởi"
+      },
+      {
+        "word": "friend",
+        "index": 20,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "người bạn"
+      },
+      {
+        "word": "friendship",
+        "index": 21,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "tình bạn"
+      },
+      {
+        "word": "friendly",
+        "index": 22,
+        "type": "adj",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "thân thiện"
+      },
+      {
+        "word": "essay",
+        "index": 23,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "bài luận"
+      },
+      {
+        "word": "dishwasher",
+        "index": 24,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "máy rửa chén"
+      },
+      {
+        "word": "cook",
+        "index": 25,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đầu bếp"
+      },
+      {
+        "word": "furniture",
+        "index": 26,
+        "type": "",
+        "phonetic": "",
+        "meaning": "",
+        "example": "",
+        "vietnamese": "đồ đạc trong nhà"
+      }
+    ]
+  },
+  {
     "date": "2026-08-23",
     "dateFormatted": "August 23, 2026",
     "theme": "Vocabulary Test Words",
